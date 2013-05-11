@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 // Import
@@ -13,15 +14,6 @@
 
 
 @synthesize item;
-
-
-- (void) dealloc
-{
-	[item release];
-	
-	[super dealloc];
-
-}
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic
 {
@@ -44,7 +36,6 @@
 		{
 			TrafficEvent *item = [[TrafficEvent alloc] initWithJSONDictionary:itemDic];
 			[array addObject:item];
-			[item release];
 		}
 		self.item = [NSArray arrayWithArray:array];
 	}

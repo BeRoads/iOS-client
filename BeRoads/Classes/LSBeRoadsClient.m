@@ -10,9 +10,14 @@
 
 #import "AFJSONRequestOperation.h"
 
+#import "Cameras.h"
+#import "TrafficEvents.h"
+#import "Radars.h"
+
 @implementation LSBeRoadsClient
 
 static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/IWay/";
+static NSString * const kTrafficEvents = @"TrafficEvent";
 
 + (LSBeRoadsClient *)sharedClient {
     static LSBeRoadsClient *_sharedClient = nil;
@@ -36,6 +41,45 @@ static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/IWay/"
 	[self setDefaultHeader:@"Accept" value:@"application/json"];
     
     return self;
+}
+
+#pragma mark GET_FROM_REST
+
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block {    
+    NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
+    
+    NSString* path = [NSString stringWithFormat:@"%@/%@/%@",kTrafficEvents,language,@"all.json"];
+    
+	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+		// Block success
+		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+		dispatch_async(jsonParsing, ^{
+            NSDictionary* dict = [JSON objectForKey:@"TrafficEvent"];
+            TrafficEvents* TrafficEventsObject = [[TrafficEvents alloc] initWithJSONDictionary:dict];
+            NSArray* trafficEvents = [TrafficEventsObject item];
+            
+            NSLog(@"TrafficEvents count : %d", [trafficEvents count]);
+            
+			dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if(block){
+                    block(trafficEvents,nil);
+                }
+			});
+		});
+		
+		dispatch_release(jsonParsing);
+		// End of success block
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+		NSLog(@"Error : %@",error);
+		
+		// Si block, callback vers le block
+		if(block){
+			block(nil,error);
+		}
+	}];
+	
 }
 
 @end

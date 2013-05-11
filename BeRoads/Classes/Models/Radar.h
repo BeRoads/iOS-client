@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

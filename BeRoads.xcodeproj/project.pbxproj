@@ -15,8 +15,6 @@
 		49693D32173E44D7000D408E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D31173E44D7000D408E /* Default.png */; };
 		49693D34173E44D7000D408E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D33173E44D7000D408E /* Default@2x.png */; };
 		49693D36173E44D7000D408E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D35173E44D7000D408E /* Default-568h@2x.png */; };
-		49693D9D173E5286000D408E /* LSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D7F173E5286000D408E /* LSFirstViewController.m */; };
-		49693D9E173E5286000D408E /* LSSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D81173E5286000D408E /* LSSecondViewController.m */; };
 		49693D9F173E5286000D408E /* LSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D83173E5286000D408E /* LSAppDelegate.m */; };
 		49693DA0173E5286000D408E /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D86173E5286000D408E /* Camera.m */; };
 		49693DA1173E5286000D408E /* Cameras.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D88173E5286000D408E /* Cameras.m */; };
@@ -24,9 +22,6 @@
 		49693DA3173E5286000D408E /* Radars.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D8C173E5286000D408E /* Radars.m */; };
 		49693DA4173E5286000D408E /* TrafficEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D8E173E5286000D408E /* TrafficEvent.m */; };
 		49693DA5173E5286000D408E /* TrafficEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D90173E5286000D408E /* TrafficEvents.m */; };
-		49693DA6173E5286000D408E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D93173E5286000D408E /* Default-568h@2x.png */; };
-		49693DA7173E5286000D408E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D94173E5286000D408E /* Default.png */; };
-		49693DA8173E5286000D408E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D95173E5286000D408E /* Default@2x.png */; };
 		49693DA9173E5286000D408E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D96173E5286000D408E /* first.png */; };
 		49693DAA173E5286000D408E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D97173E5286000D408E /* first@2x.png */; };
 		49693DAB173E5286000D408E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693D98173E5286000D408E /* second.png */; };
@@ -42,6 +37,11 @@
 		49693DC9173E53EA000D408E /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DBF173E53EA000D408E /* AFXMLRequestOperation.m */; };
 		49693DCA173E53EA000D408E /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DC1173E53EA000D408E /* UIImageView+AFNetworking.m */; };
 		49693DD0173E5678000D408E /* LSBeRoadsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DCF173E5678000D408E /* LSBeRoadsClient.m */; };
+		49693DD6173E666E000D408E /* LSTrafficEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DD5173E666E000D408E /* LSTrafficEventsViewController.m */; };
+		49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DD8173E667B000D408E /* LSRadarsViewController.m */; };
+		49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DDB173E6692000D408E /* LSCamerasViewController.m */; };
+		49693DDF173E6C3E000D408E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DDD173E6C3E000D408E /* MobileCoreServices.framework */; };
+		49693DE0173E6C3E000D408E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DDE173E6C3E000D408E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,10 +56,6 @@
 		49693D31173E44D7000D408E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		49693D33173E44D7000D408E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49693D35173E44D7000D408E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		49693D7E173E5286000D408E /* LSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSFirstViewController.h; sourceTree = "<group>"; };
-		49693D7F173E5286000D408E /* LSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSFirstViewController.m; sourceTree = "<group>"; };
-		49693D80173E5286000D408E /* LSSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSecondViewController.h; sourceTree = "<group>"; };
-		49693D81173E5286000D408E /* LSSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSecondViewController.m; sourceTree = "<group>"; };
 		49693D82173E5286000D408E /* LSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAppDelegate.h; sourceTree = "<group>"; };
 		49693D83173E5286000D408E /* LSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAppDelegate.m; sourceTree = "<group>"; };
 		49693D85173E5286000D408E /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
@@ -74,9 +70,6 @@
 		49693D8E173E5286000D408E /* TrafficEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficEvent.m; sourceTree = "<group>"; };
 		49693D8F173E5286000D408E /* TrafficEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficEvents.h; sourceTree = "<group>"; };
 		49693D90173E5286000D408E /* TrafficEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficEvents.m; sourceTree = "<group>"; };
-		49693D93173E5286000D408E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		49693D94173E5286000D408E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		49693D95173E5286000D408E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49693D96173E5286000D408E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		49693D97173E5286000D408E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		49693D98173E5286000D408E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -106,6 +99,14 @@
 		49693DCD173E5608000D408E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49693DCE173E5678000D408E /* LSBeRoadsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBeRoadsClient.h; sourceTree = "<group>"; };
 		49693DCF173E5678000D408E /* LSBeRoadsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsClient.m; sourceTree = "<group>"; };
+		49693DD4173E666E000D408E /* LSTrafficEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventsViewController.h; sourceTree = "<group>"; };
+		49693DD5173E666E000D408E /* LSTrafficEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventsViewController.m; sourceTree = "<group>"; };
+		49693DD7173E667B000D408E /* LSRadarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSRadarsViewController.h; sourceTree = "<group>"; };
+		49693DD8173E667B000D408E /* LSRadarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSRadarsViewController.m; sourceTree = "<group>"; };
+		49693DDA173E6692000D408E /* LSCamerasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCamerasViewController.h; sourceTree = "<group>"; };
+		49693DDB173E6692000D408E /* LSCamerasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCamerasViewController.m; sourceTree = "<group>"; };
+		49693DDD173E6C3E000D408E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		49693DDE173E6C3E000D408E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49693DDF173E6C3E000D408E /* MobileCoreServices.framework in Frameworks */,
+				49693DE0173E6C3E000D408E /* SystemConfiguration.framework in Frameworks */,
 				49693D20173E44D7000D408E /* UIKit.framework in Frameworks */,
 				49693D22173E44D7000D408E /* Foundation.framework in Frameworks */,
 				49693D24173E44D7000D408E /* CoreGraphics.framework in Frameworks */,
@@ -142,6 +145,8 @@
 		49693D1E173E44D7000D408E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49693DDD173E6C3E000D408E /* MobileCoreServices.framework */,
+				49693DDE173E6C3E000D408E /* SystemConfiguration.framework */,
 				49693D1F173E44D7000D408E /* UIKit.framework */,
 				49693D21173E44D7000D408E /* Foundation.framework */,
 				49693D23173E44D7000D408E /* CoreGraphics.framework */,
@@ -190,10 +195,12 @@
 		49693D7D173E5286000D408E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49693D7E173E5286000D408E /* LSFirstViewController.h */,
-				49693D7F173E5286000D408E /* LSFirstViewController.m */,
-				49693D80173E5286000D408E /* LSSecondViewController.h */,
-				49693D81173E5286000D408E /* LSSecondViewController.m */,
+				49693DD4173E666E000D408E /* LSTrafficEventsViewController.h */,
+				49693DD5173E666E000D408E /* LSTrafficEventsViewController.m */,
+				49693DD7173E667B000D408E /* LSRadarsViewController.h */,
+				49693DD8173E667B000D408E /* LSRadarsViewController.m */,
+				49693DDA173E6692000D408E /* LSCamerasViewController.h */,
+				49693DDB173E6692000D408E /* LSCamerasViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,9 +236,6 @@
 		49693D92173E5286000D408E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				49693D93173E5286000D408E /* Default-568h@2x.png */,
-				49693D94173E5286000D408E /* Default.png */,
-				49693D95173E5286000D408E /* Default@2x.png */,
 				49693D96173E5286000D408E /* first.png */,
 				49693D97173E5286000D408E /* first@2x.png */,
 				49693D98173E5286000D408E /* second.png */,
@@ -334,9 +338,6 @@
 				49693D32173E44D7000D408E /* Default.png in Resources */,
 				49693D34173E44D7000D408E /* Default@2x.png in Resources */,
 				49693D36173E44D7000D408E /* Default-568h@2x.png in Resources */,
-				49693DA6173E5286000D408E /* Default-568h@2x.png in Resources */,
-				49693DA7173E5286000D408E /* Default.png in Resources */,
-				49693DA8173E5286000D408E /* Default@2x.png in Resources */,
 				49693DA9173E5286000D408E /* first.png in Resources */,
 				49693DAA173E5286000D408E /* first@2x.png in Resources */,
 				49693DAB173E5286000D408E /* second.png in Resources */,
@@ -353,8 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49693D2C173E44D7000D408E /* main.m in Sources */,
-				49693D9D173E5286000D408E /* LSFirstViewController.m in Sources */,
-				49693D9E173E5286000D408E /* LSSecondViewController.m in Sources */,
 				49693D9F173E5286000D408E /* LSAppDelegate.m in Sources */,
 				49693DA0173E5286000D408E /* Camera.m in Sources */,
 				49693DA1173E5286000D408E /* Cameras.m in Sources */,
@@ -372,6 +371,9 @@
 				49693DC9173E53EA000D408E /* AFXMLRequestOperation.m in Sources */,
 				49693DCA173E53EA000D408E /* UIImageView+AFNetworking.m in Sources */,
 				49693DD0173E5678000D408E /* LSBeRoadsClient.m in Sources */,
+				49693DD6173E666E000D408E /* LSTrafficEventsViewController.m in Sources */,
+				49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */,
+				49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

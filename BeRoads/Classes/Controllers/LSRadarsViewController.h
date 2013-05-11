@@ -1,5 +1,5 @@
 //
-//  LSFirstViewController.h
+//  LSRadarsViewController.h
 //  BeRoads
 //
 //  Created by Lionel Schinckus on 11/05/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSFirstViewController : UIViewController
+@interface LSRadarsViewController : UITableViewController
 
 @end

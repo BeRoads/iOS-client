@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,7 +17,7 @@
 	NSString *category;
 	NSString *lat;
 	NSString *lng;
-	NSDecimalNumber *id;
+	NSDecimalNumber *idTrafficEvent;
 }
 
 @property (nonatomic, retain) NSString *message;
@@ -26,7 +27,7 @@
 @property (nonatomic, retain) NSString *category;
 @property (nonatomic, retain) NSString *lat;
 @property (nonatomic, retain) NSString *lng;
-@property (nonatomic, retain) NSDecimalNumber *id;
+@property (nonatomic, retain) NSDecimalNumber *idTrafficEvent;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
 - (void) parseJSONDictionary:(NSDictionary *)dic;

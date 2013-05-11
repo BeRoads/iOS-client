@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 // Import
@@ -18,23 +19,8 @@
 @synthesize category;
 @synthesize lat;
 @synthesize lng;
-@synthesize id;
+@synthesize idTrafficEvent;
 
-
-- (void) dealloc
-{
-	[message release];
-	[location release];
-	[source release];
-	[time release];
-	[category release];
-	[lat release];
-	[lng release];
-	[id release];
-	
-	[super dealloc];
-
-}
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic
 {
@@ -91,10 +77,10 @@
 		self.lng = lng_;
 	}
 
-	id id_ = [dic objectForKey:@"id"];
-	if([id_ isKindOfClass:[NSNumber class]])
+	id idTrafficEvent_ = [dic objectForKey:@"id"];
+	if([idTrafficEvent_ isKindOfClass:[NSNumber class]])
 	{
-		self.id = id_;
+		self.idTrafficEvent = idTrafficEvent_;
 	}
 
 	

@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 // Import
@@ -18,21 +19,6 @@
 @synthesize date;
 @synthesize type;
 @synthesize speedLimit;
-
-
-- (void) dealloc
-{
-	[idRadar release];
-	[name release];
-	[lat release];
-	[lng release];
-	[date release];
-	[type release];
-	[speedLimit release];
-	
-	[super dealloc];
-
-}
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic
 {

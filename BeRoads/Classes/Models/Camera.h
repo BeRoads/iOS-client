@@ -1,7 +1,8 @@
 //
-//  Created by Cocoa JSON Editor
-//  http://www.cocoajsoneditor.com
-//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//  BeRoads
+//
+//  Created by Lionel Schinckus on 11/05/13.
+//  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +15,7 @@
 	NSString *img;
 	NSString *lat;
 	NSString *lng;
-	NSDecimalNumber *id;
+	NSDecimalNumber *idCamera;
 }
 
 @property (nonatomic, retain) NSString *city;
@@ -22,7 +23,7 @@
 @property (nonatomic, retain) NSString *img;
 @property (nonatomic, retain) NSString *lat;
 @property (nonatomic, retain) NSString *lng;
-@property (nonatomic, retain) NSDecimalNumber *id;
+@property (nonatomic, retain) NSDecimalNumber *idCamera;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
 - (void) parseJSONDictionary:(NSDictionary *)dic;

@@ -1,5 +1,5 @@
 //
-//  LSSecondViewController.h
+//  LSCamerasViewController.h
 //  BeRoads
 //
 //  Created by Lionel Schinckus on 11/05/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSSecondViewController : UIViewController
+@interface LSCamerasViewController : UITableViewController
 
 @end

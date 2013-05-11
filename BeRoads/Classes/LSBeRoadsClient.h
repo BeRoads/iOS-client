@@ -12,4 +12,6 @@
 
 + (LSBeRoadsClient*)sharedClient;
 
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block;
+
 @end
