@@ -10,4 +10,6 @@
 
 @interface LSCamerasViewController : UITableViewController
 
+@property (nonatomic,strong) NSArray* cameras;
+
 @end

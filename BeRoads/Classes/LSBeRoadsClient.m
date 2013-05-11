@@ -18,6 +18,8 @@
 
 static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/IWay/";
 static NSString * const kTrafficEvents = @"TrafficEvent";
+static NSString * const kRadar = @"Radar.json";
+static NSString * const kCamera = @"Camera.json";
 
 + (LSBeRoadsClient *)sharedClient {
     static LSBeRoadsClient *_sharedClient = nil;
@@ -56,8 +58,8 @@ static NSString * const kTrafficEvents = @"TrafficEvent";
         
 		dispatch_async(jsonParsing, ^{
             NSDictionary* dict = [JSON objectForKey:@"TrafficEvent"];
-            TrafficEvents* TrafficEventsObject = [[TrafficEvents alloc] initWithJSONDictionary:dict];
-            NSArray* trafficEvents = [TrafficEventsObject item];
+            TrafficEvents* trafficEventsObject = [[TrafficEvents alloc] initWithJSONDictionary:dict];
+            NSArray* trafficEvents = [trafficEventsObject item];
             
             NSLog(@"TrafficEvents count : %d", [trafficEvents count]);
             
@@ -65,6 +67,76 @@ static NSString * const kTrafficEvents = @"TrafficEvent";
                 
                 if(block){
                     block(trafficEvents,nil);
+                }
+			});
+		});
+		
+		dispatch_release(jsonParsing);
+		// End of success block
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+		NSLog(@"Error : %@",error);
+		
+		// Si block, callback vers le block
+		if(block){
+			block(nil,error);
+		}
+	}];
+	
+}
+
+- (void) getRadars:(void (^)(NSArray*,NSError*))block {    
+    NSString* path = [NSString stringWithFormat:@"%@",kRadar];
+    
+	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+		// Block success
+		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+		dispatch_async(jsonParsing, ^{
+            NSDictionary* dict = [JSON objectForKey:@"Radar"];
+            Radars* radarsObject = [[Radars alloc] initWithJSONDictionary:dict];
+            NSArray* radars = [radarsObject item];
+            
+            NSLog(@"Radars count : %d", [radars count]);
+            
+			dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if(block){
+                    block(radars,nil);
+                }
+			});
+		});
+		
+		dispatch_release(jsonParsing);
+		// End of success block
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+		NSLog(@"Error : %@",error);
+		
+		// Si block, callback vers le block
+		if(block){
+			block(nil,error);
+		}
+	}];
+	
+}
+
+- (void) getCameras:(void (^)(NSArray*,NSError*))block {    
+    NSString* path = [NSString stringWithFormat:@"%@",kCamera];
+    
+	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+		// Block success
+		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+		dispatch_async(jsonParsing, ^{
+            NSDictionary* dict = [JSON objectForKey:@"Camera"];
+            Cameras* camerasObject = [[Cameras alloc] initWithJSONDictionary:dict];
+            NSArray* cameras = [camerasObject item];
+            
+            NSLog(@"Cameras count : %d", [cameras count]);
+            
+			dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if(block){
+                    block(cameras,nil);
                 }
 			});
 		});

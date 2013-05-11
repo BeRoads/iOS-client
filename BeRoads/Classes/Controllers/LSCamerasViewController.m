@@ -8,6 +8,10 @@
 
 #import "LSCamerasViewController.h"
 
+#import "Camera.h"
+
+#import "LSBeRoadsClient.h"
+
 @interface LSCamerasViewController ()
 
 @end
@@ -32,6 +36,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reloadCameras];
+}
+
+- (void)reloadCameras{
+    [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
+        self.cameras = cameras;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,24 +56,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.cameras count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
+    Camera* currentCamera = [self.cameras objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentCamera.zone;
+    cell.detailTextLabel.text = currentCamera.city;
     
     return cell;
 }

@@ -8,6 +8,10 @@
 
 #import "LSRadarsViewController.h"
 
+#import "Radar.h"
+
+#import "LSBeRoadsClient.h"
+
 @interface LSRadarsViewController ()
 
 @end
@@ -32,6 +36,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reloadRadars];
+}
+
+- (void)reloadRadars{
+    [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
+        self.radars = radars;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,24 +56,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.radars count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
+    Radar* currentRadar = [self.radars objectAtIndex:indexPath.row];
+    cell.textLabel.text = [currentRadar name];
+    cell.detailTextLabel.text = [currentRadar type];
     
     return cell;
 }

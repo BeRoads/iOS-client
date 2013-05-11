@@ -14,4 +14,8 @@
 
 - (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block;
 
+- (void) getRadars:(void (^)(NSArray*,NSError*))block;
+
+- (void) getCameras:(void (^)(NSArray*,NSError*))block;
+
 @end

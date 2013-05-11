@@ -10,4 +10,6 @@
 
 @interface LSRadarsViewController : UITableViewController
 
+@property (nonatomic,strong) NSArray* radars;
+
 @end
