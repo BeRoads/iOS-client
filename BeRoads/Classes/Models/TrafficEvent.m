@@ -1,0 +1,103 @@
+//
+//  Created by Cocoa JSON Editor
+//  http://www.cocoajsoneditor.com
+//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//
+
+// Import
+#import "TrafficEvent.h"
+
+
+@implementation TrafficEvent
+
+
+@synthesize message;
+@synthesize location;
+@synthesize source;
+@synthesize time;
+@synthesize category;
+@synthesize lat;
+@synthesize lng;
+@synthesize id;
+
+
+- (void) dealloc
+{
+	[message release];
+	[location release];
+	[source release];
+	[time release];
+	[category release];
+	[lat release];
+	[lng release];
+	[id release];
+	
+	[super dealloc];
+
+}
+
+- (id) initWithJSONDictionary:(NSDictionary *)dic
+{
+	if(self = [super init])
+	{
+		[self parseJSONDictionary:dic];
+	}
+	
+	return self;
+}
+
+- (void) parseJSONDictionary:(NSDictionary *)dic
+{
+	// PARSER
+	id message_ = [dic objectForKey:@"message"];
+	if([message_ isKindOfClass:[NSString class]])
+	{
+		self.message = message_;
+	}
+
+	id location_ = [dic objectForKey:@"location"];
+	if([location_ isKindOfClass:[NSString class]])
+	{
+		self.location = location_;
+	}
+
+	id source_ = [dic objectForKey:@"source"];
+	if([source_ isKindOfClass:[NSString class]])
+	{
+		self.source = source_;
+	}
+
+	id time_ = [dic objectForKey:@"time"];
+	if([time_ isKindOfClass:[NSNumber class]])
+	{
+		self.time = time_;
+	}
+
+	id category_ = [dic objectForKey:@"category"];
+	if([category_ isKindOfClass:[NSString class]])
+	{
+		self.category = category_;
+	}
+
+	id lat_ = [dic objectForKey:@"lat"];
+	if([lat_ isKindOfClass:[NSString class]])
+	{
+		self.lat = lat_;
+	}
+
+	id lng_ = [dic objectForKey:@"lng"];
+	if([lng_ isKindOfClass:[NSString class]])
+	{
+		self.lng = lng_;
+	}
+
+	id id_ = [dic objectForKey:@"id"];
+	if([id_ isKindOfClass:[NSNumber class]])
+	{
+		self.id = id_;
+	}
+
+	
+}
+
+@end

@@ -1,0 +1,3 @@
+[submodule "BeRoads/Vendors/AFNetworking"]
+	path = BeRoads/Vendors/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
