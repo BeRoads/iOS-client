@@ -36,6 +36,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
     [self reloadCameras];
 }
 
@@ -50,6 +51,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)awakeFromNib{
+    self.title = NSLocalizedString(@"Cameras", @"Cameras");
 }
 
 #pragma mark - Table view data source
@@ -77,8 +82,8 @@
     
     // Configure the cell...
     Camera* currentCamera = [self.cameras objectAtIndex:indexPath.row];
-    cell.textLabel.text = currentCamera.zone;
-    cell.detailTextLabel.text = currentCamera.city;
+    cell.textLabel.text = currentCamera.city;
+    cell.detailTextLabel.text = currentCamera.zone;
     
     return cell;
 }

@@ -36,6 +36,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = NSLocalizedString(@"Traffic Event", @"Traffic Event");
+    self.title = NSLocalizedString(@"Traffic", @"Traffic");
+    
     [self reloadTrafficEvents];
 }
 
@@ -77,8 +80,8 @@
     
     // Configure the cell...
     TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
-    cell.textLabel.text = [currentTrafficEvent message];
-    cell.detailTextLabel.text = [currentTrafficEvent location];
+    cell.textLabel.text = [currentTrafficEvent location];
+    cell.detailTextLabel.text = [currentTrafficEvent message];
     
     return cell;
 }

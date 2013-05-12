@@ -36,6 +36,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
     [self reloadRadars];
 }
 
@@ -50,6 +51,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)awakeFromNib{
+    self.title = NSLocalizedString(@"Radars", @"Radars");
 }
 
 #pragma mark - Table view data source
