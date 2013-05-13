@@ -13,6 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
+    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    locationManager.distanceFilter = 1000; // 1 kilometer
+    locationManager.updateLocationOnApplicationDidBecomeActive = YES;
+    locationManager.loop = YES;
+    locationManager.loopTimeInterval = 60;
+    [locationManager startUpdatingLocation];
+    
     return YES;
 }
 							
@@ -41,6 +49,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
+    [locationManager stopUpdatingLocation];
 }
 
 @end

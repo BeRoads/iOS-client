@@ -29,6 +29,16 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
+    [locationManager addDelegate:self];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
+    [locationManager removeDelegate:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -37,6 +47,10 @@
 
 - (void)awakeFromNib{
     self.title = NSLocalizedString(@"Map", @"Map");
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSLog(@"MapVC didUpdateLocation %@",newLocation);
 }
 
 @end

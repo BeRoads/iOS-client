@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSMapViewController : UIViewController
+@interface LSMapViewController : UIViewController <LSLocationManagerDelegate>
 
 @end

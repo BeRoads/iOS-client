@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSCamerasViewController : UITableViewController
+@interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate>
 
 @property (nonatomic,strong) NSArray* cameras;
 

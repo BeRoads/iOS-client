@@ -46,6 +46,7 @@
 		49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF0173F9DC5000D408E /* LSMapViewController.m */; };
 		49693DF4173F9E81000D408E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF2173F9E80000D408E /* CoreLocation.framework */; };
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
+		49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF7173FE35C000D408E /* LSLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,8 @@
 		49693DF0173F9DC5000D408E /* LSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMapViewController.m; sourceTree = "<group>"; };
 		49693DF2173F9E80000D408E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49693DF3173F9E80000D408E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		49693DF6173FE35C000D408E /* LSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLocationManager.h; sourceTree = "<group>"; };
+		49693DF7173FE35C000D408E /* LSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				49693D83173E5286000D408E /* LSAppDelegate.m */,
 				49693DCE173E5678000D408E /* LSBeRoadsClient.h */,
 				49693DCF173E5678000D408E /* LSBeRoadsClient.m */,
+				49693DF6173FE35C000D408E /* LSLocationManager.h */,
+				49693DF7173FE35C000D408E /* LSLocationManager.m */,
 				49693D84173E5286000D408E /* Models */,
 			);
 			path = Classes;
@@ -392,6 +397,7 @@
 				49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */,
 				49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */,
 				49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */,
+				49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
