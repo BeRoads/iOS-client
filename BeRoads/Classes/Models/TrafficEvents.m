@@ -34,8 +34,8 @@
 		NSMutableArray *array = [NSMutableArray array];
 		for(NSDictionary *itemDic in item_)
 		{
-			TrafficEvent *item = [[TrafficEvent alloc] initWithJSONDictionary:itemDic];
-			[array addObject:item];
+			TrafficEvent *trafficEvent = [[TrafficEvent alloc] initWithJSONDictionary:itemDic];
+			[array addObject:trafficEvent];
 		}
 		self.item = [NSArray arrayWithArray:array];
 	}

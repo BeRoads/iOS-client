@@ -34,8 +34,8 @@
 		NSMutableArray *array = [NSMutableArray array];
 		for(NSDictionary *itemDic in item_)
 		{
-			Camera *item = [[Camera alloc] initWithJSONDictionary:itemDic];
-			[array addObject:item];
+			Camera *camera = [[Camera alloc] initWithJSONDictionary:itemDic];
+			[array addObject:camera];
 		}
 		self.item = [NSArray arrayWithArray:array];
 	}

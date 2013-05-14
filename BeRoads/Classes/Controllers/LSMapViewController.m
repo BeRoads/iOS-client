@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _mapView.showsUserLocation = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -53,4 +54,8 @@
     NSLog(@"MapVC didUpdateLocation %@",newLocation);
 }
 
+- (void)viewDidUnload {
+    [self setMapView:nil];
+    [super viewDidUnload];
+}
 @end
