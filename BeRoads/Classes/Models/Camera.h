@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-
-@interface Camera : NSObject
+@interface Camera : NSObject <MKAnnotation>
 {
 	NSString *city;
 	NSString *zone;

@@ -71,4 +71,18 @@
 	
 }
 
+#pragma mark ANNOTATION
+
+-(CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
+}
+
+- (NSString *)title{
+    return zone;
+}
+
+- (NSString *)subtitle{
+    return city;
+}
+
 @end

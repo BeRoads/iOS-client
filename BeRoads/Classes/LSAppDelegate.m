@@ -18,7 +18,7 @@
     locationManager.distanceFilter = 1000; // 1 kilometer
     locationManager.updateLocationOnApplicationDidBecomeActive = YES;
     locationManager.loop = YES;
-    locationManager.loopTimeInterval = 60;
+    locationManager.loopTimeInterval = 120;
     [locationManager startUpdatingLocation];
     
     return YES;

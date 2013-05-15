@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-
-@interface Radar : NSObject
+@interface Radar : NSObject <MKAnnotation>
 {
 	NSDecimalNumber *idRadar;
 	NSString *name;

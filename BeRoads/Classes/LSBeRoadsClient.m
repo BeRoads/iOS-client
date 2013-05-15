@@ -99,7 +99,6 @@ static NSString * const kCamera = @"Camera.json";
             NSLog(@"Radars count : %d", [radars count]);
             
 			dispatch_async(dispatch_get_main_queue(), ^{
-                
                 if(block){
                     block(radars,nil);
                 }

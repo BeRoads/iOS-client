@@ -74,8 +74,20 @@
 	{
 		self.speedLimit = speedLimit_;
 	}
-
 	
+}
+
+#pragma mark ANNOTATION
+-(CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
+}
+
+- (NSString *)title{
+    return name;
+}
+
+- (NSString *)subtitle{
+    return [NSString stringWithFormat:@"%@ - %@",speedLimit,type];
 }
 
 @end

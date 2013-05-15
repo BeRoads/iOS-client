@@ -86,4 +86,16 @@
 	
 }
 
+-(CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
+}
+
+- (NSString *)title{
+    return category;
+}
+
+- (NSString *)subtitle{
+    return location;
+}
+
 @end

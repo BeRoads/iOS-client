@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-
-@interface TrafficEvent : NSObject
+@interface TrafficEvent : NSObject <MKAnnotation>
 {
 	NSString *message;
 	NSString *location;
