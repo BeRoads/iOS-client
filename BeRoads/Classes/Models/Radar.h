@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface Radar : NSObject <MKAnnotation>
+#import "OCGrouping.h"
+
+@interface Radar : NSObject <MKAnnotation,OCGrouping>
 {
 	NSDecimalNumber *idRadar;
 	NSString *name;

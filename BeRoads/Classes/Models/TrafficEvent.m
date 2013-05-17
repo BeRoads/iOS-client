@@ -98,4 +98,8 @@
     return location;
 }
 
+-(NSString *) groupTag{
+    return @"TrafficEvent";
+}
+
 @end

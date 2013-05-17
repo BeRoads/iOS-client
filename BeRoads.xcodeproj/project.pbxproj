@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490A7BAE1745FCF60013D46F /* OCAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BA61745FCF60013D46F /* OCAlgorithms.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		490A7BAF1745FCF60013D46F /* OCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BA81745FCF60013D46F /* OCAnnotation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		490A7BB01745FCF60013D46F /* OCDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BAA1745FCF60013D46F /* OCDistance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		490A7BB11745FCF60013D46F /* OCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BAD1745FCF60013D46F /* OCMapView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		49693D20173E44D7000D408E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693D1F173E44D7000D408E /* UIKit.framework */; };
 		49693D22173E44D7000D408E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693D21173E44D7000D408E /* Foundation.framework */; };
 		49693D24173E44D7000D408E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693D23173E44D7000D408E /* CoreGraphics.framework */; };
@@ -53,6 +57,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490A7BA51745FCF60013D46F /* OCAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithms.h; sourceTree = "<group>"; };
+		490A7BA61745FCF60013D46F /* OCAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAlgorithms.m; sourceTree = "<group>"; };
+		490A7BA71745FCF60013D46F /* OCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAnnotation.h; sourceTree = "<group>"; };
+		490A7BA81745FCF60013D46F /* OCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAnnotation.m; sourceTree = "<group>"; };
+		490A7BA91745FCF60013D46F /* OCDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDistance.h; sourceTree = "<group>"; };
+		490A7BAA1745FCF60013D46F /* OCDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDistance.m; sourceTree = "<group>"; };
+		490A7BAB1745FCF60013D46F /* OCGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGrouping.h; sourceTree = "<group>"; };
+		490A7BAC1745FCF60013D46F /* OCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMapView.h; sourceTree = "<group>"; };
+		490A7BAD1745FCF60013D46F /* OCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMapView.m; sourceTree = "<group>"; };
 		49693D1C173E44D7000D408E /* BeRoads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRoads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49693D1F173E44D7000D408E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49693D21173E44D7000D408E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +158,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490A7BA41745FCF60013D46F /* OCMapView */ = {
+			isa = PBXGroup;
+			children = (
+				490A7BA51745FCF60013D46F /* OCAlgorithms.h */,
+				490A7BA61745FCF60013D46F /* OCAlgorithms.m */,
+				490A7BA71745FCF60013D46F /* OCAnnotation.h */,
+				490A7BA81745FCF60013D46F /* OCAnnotation.m */,
+				490A7BA91745FCF60013D46F /* OCDistance.h */,
+				490A7BAA1745FCF60013D46F /* OCDistance.m */,
+				490A7BAB1745FCF60013D46F /* OCGrouping.h */,
+				490A7BAC1745FCF60013D46F /* OCMapView.h */,
+				490A7BAD1745FCF60013D46F /* OCMapView.m */,
+			);
+			name = OCMapView;
+			path = OCMapView/OCMapView;
+			sourceTree = "<group>";
+		};
 		49693D13173E44D7000D408E = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				49693DAE173E53EA000D408E /* AFNetworking */,
+				490A7BA41745FCF60013D46F /* OCMapView */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -418,6 +449,10 @@
 				49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */,
 				49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */,
 				49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */,
+				490A7BAE1745FCF60013D46F /* OCAlgorithms.m in Sources */,
+				490A7BAF1745FCF60013D46F /* OCAnnotation.m in Sources */,
+				490A7BB01745FCF60013D46F /* OCDistance.m in Sources */,
+				490A7BB11745FCF60013D46F /* OCMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +485,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -465,6 +501,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -481,7 +519,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -489,6 +528,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

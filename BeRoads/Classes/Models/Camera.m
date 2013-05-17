@@ -85,4 +85,8 @@
     return city;
 }
 
+-(NSString *) groupTag{
+    return @"Camera";
+}
+
 @end

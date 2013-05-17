@@ -1,3 +1,6 @@
 [submodule "BeRoads/Vendors/AFNetworking"]
 	path = BeRoads/Vendors/AFNetworking
 	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "BeRoads/Vendors/OCMapView"]
+	path = BeRoads/Vendors/OCMapView
+	url = https://github.com/yinkou/OCMapView.git
