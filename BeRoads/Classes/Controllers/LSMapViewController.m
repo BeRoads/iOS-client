@@ -235,7 +235,7 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
-    if (!_firstTime) {
+    if (!_firstTime && [userLocation.location.timestamp timeIntervalSinceNow] < 30 && userLocation.location.horizontalAccuracy > 0) {
         MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
         MKCoordinateRegion region = MKCoordinateRegionMake(userLocation.coordinate, span);
         

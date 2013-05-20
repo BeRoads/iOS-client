@@ -12,6 +12,10 @@
 
 #import "TrafficEvent.h"
 
+#import "LSLocationManager.h"
+
+#import "LSBeRoadsCell.h"
+
 @interface LSTrafficEventsViewController ()
 
 @end
@@ -71,17 +75,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"beroadsCell";
+    LSBeRoadsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
+    /*
+     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
+     }
+     */
     
     // Configure the cell...
     TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
-    cell.textLabel.text = [currentTrafficEvent location];
-    cell.detailTextLabel.text = [currentTrafficEvent message];
+    
+    CLLocation* trafficEventLocation = [[CLLocation alloc] initWithLatitude:[currentTrafficEvent.lat floatValue] longitude:[currentTrafficEvent.lng floatValue]];
+    int distance = (int) [trafficEventLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
+                
+    cell.titleLabel.text = [currentTrafficEvent location];
     
     return cell;
 }

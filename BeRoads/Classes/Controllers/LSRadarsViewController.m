@@ -12,6 +12,8 @@
 
 #import "LSBeRoadsClient.h"
 
+#import "LSBeRoadsRadarCell.h"
+
 @interface LSRadarsViewController ()
 
 @end
@@ -73,17 +75,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"beRoadsRadarCell";
+    LSBeRoadsRadarCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
+    /*if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
+    }*/
     
     // Configure the cell...
     Radar* currentRadar = [self.radars objectAtIndex:indexPath.row];
-    cell.textLabel.text = [currentRadar name];
-    cell.detailTextLabel.text = [currentRadar type];
+    cell.titleLabel.text = [currentRadar name];
+    cell.speedLimitLabel.text = [currentRadar speedLimit];
     
     return cell;
 }

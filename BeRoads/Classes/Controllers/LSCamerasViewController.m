@@ -11,6 +11,7 @@
 #import "Camera.h"
 
 #import "LSBeRoadsClient.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface LSCamerasViewController ()
 
@@ -94,8 +95,18 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    __weak UITableViewCell* weakCell = cell;
+    
     // Configure the cell...
     Camera* currentCamera = [self.cameras objectAtIndex:indexPath.row];
+    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img]]
+                          placeholderImage:[UIImage imageNamed:@"placeholder-cell"]
+    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        weakCell.imageView.image = image;
+        [weakCell setNeedsDisplay];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"Error : %@",error);
+    }];
     cell.textLabel.text = currentCamera.city;
     cell.detailTextLabel.text = currentCamera.zone;
     
