@@ -87,6 +87,11 @@
     cell.titleLabel.text = [currentRadar name];
     cell.speedLimitLabel.text = [currentRadar speedLimit];
     
+    CLLocation* radarLocation = [[CLLocation alloc] initWithLatitude:[currentRadar.lat floatValue] longitude:[currentRadar.lng floatValue]];
+    int distance = (int) [radarLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
+
+    
     return cell;
 }
 

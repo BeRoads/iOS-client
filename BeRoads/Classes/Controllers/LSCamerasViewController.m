@@ -110,6 +110,8 @@
     cell.textLabel.text = currentCamera.city;
     cell.detailTextLabel.text = currentCamera.zone;
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 
