@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
-#import "LSBeRoadsCell.h"
+#import "LSTrafficEventsBeRoadsCell.h"
 
-@implementation LSBeRoadsCell
+@implementation LSTrafficEventsBeRoadsCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

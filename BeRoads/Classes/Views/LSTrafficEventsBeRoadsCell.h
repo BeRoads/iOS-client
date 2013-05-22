@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSBeRoadsCell : UITableViewCell
+@interface LSTrafficEventsBeRoadsCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
-
 
 @end

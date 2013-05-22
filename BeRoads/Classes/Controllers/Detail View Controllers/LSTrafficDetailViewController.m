@@ -1,28 +1,20 @@
 //
-//  LSTrafficEventsViewController.m
+//  LSTrafficDetailViewController.m
 //  BeRoads
 //
-//  Created by Lionel Schinckus on 11/05/13.
+//  Created by Lionel Schinckus on 22/05/13.
 //  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
-#import "LSTrafficEventsViewController.h"
-
-#import "LSBeRoadsClient.h"
+#import "LSTrafficDetailViewController.h"
 
 #import "TrafficEvent.h"
 
-#import "LSLocationManager.h"
-
-#import "LSTrafficEventsBeRoadsCell.h"
-
-#import "LSTrafficDetailViewController.h"
-
-@interface LSTrafficEventsViewController ()
+@interface LSTrafficDetailViewController ()
 
 @end
 
-@implementation LSTrafficEventsViewController
+@implementation LSTrafficDetailViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,23 +34,24 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = NSLocalizedString(@"Traffic Event", @"Traffic Event");
-    self.title = NSLocalizedString(@"Traffic", @"Traffic");
-    
-    [self reloadTrafficEvents];
-}
-
-- (void)reloadTrafficEvents{
-    [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
-        self.trafficEvents = trafficEvents;
-        [self.tableView reloadData];
-    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self addObserver:self forKeyPath:@"trafficEvent" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self removeObserver:self forKeyPath:@"trafficEvent"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -72,37 +65,46 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.trafficEvents count];
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = 44;
+    
+    if (indexPath.row == 0) {
+        height = [_trafficEvent.location sizeWithFont:[UIFont boldSystemFontOfSize:18] constrainedToSize:CGSizeMake(300, 480)].height;
+    } else if (indexPath.row == 1){
+        height = [_trafficEvent.message sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(300, 480)].height;
+    } else if (indexPath.row == 2){
+        height = 40;
+    }
+    
+    return height + 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"beroadsCell";
-    LSTrafficEventsBeRoadsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    /*
-     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-     }
-     */
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    CLLocation* trafficEventLocation = [[CLLocation alloc] initWithLatitude:[currentTrafficEvent.lat floatValue] longitude:[currentTrafficEvent.lng floatValue]];
-    int distance = (int) [trafficEventLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
-                
-    cell.titleLabel.text = [currentTrafficEvent location];
+    if (indexPath.row == 0) {
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.text = _trafficEvent.location;
+    } else if (indexPath.row == 1){
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.text = _trafficEvent.message;
+    } else if (indexPath.row == 2){
+        cell.textLabel.text = [NSString stringWithFormat:@"Source : %@",_trafficEvent.source];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+    }
     
     return cell;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"detailTrafficEvent"]) {
-        LSTrafficDetailViewController* detailViewController = [segue destinationViewController];
-        detailViewController.trafficEvent = [_trafficEvents objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    }
 }
 
 /*
