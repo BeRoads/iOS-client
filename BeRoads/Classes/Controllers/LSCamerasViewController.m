@@ -12,8 +12,6 @@
 
 #import "LSLocationManager.h"
 
-#import "LSCamerasBeRoadsCell.h"
-
 #import "LSBeRoadsClient.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -65,20 +63,6 @@
     self.title = NSLocalizedString(@"Cameras", @"Cameras");
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
-    [locationManager addDelegate:self];
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
-    [locationManager removeDelegate:self];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    NSLog(@"CameraVC didUpdateLocation %@",newLocation);
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -115,7 +99,6 @@
         NSLog(@"Error : %@",error);
     }];
     cell.textLabel.text = currentCamera.city;
-    cell.detailTextLabel.text = currentCamera.zone;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
