@@ -7,8 +7,12 @@
 //
 
 #import "LSCamerasViewController.h"
-
+#import "LSCameraDetailViewController.h"
 #import "Camera.h"
+
+#import "LSLocationManager.h"
+
+#import "LSCamerasBeRoadsCell.h"
 
 #import "LSBeRoadsClient.h"
 #import "UIImageView+AFNetworking.h"
@@ -37,7 +41,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        
+    
+    self.navigationItem.title = NSLocalizedString(@"Camera", @"Camera");
+    self.title = NSLocalizedString(@"Camera", @"Camera");
+    
     [self reloadCameras];
 }
 
@@ -88,7 +95,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"beroadsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -113,6 +120,13 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"detailCamera"]) {
+        LSCameraDetailViewController* detailViewController = [segue destinationViewController];
+        detailViewController.camera = [_cameras objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
 }
 
 /*

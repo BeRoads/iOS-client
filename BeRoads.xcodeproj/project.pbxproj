@@ -57,6 +57,8 @@
 		49693DF4173F9E81000D408E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF2173F9E80000D408E /* CoreLocation.framework */; };
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
 		49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF7173FE35C000D408E /* LSLocationManager.m */; };
+		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
+		6CB5210D1750CACE004D6B6B /* LSCamerasBeRoadsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5210C1750CACE004D6B6B /* LSCamerasBeRoadsCell.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
 		C59C60971743C2230033BC80 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60941743C2230033BC80 /* radar.png */; };
@@ -150,6 +152,10 @@
 		49693DF3173F9E80000D408E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		49693DF6173FE35C000D408E /* LSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLocationManager.h; sourceTree = "<group>"; };
 		49693DF7173FE35C000D408E /* LSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLocationManager.m; sourceTree = "<group>"; };
+		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
+		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
+		6CB5210B1750CAB8004D6B6B /* LSCamerasBeRoadsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCamerasBeRoadsCell.h; sourceTree = "<group>"; };
+		6CB5210C1750CACE004D6B6B /* LSCamerasBeRoadsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCamerasBeRoadsCell.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
 		C59C60931743C2230033BC80 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		C59C60941743C2230033BC80 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
@@ -180,6 +186,8 @@
 				4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */,
 				4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */,
 				4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */,
+				6CB5210B1750CAB8004D6B6B /* LSCamerasBeRoadsCell.h */,
+				6CB5210C1750CACE004D6B6B /* LSCamerasBeRoadsCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +214,8 @@
 			children = (
 				490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */,
 				490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */,
+				6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */,
+				6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */,
 			);
 			path = "Detail View Controllers";
 			sourceTree = "<group>";
@@ -499,6 +509,8 @@
 				4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */,
 				4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */,
 				490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */,
+				6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */,
+				6CB5210D1750CACE004D6B6B /* LSCamerasBeRoadsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
