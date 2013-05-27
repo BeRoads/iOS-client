@@ -9,13 +9,17 @@
 #import "LSCamerasViewController.h"
 #import "LSCameraDetailViewController.h"
 #import "Camera.h"
+#import "Zone.h"
 
 #import "LSLocationManager.h"
 
 #import "LSBeRoadsClient.h"
+
 #import "UIImageView+AFNetworking.h"
 
 @interface LSCamerasViewController ()
+
+@property (nonatomic, strong) NSArray* zones;
 
 @end
 
@@ -49,6 +53,7 @@
 - (void)reloadCameras{
     [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
         self.cameras = cameras;
+        [self createZones];
         [self.tableView reloadData];
     }];
 }
@@ -68,13 +73,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [self.zones count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.cameras count];
+    return [[[self.zones objectAtIndex:section] cameras] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +94,7 @@
     __weak UITableViewCell* weakCell = cell;
     
     // Configure the cell...
-    Camera* currentCamera = [self.cameras objectAtIndex:indexPath.row];
+    Camera* currentCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
     [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img]]
                           placeholderImage:[UIImage imageNamed:@"placeholder-cell"]
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -105,11 +110,30 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [[self.zones objectAtIndex:section] title];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"detailCamera"]) {
         LSCameraDetailViewController* detailViewController = [segue destinationViewController];
         detailViewController.camera = [_cameras objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
+}
+
+- (void)createZones{
+    NSMutableArray* zonesMutable = [NSMutableArray array];
+    NSArray* titlesZones = [_cameras valueForKeyPath:@"@distinctUnionOfObjects.zone"];
+    
+    for (NSString* title in titlesZones) {
+        Zone* zone = [[Zone alloc] init];
+        zone.title = title;
+        NSPredicate* predicate = [NSPredicate predicateWithFormat:@"zone LIKE %@",title];
+        zone.cameras = [_cameras filteredArrayUsingPredicate:predicate];
+        [zonesMutable addObject:zone];
+    }
+    
+    _zones = [NSArray arrayWithArray:zonesMutable];
 }
 
 /*
