@@ -100,7 +100,7 @@
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.text = _trafficEvent.message;
     } else if (indexPath.row == 2){
-        cell.textLabel.text = [NSString stringWithFormat:@"Source : %@",_trafficEvent.source];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@",NSLocalizedString(@"Source", @"Source"),_trafficEvent.source];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
     }
     

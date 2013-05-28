@@ -58,6 +58,8 @@
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
 		49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF7173FE35C000D408E /* LSLocationManager.m */; };
 		4979182117538C720010974E /* Zone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979182017538C720010974E /* Zone.m */; };
+		4979182D17541A580010974E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4979182817541A580010974E /* Localizable.strings */; };
+		4979182E17541A580010974E /* BeRoads-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49693D27173E44D7000D408E /* BeRoads-Info.plist */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -87,9 +89,9 @@
 		49693D1F173E44D7000D408E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49693D21173E44D7000D408E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49693D23173E44D7000D408E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		49693D27173E44D7000D408E /* BeRoads-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeRoads-Info.plist"; sourceTree = "<group>"; };
+		49693D27173E44D7000D408E /* BeRoads-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BeRoads-Info.plist"; sourceTree = "<group>"; };
 		49693D29173E44D7000D408E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		49693D2B173E44D7000D408E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49693D2B173E44D7000D408E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49693D2D173E44D7000D408E /* BeRoads-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeRoads-Prefix.pch"; sourceTree = "<group>"; };
 		49693D31173E44D7000D408E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		49693D33173E44D7000D408E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -154,6 +156,10 @@
 		49693DF7173FE35C000D408E /* LSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLocationManager.m; sourceTree = "<group>"; };
 		4979181F17538C720010974E /* Zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zone.h; sourceTree = "<group>"; };
 		4979182017538C720010974E /* Zone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zone.m; sourceTree = "<group>"; };
+		4979182917541A580010974E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4979182A17541A580010974E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4979182B17541A580010974E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4979182C17541A580010974E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -263,6 +269,7 @@
 		49693D26173E44D7000D408E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4979182817541A580010974E /* Localizable.strings */,
 				49693D27173E44D7000D408E /* BeRoads-Info.plist */,
 				49693D28173E44D7000D408E /* InfoPlist.strings */,
 				49693D2B173E44D7000D408E /* main.m */,
@@ -469,6 +476,8 @@
 				4906D573174AD29B00693392 /* placeholder-cell.png in Resources */,
 				4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */,
 				4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */,
+				4979182D17541A580010974E /* Localizable.strings in Resources */,
+				4979182E17541A580010974E /* BeRoads-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +535,17 @@
 				49693DCD173E5608000D408E /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4979182817541A580010974E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4979182917541A580010974E /* de */,
+				4979182A17541A580010974E /* en */,
+				4979182B17541A580010974E /* fr */,
+				4979182C17541A580010974E /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

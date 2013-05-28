@@ -42,8 +42,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = NSLocalizedString(@"Traffic Event", @"Traffic Event");
-    self.title = NSLocalizedString(@"Traffic", @"Traffic");
     
     [self reloadTrafficEvents];
 }
@@ -59,6 +57,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)awakeFromNib{
+    self.title = NSLocalizedString(@"Traffic", @"Traffic");
 }
 
 #pragma mark - Table view data source

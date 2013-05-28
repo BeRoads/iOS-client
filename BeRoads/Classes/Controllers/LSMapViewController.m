@@ -110,8 +110,8 @@
         [mapView addOverlay:circleLine];
         
         // set title
-        clusterAnnotation.title = @"Cluster";
-        clusterAnnotation.subtitle = [NSString stringWithFormat:@"Containing annotations: %d", [clusterAnnotation.annotationsInCluster count]];
+        clusterAnnotation.title = NSLocalizedString(@"Cluster", @"Cluster");
+        clusterAnnotation.subtitle = [NSString stringWithFormat:@"%@ : %d",NSLocalizedString(@"Containing annotations", @"Containing annotations"), [clusterAnnotation.annotationsInCluster count]];
         
         // set its image
         annotationView.image = [UIImage imageNamed:@"camera.png"];
@@ -211,18 +211,7 @@
             MKAnnotationView *customAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:radarAnnotationIdentifier];
             customAnnotationView.image = [UIImage imageNamed:@"radar"];
             customAnnotationView.canShowCallout = YES;
-            
-            // add a detail disclosure button to the callout which will open a new view controller page
-            //
-            // note: when the detail disclosure button is tapped, we respond to it via:
-            //       calloutAccessoryControlTapped delegate method
-            //
-            // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
-            //
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
-            customAnnotationView.rightCalloutAccessoryView = rightButton;
-            
+                        
             return customAnnotationView;
         }
         else
