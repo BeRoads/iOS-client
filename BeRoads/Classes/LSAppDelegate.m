@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // Location manager
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
     locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
     locationManager.distanceFilter = 1000; // 1 kilometer
@@ -20,6 +21,14 @@
     locationManager.loop = YES;
     locationManager.loopTimeInterval = 120;
     [locationManager startUpdatingLocation];
+    
+    // The registration domain is volatile.  It does not persist across launches.
+    // You must register your defaults at each launch; otherwise you will get
+    // (system) default values when accessing the values of preferences the
+    // user (via the Settings app) or your app (via set*:forKey:) has not
+    // modified.  Registering a set of default values ensures that your app always
+    // has a known good set of values to operate on.
+    [[LSPreferenceManager defaultManager] populateRegistrationDomain];
     
     return YES;
 }

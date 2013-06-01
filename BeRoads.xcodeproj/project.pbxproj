@@ -77,6 +77,10 @@
 		4979185F1755330D0010974E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4979185E1755330D0010974E /* Settings.bundle */; };
 		4979186117554B6E0010974E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4979186017554B6E0010974E /* MessageUI.framework */; };
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
+		4986C83C1758F7D700DFDE67 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83A1758F7D700DFDE67 /* 20-gear2.png */; };
+		4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */; };
+		4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83E1758FB5200DFDE67 /* 20-info.png */; };
+		4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C841175A944B00DFDE67 /* LSPreferenceManager.m */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -210,6 +214,11 @@
 		4979186017554B6E0010974E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4979186217556D8E0010974E /* LSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSettingsViewController.h; sourceTree = "<group>"; };
 		4979186317556D8E0010974E /* LSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSettingsViewController.m; sourceTree = "<group>"; };
+		4986C83A1758F7D700DFDE67 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2Highlighted.png"; sourceTree = "<group>"; };
+		4986C83E1758FB5200DFDE67 /* 20-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-info.png"; sourceTree = "<group>"; };
+		4986C840175A944B00DFDE67 /* LSPreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPreferenceManager.h; sourceTree = "<group>"; };
+		4986C841175A944B00DFDE67 /* LSPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPreferenceManager.m; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -342,6 +351,8 @@
 				49693DCF173E5678000D408E /* LSBeRoadsClient.m */,
 				49693DF6173FE35C000D408E /* LSLocationManager.h */,
 				49693DF7173FE35C000D408E /* LSLocationManager.m */,
+				4986C840175A944B00DFDE67 /* LSPreferenceManager.h */,
+				4986C841175A944B00DFDE67 /* LSPreferenceManager.m */,
 				49693D84173E5286000D408E /* Models */,
 				4906D56D174A7EEB00693392 /* Views */,
 			);
@@ -401,6 +412,9 @@
 		49693D92173E5286000D408E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4986C83E1758FB5200DFDE67 /* 20-info.png */,
+				4986C83A1758F7D700DFDE67 /* 20-gear2.png */,
+				4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */,
 				C59C60911743C2230033BC80 /* annotations */,
 				4906D575174AD5B600693392 /* bg_speedlimit.png */,
 				4906D571174AD29B00693392 /* placeholder-cell.png */,
@@ -596,6 +610,9 @@
 				4979182D17541A580010974E /* Localizable.strings in Resources */,
 				4979182E17541A580010974E /* BeRoads-Info.plist in Resources */,
 				4979185F1755330D0010974E /* Settings.bundle in Resources */,
+				4986C83C1758F7D700DFDE67 /* 20-gear2.png in Resources */,
+				4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */,
+				4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +670,7 @@
 				4979185C17552C270010974E /* IASKSwitch.m in Sources */,
 				4979185D17552C270010974E /* IASKTextField.m in Sources */,
 				4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */,
+				4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

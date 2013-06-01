@@ -50,7 +50,7 @@
     [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
         self.trafficEvents = trafficEvents;
         [self.tableView reloadData];
-    }];
+    } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
 - (void)didReceiveMemoryWarning

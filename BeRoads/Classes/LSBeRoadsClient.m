@@ -47,12 +47,22 @@ static NSString * const kCamera = @"Camera.json";
 
 #pragma mark GET_FROM_REST
 
-- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block {    
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {    
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
     
     NSString* path = [NSString stringWithFormat:@"%@/%@/%@",kTrafficEvents,language,@"all.json"];
     
-	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:[NSString stringWithFormat:@"%f,%f",coordinate.latitude,coordinate.longitude] forKey:@"from"];
+   
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger area = [userDefaults integerForKey:kAreaPreference];
+    
+    if (area > 0) {
+        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+    }
+    
+	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -84,10 +94,20 @@ static NSString * const kCamera = @"Camera.json";
 	
 }
 
-- (void) getRadars:(void (^)(NSArray*,NSError*))block {    
+- (void) getRadars:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {
     NSString* path = [NSString stringWithFormat:@"%@",kRadar];
     
-	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:[NSString stringWithFormat:@"%f,%f",coordinate.latitude,coordinate.longitude] forKey:@"from"];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger area = [userDefaults integerForKey:kAreaPreference];
+    
+    if (area > 0) {
+        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+    }
+    
+	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -118,10 +138,20 @@ static NSString * const kCamera = @"Camera.json";
 	
 }
 
-- (void) getCameras:(void (^)(NSArray*,NSError*))block {    
+- (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {    
     NSString* path = [NSString stringWithFormat:@"%@",kCamera];
     
-	[self getPath:path parameters:nil success:^(AFHTTPRequestOperation* request, id JSON){
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:[NSString stringWithFormat:@"%f,%f",coordinate.latitude,coordinate.longitude] forKey:@"from"];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSInteger area = [userDefaults integerForKey:kAreaPreference];
+    
+    if (area > 0) {
+        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+    }
+    
+	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         

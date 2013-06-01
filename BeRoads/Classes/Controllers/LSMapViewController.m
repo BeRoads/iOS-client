@@ -16,6 +16,8 @@
 @interface LSMapViewController ()
 
 @property (nonatomic,assign) BOOL firstTime;
+@property (nonatomic,retain) CLLocation* location;
+@property (nonatomic,retain) NSUserDefaults* userDefaults;
 
 @end
 
@@ -30,35 +32,22 @@
     return self;
 }
 
+#pragma mark View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self reloadCameras];
-    [self reloadTrafficEvents];
-    [self reloadRadars];
+    _userDefaults = [NSUserDefaults standardUserDefaults];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     _mapView.showsUserLocation = YES;
-}
-
-- (void)reloadCameras{
-    [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
-        [_mapView addAnnotations:cameras];
-    }];
-}
-
-- (void)reloadTrafficEvents{
-    [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
-        [_mapView addAnnotations:trafficEvents];
-    }];
-}
-
-- (void)reloadRadars{
-    [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
-        [_mapView addAnnotations:radars];
-    }];
+    
+    _mapView.clusteringEnabled = [_userDefaults boolForKey:kClusterPreference];
+    
+    [_mapView removeAnnotations:_mapView.annotations];
+    [self reload];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -79,6 +68,40 @@
     [self setMapView:nil];
     [super viewDidUnload];
 }
+
+#pragma mark NETWORK CONNECTION
+
+- (void)reload{
+    [self reloadCameras];
+    [self reloadTrafficEvents];
+    [self reloadRadars];
+}
+
+- (void)reloadCameras{
+    if ([_userDefaults boolForKey:kCameraPreference]) {
+        [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
+            [_mapView addAnnotations:cameras];
+        } location:_location.coordinate];
+    }
+}
+
+- (void)reloadTrafficEvents{
+    if ([_userDefaults boolForKey:kTrafficreference]) {
+        [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
+            [_mapView addAnnotations:trafficEvents];
+        } location:_location.coordinate];
+    }
+}
+
+- (void)reloadRadars{
+    if ([_userDefaults boolForKey:kRadarPreference]) {
+        [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
+            [_mapView addAnnotations:radars];
+        } location:_location.coordinate];
+    }
+}
+
+#pragma mark MapView Delegate
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     // in case it's the user location, we already have an annotation, so just return nil
@@ -225,7 +248,11 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     if (!_firstTime && [userLocation.location.timestamp timeIntervalSinceNow] < 30 && userLocation.location.horizontalAccuracy > 0) {
-        MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
+        _location = userLocation.location;
+        
+        [self reload];
+        
+        MKCoordinateSpan span = MKCoordinateSpanMake(0.5, 0.5);
         MKCoordinateRegion region = MKCoordinateRegionMake(userLocation.coordinate, span);
         
         NSLog(@"User loation : %@",_mapView.userLocation);

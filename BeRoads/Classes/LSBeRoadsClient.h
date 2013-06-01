@@ -12,10 +12,10 @@
 
 + (LSBeRoadsClient*)sharedClient;
 
-- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block;
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
 
-- (void) getRadars:(void (^)(NSArray*,NSError*))block;
+- (void) getRadars:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
 
-- (void) getCameras:(void (^)(NSArray*,NSError*))block;
+- (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
 
 @end

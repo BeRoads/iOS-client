@@ -55,7 +55,7 @@
         self.cameras = cameras;
         [self createZones];
         [self.tableView reloadData];
-    }];
+    } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
 - (void)didReceiveMemoryWarning

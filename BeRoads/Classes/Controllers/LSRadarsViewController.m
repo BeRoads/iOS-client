@@ -46,7 +46,7 @@
     [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
         self.radars = radars;
         [self.tableView reloadData];
-    }];
+    } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
 - (void)didReceiveMemoryWarning

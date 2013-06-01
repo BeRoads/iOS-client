@@ -15,4 +15,5 @@
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <CoreLocation/CoreLocation.h>
     #import "LSLocationManager.h"
+    #import "LSPreferenceManager.h"
 #endif
