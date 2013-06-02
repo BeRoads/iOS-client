@@ -13,6 +13,8 @@
 
 @interface LSCameraDetailViewController ()
 
+@property (nonatomic, strong) UIImageView *myImageView;
+
 @end
 
 @implementation LSCameraDetailViewController

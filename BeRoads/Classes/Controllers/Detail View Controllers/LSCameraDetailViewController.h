@@ -11,6 +11,7 @@
 @class Camera;
 
 @interface LSCameraDetailViewController : UIViewController
+
 @property (nonatomic,strong) Camera* camera;
-@property (nonatomic, strong) UIImageView *myImageView;
+
 @end

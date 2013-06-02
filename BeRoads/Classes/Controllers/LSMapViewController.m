@@ -13,6 +13,9 @@
 #import "LSBeRoadsClient.h"
 #import "OCAnnotation.h"
 
+#import "LSTrafficDetailViewController.h"
+#import "LSCameraDetailViewController.h"
+
 @interface LSMapViewController ()
 
 @property (nonatomic,assign) BOOL firstTime;
@@ -102,6 +105,21 @@
 }
 
 #pragma mark MapView Delegate
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    // here we illustrate how to detect which annotation type was clicked on for its callout
+    id <MKAnnotation> annotation = [view annotation];
+
+    if ([annotation isKindOfClass:[Camera class]]){
+        LSCameraDetailViewController* cameraDetailViewController = [[LSCameraDetailViewController alloc] init];
+        cameraDetailViewController.camera = (Camera*)annotation;
+        [self.navigationController pushViewController:cameraDetailViewController animated:YES];
+    } else if ([annotation isKindOfClass:[TrafficEvent class]]){
+        LSTrafficDetailViewController* trafficDetailViewController = [[LSTrafficDetailViewController alloc] init];
+        trafficDetailViewController.trafficEvent = (TrafficEvent*)annotation;
+        [self.navigationController pushViewController:trafficDetailViewController animated:YES];
+    }
+}
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     // in case it's the user location, we already have an annotation, so just return nil
