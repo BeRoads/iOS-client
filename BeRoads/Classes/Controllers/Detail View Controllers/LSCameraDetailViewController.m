@@ -10,10 +10,12 @@
 #import "UIImageView+AFNetworking.h"
 
 #import "Camera.h"
+#import "ImageScrollView.h"
 
 @interface LSCameraDetailViewController ()
 
 @property (nonatomic, strong) UIImageView *myImageView;
+@property (strong, nonatomic) IBOutlet ImageScrollView *imageScrollView;
 
 @end
 
@@ -35,32 +37,14 @@
     self.navigationItem.title = self.camera.city;
     self.title = self.camera.city;
     
-    UIImage *myScreenShot = [UIImage imageNamed:@"Default.png"];
-    self.myImageView = [[UIImageView alloc] initWithImage:myScreenShot];
-    UIImageView *img = self.myImageView;
-    [self.myImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.camera.img]]
-                          placeholderImage:[UIImage imageNamed:@"placeholder-cell"]
+    UIImageView *img = [[UIImageView alloc] init];
+    [img setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.camera.img]]
+                          placeholderImage:[UIImage imageNamed:@"Default"]
                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       img.image = image;
+                                       [_imageScrollView displayImage:image];
                                    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                        NSLog(@"Error : %@",error);
                                    }];
-    //set the frame for the image view
-    CGRect myFrame = CGRectMake(0, 0, self.myImageView.frame.size.width,
-                                self.myImageView.frame.size.height/2);
-    [self.myImageView setFrame:myFrame];
-    
-    //If your image is bigger than the frame then you can scale it
-    [self.myImageView setContentMode:UIViewContentModeScaleAspectFit];
-    
-    //add the image view to the current view
-    [self.view addSubview:self.myImageView];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,4 +62,8 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setImageScrollView:nil];
+    [super viewDidUnload];
+}
 @end

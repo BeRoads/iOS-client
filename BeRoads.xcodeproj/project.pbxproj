@@ -81,6 +81,8 @@
 		4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */; };
 		4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83E1758FB5200DFDE67 /* 20-info.png */; };
 		4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C841175A944B00DFDE67 /* LSPreferenceManager.m */; };
+		4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */; };
+		4986C84A175BF94200DFDE67 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C848175BF94200DFDE67 /* ImageScrollView.m */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -219,6 +221,10 @@
 		4986C83E1758FB5200DFDE67 /* 20-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-info.png"; sourceTree = "<group>"; };
 		4986C840175A944B00DFDE67 /* LSPreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPreferenceManager.h; sourceTree = "<group>"; };
 		4986C841175A944B00DFDE67 /* LSPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPreferenceManager.m; sourceTree = "<group>"; };
+		4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+UITabBarController_HideTabBar.h"; sourceTree = "<group>"; };
+		4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+UITabBarController_HideTabBar.m"; sourceTree = "<group>"; };
+		4986C847175BF94200DFDE67 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		4986C848175BF94200DFDE67 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */,
 				6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */,
 				6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */,
+				4986C843175BF94200DFDE67 /* ScrollViews */,
 			);
 			path = "Detail View Controllers";
 			sourceTree = "<group>";
@@ -526,6 +533,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4986C843175BF94200DFDE67 /* ScrollViews */ = {
+			isa = PBXGroup;
+			children = (
+				4986C844175BF94200DFDE67 /* Categories */,
+				4986C847175BF94200DFDE67 /* ImageScrollView.h */,
+				4986C848175BF94200DFDE67 /* ImageScrollView.m */,
+			);
+			path = ScrollViews;
+			sourceTree = "<group>";
+		};
+		4986C844175BF94200DFDE67 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */,
+				4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		C59C60911743C2230033BC80 /* annotations */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +697,8 @@
 				4979185D17552C270010974E /* IASKTextField.m in Sources */,
 				4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */,
 				4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */,
+				4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */,
+				4986C84A175BF94200DFDE67 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
