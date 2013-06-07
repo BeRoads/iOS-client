@@ -46,6 +46,11 @@
     [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
         self.radars = radars;
         [self.tableView reloadData];
+        
+        PullTableView* pullTableView = (PullTableView*)self.tableView;
+        if (pullTableView.pullTableIsRefreshing) {
+            pullTableView.pullTableIsRefreshing = NO;
+        }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
@@ -77,11 +82,7 @@
 {
     static NSString *CellIdentifier = @"beRoadsRadarCell";
     LSBeRoadsRadarCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    /*if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }*/
-    
+        
     // Configure the cell...
     Radar* currentRadar = [self.radars objectAtIndex:indexPath.row];
     cell.titleLabel.text = [currentRadar name];
@@ -94,6 +95,19 @@
     
     return cell;
 }
+
+#pragma mark PullToRefreshDelegate
+- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+{
+    [self reloadRadars];
+}
+
+- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
+    
+}
+
+#pragma mark - Table view data source
+
 
 /*
 // Override to support conditional editing of the table view.

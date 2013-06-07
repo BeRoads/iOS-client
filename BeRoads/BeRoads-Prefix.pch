@@ -8,6 +8,7 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
+
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
@@ -16,4 +17,7 @@
     #import <CoreLocation/CoreLocation.h>
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
+    #import "TestFlight.h"
 #endif
+
+#define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

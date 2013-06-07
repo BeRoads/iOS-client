@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PullTableView.h"
+
 @interface LSRadarsViewController : UITableViewController
 
 @property (nonatomic,strong) NSArray* radars;

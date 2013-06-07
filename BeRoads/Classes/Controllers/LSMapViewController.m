@@ -282,24 +282,7 @@
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay{
-    MKCircle *circle = overlay;
     MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:overlay];
-    
-    /*if ([circle.title isEqualToString:@"background"])
-    {
-        circleView.fillColor = [UIColor yellowColor];
-        circleView.alpha = 0.25;
-    }
-    else if ([circle.title isEqualToString:@"helper"])
-    {
-        circleView.fillColor = [UIColor redColor];
-        circleView.alpha = 0.25;
-    }
-    else
-    {
-        circleView.strokeColor = [UIColor blackColor];
-        circleView.lineWidth = 0.5;
-    }*/
     
     return circleView;
 }

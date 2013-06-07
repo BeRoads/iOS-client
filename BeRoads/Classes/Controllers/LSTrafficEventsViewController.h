@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSTrafficEventsViewController : UITableViewController
+#import "PullTableView.h"
+
+@interface LSTrafficEventsViewController : UITableViewController <PullTableViewDelegate>
 
 @property (nonatomic,strong) NSArray* trafficEvents;
 

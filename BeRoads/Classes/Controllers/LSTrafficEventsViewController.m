@@ -50,6 +50,11 @@
     [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
         self.trafficEvents = trafficEvents;
         [self.tableView reloadData];
+        
+        PullTableView* pullTableView = (PullTableView*)self.tableView;
+        if (pullTableView.pullTableIsRefreshing) {
+            pullTableView.pullTableIsRefreshing = NO;
+        }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
@@ -106,6 +111,18 @@
         detailViewController.trafficEvent = [_trafficEvents objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
+
+#pragma mark PullToRefreshDelegate
+- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+{
+    [self reloadTrafficEvents];
+}
+
+- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
+    
+}
+
+#pragma mark - Table view data source
 
 /*
 // Override to support conditional editing of the table view.

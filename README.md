@@ -11,16 +11,19 @@ Library used in this project
 * OCMapView : https://github.com/yinkou/OCMapView
 * InAppSettingsKit : https://github.com/futuretap/InAppSettingsKit
 * DMLocationManager : https://github.com/martinstolz/DMLocationManager
+* EGOTableViewPullToRefresh : https://github.com/mrackwitz/EGOTableViewPullRefresh
+* FormatterKit : https://github.com/mattt/FormatterKit
 
 RoadMap
 -------
 
 ###v1.0
 
-* All features in the Mobile WebApp
-* Image ScrollView for zoom in Camera Detail View Controller
-* About view
-* Add icons for the apps
+* All features in the Mobile WebApp (done)
+* Image ScrollView for zoom in Camera Detail View Controller (done)
+* About view (done)
+* Add icons for the apps (done)
+* Pull To Refresh for Table View (done)
 
 ###v1.1
 * Push notification

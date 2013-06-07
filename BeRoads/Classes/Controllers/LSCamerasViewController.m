@@ -55,6 +55,11 @@
         self.cameras = cameras;
         [self createZones];
         [self.tableView reloadData];
+        
+        PullTableView* pullTableView = (PullTableView*)self.tableView;
+        if (pullTableView.pullTableIsRefreshing) {
+            pullTableView.pullTableIsRefreshing = NO;
+        }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
@@ -135,6 +140,19 @@
     
     _zones = [NSArray arrayWithArray:zonesMutable];
 }
+
+#pragma mark PullToRefreshDelegate
+- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+{
+    [self reloadCameras];
+}
+
+- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
+    
+}
+
+#pragma mark - Table view data source
+
 
 /*
 // Override to support conditional editing of the table view.

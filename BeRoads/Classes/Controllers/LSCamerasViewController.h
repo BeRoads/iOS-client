@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PullTableView.h"
+
 @interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate>
 
 @property (nonatomic,strong) NSArray* cameras;

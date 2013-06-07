@@ -7,3 +7,9 @@
 [submodule "BeRoads/Vendors/InAppSettingsKit"]
 	path = BeRoads/Vendors/InAppSettingsKit
 	url = https://github.com/futuretap/InAppSettingsKit.git
+[submodule "BeRoads/Vendors/FormatterKit"]
+	path = BeRoads/Vendors/FormatterKit
+	url = https://github.com/mattt/FormatterKit.git
+[submodule "BeRoads/Vendors/EGOTableViewPullToRefresh"]
+	path = BeRoads/Vendors/EGOTableViewPullToRefresh
+	url = https://github.com/mrackwitz/EGOTableViewPullRefresh.git
