@@ -53,6 +53,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ckx-SB-KJI" customClass="OCMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="l7M-i7-8BG" id="Bpj-4W-NYf"/>
                                 </connections>
