@@ -45,8 +45,6 @@
 		49463223176134F50065AE05 /* qkaiser.png in Resources */ = {isa = PBXBuildFile; fileRef = 4946321F176134F50065AE05 /* qkaiser.png */; };
 		49463224176134F50065AE05 /* valcapri.png in Resources */ = {isa = PBXBuildFile; fileRef = 49463220176134F50065AE05 /* valcapri.png */; };
 		49463225176134F50065AE05 /* waza_be.png in Resources */ = {isa = PBXBuildFile; fileRef = 49463221176134F50065AE05 /* waza_be.png */; };
-		4946322C1761399D0065AE05 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4946322A1761399D0065AE05 /* icon.png */; };
-		4946322D1761399D0065AE05 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4946322B1761399D0065AE05 /* icon@2x.png */; };
 		4946323317614E0A0065AE05 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4946322F17614E0A0065AE05 /* libTestFlight.a */; };
 		4946323417614E0A0065AE05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4946323017614E0A0065AE05 /* README.md */; };
 		4946323517614E0A0065AE05 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 4946323117614E0A0065AE05 /* release_notes.md */; };
@@ -117,8 +115,10 @@
 		4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83E1758FB5200DFDE67 /* 20-info.png */; };
 		4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C841175A944B00DFDE67 /* LSPreferenceManager.m */; };
 		4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */; };
-		4986C84A175BF94200DFDE67 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C848175BF94200DFDE67 /* ImageScrollView.m */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
+		C56B74991772DD1700D9C305 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C56B74971772DD1700D9C305 /* Icon.png */; };
+		C56B749A1772DD1700D9C305 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C56B74981772DD1700D9C305 /* Icon@2x.png */; };
+		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
 		C59C60971743C2230033BC80 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60941743C2230033BC80 /* radar.png */; };
@@ -189,8 +189,6 @@
 		4946321F176134F50065AE05 /* qkaiser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qkaiser.png; sourceTree = "<group>"; };
 		49463220176134F50065AE05 /* valcapri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valcapri.png; sourceTree = "<group>"; };
 		49463221176134F50065AE05 /* waza_be.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waza_be.png; sourceTree = "<group>"; };
-		4946322A1761399D0065AE05 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		4946322B1761399D0065AE05 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		4946322F17614E0A0065AE05 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		4946323017614E0A0065AE05 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4946323117614E0A0065AE05 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -312,10 +310,12 @@
 		4986C841175A944B00DFDE67 /* LSPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPreferenceManager.m; sourceTree = "<group>"; };
 		4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+UITabBarController_HideTabBar.h"; sourceTree = "<group>"; };
 		4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+UITabBarController_HideTabBar.m"; sourceTree = "<group>"; };
-		4986C847175BF94200DFDE67 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
-		4986C848175BF94200DFDE67 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
+		C56B74971772DD1700D9C305 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C56B74981772DD1700D9C305 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
+		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
 		C59C60931743C2230033BC80 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		C59C60941743C2230033BC80 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
@@ -566,6 +566,8 @@
 				49693DDB173E6692000D408E /* LSCamerasViewController.m */,
 				4979186217556D8E0010974E /* LSSettingsViewController.h */,
 				4979186317556D8E0010974E /* LSSettingsViewController.m */,
+				C56FA373177333D000596208 /* LSAboutViewController.h */,
+				C56FA374177333D000596208 /* LSAboutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -606,8 +608,8 @@
 		49693D92173E5286000D408E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4946322A1761399D0065AE05 /* icon.png */,
-				4946322B1761399D0065AE05 /* icon@2x.png */,
+				C56B74971772DD1700D9C305 /* Icon.png */,
+				C56B74981772DD1700D9C305 /* Icon@2x.png */,
 				4946321D176134F50065AE05 /* authors */,
 				4986C83E1758FB5200DFDE67 /* 20-info.png */,
 				4986C83A1758F7D700DFDE67 /* 20-gear2.png */,
@@ -730,8 +732,6 @@
 			isa = PBXGroup;
 			children = (
 				4986C844175BF94200DFDE67 /* Categories */,
-				4986C847175BF94200DFDE67 /* ImageScrollView.h */,
-				4986C848175BF94200DFDE67 /* ImageScrollView.m */,
 			);
 			path = ScrollViews;
 			sourceTree = "<group>";
@@ -846,10 +846,10 @@
 				49463223176134F50065AE05 /* qkaiser.png in Resources */,
 				49463224176134F50065AE05 /* valcapri.png in Resources */,
 				49463225176134F50065AE05 /* waza_be.png in Resources */,
-				4946322C1761399D0065AE05 /* icon.png in Resources */,
-				4946322D1761399D0065AE05 /* icon@2x.png in Resources */,
 				4946323417614E0A0065AE05 /* README.md in Resources */,
 				4946323517614E0A0065AE05 /* release_notes.md in Resources */,
+				C56B74991772DD1700D9C305 /* Icon.png in Resources */,
+				C56B749A1772DD1700D9C305 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,7 +909,6 @@
 				4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */,
 				4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */,
 				4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */,
-				4986C84A175BF94200DFDE67 /* ImageScrollView.m in Sources */,
 				494631F01760E3BE0065AE05 /* LoadMoreTableFooterView.m in Sources */,
 				494631F11760E3BE0065AE05 /* MessageInterceptor.m in Sources */,
 				494631F21760E3BE0065AE05 /* NSDate+LastUpdatedTime.m in Sources */,
@@ -923,6 +922,7 @@
 				494632121760E3E30065AE05 /* TTTTimeIntervalFormatter.m in Sources */,
 				494632131760E3E30065AE05 /* TTTUnitOfInformationFormatter.m in Sources */,
 				494632141760E3E30065AE05 /* TTTURLRequestFormatter.m in Sources */,
+				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,8 +1003,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
+				PROVISIONING_PROFILE = "797233D2-B486-40C5-8C19-CD6226BDB4ED";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "797233D2-B486-40C5-8C19-CD6226BDB4ED";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1021,8 +1021,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lionel Schinckus (GXE2LX9ZB2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Lionel Schinckus";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Lionel Schinckus";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1030,8 +1030,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6BD33E3-89A9-43D6-B2B3-1B98D4A57CD4";
+				PROVISIONING_PROFILE = "A1A924BC-0410-402C-B0FD-EE22F1AAF811";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A1A924BC-0410-402C-B0FD-EE22F1AAF811";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
