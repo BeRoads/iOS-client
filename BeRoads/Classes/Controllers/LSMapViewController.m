@@ -11,7 +11,6 @@
 #import "TrafficEvent.h"
 #import "Radar.h"
 #import "LSBeRoadsClient.h"
-#import "OCAnnotation.h"
 
 #import "LSTrafficDetailViewController.h"
 #import "LSCameraDetailViewController.h"
@@ -46,9 +45,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     _mapView.showsUserLocation = YES;
-    
-    _mapView.clusteringEnabled = [_userDefaults boolForKey:kClusterPreference];
-    
+        
     [_mapView removeAnnotations:_mapView.annotations];
     [self reload];
 }
@@ -128,50 +125,6 @@
         return nil;
     }
     
-    //handle clustering
-    if ([annotation isKindOfClass:[OCAnnotation class]]) {
-        OCAnnotation *clusterAnnotation = (OCAnnotation *)annotation;
-        
-        MKAnnotationView* annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
-        if (!annotationView) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
-            annotationView.canShowCallout = YES;
-            annotationView.centerOffset = CGPointMake(0, -20);
-        }
-        //calculate cluster region
-        CLLocationDistance clusterRadius = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0f; //static circle size of cluster
-        //CLLocationDistance clusterRadius = mapView.region.span.longitudeDelta/log(mapView.region.span.longitudeDelta*mapView.region.span.longitudeDelta) * log(pow([clusterAnnotation.annotationsInCluster count], 4)) * self.mapView.clusterSize * 50000; //circle size based on number of annotations in cluster
-        
-        MKCircle *circle = [MKCircle circleWithCenterCoordinate:clusterAnnotation.coordinate radius:clusterRadius * cos([annotation coordinate].latitude * M_PI / 180.0)];
-        [circle setTitle:@"background"];
-        [mapView addOverlay:circle];
-        
-        MKCircle *circleLine = [MKCircle circleWithCenterCoordinate:clusterAnnotation.coordinate radius:clusterRadius * cos([annotation coordinate].latitude * M_PI / 180.0)];
-        [circleLine setTitle:@"line"];
-        [mapView addOverlay:circleLine];
-        
-        // set title
-        clusterAnnotation.title = NSLocalizedString(@"Cluster", @"Cluster");
-        clusterAnnotation.subtitle = [NSString stringWithFormat:@"%@ : %d",NSLocalizedString(@"Containing annotations", @"Containing annotations"), [clusterAnnotation.annotationsInCluster count]];
-        
-        // set its image
-        annotationView.image = [UIImage imageNamed:@"camera.png"];
-        
-        // change pin image for group
-        if (self.mapView.clusterByGroupTag) {
-            if ([clusterAnnotation.groupTag isEqualToString:@"Radar"]) {
-                annotationView.image = [UIImage imageNamed:@"radar"];
-            }
-            else if([clusterAnnotation.groupTag isEqualToString:@"TrafficEvent"]){
-                annotationView.image = [UIImage imageNamed:@"accident"];
-            }
-            else if([clusterAnnotation.groupTag isEqualToString:@"Camera"]){
-                annotationView.image = [UIImage imageNamed:@"camera"];
-            }
-            clusterAnnotation.title = clusterAnnotation.groupTag;
-        }
-        return annotationView;
-    }
     
     // handle our three custom annotations
     //
@@ -279,17 +232,6 @@
         [_mapView regionThatFits:region];
         _firstTime = YES;
     }
-}
-
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay{
-    MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:overlay];
-    
-    return circleView;
-}
-
-- (void)mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated{
-    [self.mapView removeOverlays:self.mapView.overlays];
-    [self.mapView doClustering];
 }
 
 @end

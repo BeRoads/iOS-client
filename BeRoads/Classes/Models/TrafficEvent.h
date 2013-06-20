@@ -8,9 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-#import "OCGrouping.h"
-
-@interface TrafficEvent : NSObject <MKAnnotation,OCGrouping>
+@interface TrafficEvent : NSObject <MKAnnotation>
 {
 	NSString *message;
 	NSString *location;

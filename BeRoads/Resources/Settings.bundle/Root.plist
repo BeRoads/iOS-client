@@ -64,16 +64,6 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Cluster of annotations</string>
-			<key>Key</key>
-			<string>cluster_preference</string>
-			<key>DefaultValue</key>
-			<true/>
-		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

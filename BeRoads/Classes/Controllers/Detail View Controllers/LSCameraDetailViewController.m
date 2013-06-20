@@ -149,6 +149,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [self addObserver:self forKeyPath:@"camera" options:NSKeyValueObservingOptionNew context:nil];
+    NSLog(@"Camera : %@ %@",_camera.title,_camera.img);
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

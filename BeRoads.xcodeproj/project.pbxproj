@@ -12,10 +12,6 @@
 		4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4906D572174AD29B00693392 /* placeholder-cell@2x.png */; };
 		4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4906D575174AD5B600693392 /* bg_speedlimit.png */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
-		490A7BAE1745FCF60013D46F /* OCAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BA61745FCF60013D46F /* OCAlgorithms.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		490A7BAF1745FCF60013D46F /* OCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BA81745FCF60013D46F /* OCAnnotation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		490A7BB01745FCF60013D46F /* OCDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BAA1745FCF60013D46F /* OCDistance.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		490A7BB11745FCF60013D46F /* OCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BAD1745FCF60013D46F /* OCMapView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */; };
 		494631F01760E3BE0065AE05 /* LoadMoreTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494631D81760E3BD0065AE05 /* LoadMoreTableFooterView.m */; };
 		494631F11760E3BE0065AE05 /* MessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 494631DA1760E3BD0065AE05 /* MessageInterceptor.m */; };
@@ -131,15 +127,6 @@
 		4906D575174AD5B600693392 /* bg_speedlimit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_speedlimit.png; sourceTree = "<group>"; };
 		4906D577174AD77B00693392 /* LSBeRoadsRadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBeRoadsRadarCell.h; sourceTree = "<group>"; };
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
-		490A7BA51745FCF60013D46F /* OCAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithms.h; sourceTree = "<group>"; };
-		490A7BA61745FCF60013D46F /* OCAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAlgorithms.m; sourceTree = "<group>"; };
-		490A7BA71745FCF60013D46F /* OCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAnnotation.h; sourceTree = "<group>"; };
-		490A7BA81745FCF60013D46F /* OCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAnnotation.m; sourceTree = "<group>"; };
-		490A7BA91745FCF60013D46F /* OCDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDistance.h; sourceTree = "<group>"; };
-		490A7BAA1745FCF60013D46F /* OCDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDistance.m; sourceTree = "<group>"; };
-		490A7BAB1745FCF60013D46F /* OCGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGrouping.h; sourceTree = "<group>"; };
-		490A7BAC1745FCF60013D46F /* OCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMapView.h; sourceTree = "<group>"; };
-		490A7BAD1745FCF60013D46F /* OCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMapView.m; sourceTree = "<group>"; };
 		490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficDetailViewController.h; sourceTree = "<group>"; };
 		490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficDetailViewController.m; sourceTree = "<group>"; };
 		494631D71760E3BD0065AE05 /* LoadMoreTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreTableFooterView.h; sourceTree = "<group>"; };
@@ -352,23 +339,6 @@
 				4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		490A7BA41745FCF60013D46F /* OCMapView */ = {
-			isa = PBXGroup;
-			children = (
-				490A7BA51745FCF60013D46F /* OCAlgorithms.h */,
-				490A7BA61745FCF60013D46F /* OCAlgorithms.m */,
-				490A7BA71745FCF60013D46F /* OCAnnotation.h */,
-				490A7BA81745FCF60013D46F /* OCAnnotation.m */,
-				490A7BA91745FCF60013D46F /* OCDistance.h */,
-				490A7BAA1745FCF60013D46F /* OCDistance.m */,
-				490A7BAB1745FCF60013D46F /* OCGrouping.h */,
-				490A7BAC1745FCF60013D46F /* OCMapView.h */,
-				490A7BAD1745FCF60013D46F /* OCMapView.m */,
-			);
-			name = OCMapView;
-			path = OCMapView/OCMapView;
 			sourceTree = "<group>";
 		};
 		490A7BB4174C92DD0013D46F /* Detail View Controllers */ = {
@@ -634,7 +604,6 @@
 				494631D51760E3BD0065AE05 /* EGOTableViewPullRefresh */,
 				4979182F17552C270010974E /* InAppSettingsKit */,
 				49693DAE173E53EA000D408E /* AFNetworking */,
-				490A7BA41745FCF60013D46F /* OCMapView */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -757,9 +726,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49693D1B173E44D7000D408E /* BeRoads */ = {
+		49693D1B173E44D7000D408E /* beroads */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49693D4A173E44D7000D408E /* Build configuration list for PBXNativeTarget "BeRoads" */;
+			buildConfigurationList = 49693D4A173E44D7000D408E /* Build configuration list for PBXNativeTarget "beroads" */;
 			buildPhases = (
 				49693D18173E44D7000D408E /* Sources */,
 				49693D19173E44D7000D408E /* Frameworks */,
@@ -769,7 +738,7 @@
 			);
 			dependencies = (
 			);
-			name = BeRoads;
+			name = beroads;
 			productName = BeRoads;
 			productReference = 49693D1C173E44D7000D408E /* BeRoads.app */;
 			productType = "com.apple.product-type.application";
@@ -799,7 +768,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49693D1B173E44D7000D408E /* BeRoads */,
+				49693D1B173E44D7000D408E /* beroads */,
 			);
 		};
 /* End PBXProject section */
@@ -881,10 +850,6 @@
 				49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */,
 				49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */,
 				49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */,
-				490A7BAE1745FCF60013D46F /* OCAlgorithms.m in Sources */,
-				490A7BAF1745FCF60013D46F /* OCAnnotation.m in Sources */,
-				490A7BB01745FCF60013D46F /* OCDistance.m in Sources */,
-				490A7BB11745FCF60013D46F /* OCMapView.m in Sources */,
 				4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */,
 				4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */,
 				490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */,
@@ -1079,7 +1044,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49693D4A173E44D7000D408E /* Build configuration list for PBXNativeTarget "BeRoads" */ = {
+		49693D4A173E44D7000D408E /* Build configuration list for PBXNativeTarget "beroads" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49693D4B173E44D7000D408E /* Debug */,
