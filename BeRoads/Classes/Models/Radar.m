@@ -44,6 +44,12 @@
 	{
 		self.name = name_;
 	}
+    
+    id address_ = [dic objectForKey:@"address"];
+	if([address_ isKindOfClass:[NSString class]])
+	{
+		self.address = address_;
+	}
 
 	id lat_ = [dic objectForKey:@"lat"];
 	if([lat_ isKindOfClass:[NSString class]])

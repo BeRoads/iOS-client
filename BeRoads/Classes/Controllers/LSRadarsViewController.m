@@ -85,7 +85,7 @@
         
     // Configure the cell...
     Radar* currentRadar = [self.radars objectAtIndex:indexPath.row];
-    cell.titleLabel.text = [currentRadar name];
+    cell.titleLabel.text = [currentRadar address];
     cell.speedLimitLabel.text = [currentRadar speedLimit];
     
     CLLocation* radarLocation = [[CLLocation alloc] initWithLatitude:[currentRadar.lat floatValue] longitude:[currentRadar.lng floatValue]];

@@ -92,7 +92,6 @@
 		49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF7173FE35C000D408E /* LSLocationManager.m */; };
 		4979182117538C720010974E /* Zone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979182017538C720010974E /* Zone.m */; };
 		4979182D17541A580010974E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4979182817541A580010974E /* Localizable.strings */; };
-		4979182E17541A580010974E /* BeRoads-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49693D27173E44D7000D408E /* BeRoads-Info.plist */; };
 		4979185017552C270010974E /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979183217552C270010974E /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4979185117552C270010974E /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979183417552C270010974E /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4979185217552C270010974E /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979183617552C270010974E /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -827,7 +826,6 @@
 				4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */,
 				4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */,
 				4979182D17541A580010974E /* Localizable.strings in Resources */,
-				4979182E17541A580010974E /* BeRoads-Info.plist in Resources */,
 				4979185F1755330D0010974E /* Settings.bundle in Resources */,
 				4986C83C1758F7D700DFDE67 /* 20-gear2.png in Resources */,
 				4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */,
