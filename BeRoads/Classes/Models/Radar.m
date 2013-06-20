@@ -90,8 +90,4 @@
     return [NSString stringWithFormat:@"%@ - %@",speedLimit,type];
 }
 
--(NSString *) groupTag{
-    return @"Radar";
-}
-
 @end

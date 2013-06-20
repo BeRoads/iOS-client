@@ -78,15 +78,11 @@
 }
 
 - (NSString *)title{
-    return zone;
-}
-
-- (NSString *)subtitle{
     return city;
 }
 
--(NSString *) groupTag{
-    return @"Camera";
+- (NSString *)subtitle{
+    return zone;
 }
 
 @end

@@ -8,9 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-#import "OCGrouping.h"
-
-@interface Camera : NSObject <MKAnnotation,OCGrouping>
+@interface Camera : NSObject <MKAnnotation>
 {
 	NSString *city;
 	NSString *zone;

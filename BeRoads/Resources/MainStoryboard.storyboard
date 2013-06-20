@@ -51,7 +51,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ckx-SB-KJI" customClass="OCMapView">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ckx-SB-KJI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -553,7 +553,7 @@
         <class className="LSMapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LSMapViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="OCMapView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
         <class className="LSRadarsViewController" superclassName="UITableViewController">
@@ -574,9 +574,6 @@
         </class>
         <class className="LSTrafficEventsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LSTrafficEventsViewController.h"/>
-        </class>
-        <class className="OCMapView" superclassName="MKMapView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OCMapView.h"/>
         </class>
         <class className="PullTableView" superclassName="UITableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PullTableView.h"/>
