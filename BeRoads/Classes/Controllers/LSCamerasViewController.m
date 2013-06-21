@@ -120,7 +120,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"detailCamera"]) {
         LSCameraDetailViewController* detailViewController = [segue destinationViewController];
-        detailViewController.camera = [_cameras objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        Camera* selectedCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
+        detailViewController.camera = selectedCamera;
     }
 }
 

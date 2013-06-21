@@ -181,7 +181,7 @@
 		4946323217614E0A0065AE05 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		49463236176150B70065AE05 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		49463238176152FA0065AE05 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		49693D1C173E44D7000D408E /* BeRoads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRoads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49693D1C173E44D7000D408E /* beroads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beroads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49693D1F173E44D7000D408E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49693D21173E44D7000D408E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49693D23173E44D7000D408E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -455,7 +455,7 @@
 		49693D1D173E44D7000D408E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49693D1C173E44D7000D408E /* BeRoads.app */,
+				49693D1C173E44D7000D408E /* beroads.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -740,7 +740,7 @@
 			);
 			name = beroads;
 			productName = BeRoads;
-			productReference = 49693D1C173E44D7000D408E /* BeRoads.app */;
+			productReference = 49693D1C173E44D7000D408E /* beroads.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
