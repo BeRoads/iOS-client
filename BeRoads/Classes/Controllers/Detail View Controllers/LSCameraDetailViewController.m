@@ -17,7 +17,7 @@
 - (void)scrollViewDoubleTapped:(UITapGestureRecognizer*)recognizer;
 - (void)scrollViewTwoFingerTapped:(UITapGestureRecognizer*)recognizer;
 
-@property (nonatomic, strong) UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
@@ -35,23 +35,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationItem.title = self.camera.city;
     self.title = self.camera.city;
-    
-    UIImageView *img = [[UIImageView alloc] init];
-    [img setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.camera.img]]
-                          placeholderImage:[UIImage imageNamed:@"Default"]
-                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       _imageView = [[UIImageView alloc] initWithImage:image];
-                                       [self displayImageView];
-                                   } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-                                       NSLog(@"Error : %@",error);
-                                   }];
 }
 
-- (void)displayImageView{
-    [self.scrollView addSubview:self.imageView];
-    
+- (void)displayImageView{    
     // 2
     self.scrollView.contentSize = _imageView.image.size;
     
@@ -148,17 +135,46 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self addObserver:self forKeyPath:@"camera" options:NSKeyValueObservingOptionNew context:nil];
-    NSLog(@"Camera : %@ %@",_camera.title,_camera.img);
+    [self addObserver:self forKeyPath:@"camera.img" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)loadImageFromNetwork{
+    __weak LSCameraDetailViewController* weakSelf = self;
+    NSString* urlString = [self.camera.img stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL* url = [NSURL URLWithString:urlString];
+
+    NSLog(@"Last path extension : %@", [url pathExtension]);
+    
+    
+    NSLog(@"Camera : %@ %@ %@",_camera.title,_camera.img,url);
+
+    [_imageView setImageWithURLRequest:[NSURLRequest requestWithURL:url]
+                      placeholderImage:[UIImage imageNamed:@"Default"]
+                               success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                   NSLog(@"Image received");
+                                   weakSelf.imageView.image = image;
+                                   weakSelf.imageView.frame = CGRectMake(weakSelf.imageView.frame.origin.x, weakSelf.imageView.frame.origin.y, image.size.width, image.size.height);
+                                   [weakSelf displayImageView];
+                               } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                   NSLog(@"Error : %@",error);
+                               }];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
-    [self removeObserver:self forKeyPath:@"camera"];
+    [self removeObserver:self forKeyPath:@"camera.img"];
 }
 
 - (void)viewDidUnload {
     [self setScrollView:nil];
     [super viewDidUnload];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    NSLog(@"KeyPath : %@",keyPath);
+    if ([keyPath isEqualToString:@"camera.img"]) {
+        [self loadImageFromNetwork];
+    }
 }
 
 @end

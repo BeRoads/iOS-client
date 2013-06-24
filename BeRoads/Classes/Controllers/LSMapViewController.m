@@ -105,14 +105,14 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     // here we illustrate how to detect which annotation type was clicked on for its callout
-    id <MKAnnotation> annotation = [view annotation];
+    id<MKAnnotation> annotation = [view annotation];
 
     if ([annotation isKindOfClass:[Camera class]]){
-        LSCameraDetailViewController* cameraDetailViewController = [[LSCameraDetailViewController alloc] init];
+        LSCameraDetailViewController* cameraDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraDetailViewController"];
         cameraDetailViewController.camera = (Camera*)annotation;
         [self.navigationController pushViewController:cameraDetailViewController animated:YES];
     } else if ([annotation isKindOfClass:[TrafficEvent class]]){
-        LSTrafficDetailViewController* trafficDetailViewController = [[LSTrafficDetailViewController alloc] init];
+        LSTrafficDetailViewController* trafficDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"trafficDetailViewController"];
         trafficDetailViewController.trafficEvent = (TrafficEvent*)annotation;
         [self.navigationController pushViewController:trafficDetailViewController animated:YES];
     }
