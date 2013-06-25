@@ -8,7 +8,6 @@ For more information on BeRoads : http://www.beroads.com/
 Library used in this project
 ------
 * AFNetworking : https://github.com/AFNetworking/AFNetworking
-* OCMapView : https://github.com/yinkou/OCMapView
 * InAppSettingsKit : https://github.com/futuretap/InAppSettingsKit
 * DMLocationManager : https://github.com/martinstolz/DMLocationManager
 * EGOTableViewPullToRefresh : https://github.com/mrackwitz/EGOTableViewPullRefresh
