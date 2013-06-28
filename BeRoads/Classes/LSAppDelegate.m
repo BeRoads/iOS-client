@@ -7,6 +7,8 @@
 //
 
 #import "LSAppDelegate.h"
+#import "AFHTTPClient.h"
+#import "AFJSONRequestOperation.h"
 
 @implementation LSAppDelegate
 
@@ -36,6 +38,10 @@
     // modified.  Registering a set of default values ensures that your app always
     // has a known good set of values to operate on.
     [[LSPreferenceManager defaultManager] populateRegistrationDomain];
+    
+    // Let the device know we want to receive push notifications
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     return YES;
 }
@@ -68,5 +74,56 @@
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
     [locationManager stopUpdatingLocation];
 }
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+   
+    //send a request to register the deviceToken to the beroads server so it can send push notification  
+    CLLocation* coordinate = [[LSLocationManager sharedLocationManager] location];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    double area = [userDefaults integerForKey:kAreaPreference];
+    
+    NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
+    double latitude = [coordinate coordinate].latitude;
+    double longitude = [coordinate coordinate].longitude;
+    
+    
+    AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:url];
+    [client registerHTTPOperationClass:[AFHTTPRequestOperation class]];
+    [client setParameterEncoding:AFJSONParameterEncoding];
+    
+    NSMutableURLRequest *request = [client requestWithMethod:@"POST"
+                                                        path:@"http://dashboard.beroads.com/apns"
+                                                  parameters:@{
+                                    @"device_token":deviceToken,
+                                    @"area":[NSString stringWithFormat:@"%f",area],
+                                    @"coords" : @{
+                                    @"lat":[NSString stringWithFormat:@"%f",latitude],
+                                    @"lng":[NSString stringWithFormat:@"%f",longitude]
+                                    },
+                                    @"language" : @"en"
+                                    }];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // Print the response body in text
+        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [operation start];
+   
+	NSLog(@"My token is: %@", deviceToken);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+}
+
+
 
 @end
