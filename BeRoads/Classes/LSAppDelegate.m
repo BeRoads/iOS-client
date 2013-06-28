@@ -82,9 +82,11 @@
     CLLocation* coordinate = [[LSLocationManager sharedLocationManager] location];
     
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    double area = [userDefaults integerForKey:kAreaPreference];
-    
+        
     NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
+    
+    NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
+    double area = [userDefaults integerForKey:kAreaPreference];
     double latitude = [coordinate coordinate].latitude;
     double longitude = [coordinate coordinate].longitude;
     
@@ -102,7 +104,7 @@
                                     @"lat":[NSString stringWithFormat:@"%f",latitude],
                                     @"lng":[NSString stringWithFormat:@"%f",longitude]
                                     },
-                                    @"language" : @"en"
+                                    @"language" : language
                                     }];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
