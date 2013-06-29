@@ -101,8 +101,8 @@
                                     @"device_token":deviceToken,
                                     @"area":[NSString stringWithFormat:@"%f",area],
                                     @"coords" : @{
-                                    @"lat":[NSString stringWithFormat:@"%f",latitude],
-                                    @"lng":[NSString stringWithFormat:@"%f",longitude]
+                                    @"latitude":[NSString stringWithFormat:@"%f",latitude],
+                                    @"longitude":[NSString stringWithFormat:@"%f",longitude]
                                     },
                                     @"language" : language
                                     }];
