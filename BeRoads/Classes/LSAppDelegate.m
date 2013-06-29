@@ -7,6 +7,8 @@
 //
 
 #import "LSAppDelegate.h"
+#import "AFHTTPClient.h"
+#import "AFJSONRequestOperation.h"
 
 @implementation LSAppDelegate
 
@@ -16,7 +18,7 @@
     // Location manager
     
     // !!!: Use the next line only during beta
-    //[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     
     [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];   
     // End TestFlight
@@ -36,6 +38,10 @@
     // modified.  Registering a set of default values ensures that your app always
     // has a known good set of values to operate on.
     [[LSPreferenceManager defaultManager] populateRegistrationDomain];
+    
+    // Let the device know we want to receive push notifications
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     return YES;
 }
@@ -68,5 +74,65 @@
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
     [locationManager stopUpdatingLocation];
 }
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+   
+    //send a request to register the deviceToken to the beroads server so it can send push notification  
+    CLLocation* coordinate = [[LSLocationManager sharedLocationManager] location];
+    
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+        
+    NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
+    
+    NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
+    double area = [userDefaults integerForKey:kAreaPreference];
+    double latitude = [coordinate coordinate].latitude;
+    double longitude = [coordinate coordinate].longitude;
+    NSString* deviceTokenString = [[[deviceToken description]
+                                    stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]
+                                   stringByReplacingOccurrencesOfString:@" "
+                                   withString:@""];
+    
+    NSMutableDictionary*  parametersCoords = [NSMutableDictionary dictionary];
+    [parametersCoords setObject:[NSString stringWithFormat:@"%f",latitude] forKey:@"latitude"];
+    [parametersCoords setObject:[NSString stringWithFormat:@"%f",longitude] forKey:@"longitude"];
+    
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:deviceTokenString forKey:@"device_token"];
+    [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+    [parameters setObject:language forKey:@"language"];
+    [parameters setObject:parametersCoords forKey:@"coords"];
+    
+    AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:url];
+    [client registerHTTPOperationClass:[AFHTTPRequestOperation class]];
+    [client setParameterEncoding:AFJSONParameterEncoding];
+    
+    NSMutableURLRequest *request = [client requestWithMethod:@"POST"
+                                                        path:@"http://dashboard.beroads.com/apns"
+                                                  parameters:parameters];
+    
+    NSLog(@"URL Request : %@", [request URL]);
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // Print the response body in text
+        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    [operation start];
+   
+	NSLog(@"My token is: %@", deviceTokenString);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+}
+
+
 
 @end
