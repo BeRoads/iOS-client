@@ -16,7 +16,7 @@
     // Location manager
     
     // !!!: Use the next line only during beta
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    //[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     
     [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];   
     // End TestFlight

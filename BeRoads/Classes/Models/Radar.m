@@ -14,6 +14,7 @@
 
 @synthesize idRadar;
 @synthesize name;
+@synthesize address;
 @synthesize lat;
 @synthesize lng;
 @synthesize date;
