@@ -52,6 +52,11 @@
         self.trafficEvents = trafficEvents;
         [self.tableView reloadData];
         
+        if ([self.trafficEvents count] == 0) {
+            UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
+            
+        }
+        
         PullTableView* pullTableView = (PullTableView*)self.tableView;
         if (pullTableView.pullTableIsRefreshing) {
             pullTableView.pullTableIsRefreshing = NO;

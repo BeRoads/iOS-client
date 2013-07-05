@@ -113,6 +113,7 @@
 		499BC21C177C409900DC746D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21B177C409900DC746D /* Icon.png */; };
 		499BC21E177C40A700DC746D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21D177C40A700DC746D /* Icon@2x.png */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
+		C51D4BA01787095F001CF3B3 /* LSNoResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51D4B9F1787095F001CF3B3 /* LSNoResultView.m */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -300,6 +301,8 @@
 		499BC21D177C40A700DC746D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
+		C51D4B9E1787095F001CF3B3 /* LSNoResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNoResultView.h; sourceTree = "<group>"; };
+		C51D4B9F1787095F001CF3B3 /* LSNoResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNoResultView.m; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */,
 				4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */,
 				4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */,
+				C51D4B9E1787095F001CF3B3 /* LSNoResultView.h */,
+				C51D4B9F1787095F001CF3B3 /* LSNoResultView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -886,6 +891,7 @@
 				494632131760E3E30065AE05 /* TTTUnitOfInformationFormatter.m in Sources */,
 				494632141760E3E30065AE05 /* TTTURLRequestFormatter.m in Sources */,
 				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
+				C51D4BA01787095F001CF3B3 /* LSNoResultView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
