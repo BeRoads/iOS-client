@@ -48,6 +48,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _userDefaults = [NSUserDefaults standardUserDefaults];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
+    self.navigationItem.leftBarButtonItem = menuButton;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -62,7 +65,7 @@
     if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
         self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
-
+    
     _mapView.showsUserLocation = YES;
         
     [_mapView removeAnnotations:_mapView.annotations];

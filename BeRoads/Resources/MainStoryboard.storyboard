@@ -7,31 +7,18 @@
         <!--Map View Controller-->
         <scene sceneID="ij5-uq-FAf">
             <objects>
-                <viewController storyboardIdentifier="Map" id="l7M-i7-8BG" customClass="LSMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="" id="l7M-i7-8BG" customClass="LSMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X1w-Jc-zID">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ckx-SB-KJI">
-                                <rect key="frame" x="0.0" y="46" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="l7M-i7-8BG" id="Bpj-4W-NYf"/>
                                 </connections>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" id="btR-Jp-US6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Map" id="z0I-YA-ODu">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Df5-zX-oNT">
-                                            <connections>
-                                                <action selector="revealMenu:" destination="l7M-i7-8BG" id="Kwg-kS-JeE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -42,7 +29,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgJ-NA-qfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="-367"/>
+            <point key="canvasLocation" x="970" y="-375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6LK-ya-oaf">
+            <objects>
+                <navigationController storyboardIdentifier="Map" definesPresentationContext="YES" id="Klq-C2-jfI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ibg-N3-5MT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="l7M-i7-8BG" kind="relationship" relationship="rootViewController" id="4p4-Vh-AQU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8C6-Ow-HiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="-375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K42-yH-mJ2">
