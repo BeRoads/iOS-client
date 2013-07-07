@@ -12,6 +12,7 @@ Library used in this project
 * DMLocationManager : https://github.com/martinstolz/DMLocationManager
 * EGOTableViewPullToRefresh : https://github.com/mrackwitz/EGOTableViewPullRefresh
 * FormatterKit : https://github.com/mattt/FormatterKit
+* ECSlidingViewController : https://github.com/edgecase/ECSlidingViewController
 
 RoadMap
 -------
