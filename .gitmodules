@@ -10,3 +10,6 @@
 [submodule "BeRoads/Vendors/EGOTableViewPullToRefresh"]
 	path = BeRoads/Vendors/EGOTableViewPullToRefresh
 	url = https://github.com/mrackwitz/EGOTableViewPullRefresh.git
+[submodule "BeRoads/Vendors/ECSlidingViewController"]
+	path = BeRoads/Vendors/ECSlidingViewController
+	url = https://github.com/edgecase/ECSlidingViewController.git

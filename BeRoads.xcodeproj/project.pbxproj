@@ -113,6 +113,8 @@
 		499BC21C177C409900DC746D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21B177C409900DC746D /* Icon.png */; };
 		499BC21E177C40A700DC746D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21D177C40A700DC746D /* Icon@2x.png */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
+		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
+		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -300,6 +302,8 @@
 		499BC21D177C40A700DC746D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
+		6CDE3B9D1789910400AAEEDA /* bg_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_list.png; sourceTree = "<group>"; };
+		6CDE3B9E1789910400AAEEDA /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -576,6 +580,8 @@
 		49693D92173E5286000D408E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CDE3B9D1789910400AAEEDA /* bg_list.png */,
+				6CDE3B9E1789910400AAEEDA /* navbar.png */,
 				499BC215177C3EFC00DC746D /* Default-568h@2x.png */,
 				499BC216177C3EFC00DC746D /* Default.png */,
 				499BC217177C3EFC00DC746D /* Default@2x.png */,
@@ -817,6 +823,8 @@
 				499BC21A177C3EFC00DC746D /* Default@2x.png in Resources */,
 				499BC21C177C409900DC746D /* Icon.png in Resources */,
 				499BC21E177C40A700DC746D /* Icon@2x.png in Resources */,
+				6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */,
+				6CDE3BA01789910400AAEEDA /* navbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
