@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 #import "PullTableView.h"
 
 @interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate>
+
+- (IBAction)revealMenu:(id)sender;
 
 @property (nonatomic,strong) NSArray* cameras;
 

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 #import "PullTableView.h"
 
 @interface LSTrafficEventsViewController : UITableViewController <PullTableViewDelegate>
+
+- (IBAction)revealMenu:(id)sender;
 
 @property (nonatomic,strong) NSArray* trafficEvents;
 

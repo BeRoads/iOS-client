@@ -12,6 +12,10 @@
 
 @implementation LSAppDelegate
 
+@synthesize window;
+@synthesize navController = _navController;
+@synthesize splitViewController = _splitViewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -46,10 +50,10 @@
     //Set the status bar to black color.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
-    //Change @"menubar.png" to the file name of your image.
     UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
-    
     [[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
     
     return YES;
 }

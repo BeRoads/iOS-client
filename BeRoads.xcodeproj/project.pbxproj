@@ -115,6 +115,12 @@
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
 		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
+		6CDE3BA21789955100AAEEDA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */; };
+		6CDE3BA9178999A900AAEEDA /* LSSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */; };
+		6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */; };
+		6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */; };
+		6CDE3BB51789A9DE00AAEEDA /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BB21789A9DE00AAEEDA /* ECSlidingViewController.m */; };
+		6CDE3BB61789A9DE00AAEEDA /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BB41789A9DE00AAEEDA /* UIImage+ImageWithUIView.m */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -304,6 +310,17 @@
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		6CDE3B9D1789910400AAEEDA /* bg_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_list.png; sourceTree = "<group>"; };
 		6CDE3B9E1789910400AAEEDA /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		6CDE3BA3178998E700AAEEDA /* LSSideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSSideMenuViewController.h; sourceTree = "<group>"; };
+		6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSideMenuViewController.m; sourceTree = "<group>"; };
+		6CDE3BAA1789A6BB00AAEEDA /* InitialSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
+		6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
+		6CDE3BAD1789A74200AAEEDA /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		6CDE3BB11789A9DE00AAEEDA /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		6CDE3BB21789A9DE00AAEEDA /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		6CDE3BB31789A9DE00AAEEDA /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		6CDE3BB41789A9DE00AAEEDA /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -540,6 +557,12 @@
 				4979186317556D8E0010974E /* LSSettingsViewController.m */,
 				C56FA373177333D000596208 /* LSAboutViewController.h */,
 				C56FA374177333D000596208 /* LSAboutViewController.m */,
+				6CDE3BA3178998E700AAEEDA /* LSSideMenuViewController.h */,
+				6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */,
+				6CDE3BAA1789A6BB00AAEEDA /* InitialSlidingViewController.h */,
+				6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */,
+				6CDE3BAD1789A74200AAEEDA /* MenuViewController.h */,
+				6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -573,6 +596,7 @@
 				4979182817541A580010974E /* Localizable.strings */,
 				4979185E1755330D0010974E /* Settings.bundle */,
 				494632151760E48F0065AE05 /* FormatterKit.strings */,
+				6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -605,6 +629,7 @@
 		49693D9B173E5286000D408E /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				6CDE3BB01789A9DE00AAEEDA /* ECSlidingViewController */,
 				4946322E17614E0A0065AE05 /* TestFlightSDK1.2.5 */,
 				494631FF1760E3E30065AE05 /* FormatterKit */,
 				494631D51760E3BD0065AE05 /* EGOTableViewPullRefresh */,
@@ -719,6 +744,18 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		6CDE3BB01789A9DE00AAEEDA /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CDE3BB11789A9DE00AAEEDA /* ECSlidingViewController.h */,
+				6CDE3BB21789A9DE00AAEEDA /* ECSlidingViewController.m */,
+				6CDE3BB31789A9DE00AAEEDA /* UIImage+ImageWithUIView.h */,
+				6CDE3BB41789A9DE00AAEEDA /* UIImage+ImageWithUIView.m */,
+			);
+			name = ECSlidingViewController;
+			path = ECSlidingViewController/ECSlidingViewController/Vendor/ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 		C59C60911743C2230033BC80 /* annotations */ = {
 			isa = PBXGroup;
 			children = (
@@ -825,6 +862,7 @@
 				499BC21E177C40A700DC746D /* Icon@2x.png in Resources */,
 				6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */,
 				6CDE3BA01789910400AAEEDA /* navbar.png in Resources */,
+				6CDE3BA21789955100AAEEDA /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +932,11 @@
 				494632131760E3E30065AE05 /* TTTUnitOfInformationFormatter.m in Sources */,
 				494632141760E3E30065AE05 /* TTTURLRequestFormatter.m in Sources */,
 				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
+				6CDE3BA9178999A900AAEEDA /* LSSideMenuViewController.m in Sources */,
+				6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */,
+				6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */,
+				6CDE3BB51789A9DE00AAEEDA /* ECSlidingViewController.m in Sources */,
+				6CDE3BB61789A9DE00AAEEDA /* UIImage+ImageWithUIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1063,7 @@
 					"\"$(SRCROOT)/BeRoads/Vendors/TestFlightSDK1.2.5\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1036,6 +1080,7 @@
 					"\"$(SRCROOT)/BeRoads/Vendors/TestFlightSDK1.2.5\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 
 @interface LSAboutViewController : UITableViewController
 

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 #import "IASKAppSettingsViewController.h"
 
 @interface LSSettingsViewController : IASKAppSettingsViewController <IASKSettingsDelegate>
+
+- (IBAction)revealMenu:(id)sender;
 
 @end
