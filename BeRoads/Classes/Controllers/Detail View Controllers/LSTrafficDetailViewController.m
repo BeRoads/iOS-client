@@ -16,15 +16,6 @@
 
 @implementation LSTrafficDetailViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -51,9 +42,6 @@
     [self removeObserver:self forKeyPath:@"trafficEvent"];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    [self.tableView reloadData];
-}
 
 #pragma mark - Table view data source
 

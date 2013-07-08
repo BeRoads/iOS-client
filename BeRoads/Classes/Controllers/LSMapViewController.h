@@ -12,7 +12,7 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface LSMapViewController : UIViewController <LSLocationManagerDelegate,MKMapViewDelegate>
+@interface LSMapViewController : UIViewController <LSLocationManagerDelegate,MKMapViewDelegate,UISplitViewControllerDelegate>
 
 - (IBAction)revealMenu:(id)sender;
 

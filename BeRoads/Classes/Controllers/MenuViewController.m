@@ -10,7 +10,6 @@
 
 @interface MenuViewController()
 @property (nonatomic, strong) NSArray *menuItems;
-@property (nonatomic, strong) NSDictionary *menuDestinations;
 @end
 
 @implementation MenuViewController
@@ -23,27 +22,48 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
+    [self.slidingViewController setHidesBottomBarWhenPushed:true];
+    self.slidingViewController.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor grayColor];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return self.menuItems.count;
+    return [self.menuItems count];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // This will create a "invisible" footer
+    return 0.01f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"MenuItemCell";
+    NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
+    //TODO : select color that fits the BeRoads UI guidelines
+    cell.contentView.backgroundColor = [UIColor grayColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [cell.textLabel setHighlightedTextColor: [UIColor whiteColor]];
     
+    cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
+    [cell.imageView setFrame:CGRectMake(0, 0, 20, 20)];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.menuItems objectAtIndex:indexPath.row]]];
+    cell.imageView.contentMode =  UIViewContentModeScaleAspectFill;
+    cell.imageView.clipsToBounds = YES;
     return cell;
 }
 

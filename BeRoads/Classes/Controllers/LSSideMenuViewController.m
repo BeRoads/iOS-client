@@ -7,26 +7,26 @@
 //
 
 #import "LSSideMenuViewController.h"
+#import "LSCamerasViewController.h"
+#import "LSTrafficEventsViewController.h"
+#import "LSRadarsViewController.h"
+#import "LSSettingsViewController.h"
+#import "LSAboutViewController.h"
 
 @interface LSSideMenuViewController ()
+
+@property (nonatomic, strong) NSArray *menuItems;
 
 @end
 
 @implementation LSSideMenuViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize menuItems;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.tableView.layer.borderColor = [UIColor whiteColor].CGColor;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,33 +42,37 @@
 
 - (void)awakeFromNib{
     self.title = NSLocalizedString(@"Navigation", @"Navigation");
+    self.menuItems = [NSArray arrayWithObjects: @"Trafic", @"Radars", @"Webcams", @"Settings", @"About", nil];
 }
 
 #pragma mark - Table view data source
 
-/*
- - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
- {
- // Return the number of sections.
- return 0;
- }
- 
  - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
  {
- // Return the number of rows in the section.
- return 0;
+     return self.menuItems.count;
  }
  
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
- static NSString *CellIdentifier = @"Cell";
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
+     NSString *cellIdentifier = @"Cell";
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+     if (cell == nil) {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+     }
+     //TODO : select color that fits the BeRoads UI guidelines
+     cell.contentView.backgroundColor = [UIColor grayColor];
+     cell.textLabel.textColor = [UIColor whiteColor];
+     cell.textLabel.backgroundColor = [UIColor clearColor];
+     cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+     [cell.textLabel setHighlightedTextColor: [UIColor whiteColor]];
+     
+     cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];     
+     
+     return cell;
+
  }
- */
+ 
 
 /*
  // Override to support conditional editing of the table view.
@@ -113,17 +117,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        NSLog(@"Trafic");
-    } else if (indexPath.row == 1){
-        NSLog(@"Radars");
-    } else if (indexPath.row == 2) {
-        NSLog(@"Webcams");
-    } else if (indexPath.row == 3){
-        NSLog(@"About");
-    } else{
-        NSLog(@"Other?");
-    }
+    NSString *identifier = [NSString stringWithFormat:@"%@", [self.menuItems objectAtIndex:indexPath.row]];
+    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    [self.navigationController pushViewController:newTopViewController animated:true];
 }
 
 @end

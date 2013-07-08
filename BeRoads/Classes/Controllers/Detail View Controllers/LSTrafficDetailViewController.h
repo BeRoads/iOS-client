@@ -10,7 +10,7 @@
 
 @class TrafficEvent;
 
-@interface LSTrafficDetailViewController : UITableViewController
+@interface LSTrafficDetailViewController : UIViewController
 
 @property (nonatomic,strong) TrafficEvent* trafficEvent;
 
