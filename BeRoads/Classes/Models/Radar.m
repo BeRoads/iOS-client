@@ -90,7 +90,7 @@
 }
 
 - (NSString *)title{
-    return name;
+    return address;
 }
 
 - (NSString *)subtitle{

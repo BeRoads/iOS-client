@@ -129,6 +129,7 @@
 		6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCB178A1F4600AAEEDA /* Settings.png */; };
 		6CDE3BCF178A2A7500AAEEDA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCE178A2A7500AAEEDA /* menu.png */; };
 		6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */; };
+		C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
@@ -338,6 +339,10 @@
 		6CDE3BCE178A2A7500AAEEDA /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		6CDE3BD0178A2FDE00AAEEDA /* LSTrafficEventDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventDetailsView.h; sourceTree = "<group>"; };
 		6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventDetailsView.m; sourceTree = "<group>"; };
+		C55A373B178C4EFB00375CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C55A373D178C4F0F00375CB6 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C55A373E178C4F1900375CB6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C55A373F178C4F1E00375CB6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
@@ -610,6 +615,7 @@
 		49693D91173E5286000D408E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C55A3739178C4EEF00375CB6 /* XIBs */,
 				49693D92173E5286000D408E /* Images */,
 				49693D9A173E5286000D408E /* MainStoryboard.storyboard */,
 				4979182817541A580010974E /* Localizable.strings */,
@@ -782,6 +788,15 @@
 			path = ECSlidingViewController/ECSlidingViewController/Vendor/ECSlidingViewController;
 			sourceTree = "<group>";
 		};
+		C55A3739178C4EEF00375CB6 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */,
+			);
+			name = XIBs;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		C59C60911743C2230033BC80 /* annotations */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +911,7 @@
 				6CDE3BCC178A1F4600AAEEDA /* About.png in Resources */,
 				6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */,
 				6CDE3BCF178A2A7500AAEEDA /* menu.png in Resources */,
+				C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1034,17 @@
 			);
 			name = Localizable.strings;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C55A373B178C4EFB00375CB6 /* en */,
+				C55A373D178C4F0F00375CB6 /* de */,
+				C55A373E178C4F1900375CB6 /* fr */,
+				C55A373F178C4F1E00375CB6 /* nl */,
+			);
+			name = NoResults_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

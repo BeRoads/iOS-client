@@ -18,7 +18,11 @@
 
 #import "LSTrafficDetailViewController.h"
 
+#import "LSNoResultView.h"
+
 @interface LSTrafficEventsViewController ()
+
+@property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
@@ -50,6 +54,7 @@
     
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
     self.navigationItem.leftBarButtonItem = menuButton;
+    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
     ((PullTableView*)self.tableView).pullTableIsLoadingMoreEnabled = NO;
     [self reloadTrafficEvents];
@@ -59,6 +64,12 @@
     [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
         self.trafficEvents = trafficEvents;
         [self.tableView reloadData];
+        
+        if ([self.trafficEvents count] == 0) {
+            [_noResultView showInView:self.view];
+        } else{
+            [_noResultView removeFromView];
+        }
         
         PullTableView* pullTableView = (PullTableView*)self.tableView;
         if (pullTableView.pullTableIsRefreshing) {
