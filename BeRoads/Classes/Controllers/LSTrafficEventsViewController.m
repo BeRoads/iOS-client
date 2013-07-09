@@ -18,7 +18,11 @@
 
 #import "LSTrafficDetailViewController.h"
 
+#import "LSNoResultView.h"
+
 @interface LSTrafficEventsViewController ()
+
+@property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
@@ -43,6 +47,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
+    
     ((PullTableView*)self.tableView).pullTableIsLoadingMoreEnabled = NO;
     [self reloadTrafficEvents];
 }
@@ -53,8 +59,9 @@
         [self.tableView reloadData];
         
         if ([self.trafficEvents count] == 0) {
-            UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
-            
+            [_noResultView showInView:self.view];
+        } else{
+            [_noResultView removeFromView];
         }
         
         PullTableView* pullTableView = (PullTableView*)self.tableView;

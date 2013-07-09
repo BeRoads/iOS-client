@@ -8,18 +8,21 @@
 
 #import "LSCamerasViewController.h"
 #import "LSCameraDetailViewController.h"
+
 #import "Camera.h"
 #import "Zone.h"
 
 #import "LSLocationManager.h"
-
 #import "LSBeRoadsClient.h"
 
 #import "UIImageView+AFNetworking.h"
+#import "LSNoResultView.h"
 
 @interface LSCamerasViewController ()
 
 @property (nonatomic, strong) NSArray* zones;
+
+@property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
@@ -43,7 +46,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        
+    
+    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
+    
     ((PullTableView*)self.tableView).pullTableIsLoadingMoreEnabled = NO;
     [self reloadCameras];
 }
@@ -53,6 +58,13 @@
         self.cameras = cameras;
         [self createZones];
         [self.tableView reloadData];
+        
+        if ([self.cameras count] == 0) {
+            [_noResultView showInView:self.view];
+        } else{
+            [_noResultView removeFromView];
+        }
+
         
         PullTableView* pullTableView = (PullTableView*)self.tableView;
         if (pullTableView.pullTableIsRefreshing) {

@@ -14,7 +14,11 @@
 
 #import "LSBeRoadsRadarCell.h"
 
+#import "LSNoResultView.h"
+
 @interface LSRadarsViewController ()
+
+@property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
@@ -39,6 +43,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
+    
     ((PullTableView*)self.tableView).pullTableIsLoadingMoreEnabled = NO;
     [self reloadRadars];
 }
@@ -47,6 +53,12 @@
     [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
         self.radars = radars;
         [self.tableView reloadData];
+        
+        if ([self.radars count] == 0) {
+            [_noResultView showInView:self.view];
+        } else{
+            [_noResultView removeFromView];
+        }
         
         PullTableView* pullTableView = (PullTableView*)self.tableView;
         if (pullTableView.pullTableIsRefreshing) {

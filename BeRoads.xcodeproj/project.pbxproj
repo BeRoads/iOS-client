@@ -118,6 +118,7 @@
 		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
 		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
 		C59C60971743C2230033BC80 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60941743C2230033BC80 /* radar.png */; };
+		C5AB2083178BFA3400DCD100 /* NoResults_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5AB2081178BFA3400DCD100 /* NoResults_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +309,10 @@
 		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
 		C59C60931743C2230033BC80 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		C59C60941743C2230033BC80 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
+		C5AB2082178BFA3400DCD100 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C5AB2084178BFA4800DCD100 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C5AB2085178BFA4900DCD100 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
+		C5AB2086178BFA4E00DCD100 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +495,7 @@
 			children = (
 				49693D7C173E5286000D408E /* Classes */,
 				49693D91173E5286000D408E /* Resources */,
+				C5AB2080178BF9EB00DCD100 /* XIBs */,
 				49693D9B173E5286000D408E /* Vendors */,
 				49693D26173E44D7000D408E /* Supporting Files */,
 			);
@@ -728,6 +734,14 @@
 			path = annotations;
 			sourceTree = "<group>";
 		};
+		C5AB2080178BF9EB00DCD100 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				C5AB2081178BFA3400DCD100 /* NoResults_iPhone.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -822,6 +836,7 @@
 				499BC21A177C3EFC00DC746D /* Default@2x.png in Resources */,
 				499BC21C177C409900DC746D /* Icon.png in Resources */,
 				499BC21E177C40A700DC746D /* Icon@2x.png in Resources */,
+				C5AB2083178BFA3400DCD100 /* NoResults_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,6 +954,17 @@
 			);
 			name = Localizable.strings;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C5AB2081178BFA3400DCD100 /* NoResults_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5AB2082178BFA3400DCD100 /* fr */,
+				C5AB2084178BFA4800DCD100 /* de */,
+				C5AB2085178BFA4900DCD100 /* en */,
+				C5AB2086178BFA4E00DCD100 /* nl */,
+			);
+			name = NoResults_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

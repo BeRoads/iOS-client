@@ -10,6 +10,12 @@
 
 @interface LSNoResultView : UIView
 
-@property (nonatomic,strong) NSString* text;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *messageTitle;
+
+- (void)showInView:(UIView*)view;
+
+- (void)removeFromView;
+
 
 @end
