@@ -111,7 +111,7 @@
     NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
     
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
-    double area = [userDefaults integerForKey:kAreaPreference];
+    NSInteger area = [userDefaults integerForKey:kAreaPreference];
     double latitude = [coordinate coordinate].latitude;
     double longitude = [coordinate coordinate].longitude;
     NSString* deviceTokenString = [[[deviceToken description]

@@ -13,6 +13,7 @@
 		4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4906D575174AD5B600693392 /* bg_speedlimit.png */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
 		490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */; };
+		49384252178EC1D800F05595 /* LSNoResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49384251178EC1D800F05595 /* LSNoResultView.m */; };
 		494631F01760E3BE0065AE05 /* LoadMoreTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494631D81760E3BD0065AE05 /* LoadMoreTableFooterView.m */; };
 		494631F11760E3BE0065AE05 /* MessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 494631DA1760E3BD0065AE05 /* MessageInterceptor.m */; };
 		494631F21760E3BE0065AE05 /* NSDate+LastUpdatedTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 494631DC1760E3BD0065AE05 /* NSDate+LastUpdatedTime.m */; };
@@ -146,6 +147,8 @@
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
 		490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficDetailViewController.h; sourceTree = "<group>"; };
 		490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficDetailViewController.m; sourceTree = "<group>"; };
+		49384250178EC1D800F05595 /* LSNoResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNoResultView.h; sourceTree = "<group>"; };
+		49384251178EC1D800F05595 /* LSNoResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNoResultView.m; sourceTree = "<group>"; };
 		494631D71760E3BD0065AE05 /* LoadMoreTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreTableFooterView.h; sourceTree = "<group>"; };
 		494631D81760E3BD0065AE05 /* LoadMoreTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreTableFooterView.m; sourceTree = "<group>"; };
 		494631D91760E3BD0065AE05 /* MessageInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInterceptor.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 		4906D56D174A7EEB00693392 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49384250178EC1D800F05595 /* LSNoResultView.h */,
+				49384251178EC1D800F05595 /* LSNoResultView.m */,
 				4906D577174AD77B00693392 /* LSBeRoadsRadarCell.h */,
 				4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */,
 				4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */,
@@ -987,6 +992,7 @@
 				6CDE3BB51789A9DE00AAEEDA /* ECSlidingViewController.m in Sources */,
 				6CDE3BB61789A9DE00AAEEDA /* UIImage+ImageWithUIView.m in Sources */,
 				6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */,
+				49384252178EC1D800F05595 /* LSNoResultView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

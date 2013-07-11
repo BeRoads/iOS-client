@@ -60,7 +60,7 @@
          cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
      }
      //TODO : select color that fits the BeRoads UI guidelines
-     cell.contentView.backgroundColor = [UIColor grayColor];
+     cell.contentView.backgroundColor = [UIColor darkGrayColor];
      cell.textLabel.textColor = [UIColor whiteColor];
      cell.textLabel.backgroundColor = [UIColor clearColor];
      cell.detailTextLabel.backgroundColor = [UIColor clearColor];
