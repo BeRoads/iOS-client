@@ -49,7 +49,7 @@
         <!--Navigation Controller-->
         <scene sceneID="K42-yH-mJ2">
             <objects>
-                <navigationController storyboardIdentifier="Trafic" definesPresentationContext="YES" id="xC7-UH-eSf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Traffic" definesPresentationContext="YES" id="xC7-UH-eSf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uCl-2u-oGB">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -534,34 +534,39 @@
         <scene sceneID="fQk-5g-yDe">
             <objects>
                 <viewController storyboardIdentifier="Menu" id="ngX-Cs-XCP" customClass="MenuViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="o0V-4b-nur">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PNM-Nl-0FN">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PNM-Nl-0FN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuItemCell" id="d7b-32-MZB">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuItemCell" textLabel="nAQ-ay-kQZ" style="IBUITableViewCellStyleDefault" id="d7b-32-MZB">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nAQ-ay-kQZ">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ngX-Cs-XCP" id="lob-bc-Nib"/>
-                                    <outlet property="delegate" destination="ngX-Cs-XCP" id="VbC-xs-JPk"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.3586973852" green="0.3586973852" blue="0.3586973852" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ngX-Cs-XCP" id="lob-bc-Nib"/>
+                            <outlet property="delegate" destination="ngX-Cs-XCP" id="VbC-xs-JPk"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="view" destination="PNM-Nl-0FN" id="gpS-8q-524"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d3-FO-FPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -591,9 +596,6 @@
         </class>
         <class className="LSAboutViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LSAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-            </relationships>
         </class>
         <class className="LSBeRoadsRadarCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LSBeRoadsRadarCell.h"/>
@@ -651,7 +653,7 @@
                 <relationship kind="action" name="revealMenu:"/>
             </relationships>
         </class>
-        <class className="MenuViewController" superclassName="UIViewController">
+        <class className="MenuViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
         </class>
         <class className="PullTableView" superclassName="UITableView">

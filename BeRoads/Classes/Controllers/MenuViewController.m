@@ -9,7 +9,9 @@
 #import "MenuViewController.h"
 
 @interface MenuViewController()
+
 @property (nonatomic, strong) NSArray *menuItems;
+
 @end
 
 @implementation MenuViewController
@@ -17,7 +19,7 @@
 
 - (void)awakeFromNib
 {
-    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Trafic", @"Radars", @"Webcams", @"Settings", @"About", nil];
+    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Webcams", @"Settings", @"About", nil];
 }
 
 - (void)viewDidLoad
@@ -28,8 +30,8 @@
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     [self.slidingViewController setHidesBottomBarWhenPushed:true];
-    self.slidingViewController.view.backgroundColor = [UIColor grayColor];
-    self.view.backgroundColor = [UIColor grayColor];
+    //self.slidingViewController.view.backgroundColor = [UIColor darkGrayColor];
+    //self.view.backgroundColor = [UIColor darkGrayColor];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
@@ -45,18 +47,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"Cell";
+    NSString *cellIdentifier = @"MenuItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
     //TODO : select color that fits the BeRoads UI guidelines
-    cell.contentView.backgroundColor = [UIColor grayColor];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    //cell.contentView.backgroundColor = [UIColor darkGrayColor];
+    //cell.textLabel.textColor = [UIColor whiteColor];
+    //cell.textLabel.backgroundColor = [UIColor clearColor];
+    //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+    //[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell.textLabel setHighlightedTextColor: [UIColor whiteColor]];
     
     cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];

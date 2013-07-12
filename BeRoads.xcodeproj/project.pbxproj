@@ -75,11 +75,6 @@
 		49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DDB173E6692000D408E /* LSCamerasViewController.m */; };
 		49693DDF173E6C3E000D408E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DDD173E6C3E000D408E /* MobileCoreServices.framework */; };
 		49693DE0173E6C3E000D408E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DDE173E6C3E000D408E /* SystemConfiguration.framework */; };
-		49693DE7173F9A6B000D408E /* traffic_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693DE5173F9A6B000D408E /* traffic_icon.png */; };
-		49693DE8173F9A6B000D408E /* trafficevents_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693DE6173F9A6B000D408E /* trafficevents_icon.png */; };
-		49693DEC173F9B35000D408E /* cameras_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693DE9173F9B35000D408E /* cameras_icon.png */; };
-		49693DED173F9B35000D408E /* map_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693DEA173F9B35000D408E /* map_icon.png */; };
-		49693DEE173F9B35000D408E /* radars_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49693DEB173F9B35000D408E /* radars_icon.png */; };
 		49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF0173F9DC5000D408E /* LSMapViewController.m */; };
 		49693DF4173F9E81000D408E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF2173F9E80000D408E /* CoreLocation.framework */; };
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
@@ -105,7 +100,6 @@
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
 		4986C83C1758F7D700DFDE67 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83A1758F7D700DFDE67 /* 20-gear2.png */; };
 		4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */; };
-		4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4986C83E1758FB5200DFDE67 /* 20-info.png */; };
 		4986C842175A944B00DFDE67 /* LSPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C841175A944B00DFDE67 /* LSPreferenceManager.m */; };
 		4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */; };
 		499BC218177C3EFC00DC746D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC215177C3EFC00DC746D /* Default-568h@2x.png */; };
@@ -117,14 +111,13 @@
 		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
 		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
 		6CDE3BA21789955100AAEEDA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */; };
-		6CDE3BA9178999A900AAEEDA /* LSSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */; };
 		6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */; };
 		6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */; };
 		6CDE3BB51789A9DE00AAEEDA /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BB21789A9DE00AAEEDA /* ECSlidingViewController.m */; };
 		6CDE3BB61789A9DE00AAEEDA /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BB41789A9DE00AAEEDA /* UIImage+ImageWithUIView.m */; };
 		6CDE3BC31789D3A300AAEEDA /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BBF1789D3A300AAEEDA /* Map.png */; };
 		6CDE3BC41789D3A300AAEEDA /* Radars.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC01789D3A300AAEEDA /* Radars.png */; };
-		6CDE3BC51789D3A300AAEEDA /* Trafic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC11789D3A300AAEEDA /* Trafic.png */; };
+		6CDE3BC51789D3A300AAEEDA /* Traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC11789D3A300AAEEDA /* Traffic.png */; };
 		6CDE3BC61789D3A300AAEEDA /* Webcams.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC21789D3A300AAEEDA /* Webcams.png */; };
 		6CDE3BCC178A1F4600AAEEDA /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCA178A1F4600AAEEDA /* About.png */; };
 		6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCB178A1F4600AAEEDA /* Settings.png */; };
@@ -256,11 +249,6 @@
 		49693DDB173E6692000D408E /* LSCamerasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCamerasViewController.m; sourceTree = "<group>"; };
 		49693DDD173E6C3E000D408E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		49693DDE173E6C3E000D408E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		49693DE5173F9A6B000D408E /* traffic_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traffic_icon.png; sourceTree = "<group>"; };
-		49693DE6173F9A6B000D408E /* trafficevents_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trafficevents_icon.png; sourceTree = "<group>"; };
-		49693DE9173F9B35000D408E /* cameras_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameras_icon.png; sourceTree = "<group>"; };
-		49693DEA173F9B35000D408E /* map_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_icon.png; sourceTree = "<group>"; };
-		49693DEB173F9B35000D408E /* radars_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radars_icon.png; sourceTree = "<group>"; };
 		49693DEF173F9DC5000D408E /* LSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMapViewController.h; sourceTree = "<group>"; };
 		49693DF0173F9DC5000D408E /* LSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMapViewController.m; sourceTree = "<group>"; };
 		49693DF2173F9E80000D408E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -308,7 +296,6 @@
 		4979186317556D8E0010974E /* LSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSettingsViewController.m; sourceTree = "<group>"; };
 		4986C83A1758F7D700DFDE67 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
 		4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2Highlighted.png"; sourceTree = "<group>"; };
-		4986C83E1758FB5200DFDE67 /* 20-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-info.png"; sourceTree = "<group>"; };
 		4986C840175A944B00DFDE67 /* LSPreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPreferenceManager.h; sourceTree = "<group>"; };
 		4986C841175A944B00DFDE67 /* LSPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPreferenceManager.m; sourceTree = "<group>"; };
 		4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+UITabBarController_HideTabBar.h"; sourceTree = "<group>"; };
@@ -323,8 +310,6 @@
 		6CDE3B9D1789910400AAEEDA /* bg_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_list.png; sourceTree = "<group>"; };
 		6CDE3B9E1789910400AAEEDA /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
 		6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		6CDE3BA3178998E700AAEEDA /* LSSideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSSideMenuViewController.h; sourceTree = "<group>"; };
-		6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSideMenuViewController.m; sourceTree = "<group>"; };
 		6CDE3BAA1789A6BB00AAEEDA /* InitialSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
 		6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
 		6CDE3BAD1789A74200AAEEDA /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -335,7 +320,7 @@
 		6CDE3BB41789A9DE00AAEEDA /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		6CDE3BBF1789D3A300AAEEDA /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		6CDE3BC01789D3A300AAEEDA /* Radars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Radars.png; sourceTree = "<group>"; };
-		6CDE3BC11789D3A300AAEEDA /* Trafic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trafic.png; sourceTree = "<group>"; };
+		6CDE3BC11789D3A300AAEEDA /* Traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Traffic.png; sourceTree = "<group>"; };
 		6CDE3BC21789D3A300AAEEDA /* Webcams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Webcams.png; sourceTree = "<group>"; };
 		6CDE3BCA178A1F4600AAEEDA /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		6CDE3BCB178A1F4600AAEEDA /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
@@ -586,8 +571,6 @@
 				4979186317556D8E0010974E /* LSSettingsViewController.m */,
 				C56FA373177333D000596208 /* LSAboutViewController.h */,
 				C56FA374177333D000596208 /* LSAboutViewController.m */,
-				6CDE3BA3178998E700AAEEDA /* LSSideMenuViewController.h */,
-				6CDE3BA8178999A900AAEEDA /* LSSideMenuViewController.m */,
 				6CDE3BAA1789A6BB00AAEEDA /* InitialSlidingViewController.h */,
 				6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */,
 				6CDE3BAD1789A74200AAEEDA /* MenuViewController.h */,
@@ -623,10 +606,10 @@
 				C55A3739178C4EEF00375CB6 /* XIBs */,
 				49693D92173E5286000D408E /* Images */,
 				49693D9A173E5286000D408E /* MainStoryboard.storyboard */,
+				6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */,
 				4979182817541A580010974E /* Localizable.strings */,
 				4979185E1755330D0010974E /* Settings.bundle */,
 				494632151760E48F0065AE05 /* FormatterKit.strings */,
-				6CDE3BA11789955100AAEEDA /* MainStoryboard_iPad.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -639,7 +622,7 @@
 				6CDE3BCB178A1F4600AAEEDA /* Settings.png */,
 				6CDE3BBF1789D3A300AAEEDA /* Map.png */,
 				6CDE3BC01789D3A300AAEEDA /* Radars.png */,
-				6CDE3BC11789D3A300AAEEDA /* Trafic.png */,
+				6CDE3BC11789D3A300AAEEDA /* Traffic.png */,
 				6CDE3BC21789D3A300AAEEDA /* Webcams.png */,
 				6CDE3B9D1789910400AAEEDA /* bg_list.png */,
 				6CDE3B9E1789910400AAEEDA /* navbar.png */,
@@ -647,18 +630,12 @@
 				499BC216177C3EFC00DC746D /* Default.png */,
 				499BC217177C3EFC00DC746D /* Default@2x.png */,
 				4946321D176134F50065AE05 /* authors */,
-				4986C83E1758FB5200DFDE67 /* 20-info.png */,
 				4986C83A1758F7D700DFDE67 /* 20-gear2.png */,
 				4986C83B1758F7D700DFDE67 /* 20-gear2Highlighted.png */,
 				C59C60911743C2230033BC80 /* annotations */,
 				4906D575174AD5B600693392 /* bg_speedlimit.png */,
 				4906D571174AD29B00693392 /* placeholder-cell.png */,
 				4906D572174AD29B00693392 /* placeholder-cell@2x.png */,
-				49693DE9173F9B35000D408E /* cameras_icon.png */,
-				49693DEA173F9B35000D408E /* map_icon.png */,
-				49693DEB173F9B35000D408E /* radars_icon.png */,
-				49693DE5173F9A6B000D408E /* traffic_icon.png */,
-				49693DE6173F9A6B000D408E /* trafficevents_icon.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -869,11 +846,6 @@
 			files = (
 				49693D2A173E44D7000D408E /* InfoPlist.strings in Resources */,
 				49693DAD173E5286000D408E /* MainStoryboard.storyboard in Resources */,
-				49693DE7173F9A6B000D408E /* traffic_icon.png in Resources */,
-				49693DE8173F9A6B000D408E /* trafficevents_icon.png in Resources */,
-				49693DEC173F9B35000D408E /* cameras_icon.png in Resources */,
-				49693DED173F9B35000D408E /* map_icon.png in Resources */,
-				49693DEE173F9B35000D408E /* radars_icon.png in Resources */,
 				C59C60951743C2230033BC80 /* accident.png in Resources */,
 				C59C60961743C2230033BC80 /* camera.png in Resources */,
 				C59C60971743C2230033BC80 /* radar.png in Resources */,
@@ -884,7 +856,6 @@
 				4979185F1755330D0010974E /* Settings.bundle in Resources */,
 				4986C83C1758F7D700DFDE67 /* 20-gear2.png in Resources */,
 				4986C83D1758F7D700DFDE67 /* 20-gear2Highlighted.png in Resources */,
-				4986C83F1758FB5200DFDE67 /* 20-info.png in Resources */,
 				494631F61760E3BE0065AE05 /* blackArrow.png in Resources */,
 				494631F71760E3BE0065AE05 /* blackArrow@2x.png in Resources */,
 				494631F81760E3BE0065AE05 /* blueArrow.png in Resources */,
@@ -911,7 +882,7 @@
 				6CDE3BA21789955100AAEEDA /* MainStoryboard_iPad.storyboard in Resources */,
 				6CDE3BC31789D3A300AAEEDA /* Map.png in Resources */,
 				6CDE3BC41789D3A300AAEEDA /* Radars.png in Resources */,
-				6CDE3BC51789D3A300AAEEDA /* Trafic.png in Resources */,
+				6CDE3BC51789D3A300AAEEDA /* Traffic.png in Resources */,
 				6CDE3BC61789D3A300AAEEDA /* Webcams.png in Resources */,
 				6CDE3BCC178A1F4600AAEEDA /* About.png in Resources */,
 				6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */,
@@ -986,7 +957,6 @@
 				494632131760E3E30065AE05 /* TTTUnitOfInformationFormatter.m in Sources */,
 				494632141760E3E30065AE05 /* TTTURLRequestFormatter.m in Sources */,
 				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
-				6CDE3BA9178999A900AAEEDA /* LSSideMenuViewController.m in Sources */,
 				6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */,
 				6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */,
 				6CDE3BB51789A9DE00AAEEDA /* ECSlidingViewController.m in Sources */,

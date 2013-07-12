@@ -9,7 +9,6 @@
 #import "LSAppDelegate.h"
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
-#import "LSSideMenuViewController.h"
 #import "LSMapViewController.h"
 
 @implementation LSAppDelegate
