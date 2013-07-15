@@ -24,6 +24,17 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        CGRect aFrame = self.frame;
+        aFrame.size.height = [[UIScreen mainScreen] bounds].size.height;
+        [self setFrame:aFrame];
+    }
+    return self;
+}
+
 - (void)showInView:(UIView*)view{
     [view addSubview:self];
 }
