@@ -49,12 +49,17 @@
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     //Set the status bar to black color.
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
-    UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
-    [[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
+    // Set to navigation bar
+    UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
+    [[UINavigationBar appearance] setBackgroundColor:mapColor];
+    [[UINavigationBar appearance] setTintColor:mapColor];
     
-    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
+    //UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
+    //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
+    
+    //[[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 

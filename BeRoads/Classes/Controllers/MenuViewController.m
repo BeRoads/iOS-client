@@ -17,11 +17,6 @@
 @implementation MenuViewController
 @synthesize menuItems;
 
-- (void)awakeFromNib
-{
-    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Webcams", @"Settings", @"About", nil];
-}
-
 - (void)viewDidLoad
 {
     
@@ -30,8 +25,8 @@
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     [self.slidingViewController setHidesBottomBarWhenPushed:true];
-    //self.slidingViewController.view.backgroundColor = [UIColor darkGrayColor];
-    //self.view.backgroundColor = [UIColor darkGrayColor];
+    
+    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
@@ -53,19 +48,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    //TODO : select color that fits the BeRoads UI guidelines
-    //cell.contentView.backgroundColor = [UIColor darkGrayColor];
-    //cell.textLabel.textColor = [UIColor whiteColor];
-    //cell.textLabel.backgroundColor = [UIColor clearColor];
-    //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    //[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [cell.textLabel setHighlightedTextColor: [UIColor whiteColor]];
-    
-    cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
-    [cell.imageView setFrame:CGRectMake(0, 0, 20, 20)];
+    cell.textLabel.text = NSLocalizedString([self.menuItems objectAtIndex:indexPath.row], [self.menuItems objectAtIndex:indexPath.row]);
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.menuItems objectAtIndex:indexPath.row]]];
-    cell.imageView.contentMode =  UIViewContentModeScaleAspectFill;
-    cell.imageView.clipsToBounds = YES;
+    
     return cell;
 }
 
@@ -74,6 +59,28 @@
     NSString *identifier = [NSString stringWithFormat:@"%@", [self.menuItems objectAtIndex:indexPath.row]];
     
     UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    
+    if ([identifier isEqualToString:@"Map"]) {
+        UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
+        [[UINavigationBar appearance] setBackgroundColor:mapColor];
+        [[UINavigationBar appearance] setTintColor:mapColor];
+    } else if ([identifier isEqualToString:@"Traffic"]) {
+        UIColor* trafficColor = [UIColor colorWithRed:0.215686F green:0.713725F blue:0.890196F alpha:1.0F];
+        [[UINavigationBar appearance] setBackgroundColor:trafficColor];
+        [[UINavigationBar appearance] setTintColor:trafficColor];
+    } else if ([identifier isEqualToString:@"Radars"]) {
+        UIColor* radarsColor = [UIColor colorWithRed:0.996078F green:0.729412F blue:0.266667F alpha:1.0F];
+        [[UINavigationBar appearance] setBackgroundColor:radarsColor];
+        [[UINavigationBar appearance] setTintColor:radarsColor];
+    } else if ([identifier isEqualToString:@"Cameras"]) {
+        UIColor* camerasColor = [UIColor colorWithRed:0.568627F green:0.803922F blue:0.192157F alpha:1.0F];
+        [[UINavigationBar appearance] setBackgroundColor:camerasColor];
+        [[UINavigationBar appearance] setTintColor:camerasColor];
+    } else{
+        UIColor* radarsColor = [UIColor grayColor];
+        [[UINavigationBar appearance] setBackgroundColor:radarsColor];
+        [[UINavigationBar appearance] setTintColor:radarsColor];
+    }
     
     [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
         CGRect frame = self.slidingViewController.topViewController.view.frame;

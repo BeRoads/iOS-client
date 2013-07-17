@@ -79,6 +79,12 @@
 		49693DF4173F9E81000D408E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF2173F9E80000D408E /* CoreLocation.framework */; };
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
 		49693DF8173FE35D000D408E /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF7173FE35C000D408E /* LSLocationManager.m */; };
+		49742F53179615BF001B62B6 /* ic_m_traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F4D179615BF001B62B6 /* ic_m_traffic.png */; };
+		49742F54179615BF001B62B6 /* ic_m_traffic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F4E179615BF001B62B6 /* ic_m_traffic@2x.png */; };
+		49742F55179615BF001B62B6 /* ic_m_webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F4F179615BF001B62B6 /* ic_m_webcam.png */; };
+		49742F56179615BF001B62B6 /* ic_m_webcam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F50179615BF001B62B6 /* ic_m_webcam@2x.png */; };
+		49742F57179615BF001B62B6 /* ic_m_radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F51179615BF001B62B6 /* ic_m_radar.png */; };
+		49742F58179615BF001B62B6 /* ic_m_radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49742F52179615BF001B62B6 /* ic_m_radar@2x.png */; };
 		4979182117538C720010974E /* Zone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979182017538C720010974E /* Zone.m */; };
 		4979182D17541A580010974E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4979182817541A580010974E /* Localizable.strings */; };
 		4979185017552C270010974E /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979183217552C270010974E /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -118,16 +124,13 @@
 		6CDE3BC31789D3A300AAEEDA /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BBF1789D3A300AAEEDA /* Map.png */; };
 		6CDE3BC41789D3A300AAEEDA /* Radars.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC01789D3A300AAEEDA /* Radars.png */; };
 		6CDE3BC51789D3A300AAEEDA /* Traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC11789D3A300AAEEDA /* Traffic.png */; };
-		6CDE3BC61789D3A300AAEEDA /* Webcams.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC21789D3A300AAEEDA /* Webcams.png */; };
+		6CDE3BC61789D3A300AAEEDA /* Cameras.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BC21789D3A300AAEEDA /* Cameras.png */; };
 		6CDE3BCC178A1F4600AAEEDA /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCA178A1F4600AAEEDA /* About.png */; };
 		6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCB178A1F4600AAEEDA /* Settings.png */; };
 		6CDE3BCF178A2A7500AAEEDA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BCE178A2A7500AAEEDA /* menu.png */; };
 		6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */; };
 		C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
-		C59C60951743C2230033BC80 /* accident.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60921743C2230033BC80 /* accident.png */; };
-		C59C60961743C2230033BC80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60931743C2230033BC80 /* camera.png */; };
-		C59C60971743C2230033BC80 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = C59C60941743C2230033BC80 /* radar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,6 +258,12 @@
 		49693DF3173F9E80000D408E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		49693DF6173FE35C000D408E /* LSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLocationManager.h; sourceTree = "<group>"; };
 		49693DF7173FE35C000D408E /* LSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLocationManager.m; sourceTree = "<group>"; };
+		49742F4D179615BF001B62B6 /* ic_m_traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_m_traffic.png; sourceTree = "<group>"; };
+		49742F4E179615BF001B62B6 /* ic_m_traffic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_m_traffic@2x.png"; sourceTree = "<group>"; };
+		49742F4F179615BF001B62B6 /* ic_m_webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_m_webcam.png; sourceTree = "<group>"; };
+		49742F50179615BF001B62B6 /* ic_m_webcam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_m_webcam@2x.png"; sourceTree = "<group>"; };
+		49742F51179615BF001B62B6 /* ic_m_radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_m_radar.png; sourceTree = "<group>"; };
+		49742F52179615BF001B62B6 /* ic_m_radar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_m_radar@2x.png"; sourceTree = "<group>"; };
 		4979181F17538C720010974E /* Zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zone.h; sourceTree = "<group>"; };
 		4979182017538C720010974E /* Zone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zone.m; sourceTree = "<group>"; };
 		4979182917541A580010974E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -321,7 +330,7 @@
 		6CDE3BBF1789D3A300AAEEDA /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		6CDE3BC01789D3A300AAEEDA /* Radars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Radars.png; sourceTree = "<group>"; };
 		6CDE3BC11789D3A300AAEEDA /* Traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Traffic.png; sourceTree = "<group>"; };
-		6CDE3BC21789D3A300AAEEDA /* Webcams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Webcams.png; sourceTree = "<group>"; };
+		6CDE3BC21789D3A300AAEEDA /* Cameras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cameras.png; sourceTree = "<group>"; };
 		6CDE3BCA178A1F4600AAEEDA /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		6CDE3BCB178A1F4600AAEEDA /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 		6CDE3BCE178A2A7500AAEEDA /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
@@ -333,9 +342,6 @@
 		C55A373F178C4F1E00375CB6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
-		C59C60921743C2230033BC80 /* accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accident.png; sourceTree = "<group>"; };
-		C59C60931743C2230033BC80 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		C59C60941743C2230033BC80 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,7 +629,7 @@
 				6CDE3BBF1789D3A300AAEEDA /* Map.png */,
 				6CDE3BC01789D3A300AAEEDA /* Radars.png */,
 				6CDE3BC11789D3A300AAEEDA /* Traffic.png */,
-				6CDE3BC21789D3A300AAEEDA /* Webcams.png */,
+				6CDE3BC21789D3A300AAEEDA /* Cameras.png */,
 				6CDE3B9D1789910400AAEEDA /* bg_list.png */,
 				6CDE3B9E1789910400AAEEDA /* navbar.png */,
 				499BC215177C3EFC00DC746D /* Default-568h@2x.png */,
@@ -782,9 +788,12 @@
 		C59C60911743C2230033BC80 /* annotations */ = {
 			isa = PBXGroup;
 			children = (
-				C59C60921743C2230033BC80 /* accident.png */,
-				C59C60931743C2230033BC80 /* camera.png */,
-				C59C60941743C2230033BC80 /* radar.png */,
+				49742F4D179615BF001B62B6 /* ic_m_traffic.png */,
+				49742F4E179615BF001B62B6 /* ic_m_traffic@2x.png */,
+				49742F4F179615BF001B62B6 /* ic_m_webcam.png */,
+				49742F50179615BF001B62B6 /* ic_m_webcam@2x.png */,
+				49742F51179615BF001B62B6 /* ic_m_radar.png */,
+				49742F52179615BF001B62B6 /* ic_m_radar@2x.png */,
 			);
 			path = annotations;
 			sourceTree = "<group>";
@@ -846,9 +855,6 @@
 			files = (
 				49693D2A173E44D7000D408E /* InfoPlist.strings in Resources */,
 				49693DAD173E5286000D408E /* MainStoryboard.storyboard in Resources */,
-				C59C60951743C2230033BC80 /* accident.png in Resources */,
-				C59C60961743C2230033BC80 /* camera.png in Resources */,
-				C59C60971743C2230033BC80 /* radar.png in Resources */,
 				4906D573174AD29B00693392 /* placeholder-cell.png in Resources */,
 				4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */,
 				4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */,
@@ -883,11 +889,17 @@
 				6CDE3BC31789D3A300AAEEDA /* Map.png in Resources */,
 				6CDE3BC41789D3A300AAEEDA /* Radars.png in Resources */,
 				6CDE3BC51789D3A300AAEEDA /* Traffic.png in Resources */,
-				6CDE3BC61789D3A300AAEEDA /* Webcams.png in Resources */,
+				6CDE3BC61789D3A300AAEEDA /* Cameras.png in Resources */,
 				6CDE3BCC178A1F4600AAEEDA /* About.png in Resources */,
 				6CDE3BCD178A1F4600AAEEDA /* Settings.png in Resources */,
 				6CDE3BCF178A2A7500AAEEDA /* menu.png in Resources */,
 				C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */,
+				49742F53179615BF001B62B6 /* ic_m_traffic.png in Resources */,
+				49742F54179615BF001B62B6 /* ic_m_traffic@2x.png in Resources */,
+				49742F55179615BF001B62B6 /* ic_m_webcam.png in Resources */,
+				49742F56179615BF001B62B6 /* ic_m_webcam@2x.png in Resources */,
+				49742F57179615BF001B62B6 /* ic_m_radar.png in Resources */,
+				49742F58179615BF001B62B6 /* ic_m_radar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

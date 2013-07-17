@@ -161,7 +161,7 @@
         {
             // if an existing pin view was not available, create one
             MKAnnotationView *customAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:cameraAnnotationIdentifier];
-            customAnnotationView.image = [UIImage imageNamed:@"camera"];
+            customAnnotationView.image = [UIImage imageNamed:@"ic_m_webcam"];
             customAnnotationView.canShowCallout = YES;
             
             // add a detail disclosure button to the callout which will open a new view controller page
@@ -193,7 +193,7 @@
         {
             // if an existing pin view was not available, create one
             MKAnnotationView *customAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:trafficEventAnnotationIdentifier];
-            customAnnotationView.image = [UIImage imageNamed:@"accident"];
+            customAnnotationView.image = [UIImage imageNamed:@"ic_m_traffic"];
             customAnnotationView.canShowCallout = YES;
             
             // add a detail disclosure button to the callout which will open a new view controller page
@@ -226,7 +226,7 @@
         {
             // if an existing pin view was not available, create one
             MKAnnotationView *customAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:radarAnnotationIdentifier];
-            customAnnotationView.image = [UIImage imageNamed:@"radar"];
+            customAnnotationView.image = [UIImage imageNamed:@"ic_m_radar"];
             customAnnotationView.canShowCallout = YES;
                         
             return customAnnotationView;
