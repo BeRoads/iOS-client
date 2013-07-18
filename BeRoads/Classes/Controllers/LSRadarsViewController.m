@@ -24,11 +24,6 @@
 
 @implementation LSRadarsViewController
 
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECRight];
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -99,6 +94,13 @@
     self.title = NSLocalizedString(@"Radars", @"Radars");
 }
 
+#pragma mark - IBActions
+
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -126,7 +128,7 @@
     CLLocation* radarLocation = [[CLLocation alloc] initWithLatitude:[currentRadar.lat floatValue] longitude:[currentRadar.lng floatValue]];
     int distance = (int) [radarLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
     cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
-
+    cell.typeRadarLabel.text = [currentRadar type];
     
     return cell;
 }

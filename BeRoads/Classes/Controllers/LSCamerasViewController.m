@@ -28,11 +28,6 @@
 
 @implementation LSCamerasViewController
 
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECRight];
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -104,6 +99,14 @@
 -(void)awakeFromNib{
     self.title = NSLocalizedString(@"Cameras", @"Cameras");
 }
+
+#pragma mark - IBACTION
+
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
 
 #pragma mark - Table view data source
 

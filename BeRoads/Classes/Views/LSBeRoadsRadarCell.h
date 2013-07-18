@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speedLimitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeRadarLabel;
 
 
 @end
