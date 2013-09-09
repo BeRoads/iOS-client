@@ -60,18 +60,7 @@
     //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
     
     //[[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 
-        /*UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        LSMapViewController *mapViewController = [[LSMapViewController alloc] init];
-        LSSideMenuViewController *sideMenuViewController = [[LSSideMenuViewController alloc] init];
-        splitViewController.delegate = mapViewController;
-        splitViewController.viewControllers = [NSArray
-                                                    arrayWithObjects:sideMenuViewController,
-                                                    mapViewController, nil];*/
-        
-    }
     return YES;
 }
 							

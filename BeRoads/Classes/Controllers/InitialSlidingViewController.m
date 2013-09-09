@@ -18,15 +18,12 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Map"];
-    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-        
-        
-        
-        
     }
-    
-    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+       
+    }
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
