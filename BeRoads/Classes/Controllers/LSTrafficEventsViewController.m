@@ -60,6 +60,20 @@
     [self reloadTrafficEvents];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    // shadowPath, shadowOffset, and rotation is handled by ECSlidingViewController.
+    // You just need to set the opacity, radius, and color.
+    self.navigationController.view.layer.shadowOpacity = 0.75f;
+    self.navigationController.view.layer.shadowRadius = 10.0f;
+    self.navigationController.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
+        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    }
+}
+
 - (void)reloadTrafficEvents{
     [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
         self.trafficEvents = trafficEvents;
