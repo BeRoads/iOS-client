@@ -117,6 +117,19 @@
 		6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C61C3A317DBB9E0000539BC /* Security.framework */; };
 		6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A517DE2065000539BC /* glyphicons_054_clock.png */; };
 		6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A617DE2065000539BC /* glyphicons_309_comments.png */; };
+		6C61C3C717DE4CBB000539BC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3AA17DE4CBB000539BC /* .gitignore */; };
+		6C61C3C817DE4CBB000539BC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3AB17DE4CBB000539BC /* LICENSE */; };
+		6C61C3C917DE4CBB000539BC /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3AD17DE4CBB000539BC /* MarqueeLabel.m */; };
+		6C61C3CA17DE4CBB000539BC /* MarqueeLabel.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3AE17DE4CBB000539BC /* MarqueeLabel.podspec */; };
+		6C61C3CE17DE4CBB000539BC /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3B717DE4CBB000539BC /* ModalViewController.xib */; };
+		6C61C3D017DE4CBB000539BC /* MarqueeLabelDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3BB17DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */; };
+		6C61C3D117DE4CBB000539BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3BC17DE4CBB000539BC /* Default-568h@2x.png */; };
+		6C61C3D317DE4CBB000539BC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3BE17DE4CBB000539BC /* MainWindow.xib */; };
+		6C61C3D417DE4CBB000539BC /* MarqueeLabelDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3BF17DE4CBB000539BC /* MarqueeLabelDemo-Info.plist */; };
+		6C61C3D517DE4CBB000539BC /* MarqueeLabelDemoNibs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3C417DE4CBB000539BC /* MarqueeLabelDemoNibs-Info.plist */; };
+		6C61C3D617DE4CBB000539BC /* MarqueeLabelDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3C517DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */; };
+		6C61C3D717DE4CBB000539BC /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3C617DE4CBB000539BC /* README.mdown */; };
+		6C61C3DE17DE4D5C000539BC /* MarqueeLabel.h in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3AC17DE4CBB000539BC /* MarqueeLabel.h */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
 		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
@@ -136,6 +149,23 @@
 		C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C61C3DA17DE4CBC000539BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C61C3C017DE4CBB000539BC /* MarqueeLabelDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = MarqueeLabelDemo;
+		};
+		6C61C3DC17DE4CBC000539BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C61C3C017DE4CBB000539BC /* MarqueeLabelDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B660C7C16BCFEEF007F9463;
+			remoteInfo = MarqueeLabelDemoNibs;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventsBeRoadsCell.h; sourceTree = "<group>"; };
@@ -323,6 +353,30 @@
 		6C61C3A317DBB9E0000539BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6C61C3A517DE2065000539BC /* glyphicons_054_clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_054_clock.png; sourceTree = "<group>"; };
 		6C61C3A617DE2065000539BC /* glyphicons_309_comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_309_comments.png; sourceTree = "<group>"; };
+		6C61C3AA17DE4CBB000539BC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6C61C3AB17DE4CBB000539BC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6C61C3AC17DE4CBB000539BC /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
+		6C61C3AD17DE4CBB000539BC /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
+		6C61C3AE17DE4CBB000539BC /* MarqueeLabel.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MarqueeLabel.podspec; sourceTree = "<group>"; };
+		6C61C3B117DE4CBB000539BC /* MarqueeLabelDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabelDemoAppDelegate.h; sourceTree = "<group>"; };
+		6C61C3B217DE4CBB000539BC /* MarqueeLabelDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabelDemoAppDelegate.m; sourceTree = "<group>"; };
+		6C61C3B317DE4CBB000539BC /* MarqueeLabelDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabelDemoViewController.h; sourceTree = "<group>"; };
+		6C61C3B417DE4CBB000539BC /* MarqueeLabelDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabelDemoViewController.m; sourceTree = "<group>"; };
+		6C61C3B517DE4CBB000539BC /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		6C61C3B617DE4CBB000539BC /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		6C61C3B717DE4CBB000539BC /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		6C61C3B917DE4CBB000539BC /* MarqueeLabelDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabelDemoViewController.h; sourceTree = "<group>"; };
+		6C61C3BA17DE4CBB000539BC /* MarqueeLabelDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabelDemoViewController.m; sourceTree = "<group>"; };
+		6C61C3BB17DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarqueeLabelDemoViewController.xib; sourceTree = "<group>"; };
+		6C61C3BC17DE4CBB000539BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6C61C3BD17DE4CBB000539BC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C61C3BE17DE4CBB000539BC /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6C61C3BF17DE4CBB000539BC /* MarqueeLabelDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarqueeLabelDemo-Info.plist"; sourceTree = "<group>"; };
+		6C61C3C017DE4CBB000539BC /* MarqueeLabelDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MarqueeLabelDemo.xcodeproj; sourceTree = "<group>"; };
+		6C61C3C317DE4CBB000539BC /* MarqueeLabelDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabelDemo_Prefix.pch; sourceTree = "<group>"; };
+		6C61C3C417DE4CBB000539BC /* MarqueeLabelDemoNibs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarqueeLabelDemoNibs-Info.plist"; sourceTree = "<group>"; };
+		6C61C3C517DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarqueeLabelDemoViewController.xib; sourceTree = "<group>"; };
+		6C61C3C617DE4CBB000539BC /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		6CDE3B9D1789910400AAEEDA /* bg_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_list.png; sourceTree = "<group>"; };
@@ -664,6 +718,7 @@
 		49693D9B173E5286000D408E /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				6C61C3A917DE4CBB000539BC /* MarqueeLabel */,
 				6CDE3BB01789A9DE00AAEEDA /* ECSlidingViewController */,
 				4946322E17614E0A0065AE05 /* TestFlightSDK1.2.5 */,
 				494631FF1760E3E30065AE05 /* FormatterKit */,
@@ -779,6 +834,70 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		6C61C3A917DE4CBB000539BC /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6C61C3AA17DE4CBB000539BC /* .gitignore */,
+				6C61C3AB17DE4CBB000539BC /* LICENSE */,
+				6C61C3AC17DE4CBB000539BC /* MarqueeLabel.h */,
+				6C61C3AD17DE4CBB000539BC /* MarqueeLabel.m */,
+				6C61C3AE17DE4CBB000539BC /* MarqueeLabel.podspec */,
+				6C61C3AF17DE4CBB000539BC /* MarqueeLabelDemo */,
+				6C61C3C617DE4CBB000539BC /* README.mdown */,
+			);
+			path = MarqueeLabel;
+			sourceTree = "<group>";
+		};
+		6C61C3AF17DE4CBB000539BC /* MarqueeLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6C61C3B017DE4CBB000539BC /* Classes */,
+				6C61C3BC17DE4CBB000539BC /* Default-568h@2x.png */,
+				6C61C3BD17DE4CBB000539BC /* main.m */,
+				6C61C3BE17DE4CBB000539BC /* MainWindow.xib */,
+				6C61C3BF17DE4CBB000539BC /* MarqueeLabelDemo-Info.plist */,
+				6C61C3C017DE4CBB000539BC /* MarqueeLabelDemo.xcodeproj */,
+				6C61C3C317DE4CBB000539BC /* MarqueeLabelDemo_Prefix.pch */,
+				6C61C3C417DE4CBB000539BC /* MarqueeLabelDemoNibs-Info.plist */,
+				6C61C3C517DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */,
+			);
+			path = MarqueeLabelDemo;
+			sourceTree = "<group>";
+		};
+		6C61C3B017DE4CBB000539BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6C61C3B117DE4CBB000539BC /* MarqueeLabelDemoAppDelegate.h */,
+				6C61C3B217DE4CBB000539BC /* MarqueeLabelDemoAppDelegate.m */,
+				6C61C3B317DE4CBB000539BC /* MarqueeLabelDemoViewController.h */,
+				6C61C3B417DE4CBB000539BC /* MarqueeLabelDemoViewController.m */,
+				6C61C3B517DE4CBB000539BC /* ModalViewController.h */,
+				6C61C3B617DE4CBB000539BC /* ModalViewController.m */,
+				6C61C3B717DE4CBB000539BC /* ModalViewController.xib */,
+				6C61C3B817DE4CBB000539BC /* Nibs */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6C61C3B817DE4CBB000539BC /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				6C61C3B917DE4CBB000539BC /* MarqueeLabelDemoViewController.h */,
+				6C61C3BA17DE4CBB000539BC /* MarqueeLabelDemoViewController.m */,
+				6C61C3BB17DE4CBB000539BC /* MarqueeLabelDemoViewController.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		6C61C3C117DE4CBB000539BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C61C3DB17DE4CBC000539BC /* MarqueeLabelDemo.app */,
+				6C61C3DD17DE4CBC000539BC /* MarqueeLabelDemoNibs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6CDE3BB01789A9DE00AAEEDA /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,12 +975,35 @@
 			mainGroup = 49693D13173E44D7000D408E;
 			productRefGroup = 49693D1D173E44D7000D408E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6C61C3C117DE4CBB000539BC /* Products */;
+					ProjectRef = 6C61C3C017DE4CBB000539BC /* MarqueeLabelDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				49693D1B173E44D7000D408E /* beroads */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6C61C3DB17DE4CBC000539BC /* MarqueeLabelDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MarqueeLabelDemo.app;
+			remoteRef = 6C61C3DA17DE4CBC000539BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C61C3DD17DE4CBC000539BC /* MarqueeLabelDemoNibs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MarqueeLabelDemoNibs.app;
+			remoteRef = 6C61C3DC17DE4CBC000539BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		49693D1A173E44D7000D408E /* Resources */ = {
@@ -917,6 +1059,17 @@
 				49742F58179615BF001B62B6 /* ic_m_radar@2x.png in Resources */,
 				6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */,
 				6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */,
+				6C61C3C717DE4CBB000539BC /* .gitignore in Resources */,
+				6C61C3C817DE4CBB000539BC /* LICENSE in Resources */,
+				6C61C3CA17DE4CBB000539BC /* MarqueeLabel.podspec in Resources */,
+				6C61C3CE17DE4CBB000539BC /* ModalViewController.xib in Resources */,
+				6C61C3D017DE4CBB000539BC /* MarqueeLabelDemoViewController.xib in Resources */,
+				6C61C3D117DE4CBB000539BC /* Default-568h@2x.png in Resources */,
+				6C61C3D317DE4CBB000539BC /* MainWindow.xib in Resources */,
+				6C61C3D417DE4CBB000539BC /* MarqueeLabelDemo-Info.plist in Resources */,
+				6C61C3D517DE4CBB000539BC /* MarqueeLabelDemoNibs-Info.plist in Resources */,
+				6C61C3D617DE4CBB000539BC /* MarqueeLabelDemoViewController.xib in Resources */,
+				6C61C3D717DE4CBB000539BC /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +1080,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C61C3DE17DE4D5C000539BC /* MarqueeLabel.h in Sources */,
 				49693D2C173E44D7000D408E /* main.m in Sources */,
 				49693D9F173E5286000D408E /* LSAppDelegate.m in Sources */,
 				49693DA0173E5286000D408E /* Camera.m in Sources */,
@@ -993,6 +1147,7 @@
 				6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */,
 				49384252178EC1D800F05595 /* LSNoResultView.m in Sources */,
 				6C61C3A217DBB886000539BC /* LSScrollLabel.m in Sources */,
+				6C61C3C917DE4CBB000539BC /* MarqueeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

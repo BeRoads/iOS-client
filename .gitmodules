@@ -13,3 +13,6 @@
 [submodule "BeRoads/Vendors/ECSlidingViewController"]
 	path = BeRoads/Vendors/ECSlidingViewController
 url=https://github.com/ValCapri/ECSlidingViewController.git
+[submodule "BeRoads/Vendors/MarqueeLabel"]
+	path = BeRoads/Vendors/MarqueeLabel
+	url = https://github.com/cbpowell/MarqueeLabel.git
