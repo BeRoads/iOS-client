@@ -11,6 +11,11 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
-@interface LSAboutViewController : UITableViewController
+
+@interface LSAboutViewController : UIViewController
+@property (nonatomic,strong) UILabel* labelChristophe;
+@property (nonatomic,strong) UILabel* labelJulien;
+@property (nonatomic,strong) UILabel* labelQuentin;
+@property (nonatomic,strong) UILabel* labelLionel;
 
 @end

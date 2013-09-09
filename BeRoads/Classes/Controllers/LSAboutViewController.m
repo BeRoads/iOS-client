@@ -14,18 +14,35 @@
 
 @implementation LSAboutViewController
 
+
 - (IBAction)revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (IBAction)openChristopheURL:(id)sender
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://plus.google.com/108315424589085456181/posts"]];
+}
+
+- (IBAction)openQuentinURL:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/QKaiser"]];
+}
+
+- (IBAction)openJulienURL:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.harkor.be"]];
+}
+
+- (IBAction)openLionelURL:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.valcapri.com"]];
+}
+
+- (IBAction)openBeRoadsURL:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.beroads.com"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -40,6 +57,7 @@
     if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
         self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
+    
 }
 
 
@@ -51,12 +69,6 @@
         UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
         self.navigationItem.leftBarButtonItem = menuButton;
     }
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,86 +81,5 @@
     self.title = NSLocalizedString(@"About", @"About");
 }
 
-#pragma mark - Table view data source
-
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 0) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.valcapri.com"]];
-    } else if (indexPath.row == 1){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/QKaiser"]];
-    } else if (indexPath.row == 2) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://plus.google.com/108315424589085456181/posts"]];
-    } else if (indexPath.row == 3){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.harkor.be"]];
-    } else{
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.beroads.com"]];
-    }
-}
 
 @end
