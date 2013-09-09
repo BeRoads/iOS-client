@@ -103,8 +103,13 @@ static NSString * const kCamera = @"Camera.json";
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger area = [userDefaults integerForKey:kAreaPreference];
     
+    //limit the amount of radars so we don't overcrowd the map when the user
+    //is going crazy with distances > 100
+    [parameters setObject:[NSString stringWithFormat:@"%i",50] forKey:@"max"];
+    
     if (area > 0) {
         [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        
     }
     
 	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){

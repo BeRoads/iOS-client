@@ -174,7 +174,6 @@
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
             customAnnotationView.rightCalloutAccessoryView = rightButton;
-            
             return customAnnotationView;
         }
         else

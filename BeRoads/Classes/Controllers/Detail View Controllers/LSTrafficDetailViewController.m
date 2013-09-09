@@ -9,6 +9,7 @@
 #import "LSTrafficDetailViewController.h"
 
 #import "TrafficEvent.h"
+#import "LSScrollLabel.h"
 
 @interface LSTrafficDetailViewController ()
 
@@ -26,6 +27,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.title = _trafficEvent.location;
+    
+    LSScrollLabel *asl = [[LSScrollLabel alloc] init];
+    [asl setText:_trafficEvent.location];
+    asl.init;
+    [self.navigationItem setTitleView:asl];
+    
 }
 
 - (void)didReceiveMemoryWarning

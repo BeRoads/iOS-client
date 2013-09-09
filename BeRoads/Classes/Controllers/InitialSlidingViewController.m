@@ -16,10 +16,10 @@
     UIStoryboard *storyboard;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"Map"];
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        storyboard = [UIStoryboard storyboardWithName:@"iPad" bundle:nil];
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
         
         
         
