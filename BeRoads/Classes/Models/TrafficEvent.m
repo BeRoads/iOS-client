@@ -19,6 +19,7 @@
 @synthesize category;
 @synthesize lat;
 @synthesize lng;
+@synthesize distance;
 @synthesize idTrafficEvent;
 
 
@@ -54,6 +55,8 @@
 	}
 
 	self.time = [[dic objectForKey:@"time"] intValue];
+    
+    self.distance = [[dic objectForKey:@"distance"] intValue];
     
 	id category_ = [dic objectForKey:@"category"];
 	if([category_ isKindOfClass:[NSString class]])

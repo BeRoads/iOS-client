@@ -116,9 +116,7 @@
     // Configure the cell...
     TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
     
-    CLLocation* trafficEventLocation = [[CLLocation alloc] initWithLatitude:[currentTrafficEvent.lat floatValue] longitude:[currentTrafficEvent.lng floatValue]];
-    int distance = (int) [trafficEventLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",currentTrafficEvent.distance];
                 
     cell.titleLabel.text = [currentTrafficEvent location];
     

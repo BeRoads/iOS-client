@@ -17,6 +17,7 @@
 	NSString *category;
 	NSString *lat;
 	NSString *lng;
+    int distance;
 	NSDecimalNumber *idTrafficEvent;
 }
 
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) NSString *lat;
 @property (nonatomic, retain) NSString *lng;
 @property (nonatomic, retain) NSDecimalNumber *idTrafficEvent;
+@property (nonatomic) int distance;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
 - (void) parseJSONDictionary:(NSDictionary *)dic;
