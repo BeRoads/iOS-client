@@ -53,12 +53,8 @@
 		self.source = source_;
 	}
 
-	id time_ = [dic objectForKey:@"time"];
-	if([time_ isKindOfClass:[NSNumber class]])
-	{
-		self.time = time_;
-	}
-
+	self.time = [[dic objectForKey:@"time"] intValue];
+    
 	id category_ = [dic objectForKey:@"category"];
 	if([category_ isKindOfClass:[NSString class]])
 	{

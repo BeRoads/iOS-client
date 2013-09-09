@@ -13,7 +13,7 @@
 	NSString *message;
 	NSString *location;
 	NSString *source;
-	NSDecimalNumber *time;
+	int time;
 	NSString *category;
 	NSString *lat;
 	NSString *lng;
@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSString *message;
 @property (nonatomic, retain) NSString *location;
 @property (nonatomic, retain) NSString *source;
-@property (nonatomic, retain) NSDecimalNumber *time;
+@property (nonatomic) int time;
 @property (nonatomic, retain) NSString *category;
 @property (nonatomic, retain) NSString *lat;
 @property (nonatomic, retain) NSString *lng;

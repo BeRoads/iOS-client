@@ -13,5 +13,9 @@
 @interface LSTrafficDetailViewController : UIViewController
 
 @property (nonatomic,strong) TrafficEvent* trafficEvent;
+@property (nonatomic,strong) IBOutlet UILabel* updateLabel;
+@property (nonatomic,strong) IBOutlet UITextView* descriptionTextView;
+@property (nonatomic,strong) IBOutlet UILabel* sourceLabel;
+
 
 @end

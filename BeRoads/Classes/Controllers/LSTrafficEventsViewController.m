@@ -104,7 +104,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"beroadsCell";
+    static NSString *CellIdentifier = @"detailTrafficEvent";
     LSTrafficEventsBeRoadsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     /*
@@ -126,6 +126,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
     if ([[segue identifier] isEqualToString:@"detailTrafficEvent"]) {
         LSTrafficDetailViewController* detailViewController = [segue destinationViewController];
         detailViewController.trafficEvent = [_trafficEvents objectAtIndex:[self.tableView indexPathForSelectedRow].row];
