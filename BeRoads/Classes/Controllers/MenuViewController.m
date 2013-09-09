@@ -25,7 +25,7 @@
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     [self.slidingViewController setHidesBottomBarWhenPushed:true];
-    
+    self.tableView.separatorColor = [UIColor whiteColor];
     self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
 }
 
@@ -37,7 +37,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     // This will create a "invisible" footer
-    return 0.01f;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,6 +49,8 @@
     }
     
     cell.textLabel.text = NSLocalizedString([self.menuItems objectAtIndex:indexPath.row], [self.menuItems objectAtIndex:indexPath.row]);
+    cell.textLabel.font = [UIFont fontWithName:@"System" size:18.000];
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.menuItems objectAtIndex:indexPath.row]]];
     
     return cell;
