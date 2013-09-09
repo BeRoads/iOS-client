@@ -20,6 +20,7 @@
 @synthesize date;
 @synthesize type;
 @synthesize speedLimit;
+@synthesize distance;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic
 {

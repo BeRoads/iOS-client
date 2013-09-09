@@ -16,6 +16,7 @@
 	NSString *lat;
 	NSString *lng;
 	NSDecimalNumber *idCamera;
+    int distance;
 }
 
 @property (nonatomic, retain) NSString *city;
@@ -24,6 +25,8 @@
 @property (nonatomic, retain) NSString *lat;
 @property (nonatomic, retain) NSString *lng;
 @property (nonatomic, retain) NSDecimalNumber *idCamera;
+@property (nonatomic) int distance;
+
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
 - (void) parseJSONDictionary:(NSDictionary *)dic;

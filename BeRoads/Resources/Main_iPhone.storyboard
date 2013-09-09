@@ -198,7 +198,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bCA-da-UKk">
                                             <rect key="frame" x="44" y="1" width="219" height="41"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -223,8 +223,8 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fixed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lru-rI-kI2">
                                             <rect key="frame" x="271" y="20" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.99607843139999996" green="0.72941176470000002" blue="0.26274509800000001" alpha="1" colorSpace="deviceRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.74675143489999996" green="0.74675143489999996" blue="0.74675143489999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
@@ -654,6 +654,8 @@
                 <relationship kind="action" name="openBeRoadsURL:"/>
                 <relationship kind="action" name="openChristopheURL:"/>
                 <relationship kind="action" name="openJulienURL:"/>
+                <relationship kind="action" name="openQuentinURL:"/>
+                <relationship kind="action" name="revealMenu:"/>
             </relationships>
         </class>
         <class className="LSBeRoadsRadarCell" superclassName="UITableViewCell">

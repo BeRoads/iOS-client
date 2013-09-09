@@ -18,6 +18,7 @@
 @synthesize lat;
 @synthesize lng;
 @synthesize idCamera;
+@synthesize distance;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic
 {

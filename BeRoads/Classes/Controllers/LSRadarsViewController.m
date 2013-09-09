@@ -125,10 +125,13 @@
     cell.titleLabel.text = [currentRadar address];
     cell.speedLimitLabel.text = [currentRadar speedLimit];
     
-    CLLocation* radarLocation = [[CLLocation alloc] initWithLatitude:[currentRadar.lat floatValue] longitude:[currentRadar.lng floatValue]];
-    int distance = (int) [radarLocation distanceFromLocation:[[LSLocationManager sharedLocationManager]location]]/1000;
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",distance];
-    cell.typeRadarLabel.text = [currentRadar type];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",currentRadar.distance];
+    if([[currentRadar type] isEqual: @"fixed"]){
+        cell.typeRadarLabel.text = @"";
+    }else{
+        cell.typeRadarLabel.text = [currentRadar type];
+    }
+    
     
     return cell;
 }
