@@ -70,9 +70,7 @@ static NSString * const kCamera = @"Camera.json";
             NSDictionary* dict = [JSON objectForKey:@"TrafficEvent"];
             TrafficEvents* trafficEventsObject = [[TrafficEvents alloc] initWithJSONDictionary:dict];
             NSArray* trafficEvents = [trafficEventsObject item];
-            
-            NSLog(@"TrafficEvents count : %d", [trafficEvents count]);
-            
+                        
 			dispatch_async(dispatch_get_main_queue(), ^{
                 
                 if(block){
@@ -121,8 +119,6 @@ static NSString * const kCamera = @"Camera.json";
             Radars* radarsObject = [[Radars alloc] initWithJSONDictionary:dict];
             NSArray* radars = [radarsObject item];
             
-            NSLog(@"Radars count : %d", [radars count]);
-            
 			dispatch_async(dispatch_get_main_queue(), ^{
                 if(block){
                     block(radars,nil);
@@ -164,8 +160,6 @@ static NSString * const kCamera = @"Camera.json";
             NSDictionary* dict = [JSON objectForKey:@"Camera"];
             Cameras* camerasObject = [[Cameras alloc] initWithJSONDictionary:dict];
             NSArray* cameras = [camerasObject item];
-            
-            NSLog(@"Cameras count : %d", [cameras count]);
             
 			dispatch_async(dispatch_get_main_queue(), ^{
                 

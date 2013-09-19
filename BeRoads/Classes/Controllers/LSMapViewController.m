@@ -33,7 +33,6 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    NSLog(@"Loading LSMapViewController...");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -247,9 +246,7 @@
         
         MKCoordinateSpan span = MKCoordinateSpanMake(0.5, 0.5);
         MKCoordinateRegion region = MKCoordinateRegionMake(userLocation.coordinate, span);
-        
-        NSLog(@"User loation : %@",_mapView.userLocation);
-                
+                        
         [_mapView setRegion:region animated:YES];
         [_mapView regionThatFits:region];
         _firstTime = YES;

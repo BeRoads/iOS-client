@@ -21,10 +21,7 @@
 {
     // Override point for customization after application launch.
     // Location manager
-    
-    // !!!: Use the next line only during beta
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-    
+        
     [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];   
     // End TestFlight
     
@@ -33,7 +30,7 @@
     locationManager.distanceFilter = 1000; // 1 kilometer
     locationManager.updateLocationOnApplicationDidBecomeActive = YES;
     locationManager.loop = YES;
-    locationManager.loopTimeInterval = 120;
+    locationManager.loopTimeInterval = 300;
     [locationManager startUpdatingLocation];
     
     // The registration domain is volatile.  It does not persist across launches.

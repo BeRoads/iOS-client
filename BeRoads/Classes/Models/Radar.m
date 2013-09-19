@@ -83,6 +83,11 @@
 		self.speedLimit = speedLimit_;
 	}
 	
+	id distance_ = [dic objectForKey:@"distance"];
+	if([distance_ isKindOfClass:[NSNumber class]])
+	{
+		self.distance = [distance_ integerValue];
+	}
 }
 
 #pragma mark ANNOTATION

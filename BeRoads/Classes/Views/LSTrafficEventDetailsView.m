@@ -25,14 +25,14 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self baseInit];
+        // Do nothing
     }
     return self;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if ((self = [super initWithCoder:aDecoder])) {
-        [self baseInit];
+        // Do nothing
     }
     return self;
 }

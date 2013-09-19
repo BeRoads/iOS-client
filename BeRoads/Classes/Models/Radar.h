@@ -18,7 +18,7 @@
 	NSString *date;
 	NSString *type;
 	NSString *speedLimit;
-    int distance;
+    NSInteger distance;
 }
 
 @property (nonatomic, retain) NSDecimalNumber *idRadar;
@@ -29,7 +29,7 @@
 @property (nonatomic, retain) NSString *date;
 @property (nonatomic, retain) NSString *type;
 @property (nonatomic, retain) NSString *speedLimit;
-@property (nonatomic) int distance;
+@property (nonatomic, assign) NSInteger distance;
 
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
