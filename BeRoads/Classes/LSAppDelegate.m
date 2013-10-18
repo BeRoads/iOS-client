@@ -58,6 +58,12 @@
     
     //[[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
 
+    if (launchOptions == nil) {
+        if([[UIApplication sharedApplication] applicationIconBadgeNumber] > 0){
+            [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+        }
+    }
+    
     return YES;
 }
 							
