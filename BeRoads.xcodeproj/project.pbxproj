@@ -45,7 +45,7 @@
 		4946323317614E0A0065AE05 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4946322F17614E0A0065AE05 /* libTestFlight.a */; };
 		4946323417614E0A0065AE05 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4946323017614E0A0065AE05 /* README.md */; };
 		4946323517614E0A0065AE05 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 4946323117614E0A0065AE05 /* release_notes.md */; };
-		49463237176150B70065AE05 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49463236176150B70065AE05 /* AdSupport.framework */; };
+		49463237176150B70065AE05 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49463236176150B70065AE05 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		49463239176152FA0065AE05 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49463238176152FA0065AE05 /* libz.1.2.5.dylib */; };
 		49693D20173E44D7000D408E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693D1F173E44D7000D408E /* UIKit.framework */; };
 		49693D22173E44D7000D408E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693D21173E44D7000D408E /* Foundation.framework */; };
@@ -553,7 +553,6 @@
 		49693D13173E44D7000D408E = {
 			isa = PBXGroup;
 			children = (
-				6C61C3A317DBB9E0000539BC /* Security.framework */,
 				49693D25173E44D7000D408E /* BeRoads */,
 				499BC21D177C40A700DC746D /* Icon@2x.png */,
 				499BC21B177C409900DC746D /* Icon.png */,
@@ -573,6 +572,7 @@
 		49693D1E173E44D7000D408E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C61C3A317DBB9E0000539BC /* Security.framework */,
 				49463238176152FA0065AE05 /* libz.1.2.5.dylib */,
 				49463236176150B70065AE05 /* AdSupport.framework */,
 				4946321B1760E8AC0065AE05 /* QuartzCore.framework */,
