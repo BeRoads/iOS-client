@@ -46,12 +46,23 @@
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
     //Set the status bar to black color.
-    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
     // Set to navigation bar
-    UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
-    [[UINavigationBar appearance] setBackgroundColor:mapColor];
-    [[UINavigationBar appearance] setTintColor:mapColor];
+    float currentVersion = 7.0;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= currentVersion)
+    {
+        [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
+        UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
+        UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+        [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+    } else {
+        UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
+        [[UINavigationBar appearance] setBackgroundColor:mapColor];
+        [[UINavigationBar appearance] setTintColor:mapColor];
+    }
     
     //UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
     //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];

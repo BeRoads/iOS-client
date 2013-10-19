@@ -25,11 +25,9 @@
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     [self.slidingViewController setHidesBottomBarWhenPushed:true];
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.separatorColor = [UIColor blackColor];
-    
-    self.menuItems = @[@"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About"];
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    //self.tableView.separatorColor = [UIColor blackColor];
+    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
@@ -66,26 +64,55 @@
     if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ){
         UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
         
-        if ([identifier isEqualToString:@"Map"]) {
-            UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
-            [[UINavigationBar appearance] setBackgroundColor:mapColor];
-            [[UINavigationBar appearance] setTintColor:mapColor];
-        } else if ([identifier isEqualToString:@"Traffic"]) {
-            UIColor* trafficColor = [UIColor colorWithRed:0.215686F green:0.713725F blue:0.890196F alpha:1.0F];
-            [[UINavigationBar appearance] setBackgroundColor:trafficColor];
-            [[UINavigationBar appearance] setTintColor:trafficColor];
-        } else if ([identifier isEqualToString:@"Radars"]) {
-            UIColor* radarsColor = [UIColor colorWithRed:0.996078F green:0.729412F blue:0.266667F alpha:1.0F];
-            [[UINavigationBar appearance] setBackgroundColor:radarsColor];
-            [[UINavigationBar appearance] setTintColor:radarsColor];
-        } else if ([identifier isEqualToString:@"Cameras"]) {
-            UIColor* camerasColor = [UIColor colorWithRed:0.568627F green:0.803922F blue:0.192157F alpha:1.0F];
-            [[UINavigationBar appearance] setBackgroundColor:camerasColor];
-            [[UINavigationBar appearance] setTintColor:camerasColor];
+        float currentVersion = 7.0;
+        
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= currentVersion)
+        {
+            [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+            
+            if ([identifier isEqualToString:@"Map"]) {
+                UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
+                UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+                [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+            } else if ([identifier isEqualToString:@"Traffic"]) {
+                UIImage *singlePixelImage = [UIImage imageNamed:@"blue_navbar"];
+                UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+                [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+            } else if ([identifier isEqualToString:@"Radars"]) {
+                UIImage *singlePixelImage = [UIImage imageNamed:@"orange_navbar"];
+                UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+                [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+            } else if ([identifier isEqualToString:@"Cameras"]) {
+                UIImage *singlePixelImage = [UIImage imageNamed:@"green_navbar"];
+                UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+                [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+            } else{
+                UIColor* radarsColor = [UIColor grayColor];
+                [[UINavigationBar appearance] setBackgroundColor:radarsColor];
+                [[UINavigationBar appearance] setTintColor:radarsColor];
+            }
         } else{
-            UIColor* radarsColor = [UIColor grayColor];
-            [[UINavigationBar appearance] setBackgroundColor:radarsColor];
-            [[UINavigationBar appearance] setTintColor:radarsColor];
+            if ([identifier isEqualToString:@"Map"]) {
+                UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
+                [[UINavigationBar appearance] setBackgroundColor:mapColor];
+                [[UINavigationBar appearance] setTintColor:mapColor];
+            } else if ([identifier isEqualToString:@"Traffic"]) {
+                UIColor* trafficColor = [UIColor colorWithRed:0.215686F green:0.713725F blue:0.890196F alpha:1.0F];
+                [[UINavigationBar appearance] setBackgroundColor:trafficColor];
+                [[UINavigationBar appearance] setTintColor:trafficColor];
+            } else if ([identifier isEqualToString:@"Radars"]) {
+                UIColor* radarsColor = [UIColor colorWithRed:0.996078F green:0.729412F blue:0.266667F alpha:1.0F];
+                [[UINavigationBar appearance] setBackgroundColor:radarsColor];
+                [[UINavigationBar appearance] setTintColor:radarsColor];
+            } else if ([identifier isEqualToString:@"Cameras"]) {
+                UIColor* camerasColor = [UIColor colorWithRed:0.568627F green:0.803922F blue:0.192157F alpha:1.0F];
+                [[UINavigationBar appearance] setBackgroundColor:camerasColor];
+                [[UINavigationBar appearance] setTintColor:camerasColor];
+            } else{
+                UIColor* radarsColor = [UIColor grayColor];
+                [[UINavigationBar appearance] setBackgroundColor:radarsColor];
+                [[UINavigationBar appearance] setTintColor:radarsColor];
+            }
         }
         
         [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
