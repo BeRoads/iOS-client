@@ -25,9 +25,11 @@
     [self.slidingViewController setAnchorRightRevealAmount:280.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
     [self.slidingViewController setHidesBottomBarWhenPushed:true];
-    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    //self.tableView.separatorColor = [UIColor blackColor];
-    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [UIColor blackColor];
+    
+    self.menuItems = @[@"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
