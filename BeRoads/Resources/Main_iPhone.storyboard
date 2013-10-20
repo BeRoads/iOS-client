@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Map View Controller - Map-->
         <scene sceneID="ij5-uq-FAf">
             <objects>
                 <viewController id="l7M-i7-8BG" customClass="LSMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X1w-Jc-zID">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="ckx-SB-KJI">
@@ -23,7 +23,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="S2I-Ln-0fj"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Map" id="S2I-Ln-0fj"/>
                     <connections>
                         <outlet property="mapView" destination="ckx-SB-KJI" id="X8U-gF-606"/>
                     </connections>
@@ -118,7 +119,7 @@
             <objects>
                 <viewController id="bYK-Bc-nbt" customClass="LSTrafficDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GNt-AC-tu9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="sourceLabel" text=" CIC Brabant Flamand" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rN4-bQ-H9I">
@@ -154,6 +155,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="2qh-qn-jyD"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="aT6-lj-XFa" id="U6Z-pa-rf0"/>
@@ -312,7 +314,7 @@
         <!--Camera Detail View Controller-->
         <scene sceneID="eEy-Vk-dCG">
             <objects>
-                <viewController storyboardIdentifier="cameraDetailViewController" modalTransitionStyle="partialCurl" id="6jc-Hd-7hv" customClass="LSCameraDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraDetailViewController" id="6jc-Hd-7hv" customClass="LSCameraDetailViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="l9w-eQ-QUk">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,7 +328,7 @@
                             <outlet property="delegate" destination="6jc-Hd-7hv" id="E4f-yZ-J2C"/>
                         </connections>
                     </scrollView>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="bkB-cz-r1N"/>
                     <connections>
                         <outlet property="imageView" destination="4i6-kZ-XZh" id="P78-H9-ZIl"/>

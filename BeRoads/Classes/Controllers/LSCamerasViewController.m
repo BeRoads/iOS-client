@@ -188,7 +188,7 @@
 }
 
 - (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
-    
+    pullTableView.pullTableIsLoadingMore = NO;
 }
 
 #pragma mark - Table view data source
