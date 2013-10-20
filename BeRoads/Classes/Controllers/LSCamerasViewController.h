@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
-#import "PullTableView.h"
+#import <PullTableView.h>
 
 @interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate>
 

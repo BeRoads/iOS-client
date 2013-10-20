@@ -52,7 +52,7 @@
     
     self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
-    ((PullTableView*)self.tableView).pullTableIsLoadingMoreEnabled = NO;
+    ((PullTableView*)self.tableView).pullTableIsLoadingMore = NO;
     [self reloadCameras];
 }
 
