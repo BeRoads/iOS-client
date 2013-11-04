@@ -53,6 +53,7 @@
     self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
     ((PullTableView*)self.tableView).pullTableIsLoadingMore = NO;
+    
     [self reloadCameras];
 }
 
@@ -133,6 +134,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    [cell addGestureRecognizer:longPressGesture];
+    
     __weak UITableViewCell* weakCell = cell;
     
     // Configure the cell...
@@ -152,6 +156,58 @@
     return cell;
 }
 
+
+- (void)longPress:(UILongPressGestureRecognizer *)gesture
+{
+	// only when gesture was recognized, not when ended
+	if (gesture.state == UIGestureRecognizerStateBegan)
+	{
+		// get affected cell
+		UITableViewCell *cell = (UITableViewCell *)[gesture view];
+        
+		// get indexPath of cell
+		NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        
+        //get the camera's zone
+        Zone* selectedZone = [self.zones objectAtIndex:indexPath.section];
+        //get the selected camera
+        Camera* selectedCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
+        
+        //retrieve user's preferences
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        
+        NSMutableArray *mutableArrayCopy = [[prefs objectForKey:@"webcams_favorites"] mutableCopy];
+        //if there is no favorites array, we create it
+        if(!mutableArrayCopy){
+            mutableArrayCopy = [[NSMutableArray alloc] init];
+            [prefs setObject:[[NSArray alloc] init] forKey:@"webcams_favorites"];
+        }
+        
+        bool present = false;
+        for(NSData *cameraEncodedObject in mutableArrayCopy){
+            Camera *camera = [NSKeyedUnarchiver unarchiveObjectWithData:cameraEncodedObject];
+            if([[camera idCamera] isEqual:[selectedCamera idCamera]])
+                present = true;
+        }
+     
+        NSData *cameraEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:selectedCamera];
+        //if it's not already stored as favorites
+        if(!present && ![[selectedZone title] isEqualToString:@"Favorites"]){
+            NSLog(@"Added element at row %@", indexPath);
+            [mutableArrayCopy addObject:cameraEncodedObject];
+        }else{
+            //it's already in favorites and he push in the favorites zone so we delete it
+            [mutableArrayCopy removeObject:cameraEncodedObject];
+        }
+        //we copy to a NSArray so NSUserDefaults don't get angry
+        NSArray *array = [NSArray arrayWithArray:mutableArrayCopy];
+        [prefs setObject:array forKey:@"webcams_favorites"];
+        //we update the favorites zone view
+        [self updateFavorites];
+        
+	}
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return [[self.zones objectAtIndex:section] title];
 }
@@ -166,9 +222,37 @@
     }
 }
 
+- (void) updateFavorites{
+    /**
+     Get the favorites zone and set the cameras NSArray to the content stored in NSUserDefaults as "webcams_favorites".
+     If the favorite zone don't exists, it does nothin'
+     **/
+    for(Zone* z in _zones){
+        if([[z title] isEqualToString:@"Favoris"]){
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            NSMutableArray *mutableArrayCopy = [[prefs objectForKey:@"webcams_favorites"] mutableCopy];
+            NSMutableArray *webcams_favorites = [[NSMutableArray alloc] init];
+            if(mutableArrayCopy){
+                for(NSData *cameraEncodedObject in mutableArrayCopy){
+                    [webcams_favorites addObject:[NSKeyedUnarchiver unarchiveObjectWithData:cameraEncodedObject]];
+                }
+            }
+            z.cameras = webcams_favorites;
+        }
+    }
+    [self.tableView reloadData];
+    
+}
+
 - (void)createZones{
     NSMutableArray* zonesMutable = [NSMutableArray array];
     NSArray* titlesZones = [_cameras valueForKeyPath:@"@distinctUnionOfObjects.zone"];
+    
+    
+
+    Zone* zone = [[Zone alloc] init];
+    zone.title = @"Favoris";
+    [zonesMutable addObject:zone];
     
     for (NSString* title in titlesZones) {
         Zone* zone = [[Zone alloc] init];
@@ -179,6 +263,7 @@
     }
     
     _zones = [NSArray arrayWithArray:zonesMutable];
+    [self updateFavorites];
 }
 
 #pragma mark PullToRefreshDelegate

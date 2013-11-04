@@ -72,6 +72,28 @@
 	
 }
 
+-(void)encodeWithCoder:(NSCoder *)encoder
+{
+    
+    [encoder encodeObject:city forKey:@"city"];
+    [encoder encodeObject:zone forKey:@"zone"];
+    [encoder encodeObject:img forKey:@"img"];
+    [encoder encodeObject:lat forKey:@"lat"];
+    [encoder encodeObject:lng forKey:@"lng"];
+    [encoder encodeObject:idCamera forKey:@"idCamera"];
+}
+
+-(id)initWithCoder:(NSCoder *)decoder
+{
+    self.city = [decoder decodeObjectForKey:@"city"];
+    self.zone = [decoder decodeObjectForKey:@"zone"];
+    self.img = [decoder decodeObjectForKey:@"img"];
+    self.lat = [decoder decodeObjectForKey:@"lat"];
+    self.lng = [decoder decodeObjectForKey:@"lng"];
+    self.idCamera = [decoder decodeObjectForKey:@"idCamera"];
+    return self;
+}
+
 #pragma mark ANNOTATION
 
 -(CLLocationCoordinate2D)coordinate{
