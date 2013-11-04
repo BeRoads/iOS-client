@@ -192,7 +192,7 @@
      
         NSData *cameraEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:selectedCamera];
         //if it's not already stored as favorites
-        if(!present && ![[selectedZone title] isEqualToString:@"Favorites"]){
+        if(!present && ![[selectedZone title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){
             NSLog(@"Added element at row %@", indexPath);
             [mutableArrayCopy addObject:cameraEncodedObject];
         }else{
@@ -228,7 +228,7 @@
      If the favorite zone don't exists, it does nothin'
      **/
     for(Zone* z in _zones){
-        if([[z title] isEqualToString:@"Favoris"]){
+        if([[z title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
             NSMutableArray *mutableArrayCopy = [[prefs objectForKey:@"webcams_favorites"] mutableCopy];
             NSMutableArray *webcams_favorites = [[NSMutableArray alloc] init];
@@ -251,7 +251,7 @@
     
 
     Zone* zone = [[Zone alloc] init];
-    zone.title = @"Favoris";
+    zone.title = NSLocalizedString(@"Favorites", @"Favorites");
     [zonesMutable addObject:zone];
     
     for (NSString* title in titlesZones) {
