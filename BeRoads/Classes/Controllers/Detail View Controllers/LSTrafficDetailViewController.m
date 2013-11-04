@@ -10,6 +10,8 @@
 
 #import "TrafficEvent.h"
 #import "MarqueeLabel.h"
+#import <Social/Social.h>
+#import <SIAlertView/SIAlertView.h>
 
 @interface LSTrafficDetailViewController ()
 
@@ -43,7 +45,68 @@
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"MMM dd, yyyy HH:mm"];
     self.updateLabel.text = [format stringFromDate:date];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];
 }
+
+- (IBAction)Share:(id)sender
+{
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"Share" andMessage:@"Choose your social network"];
+    
+    [alertView addButtonWithTitle:@"Facebook"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alert) {
+                              if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+                                  SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                                  
+                                  [fbSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
+                                  [fbSheetOBJ addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://beroads.com/event/%i", self.trafficEvent.idTrafficEvent]]];
+                                  [fbSheetOBJ addImage:[UIImage imageNamed:@"http://beroads.com/assets/img/logo.png"]];
+                                  [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
+                              }
+                              else
+                              {
+                                  UIAlertView *alertView = [[UIAlertView alloc]
+                                                            initWithTitle:@"Sorry"
+                                                            message:@"You can't send a facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup"
+                                                            delegate:self
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles:nil];
+                                  [alertView show];
+                              }
+                              
+                          }];
+    [alertView addButtonWithTitle:@"Twitter"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alert) {
+                              if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+                              {
+                                  SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
+                                                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
+                                  [tweetSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
+                                  [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
+                              }
+                              else
+                              {
+                                  UIAlertView *alertView = [[UIAlertView alloc]
+                                                            initWithTitle:@"Sorry"
+                                                            message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                                            delegate:self
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles:nil];
+                                  [alertView show];
+                              }
+                          }];
+    [alertView addButtonWithTitle:@"Cancel" type:SIAlertViewButtonTypeCancel handler:^(SIAlertView *alertView) {
+        [alertView dismissAnimated:true];
+    }];
+    
+    alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
+    [alertView show];
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

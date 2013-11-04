@@ -51,25 +51,11 @@
 		self.img = img_;
 	}
 
-	id lat_ = [dic objectForKey:@"lat"];
-	if([lat_ isKindOfClass:[NSString class]])
-	{
-		self.lat = lat_;
-	}
+	self.lat = [[dic objectForKey:@"lat"] doubleValue];
 
-	id lng_ = [dic objectForKey:@"lng"];
-	if([lng_ isKindOfClass:[NSString class]])
-	{
-		self.lng = lng_;
-	}
+	self.lng = [[dic objectForKey:@"lng"] doubleValue];
 
-	id idCamera_ = [dic objectForKey:@"id"];
-	if([idCamera_ isKindOfClass:[NSNumber class]])
-	{
-		self.idCamera = idCamera_;
-	}
-
-	
+	self.idCamera = [[dic objectForKey:@"id"] intValue];
 }
 
 -(void)encodeWithCoder:(NSCoder *)encoder
@@ -78,9 +64,9 @@
     [encoder encodeObject:city forKey:@"city"];
     [encoder encodeObject:zone forKey:@"zone"];
     [encoder encodeObject:img forKey:@"img"];
-    [encoder encodeObject:lat forKey:@"lat"];
-    [encoder encodeObject:lng forKey:@"lng"];
-    [encoder encodeObject:idCamera forKey:@"idCamera"];
+    [encoder encodeDouble:lat forKey:@"lat"];
+    [encoder encodeDouble:lng forKey:@"lng"];
+    [encoder encodeInteger:idCamera forKey:@"idCamera"];
 }
 
 -(id)initWithCoder:(NSCoder *)decoder
@@ -88,16 +74,16 @@
     self.city = [decoder decodeObjectForKey:@"city"];
     self.zone = [decoder decodeObjectForKey:@"zone"];
     self.img = [decoder decodeObjectForKey:@"img"];
-    self.lat = [decoder decodeObjectForKey:@"lat"];
-    self.lng = [decoder decodeObjectForKey:@"lng"];
-    self.idCamera = [decoder decodeObjectForKey:@"idCamera"];
+    self.lat = [decoder decodeDoubleForKey:@"lat"];
+    self.lng = [decoder decodeDoubleForKey:@"lng"];
+    self.idCamera = [decoder decodeIntegerForKey:@"idCamera"];
     return self;
 }
 
 #pragma mark ANNOTATION
 
 -(CLLocationCoordinate2D)coordinate{
-    return CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
+    return CLLocationCoordinate2DMake(self.lat, self.lng);
 }
 
 - (NSString *)title{

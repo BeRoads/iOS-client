@@ -15,10 +15,10 @@
 	NSString *source;
 	int time;
 	NSString *category;
-	NSString *lat;
-	NSString *lng;
+	double lat;
+	double lng;
     int distance;
-	NSDecimalNumber *idTrafficEvent;
+	int idTrafficEvent;
 }
 
 @property (nonatomic, retain) NSString *message;
@@ -26,9 +26,9 @@
 @property (nonatomic, retain) NSString *source;
 @property (nonatomic) int time;
 @property (nonatomic, retain) NSString *category;
-@property (nonatomic, retain) NSString *lat;
-@property (nonatomic, retain) NSString *lng;
-@property (nonatomic, retain) NSDecimalNumber *idTrafficEvent;
+@property (nonatomic) double lat;
+@property (nonatomic) double lng;
+@property (nonatomic) int idTrafficEvent;
 @property (nonatomic) int distance;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;

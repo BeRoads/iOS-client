@@ -64,29 +64,17 @@
 		self.category = category_;
 	}
 
-	id lat_ = [dic objectForKey:@"lat"];
-	if([lat_ isKindOfClass:[NSString class]])
-	{
-		self.lat = lat_;
-	}
-
-	id lng_ = [dic objectForKey:@"lng"];
-	if([lng_ isKindOfClass:[NSString class]])
-	{
-		self.lng = lng_;
-	}
-
-	id idTrafficEvent_ = [dic objectForKey:@"id"];
-	if([idTrafficEvent_ isKindOfClass:[NSNumber class]])
-	{
-		self.idTrafficEvent = idTrafficEvent_;
-	}
+	self.lat = [[dic objectForKey:@"lat"] doubleValue];
+	
+    self.lng = [[dic objectForKey:@"lng"] doubleValue];
+	
+	self.idTrafficEvent = [[dic objectForKey:@"id"] intValue];
 
 	
 }
 
 -(CLLocationCoordinate2D)coordinate{
-    return CLLocationCoordinate2DMake([self.lat floatValue], [self.lng floatValue]);
+    return CLLocationCoordinate2DMake(self.lat, self.lng);
 }
 
 - (NSString *)title{

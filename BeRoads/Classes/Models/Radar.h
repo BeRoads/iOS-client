@@ -10,26 +10,26 @@
 
 @interface Radar : NSObject <MKAnnotation>
 {
-	NSDecimalNumber *idRadar;
+	int idRadar;
 	NSString *name;
     NSString *address;
-	NSString *lat;
-	NSString *lng;
+	double lat;
+	double lng;
 	NSString *date;
 	NSString *type;
-	NSString *speedLimit;
-    NSInteger distance;
+	int speedLimit;
+    int distance;
 }
 
-@property (nonatomic, retain) NSDecimalNumber *idRadar;
+@property (nonatomic) int idRadar;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *address;
-@property (nonatomic, retain) NSString *lat;
-@property (nonatomic, retain) NSString *lng;
+@property (nonatomic) double lat;
+@property (nonatomic) double lng;
 @property (nonatomic, retain) NSString *date;
 @property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSString *speedLimit;
-@property (nonatomic, assign) NSInteger distance;
+@property (nonatomic) int speedLimit;
+@property (nonatomic) int distance;
 
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;

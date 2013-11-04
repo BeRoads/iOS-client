@@ -186,7 +186,7 @@
         bool present = false;
         for(NSData *cameraEncodedObject in mutableArrayCopy){
             Camera *camera = [NSKeyedUnarchiver unarchiveObjectWithData:cameraEncodedObject];
-            if([[camera idCamera] isEqual:[selectedCamera idCamera]])
+            if([camera idCamera] == [selectedCamera idCamera])
                 present = true;
         }
      

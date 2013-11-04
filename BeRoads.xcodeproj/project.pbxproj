@@ -75,6 +75,9 @@
 		6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A517DE2065000539BC /* glyphicons_054_clock.png */; };
 		6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A617DE2065000539BC /* glyphicons_309_comments.png */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
+		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; };
+		6CCEE02D1827A19D00221858 /* SIAlertView.h in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEE02B1827A19D00221858 /* SIAlertView.h */; };
+		6CCEE02E1827A19D00221858 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEE02C1827A19D00221858 /* SIAlertView.m */; };
 		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
 		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
 		6CDE3BA21789955100AAEEDA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA11789955100AAEEDA /* Main_iPad.storyboard */; };
@@ -195,6 +198,9 @@
 		6C61C3A617DE2065000539BC /* glyphicons_309_comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_309_comments.png; sourceTree = "<group>"; };
 		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
 		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
+		6CCEE02218279A9200221858 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6CCEE02B1827A19D00221858 /* SIAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SIAlertView.h; path = Pods/SIAlertView/SIAlertView/SIAlertView.h; sourceTree = "<group>"; };
+		6CCEE02C1827A19D00221858 /* SIAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SIAlertView.m; path = Pods/SIAlertView/SIAlertView/SIAlertView.m; sourceTree = "<group>"; };
 		6CDE3B9D1789910400AAEEDA /* bg_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_list.png; sourceTree = "<group>"; };
 		6CDE3B9E1789910400AAEEDA /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
 		6CDE3BA11789955100AAEEDA /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCEE02318279A9200221858 /* Social.framework in Frameworks */,
 				6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */,
 				49463239176152FA0065AE05 /* libz.1.2.5.dylib in Frameworks */,
 				49463237176150B70065AE05 /* AdSupport.framework in Frameworks */,
@@ -288,6 +295,8 @@
 		49693D13173E44D7000D408E = {
 			isa = PBXGroup;
 			children = (
+				6CCEE02B1827A19D00221858 /* SIAlertView.h */,
+				6CCEE02C1827A19D00221858 /* SIAlertView.m */,
 				49693D25173E44D7000D408E /* BeRoads */,
 				499BC21D177C40A700DC746D /* Icon@2x.png */,
 				499BC21B177C409900DC746D /* Icon.png */,
@@ -308,6 +317,7 @@
 		49693D1E173E44D7000D408E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CCEE02218279A9200221858 /* Social.framework */,
 				6C61C3A317DBB9E0000539BC /* Security.framework */,
 				49463238176152FA0065AE05 /* libz.1.2.5.dylib */,
 				49463236176150B70065AE05 /* AdSupport.framework */,
@@ -644,6 +654,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCEE02D1827A19D00221858 /* SIAlertView.h in Sources */,
+				6CCEE02E1827A19D00221858 /* SIAlertView.m in Sources */,
 				49693D2C173E44D7000D408E /* main.m in Sources */,
 				49693D9F173E5286000D408E /* LSAppDelegate.m in Sources */,
 				49693DA0173E5286000D408E /* Camera.m in Sources */,
