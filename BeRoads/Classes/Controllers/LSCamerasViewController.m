@@ -195,7 +195,8 @@
         if(!present && ![[selectedZone title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){
             NSLog(@"Added element at row %@", indexPath);
             [mutableArrayCopy addObject:cameraEncodedObject];
-        }else{
+        }
+        else if(present && [[selectedZone title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){
             //it's already in favorites and he push in the favorites zone so we delete it
             [mutableArrayCopy removeObject:cameraEncodedObject];
         }
