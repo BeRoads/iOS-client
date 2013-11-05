@@ -50,12 +50,21 @@
 	{
 		self.img = img_;
 	}
-
-	self.lat = [[dic objectForKey:@"lat"] doubleValue];
-
-	self.lng = [[dic objectForKey:@"lng"] doubleValue];
-
-	self.idCamera = [[dic objectForKey:@"id"] intValue];
+	
+    id lat_ = [dic objectForKey:@"lat"];
+    if([lat_ isKindOfClass:[NSDecimalNumber class]]){
+        self.lat = [lat_ doubleValue];
+    }
+    
+    id lng_ = [dic objectForKey:@"lng"];
+    if([lat_ isKindOfClass:[NSDecimalNumber class]]){
+        self.lng = [lng_ doubleValue];
+    }
+    
+	id idCamera_ = [dic objectForKey:@"id"];
+    if([idCamera_ isKindOfClass:[NSDecimalNumber class]]){
+        self.idCamera = [idCamera_ intValue];
+    }
 }
 
 -(void)encodeWithCoder:(NSCoder *)encoder

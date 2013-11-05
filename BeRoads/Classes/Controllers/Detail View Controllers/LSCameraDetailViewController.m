@@ -41,61 +41,11 @@
 
 - (IBAction)Share:(id)sender
 {
-    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"Share" andMessage:@"Choose your social network"];
-    
-    [alertView addButtonWithTitle:@"Facebook"
-                             type:SIAlertViewButtonTypeDefault
-                          handler:^(SIAlertView *alert) {
-                              if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-                                  SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-                                  
-                                  [fbSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ - %@ via @BeRoads", self.camera.zone, self.camera.city]];
-                                  [fbSheetOBJ addURL:[NSURL URLWithString:self.camera.img]];
-                                  [fbSheetOBJ addImage:[UIImage imageNamed:self.camera.img]];
-                                  [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
-                              }
-                              else
-                              {
-                                  UIAlertView *alertView = [[UIAlertView alloc]
-                                                            initWithTitle:@"Sorry"
-                                                            message:@"You can't send a facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup"
-                                                            delegate:self
-                                                            cancelButtonTitle:@"OK"
-                                                            otherButtonTitles:nil];
-                                  [alertView show];
-                              }
-
-                          }];
-    [alertView addButtonWithTitle:@"Twitter"
-                             type:SIAlertViewButtonTypeDefault
-                          handler:^(SIAlertView *alert) {
-                              if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-                              {
-                                  SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
-                                                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
-                                  [tweetSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ [%@ - %@] via @BeRoads", self.camera.img, self.camera.zone, self.camera.city]];
-                                  [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
-                              }
-                              else
-                              {
-                                  UIAlertView *alertView = [[UIAlertView alloc]
-                                                            initWithTitle:@"Sorry"
-                                                            message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
-                                                            delegate:self
-                                                            cancelButtonTitle:@"OK"
-                                                            otherButtonTitles:nil];
-                                  [alertView show];
-                              }
-                          }];
-    [alertView addButtonWithTitle:@"Cancel" type:SIAlertViewButtonTypeCancel handler:^(SIAlertView *alertView) {
-        [alertView dismissAnimated:true];
-    }];
-    
-    alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
-    [alertView show];
-    
-    
-    
+    NSArray *activityItems = @[[NSString stringWithFormat:@"[%@ - %@] via @BeRoads", self.camera.zone, self.camera.city],
+                               [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.camera.img]]]];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToTencentWeibo,UIActivityTypePostToVimeo];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 

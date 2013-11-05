@@ -54,21 +54,36 @@
 		self.source = source_;
 	}
 
-	self.time = [[dic objectForKey:@"time"] intValue];
-    
-    self.distance = [[dic objectForKey:@"distance"] intValue];
-    
+    id time_ = [dic objectForKey:@"time"];
+    if([time_ isKindOfClass:[NSDecimalNumber class]]){
+        self.time = [time_ intValue];
+    }
+
+    id distance_ = [dic objectForKey:@"distance"];
+    if([distance_ isKindOfClass:[NSDecimalNumber class]]){
+        self.distance = [distance_ intValue];
+    }
+        
 	id category_ = [dic objectForKey:@"category"];
 	if([category_ isKindOfClass:[NSString class]])
 	{
 		self.category = category_;
 	}
 
-	self.lat = [[dic objectForKey:@"lat"] doubleValue];
-	
-    self.lng = [[dic objectForKey:@"lng"] doubleValue];
-	
-	self.idTrafficEvent = [[dic objectForKey:@"id"] intValue];
+	id lat_ = [dic objectForKey:@"lat"];
+    if([lat_ isKindOfClass:[NSDecimalNumber class]]){
+        self.lat = [lat_ doubleValue];
+    }
+    
+    id lng_ = [dic objectForKey:@"lng"];
+    if([lat_ isKindOfClass:[NSDecimalNumber class]]){
+        self.lng = [lng_ doubleValue];
+    }
+    
+	id idTrafficEvent_ = [dic objectForKey:@"id"];
+    if([idTrafficEvent_ isKindOfClass:[NSDecimalNumber class]]){
+        self.idTrafficEvent = [idTrafficEvent_ intValue];
+    }
 
 	
 }

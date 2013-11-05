@@ -50,61 +50,11 @@
 
 - (IBAction)Share:(id)sender
 {
-    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"Share" andMessage:@"Choose your social network"];
-    
-    [alertView addButtonWithTitle:@"Facebook"
-                             type:SIAlertViewButtonTypeDefault
-                          handler:^(SIAlertView *alert) {
-                              if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-                                  SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-                                  
-                                  [fbSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
-                                  [fbSheetOBJ addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://beroads.com/event/%i", self.trafficEvent.idTrafficEvent]]];
-                                  [fbSheetOBJ addImage:[UIImage imageNamed:@"http://beroads.com/assets/img/logo.png"]];
-                                  [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
-                              }
-                              else
-                              {
-                                  UIAlertView *alertView = [[UIAlertView alloc]
-                                                            initWithTitle:@"Sorry"
-                                                            message:@"You can't send a facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup"
-                                                            delegate:self
-                                                            cancelButtonTitle:@"OK"
-                                                            otherButtonTitles:nil];
-                                  [alertView show];
-                              }
-                              
-                          }];
-    [alertView addButtonWithTitle:@"Twitter"
-                             type:SIAlertViewButtonTypeDefault
-                          handler:^(SIAlertView *alert) {
-                              if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-                              {
-                                  SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
-                                                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
-                                  [tweetSheetOBJ setInitialText:[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
-                                  [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
-                              }
-                              else
-                              {
-                                  UIAlertView *alertView = [[UIAlertView alloc]
-                                                            initWithTitle:@"Sorry"
-                                                            message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
-                                                            delegate:self
-                                                            cancelButtonTitle:@"OK"
-                                                            otherButtonTitles:nil];
-                                  [alertView show];
-                              }
-                          }];
-    [alertView addButtonWithTitle:@"Cancel" type:SIAlertViewButtonTypeCancel handler:^(SIAlertView *alertView) {
-        [alertView dismissAnimated:true];
-    }];
-    
-    alertView.transitionStyle = SIAlertViewTransitionStyleBounce;
-    [alertView show];
-    
-    
-    
+    NSArray *activityItems = @[[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo,
+                                                 UIActivityTypePostToVimeo];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 
