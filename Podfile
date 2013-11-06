@@ -5,4 +5,3 @@ pod "InAppSettingsKit", '>= 2.0'
 pod "MarqueeLabel", '>= 1.2'
 pod "EGOTableViewPullRefresh", :git => "https://github.com/ValCapri/EGOTableViewPullRefresh.git"
 pod "TestFlightSDK", '>= 2.0.2'
-pod 'SIAlertView'
