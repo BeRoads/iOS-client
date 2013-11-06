@@ -11,7 +11,6 @@
 
 #import "Camera.h"
 #import <Social/Social.h>
-#import <SIAlertView/SIAlertView.h>
 
 @interface LSCameraDetailViewController ()
 
