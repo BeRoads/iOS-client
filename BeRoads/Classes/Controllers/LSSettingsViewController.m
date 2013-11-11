@@ -33,19 +33,6 @@
    	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewTo:ECRight];
-}
-
-#pragma mark - IBAction
-
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -62,11 +49,27 @@
     [self.view addGestureRecognizer:[self.slidingViewController panGesture]];
 }
 
-
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)awakeFromNib{
     self.title = NSLocalizedString(@"Settings", @"Settings");
+}
+
+#pragma mark - IBAction
+
+- (IBAction)revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+#pragma mark - Settings Delegate
+
+- (void)settingsViewControllerDidEnd:(IASKAppSettingsViewController *)sender{
+    // Do nothing
 }
 
 @end

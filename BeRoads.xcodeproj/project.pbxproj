@@ -800,10 +800,7 @@
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/BeRoads/Vendors/TestFlightSDK1.2.5\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -818,10 +815,7 @@
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/BeRoads/Vendors/TestFlightSDK1.2.5\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

@@ -4,7 +4,6 @@ PODS:
   - EGOTableViewPullRefresh (0.2.0)
   - InAppSettingsKit (2.0)
   - MarqueeLabel (1.2.3)
-  - SIAlertView (1.3)
   - TestFlightSDK (2.1.1-beta)
 
 DEPENDENCIES:
@@ -13,7 +12,6 @@ DEPENDENCIES:
   - EGOTableViewPullRefresh (from `https://github.com/ValCapri/EGOTableViewPullRefresh.git`)
   - InAppSettingsKit (>= 2.0)
   - MarqueeLabel (>= 1.2)
-  - SIAlertView
   - TestFlightSDK (>= 2.0.2)
 
 EXTERNAL SOURCES:
@@ -31,7 +29,6 @@ SPEC CHECKSUMS:
   EGOTableViewPullRefresh: cce824eda661307dd567218301e652977d3ac663
   InAppSettingsKit: 2b85ba925a81634860461c21274f54b130c84614
   MarqueeLabel: bcdb527d55db00c6e45b47ff60408c40e2900648
-  SIAlertView: e6d0d786c3a3f6e456b0e8b9376d0c34d68e827b
   TestFlightSDK: dea28c16f0bf65c49c4ed8939b2ae0b0ed9bf8b0
 
-COCOAPODS: 0.22.1
+COCOAPODS: 0.27.1

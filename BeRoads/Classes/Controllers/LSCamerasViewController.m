@@ -131,13 +131,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [cell addGestureRecognizer:longPressGesture];
     
-    __weak UITableViewCell* weakCell = cell;
+    __block UITableViewCell* weakCell = cell;
     
     // Configure the cell...
     Camera* currentCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
@@ -145,10 +145,11 @@
                           placeholderImage:[UIImage imageNamed:@"placeholder-cell"]
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         weakCell.imageView.image = image;
-        [weakCell setNeedsDisplay];
+        [weakCell setNeedsLayout];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         NSLog(@"Error : %@",error);
     }];
+    
     cell.textLabel.text = currentCamera.city;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -217,6 +218,8 @@
     if ([[segue identifier] isEqualToString:@"detailCamera"]) {
         LSCameraDetailViewController* detailViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        detailViewController.view.backgroundColor = [UIColor blackColor];
         
         Camera* selectedCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
         detailViewController.camera = selectedCamera;
