@@ -14,6 +14,10 @@
 		4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4906D575174AD5B600693392 /* bg_speedlimit.png */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
 		490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */; };
+		4919892F1839736D00BD8E56 /* Icon-29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892B1839736D00BD8E56 /* Icon-29x29.png */; };
+		491989301839736D00BD8E56 /* Icon-58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892C1839736D00BD8E56 /* Icon-58x58.png */; };
+		491989311839736D00BD8E56 /* Icon-80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892D1839736D00BD8E56 /* Icon-80x80.png */; };
+		491989321839736D00BD8E56 /* Icon-120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892E1839736D00BD8E56 /* Icon-120x120.png */; };
 		49384252178EC1D800F05595 /* LSNoResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49384251178EC1D800F05595 /* LSNoResultView.m */; };
 		4946321A1760E48F0065AE05 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494632151760E48F0065AE05 /* FormatterKit.strings */; };
 		4946321C1760E8AC0065AE05 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4946321B1760E8AC0065AE05 /* QuartzCore.framework */; };
@@ -103,6 +107,10 @@
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
 		490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficDetailViewController.h; sourceTree = "<group>"; };
 		490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficDetailViewController.m; sourceTree = "<group>"; };
+		4919892B1839736D00BD8E56 /* Icon-29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29x29.png"; sourceTree = "<group>"; };
+		4919892C1839736D00BD8E56 /* Icon-58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58x58.png"; sourceTree = "<group>"; };
+		4919892D1839736D00BD8E56 /* Icon-80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80x80.png"; sourceTree = "<group>"; };
+		4919892E1839736D00BD8E56 /* Icon-120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120x120.png"; sourceTree = "<group>"; };
 		49384250178EC1D800F05595 /* LSNoResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNoResultView.h; sourceTree = "<group>"; };
 		49384251178EC1D800F05595 /* LSNoResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNoResultView.m; sourceTree = "<group>"; };
 		494632161760E48F0065AE05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = BeRoads/de.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
@@ -294,6 +302,10 @@
 				49693D25173E44D7000D408E /* BeRoads */,
 				499BC21D177C40A700DC746D /* Icon@2x.png */,
 				499BC21B177C409900DC746D /* Icon.png */,
+				4919892B1839736D00BD8E56 /* Icon-29x29.png */,
+				4919892C1839736D00BD8E56 /* Icon-58x58.png */,
+				4919892D1839736D00BD8E56 /* Icon-80x80.png */,
+				4919892E1839736D00BD8E56 /* Icon-120x120.png */,
 				49693D1E173E44D7000D408E /* Frameworks */,
 				49693D1D173E44D7000D408E /* Products */,
 				D45170FE76F2492181AC684D /* Pods.xcconfig */,
@@ -566,6 +578,7 @@
 				49693D2A173E44D7000D408E /* InfoPlist.strings in Resources */,
 				49693DAD173E5286000D408E /* Main_iPhone.storyboard in Resources */,
 				4906D573174AD29B00693392 /* placeholder-cell.png in Resources */,
+				491989321839736D00BD8E56 /* Icon-120x120.png in Resources */,
 				4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */,
 				4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */,
 				4979182D17541A580010974E /* Localizable.strings in Resources */,
@@ -577,12 +590,14 @@
 				49463222176134F50065AE05 /* harkor.png in Resources */,
 				49D957F8181336710095AF75 /* red_navbar.png in Resources */,
 				49463223176134F50065AE05 /* qkaiser.png in Resources */,
+				4919892F1839736D00BD8E56 /* Icon-29x29.png in Resources */,
 				49463224176134F50065AE05 /* valcapri.png in Resources */,
 				49463225176134F50065AE05 /* waza_be.png in Resources */,
 				499BC218177C3EFC00DC746D /* Default-568h@2x.png in Resources */,
 				499BC219177C3EFC00DC746D /* Default.png in Resources */,
 				499BC21A177C3EFC00DC746D /* Default@2x.png in Resources */,
 				499BC21C177C409900DC746D /* Icon.png in Resources */,
+				491989301839736D00BD8E56 /* Icon-58x58.png in Resources */,
 				499BC21E177C40A700DC746D /* Icon@2x.png in Resources */,
 				6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */,
 				6CDE3BA01789910400AAEEDA /* navbar.png in Resources */,
@@ -603,6 +618,7 @@
 				49742F57179615BF001B62B6 /* ic_m_radar.png in Resources */,
 				49742F58179615BF001B62B6 /* ic_m_radar@2x.png in Resources */,
 				6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */,
+				491989311839736D00BD8E56 /* Icon-80x80.png in Resources */,
 				49D957F6181336710095AF75 /* green_navbar.png in Resources */,
 				6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */,
 			);
