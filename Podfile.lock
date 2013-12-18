@@ -3,8 +3,8 @@ PODS:
   - ECSlidingViewController (0.10.0)
   - EGOTableViewPullRefresh (0.2.0)
   - InAppSettingsKit (2.0)
-  - MarqueeLabel (1.2.3)
-  - TestFlightSDK (2.1.1-beta)
+  - MarqueeLabel (1.2.5)
+  - TestFlightSDK (2.1.3-noadid-beta)
 
 DEPENDENCIES:
   - AFNetworking (from `https://github.com/AFNetworking/AFNetworking.git`, branch `1.x`)
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   ECSlidingViewController: fc9a9a6564d4a64c0d8c7cf5583d2b9a469ecd04
   EGOTableViewPullRefresh: cce824eda661307dd567218301e652977d3ac663
   InAppSettingsKit: 2b85ba925a81634860461c21274f54b130c84614
-  MarqueeLabel: bcdb527d55db00c6e45b47ff60408c40e2900648
-  TestFlightSDK: dea28c16f0bf65c49c4ed8939b2ae0b0ed9bf8b0
+  MarqueeLabel: 40f3751ea7fb959e5ffb29f33a365fec799e8337
+  TestFlightSDK: 8f8941d0dd990508e127480b06cc6c36379c1b49
 
-COCOAPODS: 0.27.1
+COCOAPODS: 0.28.0

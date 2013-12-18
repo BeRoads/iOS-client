@@ -53,8 +53,16 @@
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= currentVersion)
     {
+        // Menu Bar Button Item in white
         [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    
+        // Back in white
+        [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,nil] forState:UIControlStateNormal];
+        // Arrow in white
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        // Navigation bar text color in white
+        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+
+        // Background color
         UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
         UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
         [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];

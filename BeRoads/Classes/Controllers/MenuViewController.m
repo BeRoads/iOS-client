@@ -11,6 +11,7 @@
 @interface MenuViewController()
 
 @property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, weak) IBOutlet UITableView* tableView;
 
 @end
 
@@ -30,16 +31,23 @@
     self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    float currentVersion = 7.0;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= currentVersion)
+    {
+        CGRect frame = self.view.frame;
+        frame.origin.y = 20;
+        self.view.frame = frame;
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
     return [self.menuItems count];
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    // This will create a "invisible" footer
-    return 0;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -47,7 +55,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.backgroundView.alpha=0;
     }
     
     cell.textLabel.text = NSLocalizedString([self.menuItems objectAtIndex:indexPath.row], [self.menuItems objectAtIndex:indexPath.row]);
@@ -88,8 +95,9 @@
                 [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
             } else{
                 UIColor* radarsColor = [UIColor grayColor];
+                [[UINavigationBar appearance] setBarTintColor:radarsColor];
                 [[UINavigationBar appearance] setBackgroundColor:radarsColor];
-                [[UINavigationBar appearance] setTintColor:radarsColor];
+                [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
             }
         } else{
             if ([identifier isEqualToString:@"Map"]) {
