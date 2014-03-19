@@ -21,8 +21,8 @@
 {
     // Override point for customization after application launch.
     // Location manager
-        
-    [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];   
+    
+    [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];
     // End TestFlight
     
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
@@ -41,10 +41,6 @@
     // has a known good set of values to operate on.
     [[LSPreferenceManager defaultManager] populateRegistrationDomain];
     
-    // Let the device know we want to receive push notifications
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-    
     //Set the status bar to black color.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
@@ -61,7 +57,7 @@
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
         // Navigation bar text color in white
         [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-
+        
         // Background color
         UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
         UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
@@ -76,16 +72,20 @@
     //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
     
     //[[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
-
+    
     if (launchOptions == nil) {
         if([[UIApplication sharedApplication] applicationIconBadgeNumber] > 0){
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
         }
     }
     
+    // Let the device know we want to receive push notifications
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -94,7 +94,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -117,12 +117,12 @@
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
-   
-    //send a request to register the deviceToken to the beroads server so it can send push notification  
+    
+    //send a request to register the deviceToken to the beroads server so it can send push notification
     CLLocation* coordinate = [[LSLocationManager sharedLocationManager] location];
     
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-        
+    
     NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
     
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
@@ -134,37 +134,42 @@
                                    stringByReplacingOccurrencesOfString:@" "
                                    withString:@""];
     
-    NSMutableDictionary*  parametersCoords = [NSMutableDictionary dictionary];
-    [parametersCoords setObject:[NSString stringWithFormat:@"%f",latitude] forKey:@"latitude"];
-    [parametersCoords setObject:[NSString stringWithFormat:@"%f",longitude] forKey:@"longitude"];
+    if (longitude != 0 && latitude != 0) {
+        
+        NSMutableDictionary*  parametersCoords = [NSMutableDictionary dictionary];
+        [parametersCoords setObject:[NSString stringWithFormat:@"%f",latitude] forKey:@"latitude"];
+        [parametersCoords setObject:[NSString stringWithFormat:@"%f",longitude] forKey:@"longitude"];
+        
+        NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+        [parameters setObject:deviceTokenString forKey:@"device_token"];
+        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        [parameters setObject:language forKey:@"language"];
+        [parameters setObject:parametersCoords forKey:@"coords"];
+        
+        AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:url];
+        [client registerHTTPOperationClass:[AFHTTPRequestOperation class]];
+        [client setParameterEncoding:AFJSONParameterEncoding];
+        
+        NSMutableURLRequest *request = [client requestWithMethod:@"POST"
+                                                            path:@"http://dashboard.beroads.com/apns"
+                                                      parameters:parameters];
+        
+        NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            // Print the response body in text
+            NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
+        [operation start];
+    } else {
+        NSLog(@"La longitude et la latitude sont égales à 0");
+    }
     
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
-    [parameters setObject:deviceTokenString forKey:@"device_token"];
-    [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
-    [parameters setObject:language forKey:@"language"];
-    [parameters setObject:parametersCoords forKey:@"coords"];
-    
-    AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:url];
-    [client registerHTTPOperationClass:[AFHTTPRequestOperation class]];
-    [client setParameterEncoding:AFJSONParameterEncoding];
-    
-    NSMutableURLRequest *request = [client requestWithMethod:@"POST"
-                                                        path:@"http://dashboard.beroads.com/apns"
-                                                  parameters:parameters];
-    
-    NSLog(@"URL Request : %@", [request URL]);
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // Print the response body in text
-        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    [operation start];
-   
 	NSLog(@"My token is: %@", deviceTokenString);
 }
 

@@ -35,8 +35,11 @@
 - (void) parseJSONDictionary:(NSDictionary *)dic
 {
 	// PARSER
-	self.idRadar = [[dic objectForKey:@"id"] intValue];
-
+    id idRadar_ = [dic objectForKey:@"id"];
+    if([idRadar_ isKindOfClass:[NSDecimalNumber class]]){
+        self.idRadar = [idRadar_ intValue];
+    }
+    
 	id name_ = [dic objectForKey:@"name"];
 	if([name_ isKindOfClass:[NSString class]])
 	{
@@ -49,9 +52,23 @@
 		self.address = address_;
 	}
 
-	self.lat = [[dic objectForKey:@"lat"] doubleValue];
-	
-    self.lng = [[dic objectForKey:@"lng"] doubleValue];
+    id lat_ = [dic objectForKey:@"lat"];
+    if([lat_ isKindOfClass:[NSNumber class]]){
+        self.lat = [lat_ doubleValue];
+    } else if([lat_ isKindOfClass:[NSString class]]){
+        self.lat = [lat_ doubleValue];
+    } else {
+        NSLog(@"Lat is not know, %@, the class is %@",lat_,[lat_ class]);
+    }
+    
+    id lng_ = [dic objectForKey:@"lng"];
+    if([lng_ isKindOfClass:[NSNumber class]]){
+        self.lng = [lng_ doubleValue];
+    } else if([lng_ isKindOfClass:[NSString class]]){
+        self.lng = [lng_ doubleValue];
+    } else {
+        NSLog(@"Lng is not know, %@, the class is %@",lng_,[lng_ class]);
+    }
 	
 
 	id date_ = [dic objectForKey:@"date"];
@@ -66,9 +83,15 @@
 		self.type = type_;
 	}
 
-	self.speedLimit = [[dic objectForKey:@"speedLimit"] intValue];
-	
-	self.distance = [[dic objectForKey:@"distance"] intValue];
+    id speedLimit_ = [dic objectForKey:@"speedLimit"];
+    if([speedLimit_ isKindOfClass:[NSDecimalNumber class]]){
+        self.speedLimit = [speedLimit_ intValue];
+    }
+    
+    id distance_ = [dic objectForKey:@"distance"];
+    if([distance_ isKindOfClass:[NSDecimalNumber class]]){
+        self.distance = [distance_ intValue];
+    }
 }
 
 #pragma mark ANNOTATION

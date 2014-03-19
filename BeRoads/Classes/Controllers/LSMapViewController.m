@@ -242,6 +242,10 @@
     if (!_firstTime && [userLocation.location.timestamp timeIntervalSinceNow] < 30 && userLocation.location.horizontalAccuracy > 0) {
         _location = userLocation.location;
         
+        // Let the device know we want to receive push notifications
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        
         [self reload];
         
         MKCoordinateSpan span = MKCoordinateSpanMake(0.5, 0.5);
