@@ -178,6 +178,16 @@
 	NSLog(@"Failed to get token, error: %@", error);
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    NSLog(@"Application : %@, open URL : %@, Source Application : %@, Annotation : %@",application,url,sourceApplication,annotation);
+    if ([[url scheme] isEqualToString:@"beroads"]) {
+        if ([[url host] isEqualToString:@"open"]) {
+            NSLog(@"Fragment : %@", [url lastPathComponent]);
+        }
+    }
+    return YES;
+}
+
 
 
 @end
