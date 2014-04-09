@@ -59,7 +59,7 @@ static NSString * const kCamera = @"Camera.json";
     NSInteger area = [userDefaults integerForKey:kAreaPreference];
     
     if (area > 0) {
-        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
 	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
@@ -106,7 +106,7 @@ static NSString * const kCamera = @"Camera.json";
     [parameters setObject:[NSString stringWithFormat:@"%i",50] forKey:@"max"];
     
     if (area > 0) {
-        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
         
     }
     
@@ -149,7 +149,7 @@ static NSString * const kCamera = @"Camera.json";
     NSInteger area = [userDefaults integerForKey:kAreaPreference];
     
     if (area > 0) {
-        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
 	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){

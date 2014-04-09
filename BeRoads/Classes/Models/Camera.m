@@ -73,6 +73,11 @@
     if([idCamera_ isKindOfClass:[NSDecimalNumber class]]){
         self.idCamera = [idCamera_ intValue];
     }
+    
+    id distance_ = [dic objectForKey:@"distance"];
+    if([distance_ isKindOfClass:[NSDecimalNumber class]]){
+        self.distance = [distance_ intValue];
+    }
 }
 
 -(void)encodeWithCoder:(NSCoder *)encoder
@@ -94,6 +99,7 @@
     self.lat = [decoder decodeDoubleForKey:@"lat"];
     self.lng = [decoder decodeDoubleForKey:@"lng"];
     self.idCamera = [decoder decodeIntegerForKey:@"idCamera"];
+    self.distance = [decoder decodeIntegerForKey:@"distance"];
     return self;
 }
 

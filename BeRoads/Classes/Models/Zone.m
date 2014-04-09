@@ -11,7 +11,7 @@
 @implementation Zone
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"%@ - %d",_title,[_cameras count]];
+    return [NSString stringWithFormat:@"%@ - %lu",_title,(unsigned long)[_cameras count]];
 }
 
 @end

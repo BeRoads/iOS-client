@@ -142,7 +142,7 @@
         
         NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
         [parameters setObject:deviceTokenString forKey:@"device_token"];
-        [parameters setObject:[NSString stringWithFormat:@"%i",area] forKey:@"area"];
+        [parameters setObject:[NSString stringWithFormat:@"%ld",(long)area] forKey:@"area"];
         [parameters setObject:language forKey:@"language"];
         [parameters setObject:parametersCoords forKey:@"coords"];
         

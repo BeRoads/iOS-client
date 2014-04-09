@@ -49,7 +49,7 @@
 
 - (IBAction)Share:(id)sender
 {
-    NSArray *activityItems = @[[NSString stringWithFormat:@"%@ http://beroads.com/event/%i via @BeRoads", self.trafficEvent.location, self.trafficEvent.idTrafficEvent]];
+    NSArray *activityItems = @[[NSString stringWithFormat:@"%@ http://beroads.com/event/%li via @BeRoads", self.trafficEvent.location, (long)self.trafficEvent.idTrafficEvent]];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo,
                                                  UIActivityTypePostToVimeo];

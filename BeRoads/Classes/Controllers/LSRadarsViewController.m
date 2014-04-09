@@ -125,9 +125,9 @@
     // Configure the cell...
     Radar* currentRadar = [self.radars objectAtIndex:indexPath.row];
     cell.titleLabel.text = [currentRadar address];
-    cell.speedLimitLabel.text = [NSString stringWithFormat:@"%i", [currentRadar speedLimit]];
+    cell.speedLimitLabel.text = [NSString stringWithFormat:@"%ld", (long)currentRadar.speedLimit];
     
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",currentRadar.distance];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%ld km",(long)currentRadar.distance];
     if([[currentRadar type] isEqual: @"fixed"]){
         cell.typeRadarLabel.text = @"";
     }else{

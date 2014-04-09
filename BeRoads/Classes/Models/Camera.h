@@ -10,22 +10,22 @@
 
 @interface Camera : NSObject <MKAnnotation>
 {
+    NSInteger idCamera;
 	NSString *city;
 	NSString *zone;
 	NSString *img;
 	double lat;
 	double lng;
-	int idCamera;
-    int distance;
+    NSInteger distance;
 }
 
+@property (nonatomic, assign) NSInteger idCamera;
 @property (nonatomic, retain) NSString *city;
 @property (nonatomic, retain) NSString *zone;
 @property (nonatomic, retain) NSString *img;
-@property (nonatomic) double lat;
-@property (nonatomic) double lng;
-@property (nonatomic) int idCamera;
-@property (nonatomic) int distance;
+@property (nonatomic, assign) double lat;
+@property (nonatomic, assign) double lng;
+@property (nonatomic, assign) NSInteger distance;
 
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;

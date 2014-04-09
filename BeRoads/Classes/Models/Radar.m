@@ -104,7 +104,7 @@
 }
 
 - (NSString *)subtitle{
-    return [NSString stringWithFormat:@"%i - %@",speedLimit,type];
+    return [NSString stringWithFormat:@"%li - %@",(long)speedLimit,type];
 }
 
 @end

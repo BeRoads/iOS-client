@@ -10,26 +10,26 @@
 
 @interface TrafficEvent : NSObject <MKAnnotation>
 {
-	NSString *message;
+    NSInteger idTrafficEvent;
+    NSString *message;
 	NSString *location;
 	NSString *source;
-	int time;
+	NSInteger time;
 	NSString *category;
 	double lat;
 	double lng;
-    int distance;
-	int idTrafficEvent;
+    NSInteger distance;
 }
 
+@property (nonatomic, assign) NSInteger idTrafficEvent;
 @property (nonatomic, retain) NSString *message;
 @property (nonatomic, retain) NSString *location;
 @property (nonatomic, retain) NSString *source;
-@property (nonatomic) int time;
+@property (nonatomic, assign) NSInteger time;
 @property (nonatomic, retain) NSString *category;
-@property (nonatomic) double lat;
-@property (nonatomic) double lng;
-@property (nonatomic) int idTrafficEvent;
-@property (nonatomic) int distance;
+@property (nonatomic, assign) double lat;
+@property (nonatomic, assign) double lng;
+@property (nonatomic, assign) NSInteger distance;
 
 - (id) initWithJSONDictionary:(NSDictionary *)dic;
 - (void) parseJSONDictionary:(NSDictionary *)dic;

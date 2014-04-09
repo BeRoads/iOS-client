@@ -132,7 +132,7 @@
     // Configure the cell...
     TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
     
-        cell.distanceLabel.text = [NSString stringWithFormat:@"%d km",currentTrafficEvent.distance];
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%ld km",(long)currentTrafficEvent.distance];
                 
     cell.titleLabel.text = [currentTrafficEvent location];
     

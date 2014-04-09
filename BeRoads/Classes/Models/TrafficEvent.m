@@ -92,8 +92,6 @@
     if([idTrafficEvent_ isKindOfClass:[NSDecimalNumber class]]){
         self.idTrafficEvent = [idTrafficEvent_ intValue];
     }
-
-	
 }
 
 -(CLLocationCoordinate2D)coordinate{
