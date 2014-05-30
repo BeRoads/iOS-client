@@ -73,7 +73,9 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    _mapView.showsUserLocation = NO;
+    if (_mapView != nil && _mapView.showsUserLocation == YES) {
+        _mapView.showsUserLocation = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
