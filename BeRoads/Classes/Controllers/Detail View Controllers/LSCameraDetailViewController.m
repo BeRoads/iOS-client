@@ -42,9 +42,15 @@
 {
     NSArray *activityItems = @[[NSString stringWithFormat:@"[%@ - %@] via @BeRoads", self.camera.zone, self.camera.city],
                                [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.camera.img]]]];
-    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll, UIActivityTypePostToTencentWeibo,UIActivityTypePostToVimeo];
-    [self presentViewController:activityController animated:YES completion:nil];
+    if ([UIActivityViewController class]) {
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        NSMutableArray* excludedActivityTypes = [NSMutableArray arrayWithArray:@[UIActivityTypeAssignToContact,UIActivityTypePrint]];
+        if([[[UIDevice currentDevice] systemVersion] floatValue] > 7.0){
+            [excludedActivityTypes addObjectsFromArray:@[UIActivityTypePostToVimeo]];
+        }
+        activityController.excludedActivityTypes = excludedActivityTypes;
+        [self presentViewController:activityController animated:YES completion:nil];
+    }
 }
 
 

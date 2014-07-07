@@ -50,10 +50,15 @@
 - (IBAction)Share:(id)sender
 {
     NSArray *activityItems = @[[NSString stringWithFormat:@"%@ http://beroads.com/event/%li via @BeRoads", self.trafficEvent.location, (long)self.trafficEvent.idTrafficEvent]];
-    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo,
-                                                 UIActivityTypePostToVimeo];
-    [self presentViewController:activityController animated:YES completion:nil];
+    if ([UIActivityViewController class]) {
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        NSMutableArray* excludedActivityTypes = [NSMutableArray arrayWithArray:@[UIActivityTypeAssignToContact]];
+        if([[[UIDevice currentDevice] systemVersion] floatValue] > 7.0){
+            [excludedActivityTypes addObjectsFromArray:@[UIActivityTypePostToFlickr, UIActivityTypePostToVimeo]];
+        }
+        activityController.excludedActivityTypes = excludedActivityTypes;
+        [self presentViewController:activityController animated:YES completion:nil];
+    }
 }
 
 
