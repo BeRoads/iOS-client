@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="luR-UY-049">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="luR-UY-049">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller - Map-->
+        <!--Map-->
         <scene sceneID="ij5-uq-FAf">
             <objects>
                 <viewController id="l7M-i7-8BG" customClass="LSMapViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="552" y="299"/>
         </scene>
-        <!--Traffic Events View Controller - Traffic-->
+        <!--Traffic-->
         <scene sceneID="chM-xc-tGN">
             <objects>
                 <tableViewController id="sOX-2W-vcO" customClass="LSTrafficEventsViewController" sceneMemberID="viewController">
@@ -182,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="552" y="967"/>
         </scene>
-        <!--Radars View Controller - Radars-->
+        <!--Radars-->
         <scene sceneID="5Tc-wR-uKp">
             <objects>
                 <tableViewController id="dvZ-4L-DC8" customClass="LSRadarsViewController" sceneMemberID="viewController">
@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="535" y="1638"/>
         </scene>
-        <!--Cameras View Controller - Webcams-->
+        <!--Webcams-->
         <scene sceneID="c33-bV-JzN">
             <objects>
                 <tableViewController id="wa2-uR-cZo" customClass="LSCamerasViewController" sceneMemberID="viewController">
@@ -386,7 +386,7 @@
             </objects>
             <point key="canvasLocation" x="1347" y="1633"/>
         </scene>
-        <!--Settings View Controller - Settings-->
+        <!--Settings-->
         <scene sceneID="6y4-6T-Sbx">
             <objects>
                 <tableViewController id="vgq-GA-5tt" customClass="LSSettingsViewController" sceneMemberID="viewController">
@@ -419,7 +419,7 @@
             </objects>
             <point key="canvasLocation" x="535" y="2345"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About-->
         <scene sceneID="crh-b0-qAh">
             <objects>
                 <viewController id="hov-Mz-l09" customClass="LSAboutViewController" sceneMemberID="viewController">
@@ -427,111 +427,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Julien Winant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wYu-Dw-VnG">
-                                <rect key="frame" x="83" y="207" width="117" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rmi-rD-a6n" appends="YES" id="8R5-40-ERh"/>
-                                </connections>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Designer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ROt-Pu-smp">
-                                <rect key="frame" x="81" y="237" width="219" height="18"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rmi-rD-a6n" appends="YES" id="wVA-Ph-Y3L"/>
-                                </connections>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="harkor.png" id="Tjz-Zk-1uf">
-                                <rect key="frame" x="14" y="211" width="60" height="57"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rmi-rD-a6n" appends="YES" id="kJM-WD-QBX"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Android developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q1Y-xk-dtz">
-                                <rect key="frame" x="83" y="104" width="217" height="18"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vfl-be-mPf" appends="YES" id="ann-86-qhJ"/>
-                                </connections>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="waza_be.png" id="QJn-5d-gQd">
-                                <rect key="frame" x="15" y="75" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vfl-be-mPf" appends="YES" id="5I2-WR-JFy"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Quentin Kaiser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Q7-nV-Z4Z">
-                                <rect key="frame" x="81" y="142" width="129" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hMp-qp-LtT" appends="YES" id="Wlv-og-xcc"/>
-                                </connections>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Web Mobile and API Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g66-5E-SjF">
-                                <rect key="frame" x="83" y="172" width="217" height="18"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hMp-qp-LtT" appends="YES" id="N91-Bj-6AW"/>
-                                </connections>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="qkaiser.png" id="GiV-mM-NQ9">
-                                <rect key="frame" x="14" y="143" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hMp-qp-LtT" appends="YES" id="jZo-Ff-P4T"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Lionel Schinckus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sjJ-qE-aSy">
-                                <rect key="frame" x="83" y="275" width="149" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AhW-x7-hXB" appends="YES" id="14I-pJ-zbk"/>
-                                </connections>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OKz-qR-Jmd">
-                                <rect key="frame" x="83" y="305" width="217" height="18"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AhW-x7-hXB" appends="YES" id="OjH-FL-GtL"/>
-                                </connections>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="valcapri.png" id="SJG-ay-nX4">
-                                <rect key="frame" x="14" y="276" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AhW-x7-hXB" appends="YES" id="yIh-Ie-V8b"/>
-                                </connections>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="www.beroads.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="knW-L8-Vec">
                                 <rect key="frame" x="83" y="417" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -539,60 +434,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3586973852" green="0.3586973852" blue="0.3586973852" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="N41-3c-RmX" appends="YES" id="YSj-cV-iwD"/>
-                                </connections>
                             </label>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon.png" id="h9w-tJ-pUe">
                                 <rect key="frame" x="130" y="367" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="N41-3c-RmX" appends="YES" id="Dxq-Rb-fLI"/>
-                                </connections>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Christophe Versieux" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g9X-Hx-Ldu">
-                                <rect key="frame" x="83" y="75" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pdb-aX-g3Y">
+                                <rect key="frame" x="6" y="68" width="314" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vfl-be-mPf" appends="YES" id="EIx-0p-fAt"/>
+                                    <outlet property="dataSource" destination="hov-Mz-l09" id="2dp-4e-fqo"/>
+                                    <outlet property="delegate" destination="hov-Mz-l09" id="F1K-lu-bbv"/>
                                 </connections>
-                            </label>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="ewc-jn-KgF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Pdb-aX-g3Y" id="KCi-98-R0d"/>
+                        <outlet property="view" destination="h7F-aZ-RD0" id="0mW-it-4Fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCI-Nb-dyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="AhW-x7-hXB" userLabel="Tap Recognizer - Lionel">
-                    <connections>
-                        <action selector="openLionelURL:" destination="hov-Mz-l09" id="RY1-45-LuQ"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Rmi-rD-a6n" userLabel="Tap Recognizer - Julien">
-                    <connections>
-                        <action selector="openJulienURL:" destination="hov-Mz-l09" id="K1Y-dL-ZZS"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="hMp-qp-LtT" userLabel="Tap Recognizer - Quentin">
-                    <connections>
-                        <action selector="openQuentinURL:" destination="hov-Mz-l09" id="b1c-be-vId"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="vfl-be-mPf" userLabel="Tap Recognizer - Christophe">
-                    <connections>
-                        <action selector="openChristopheURL:" destination="hov-Mz-l09" id="Riq-e5-1SE"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="N41-3c-RmX" userLabel="Tap Recognizer - Beroads">
-                    <connections>
-                        <action selector="openBeRoadsURL:" destination="hov-Mz-l09" id="PkT-Yb-2oP"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1030" y="2998"/>
         </scene>
@@ -633,14 +499,13 @@
         <image name="bg_speedlimit.png" width="40" height="40"/>
         <image name="glyphicons_054_clock.png" width="24" height="24"/>
         <image name="glyphicons_309_comments.png" width="24" height="23"/>
-        <image name="harkor.png" width="50" height="50"/>
-        <image name="qkaiser.png" width="50" height="50"/>
-        <image name="valcapri.png" width="140" height="140"/>
-        <image name="waza_be.png" width="120" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="320" height="480"/>
+            <size key="landscapeSize" width="480" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>
