@@ -12,11 +12,6 @@
 #import "MenuViewController.h"
 
 
-@interface LSAboutViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
-@property (nonatomic,strong) UILabel* labelChristophe;
-@property (nonatomic,strong) UILabel* labelJulien;
-@property (nonatomic,strong) UILabel* labelQuentin;
-@property (nonatomic,strong) UILabel* labelLionel;
+@interface LSAboutViewController : UITableViewController
 
 @end

@@ -62,6 +62,8 @@
 	<string>Main_iPad</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>BeRoads use your location to show you traffic events near you</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

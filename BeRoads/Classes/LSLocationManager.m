@@ -239,6 +239,11 @@ static LSLocationManager* sharedLocationManager = nil;
 	[self willUpdateLocationHandler];
 	
 	_locationManager.delegate = self;
+    
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    
 	[_locationManager startUpdatingLocation];
 }
 

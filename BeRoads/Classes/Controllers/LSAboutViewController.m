@@ -11,7 +11,6 @@
 @interface LSAboutViewController ()
 
 @property (nonatomic, strong) NSArray* contacts;
-@property (nonatomic, weak) IBOutlet UITableView* tableView;
 
 @end
 
@@ -33,6 +32,17 @@
     }
     
     [self.view addGestureRecognizer:[self.slidingViewController panGesture]];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 320, 100)];
+    // 48 x 48
+    UIImageView* beRoadsImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Icon"]];
+    beRoadsImageView.frame = CGRectMake(136, 20, 48, 48);
+    // 320 x 21
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 74, 320, 21)];
+    label.text = @"www.beroads.com";
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.tableView.tableHeaderView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openBeRoadsURL:)]];
+    [self.tableView.tableHeaderView addSubview:beRoadsImageView];
+    [self.tableView.tableHeaderView addSubview:label];
 }
 
 
@@ -73,7 +83,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString* const contactCellIdentifier = @"contactCell";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:contactCellIdentifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:contactCellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:contactCellIdentifier];
@@ -88,6 +98,10 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55.0;
+}
+
 #pragma mark - Navigation
 
 - (IBAction)revealMenu:(id)sender
@@ -95,9 +109,9 @@
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
-- (IBAction)openJulienURL:(id)sender
-{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.harkor.be"]];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary* contact = self.contacts[indexPath.row];
+    [[UIApplication sharedApplication] openURL:contact[@"url"]];
 }
 
 - (IBAction)openBeRoadsURL:(id)sender

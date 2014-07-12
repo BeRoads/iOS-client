@@ -419,49 +419,6 @@
             </objects>
             <point key="canvasLocation" x="535" y="2345"/>
         </scene>
-        <!--About-->
-        <scene sceneID="crh-b0-qAh">
-            <objects>
-                <viewController id="hov-Mz-l09" customClass="LSAboutViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h7F-aZ-RD0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="www.beroads.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="knW-L8-Vec">
-                                <rect key="frame" x="83" y="417" width="149" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.3586973852" green="0.3586973852" blue="0.3586973852" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon.png" id="h9w-tJ-pUe">
-                                <rect key="frame" x="130" y="367" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pdb-aX-g3Y">
-                                <rect key="frame" x="6" y="68" width="314" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="hov-Mz-l09" id="2dp-4e-fqo"/>
-                                    <outlet property="delegate" destination="hov-Mz-l09" id="F1K-lu-bbv"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="ewc-jn-KgF"/>
-                    <connections>
-                        <outlet property="tableView" destination="Pdb-aX-g3Y" id="KCi-98-R0d"/>
-                        <outlet property="view" destination="h7F-aZ-RD0" id="0mW-it-4Fd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JCI-Nb-dyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1030" y="2998"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mbm-Hw-DJo">
             <objects>
@@ -470,12 +427,53 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hov-Mz-l09" kind="relationship" relationship="rootViewController" id="c8f-yG-mjT"/>
+                        <segue destination="tfi-TJ-Cbc" kind="relationship" relationship="rootViewController" id="MPH-jk-tLN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhz-ME-kfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565" y="3023"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="PwF-xB-eMp">
+            <objects>
+                <tableViewController id="tfi-TJ-Cbc" customClass="LSAboutViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qWU-1o-gUN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" textLabel="A2f-rP-FmP" detailTextLabel="c6A-55-TPI" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="pdz-tq-alo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pdz-tq-alo" id="Rgs-Yy-cv3">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A2f-rP-FmP">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c6A-55-TPI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tfi-TJ-Cbc" id="FFj-RZ-eyP"/>
+                            <outlet property="delegate" destination="tfi-TJ-Cbc" id="iuZ-Lk-PBR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="43P-xM-evS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPb-2k-VOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="3023"/>
         </scene>
         <!--Initial Sliding View Controller-->
         <scene sceneID="GeX-X7-cIh">
@@ -495,7 +493,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon.png" width="57" height="57"/>
         <image name="bg_speedlimit.png" width="40" height="40"/>
         <image name="glyphicons_054_clock.png" width="24" height="24"/>
         <image name="glyphicons_309_comments.png" width="24" height="23"/>
