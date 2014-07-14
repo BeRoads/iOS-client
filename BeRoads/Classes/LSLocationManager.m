@@ -240,9 +240,11 @@ static LSLocationManager* sharedLocationManager = nil;
 	
 	_locationManager.delegate = self;
     
+#ifdef __IPHONE_8_0
     if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [_locationManager requestWhenInUseAuthorization];
     }
+#endif
     
 	[_locationManager startUpdatingLocation];
 }

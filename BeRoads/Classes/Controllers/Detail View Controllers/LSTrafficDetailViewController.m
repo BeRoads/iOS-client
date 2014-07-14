@@ -14,6 +14,8 @@
 
 @interface LSTrafficDetailViewController ()
 
+@property (nonatomic, strong) NSDateFormatter* dateFormatter;
+
 @end
 
 @implementation LSTrafficDetailViewController
@@ -41,10 +43,18 @@
     self.descriptionTextView.text = self.trafficEvent.message;
     
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:self.trafficEvent.time];
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"MMM dd, yyyy HH:mm"];
-    self.updateLabel.text = [format stringFromDate:date];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];
+    
+    // Date Formatter is very expensive to alloc init, only allow once
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        [_dateFormatter setDateFormat:@"MMM dd, yyyy HH:mm"];
+    }
+    
+    self.updateLabel.text = [_dateFormatter stringFromDate:date];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];
+    }
 }
 
 - (IBAction)Share:(id)sender

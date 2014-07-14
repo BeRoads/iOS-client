@@ -79,7 +79,7 @@
 		6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A517DE2065000539BC /* glyphicons_054_clock.png */; };
 		6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C61C3A617DE2065000539BC /* glyphicons_309_comments.png */; };
 		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
-		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; };
+		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9D1789910400AAEEDA /* bg_list.png */; };
 		6CDE3BA01789910400AAEEDA /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3B9E1789910400AAEEDA /* navbar.png */; };
 		6CDE3BA21789955100AAEEDA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDE3BA11789955100AAEEDA /* Main_iPad.storyboard */; };
