@@ -10,12 +10,6 @@
 
 @implementation LSPreferenceManager
 
-NSString* const kAreaPreference = @"area_preference";
-NSString* const kClusterPreference = @"cluster_preference";
-NSString* const kTrafficreference = @"traffic_preference";
-NSString* const kRadarPreference = @"radar_preference";
-NSString* const kCameraPreference = @"camera_preference";
-
 + (id)defaultManager{
     static LSPreferenceManager* preferenceManager;
     static dispatch_once_t onceToken;

@@ -14,7 +14,7 @@
     NSString *message;
 	NSString *location;
 	NSString *source;
-	NSInteger time;
+	NSDate *time;
 	NSString *category;
 	double lat;
 	double lng;
@@ -25,7 +25,7 @@
 @property (nonatomic, retain) NSString *message;
 @property (nonatomic, retain) NSString *location;
 @property (nonatomic, retain) NSString *source;
-@property (nonatomic, assign) NSInteger time;
+@property (nonatomic, strong) NSDate *time;
 @property (nonatomic, retain) NSString *category;
 @property (nonatomic, assign) double lat;
 @property (nonatomic, assign) double lng;

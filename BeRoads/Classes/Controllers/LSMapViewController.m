@@ -68,7 +68,10 @@
     _mapView.showsUserLocation = YES;
         
     [_mapView removeAnnotations:_mapView.annotations];
-    [self reload];
+    
+    if (_location != nil && _location.coordinate.longitude != 0 && _location.coordinate.latitude != 0) {
+        [self reload];
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

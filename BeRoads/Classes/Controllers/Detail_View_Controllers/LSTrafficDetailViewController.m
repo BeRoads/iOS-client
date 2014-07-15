@@ -10,11 +10,10 @@
 
 #import "TrafficEvent.h"
 #import "MarqueeLabel.h"
+#import "PJSDateFormatters.h"
 #import <Social/Social.h>
 
 @interface LSTrafficDetailViewController ()
-
-@property (nonatomic, strong) NSDateFormatter* dateFormatter;
 
 @end
 
@@ -42,15 +41,12 @@
     self.sourceLabel.text = self.trafficEvent.source;
     self.descriptionTextView.text = self.trafficEvent.message;
     
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:self.trafficEvent.time];
+    NSDate *date = self.trafficEvent.time;
     
     // Date Formatter is very expensive to alloc init, only allow once
-    if (!_dateFormatter) {
-        _dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setDateFormat:@"MMM dd, yyyy HH:mm"];
-    }
+    NSDateFormatter* dateFormatter = [[PJSDateFormatters sharedFormatters] dateFormatterWithDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
     
-    self.updateLabel.text = [_dateFormatter stringFromDate:date];
+    self.updateLabel.text = [dateFormatter stringFromDate:date];
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];

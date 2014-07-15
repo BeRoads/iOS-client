@@ -56,7 +56,11 @@
 
     id time_ = [dic objectForKey:@"time"];
     if([time_ isKindOfClass:[NSDecimalNumber class]]){
-        self.time = [time_ intValue];
+        NSTimeInterval time1970 = [time_ intValue];
+        self.time = [NSDate dateWithTimeIntervalSince1970:time1970];
+    } else if([time_ isKindOfClass:[NSString class]]){
+        NSTimeInterval time1970 = [time_ intValue];
+        self.time = [NSDate dateWithTimeIntervalSince1970:time1970];
     }
 
     id distance_ = [dic objectForKey:@"distance"];

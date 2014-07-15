@@ -84,12 +84,16 @@
 	}
 
     id speedLimit_ = [dic objectForKey:@"speedLimit"];
-    if([speedLimit_ isKindOfClass:[NSDecimalNumber class]]){
+    if([speedLimit_ isKindOfClass:[NSNumber class]]){
+        self.speedLimit = [speedLimit_ intValue];
+    } else if ([speedLimit_ isKindOfClass:[NSString class]]) {
         self.speedLimit = [speedLimit_ intValue];
     }
     
     id distance_ = [dic objectForKey:@"distance"];
-    if([distance_ isKindOfClass:[NSDecimalNumber class]]){
+    if([distance_ isKindOfClass:[NSNumber class]]){
+        self.distance = [distance_ intValue];
+    } else if([distance_ isKindOfClass:[NSString class]]){
         self.distance = [distance_ intValue];
     }
 }
