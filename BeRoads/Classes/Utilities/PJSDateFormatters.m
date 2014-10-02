@@ -77,7 +77,53 @@
                                       timeStyle:(NSDateFormatterStyle)timeStyle
                                       andLocale:(NSLocale *)locale {
     @synchronized(self) {
-        NSString *key = [NSString stringWithFormat:@"%u|%u|%@", dateStyle, timeStyle, locale.localeIdentifier];
+        NSString* dateStyleString = @"";
+        switch(dateStyle) {
+            case NSDateFormatterNoStyle:
+                dateStyleString = @"No";
+                break;
+                
+            case NSDateFormatterLongStyle:
+                dateStyleString = @"Long";
+                break;
+                
+            case NSDateFormatterShortStyle:
+                dateStyleString = @"Short";
+                break;
+            
+            case NSDateFormatterMediumStyle:
+                dateStyleString = @"Medium";
+                break;
+            
+            case NSDateFormatterFullStyle:
+                dateStyleString = @"Full";
+                break;
+        }
+        
+        NSString* timeStyleString = @"";
+        switch(timeStyle) {
+            case NSDateFormatterNoStyle:
+                timeStyleString = @"No";
+                break;
+                
+            case NSDateFormatterLongStyle:
+                timeStyleString = @"Long";
+                break;
+                
+            case NSDateFormatterShortStyle:
+                timeStyleString = @"Short";
+                break;
+                
+            case NSDateFormatterMediumStyle:
+                timeStyleString = @"Medium";
+                break;
+                
+            case NSDateFormatterFullStyle:
+                timeStyleString = @"Full";
+                break;
+        }
+        
+        NSString *key = [NSString stringWithFormat:@"%@|%@|%@", dateStyleString, timeStyleString, locale.localeIdentifier];
         NSDateFormatter *dateFormatter = [self.existingDataFormatters objectForKey:key];
         if (dateFormatter == nil) {
             dateFormatter = [[NSDateFormatter alloc] init];

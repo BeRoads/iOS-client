@@ -1,0 +1,3 @@
+[submodule "BeRoads/External/xcconfigs"]
+	path = BeRoads/External/xcconfigs
+	url = https://github.com/jspahrsummers/xcconfigs.git

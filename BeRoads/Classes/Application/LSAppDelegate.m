@@ -10,6 +10,25 @@
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
 #import "LSMapViewController.h"
+#if HAS_POD(CrashlyticsFramework)
+#import <Crashlytics/Crashlytics.h>
+#endif
+
+#if HAS_POD(CocoaLumberjack)
+#if HAS_POD(CrashlyticsLumberjack)
+#import <CrashlyticsLumberjack/CrashlyticsLogger.h>
+#endif
+
+#if HAS_POD(Sidecar)
+#import <Sidecar/CRLMethodLogFormatter.h>
+#endif
+#endif
+
+#if HAS_POD(Aperitif) && IS_ADHOC_BUILD
+#import <Aperitif/CRLAperitif.h>
+#endif
+
+#import "Flurry.h"
 
 @implementation LSAppDelegate
 
@@ -22,8 +41,7 @@
     // Override point for customization after application launch.
     // Location manager
     
-    [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];
-    // End TestFlight
+    [self initializeLoggingAndServices];
     
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
     locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
@@ -45,9 +63,10 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
     // Set to navigation bar
-    float currentVersion = 7.0;
+    float requiredVersion = 7.0;
+    float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= currentVersion)
+    if (currentVersion >= requiredVersion)
     {
         // Menu Bar Button Item in white
         [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
@@ -80,8 +99,13 @@
     }
     
     // Let the device know we want to receive push notifications
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+    if (currentVersion >= 8.0) {
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil]];
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
     
     return YES;
 }
@@ -186,6 +210,67 @@
         }
     }
     return YES;
+}
+
+#pragma mark Amaro foundation goodies
+
+/**
+ Connects to Crashlytics and sets up CocoaLumberjack
+ */
+-(void)initializeLoggingAndServices
+{
+#if HAS_POD(CrashlyticsFramework)
+    NSString *crashlyticsAPIKey = @"3a2322f2e5a421953b38ea0d77076490aba2f9c8";
+    
+    if([crashlyticsAPIKey characterAtIndex:0] != '<') [Crashlytics startWithAPIKey:crashlyticsAPIKey];
+    else NSLog(@"Set your Crashlytics API key in the app delegate to enable Crashlytics integration!");
+#endif
+    
+#if HAS_POD(CocoaLumberjack)
+#if HAS_POD(Sidecar)
+    CRLMethodLogFormatter *logFormatter = [[CRLMethodLogFormatter alloc] init];
+    [[DDASLLogger sharedInstance] setLogFormatter:logFormatter];
+    [[DDTTYLogger sharedInstance] setLogFormatter:logFormatter];
+#endif
+    
+    // Emulate NSLog behavior for DDLog*
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    // Send warning & error messages to Crashlytics
+#if HAS_POD(CrashlyticsLumberjack)
+#if HAS_POD(Sidecar)
+    [[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
+#endif
+    [Flurry startSession:@"5G6J9C6GQMRV4GZ9HRYP"];
+    [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];
+    
+    [DDLog addLogger:[CrashlyticsLogger sharedInstance] withLogLevel:LOG_LEVEL_INFO];
+#endif
+#endif
+}
+
+/**
+ Schedules a check for updates to the app in the Installr API. Only executed for Ad Hoc builds,
+ not targetting the simulator (i.e. archives of the -Staging and -Production schemes).
+ */
+-(void)scheduleCheckForUpdates
+{
+    // Uncomment the blob below and fill in your Installr app tokens to enable automatically
+    // prompting the user when a new build of your app is pushed.
+    
+#if HAS_POD(Aperitif) && IS_ADHOC_BUILD && !TARGET_IPHONE_SIMULATOR && !defined(DEBUG)
+    
+    //    #ifdef TARGETING_STAGING
+    //    NSString * const installrAppToken = @"<Installr app token for the staging build of your app>";
+    //    #else
+    //    NSString * const installrAppToken = @"<Installr app token for the production build of your app>";
+    //    #endif
+    //
+    //    [CRLAperitif sharedInstance].appToken = installrAppToken;
+    //    [[CRLAperitif sharedInstance] checkAfterDelay:3.0];
+    
+#endif
 }
 
 

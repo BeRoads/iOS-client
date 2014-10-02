@@ -1,6 +1,7 @@
 //
 // Prefix header for all source files of the 'BeRoads' target in the 'BeRoads' project
 //
+#import "BeRoads-Environment.h"
 
 #import <Availability.h>
 
@@ -8,6 +9,12 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
+// Pull in tgmath for seamless 32-/64-bit math functions.
+// Due to a nasty clang situation right now (early 2014), we can't just use <tgmath.h>
+// directly. See the note in the header.
+#if HAS_POD(Sidecar)
+#import <Sidecar/tgmath-stopgap.h>
+#endif
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
@@ -19,6 +26,34 @@
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
     #import "TestFlight.h"
+
+    #if HAS_POD(CocoaLumberjack)
+        #import <CocoaLumberjack/CocoaLumberjack.h>
+
+        #ifdef DEBUG
+            static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+        #else
+            static const int ddLogLevel = LOG_LEVEL_WARN;
+        #endif
+    #endif
+
+    #if HAS_POD(Sidecar)
+        #import <Sidecar/CRLCategoriesAndUtils.h>
+    #endif
+
+    #if HAS_POD(libextobjc)
+        // A lot of the extobjc stuff is a little crazy.
+        // We're including it mainly for 2 things:
+        // The Scope module which gives @weakify and @strongify, and
+        // the KeyPathCoding module which gives @keypath and @collectionkeypath.
+        // Use of any of the other modules is not recommended.
+        #import <libextobjc/EXTScope.h>
+        #import <libextobjc/EXTKeyPathCoding.h>
+    #endif
+
+    #if HAS_POD(Asterism)
+        #import <Asterism/Asterism.h>
+    #endif
 #endif
 
 #define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

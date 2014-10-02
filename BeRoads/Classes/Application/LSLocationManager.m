@@ -452,7 +452,7 @@ static LSLocationManager* sharedLocationManager = nil;
 		
         NSLog(@"Use cache : %i",_useCache);
         
-		if(abs(howRecent) > _cacheAge)
+		if(abs((int)howRecent) > _cacheAge)
 		{
 #if	DM_LOCATION_MANAGER_LOG_LEVEL >= DM_LOCATION_MANAGER_LOG_LEVEL_DEBUG
 			NSLog(@"locationManager didUpdateToLocation with timestamp %@ which is to old to use", newLocation.timestamp);
