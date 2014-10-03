@@ -28,7 +28,11 @@
 #import <Aperitif/CRLAperitif.h>
 #endif
 
+#if HAS_POD(FlurrySDK)
 #import "Flurry.h"
+#endif
+
+#import "PSPDFHangDetector.h"
 
 @implementation LSAppDelegate
 
@@ -63,10 +67,11 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
     // Set to navigation bar
-    float requiredVersion = 7.0;
+    float requiredVersion7 = 7.0;
+    float requiredVersion8 = 8.0;
     float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     
-    if (currentVersion >= requiredVersion)
+    if (currentVersion >= requiredVersion7)
     {
         // Menu Bar Button Item in white
         [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
@@ -99,9 +104,11 @@
     }
     
     // Let the device know we want to receive push notifications
-    if (currentVersion >= 8.0) {
+    if (currentVersion >= requiredVersion8) {
+#ifdef __IPHONE_8_0
         [[UIApplication sharedApplication] registerForRemoteNotifications];
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil]];
+#endif
     } else {
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
@@ -178,6 +185,7 @@
                                                             path:@"http://dashboard.beroads.com/apns"
                                                       parameters:parameters];
         
+        NSLog(@"Device Token (with space) : %@",deviceToken);
         NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -219,6 +227,8 @@
  */
 -(void)initializeLoggingAndServices
 {
+    [PSPDFHangDetector startHangDetector]; // Smart little helper to find main thread hangs.
+    
 #if HAS_POD(CrashlyticsFramework)
     NSString *crashlyticsAPIKey = @"3a2322f2e5a421953b38ea0d77076490aba2f9c8";
     

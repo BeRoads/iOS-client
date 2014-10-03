@@ -75,10 +75,12 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self addObserver:self forKeyPath:@"trafficEvent" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     [self removeObserver:self forKeyPath:@"trafficEvent"];
 }
 

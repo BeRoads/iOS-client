@@ -66,7 +66,14 @@
     }
     
     _mapView.showsUserLocation = YES;
-        
+    
+    BOOL trackingUserLocation = [[NSUserDefaults standardUserDefaults] boolForKey:@"TRACKING_USER_LOCATION"];
+    if (trackingUserLocation) {
+        _mapView.userTrackingMode = MKUserTrackingModeFollow;
+    } else {
+        _mapView.userTrackingMode = MKUserTrackingModeNone;
+    }
+    
     [_mapView removeAnnotations:_mapView.annotations];
     
     if (_location != nil && _location.coordinate.longitude != 0 && _location.coordinate.latitude != 0) {
@@ -75,6 +82,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     if (_mapView != nil && _mapView.showsUserLocation == YES) {
         _mapView.showsUserLocation = NO;
     }
@@ -246,9 +254,18 @@
     if (!_firstTime && [userLocation.location.timestamp timeIntervalSinceNow] < 30 && userLocation.location.horizontalAccuracy > 0) {
         _location = userLocation.location;
         
-        // Let the device know we want to receive push notifications
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        // Let the device know we want to receive push notifications or update his location
+        float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+        float requiredVersion8 = 8.0;
+        if (currentVersion >= requiredVersion8) {
+#ifdef __IPHONE_8_0
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil]];
+#endif
+        } else {
+            [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+             (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        }
         
         [self reload];
         

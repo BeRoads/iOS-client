@@ -153,6 +153,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self addObserver:self forKeyPath:@"camera.img" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
 }
 
@@ -174,6 +175,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     [self removeObserver:self forKeyPath:@"camera.img"];
 }
 
