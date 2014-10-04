@@ -14,15 +14,11 @@
 		4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4906D575174AD5B600693392 /* bg_speedlimit.png */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
 		490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */; };
-		4919892F1839736D00BD8E56 /* Icon-29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892B1839736D00BD8E56 /* Icon-29x29.png */; };
-		491989301839736D00BD8E56 /* Icon-58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892C1839736D00BD8E56 /* Icon-58x58.png */; };
-		491989311839736D00BD8E56 /* Icon-80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892D1839736D00BD8E56 /* Icon-80x80.png */; };
-		491989321839736D00BD8E56 /* Icon-120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919892E1839736D00BD8E56 /* Icon-120x120.png */; };
 		49384252178EC1D800F05595 /* LSNoResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49384251178EC1D800F05595 /* LSNoResultView.m */; };
-		493A338619DB61190009DC03 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 493A337419DB61190009DC03 /* README.md */; };
 		4942818C19DB8A310077FDCD /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4942818B19DB8A310077FDCD /* Specs.m */; };
 		4942819719DB8A960077FDCD /* LSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4942819519DB8A960077FDCD /* LSDummySpec.m */; };
 		49462FEF19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 49462FED19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m */; };
+		49462FF119DF1086001D4801 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49462FF019DF1086001D4801 /* Images.xcassets */; };
 		4946321A1760E48F0065AE05 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494632151760E48F0065AE05 /* FormatterKit.strings */; };
 		4946321C1760E8AC0065AE05 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4946321B1760E8AC0065AE05 /* QuartzCore.framework */; };
 		49463222176134F50065AE05 /* harkor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4946321E176134F50065AE05 /* harkor.png */; };
@@ -34,8 +30,7 @@
 		494EFA7C19749D50003DD171 /* LSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA5819749D50003DD171 /* LSAppDelegate.m */; };
 		494EFA7D19749D50003DD171 /* LSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA5A19749D50003DD171 /* LSLocationManager.m */; };
 		494EFA7E19749D50003DD171 /* LSPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA5C19749D50003DD171 /* LSPreferenceManager.m */; };
-		494EFA7F19749D50003DD171 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494EFA5D19749D50003DD171 /* Main_iPad.storyboard */; };
-		494EFA8019749D50003DD171 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494EFA5E19749D50003DD171 /* Main_iPhone.storyboard */; };
+		494EFA8019749D50003DD171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494EFA5E19749D50003DD171 /* Main.storyboard */; };
 		494EFA8119749D50003DD171 /* LSBeRoadsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA6119749D50003DD171 /* LSBeRoadsClient.m */; };
 		494EFA8219749D50003DD171 /* PJSDateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA6419749D50003DD171 /* PJSDateFormatters.m */; };
 		494EFA8319749D50003DD171 /* NSDate+LSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494EFA6919749D50003DD171 /* NSDate+LSDate.m */; };
@@ -136,10 +131,6 @@
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
 		490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficDetailViewController.h; sourceTree = "<group>"; };
 		490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficDetailViewController.m; sourceTree = "<group>"; };
-		4919892B1839736D00BD8E56 /* Icon-29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29x29.png"; sourceTree = "<group>"; };
-		4919892C1839736D00BD8E56 /* Icon-58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58x58.png"; sourceTree = "<group>"; };
-		4919892D1839736D00BD8E56 /* Icon-80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80x80.png"; sourceTree = "<group>"; };
-		4919892E1839736D00BD8E56 /* Icon-120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120x120.png"; sourceTree = "<group>"; };
 		492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		492C4DF119DC1D7800DAE8E3 /* Pods.adhoc_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
 		492C4DF219DC1D7800DAE8E3 /* Pods.debug_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_production.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +174,8 @@
 		4942819919DB8EBC0077FDCD /* Pods-Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-Environment.h"; sourceTree = "<group>"; };
 		49462FED19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPDFUIKitMainThreadGuard.m; sourceTree = "<group>"; };
 		49462FEE19DF0A68001D4801 /* PSPDFHangDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPDFHangDetector.h; sourceTree = "<group>"; };
+		49462FF019DF1086001D4801 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../beroads/Images.xcassets; sourceTree = "<group>"; };
+		49462FF219DF199F001D4801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		494632161760E48F0065AE05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = BeRoads/de.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
 		494632171760E48F0065AE05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = BeRoads/en.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
 		494632181760E48F0065AE05 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = BeRoads/fr.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
@@ -200,8 +193,7 @@
 		494EFA5A19749D50003DD171 /* LSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLocationManager.m; sourceTree = "<group>"; };
 		494EFA5B19749D50003DD171 /* LSPreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPreferenceManager.h; sourceTree = "<group>"; };
 		494EFA5C19749D50003DD171 /* LSPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPreferenceManager.m; sourceTree = "<group>"; };
-		494EFA5D19749D50003DD171 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		494EFA5E19749D50003DD171 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		494EFA5E19749D50003DD171 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		494EFA6019749D50003DD171 /* LSBeRoadsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBeRoadsClient.h; sourceTree = "<group>"; };
 		494EFA6119749D50003DD171 /* LSBeRoadsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsClient.m; sourceTree = "<group>"; };
 		494EFA6319749D50003DD171 /* PJSDateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSDateFormatters.h; sourceTree = "<group>"; };
@@ -315,7 +307,6 @@
 		8F567F60A7DD9B2F7E3F67B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9294D31CF027164AEBF29B87 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BBEFCF83627591E64A3471EA /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
-		C55A373B178C4EFB00375CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		C55A373D178C4F0F00375CB6 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		C55A373E178C4F1900375CB6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		C55A373F178C4F1E00375CB6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
@@ -513,8 +504,7 @@
 				494EFA5A19749D50003DD171 /* LSLocationManager.m */,
 				494EFA5B19749D50003DD171 /* LSPreferenceManager.h */,
 				494EFA5C19749D50003DD171 /* LSPreferenceManager.m */,
-				494EFA5D19749D50003DD171 /* Main_iPad.storyboard */,
-				494EFA5E19749D50003DD171 /* Main_iPhone.storyboard */,
+				494EFA5E19749D50003DD171 /* Main.storyboard */,
 				494EFA8E1974C9EF003DD171 /* LSConstants.h */,
 				494EFA8F1974C9EF003DD171 /* LSConstants.m */,
 			);
@@ -592,10 +582,6 @@
 				49693D25173E44D7000D408E /* BeRoads */,
 				499BC21D177C40A700DC746D /* Icon@2x.png */,
 				499BC21B177C409900DC746D /* Icon.png */,
-				4919892B1839736D00BD8E56 /* Icon-29x29.png */,
-				4919892C1839736D00BD8E56 /* Icon-58x58.png */,
-				4919892D1839736D00BD8E56 /* Icon-80x80.png */,
-				4919892E1839736D00BD8E56 /* Icon-120x120.png */,
 				4942818819DB8A310077FDCD /* Specs */,
 				49693D1E173E44D7000D408E /* Frameworks */,
 				49693D1D173E44D7000D408E /* Products */,
@@ -720,6 +706,7 @@
 		49693D91173E5286000D408E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49462FF019DF1086001D4801 /* Images.xcassets */,
 				493A338719DB616E0009DC03 /* xcconfigs */,
 				C55A3739178C4EEF00375CB6 /* XIBs */,
 				49693D92173E5286000D408E /* Images */,
@@ -909,6 +896,7 @@
 				fr,
 				nl,
 				de,
+				Base,
 			);
 			mainGroup = 49693D13173E44D7000D408E;
 			productRefGroup = 49693D1D173E44D7000D408E /* Products */;
@@ -934,9 +922,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49693D2A173E44D7000D408E /* InfoPlist.strings in Resources */,
-				494EFA7F19749D50003DD171 /* Main_iPad.storyboard in Resources */,
+				49462FF119DF1086001D4801 /* Images.xcassets in Resources */,
 				4906D573174AD29B00693392 /* placeholder-cell.png in Resources */,
-				491989321839736D00BD8E56 /* Icon-120x120.png in Resources */,
 				4906D574174AD29B00693392 /* placeholder-cell@2x.png in Resources */,
 				4906D576174AD5B600693392 /* bg_speedlimit.png in Resources */,
 				4979182D17541A580010974E /* Localizable.strings in Resources */,
@@ -948,15 +935,13 @@
 				49463222176134F50065AE05 /* harkor.png in Resources */,
 				49D957F8181336710095AF75 /* red_navbar.png in Resources */,
 				49463223176134F50065AE05 /* qkaiser.png in Resources */,
-				4919892F1839736D00BD8E56 /* Icon-29x29.png in Resources */,
 				49463224176134F50065AE05 /* valcapri.png in Resources */,
 				49463225176134F50065AE05 /* waza_be.png in Resources */,
 				499BC218177C3EFC00DC746D /* Default-568h@2x.png in Resources */,
-				494EFA8019749D50003DD171 /* Main_iPhone.storyboard in Resources */,
+				494EFA8019749D50003DD171 /* Main.storyboard in Resources */,
 				499BC219177C3EFC00DC746D /* Default.png in Resources */,
 				499BC21A177C3EFC00DC746D /* Default@2x.png in Resources */,
 				499BC21C177C409900DC746D /* Icon.png in Resources */,
-				491989301839736D00BD8E56 /* Icon-58x58.png in Resources */,
 				499BC21E177C40A700DC746D /* Icon@2x.png in Resources */,
 				6CDE3B9F1789910400AAEEDA /* bg_list.png in Resources */,
 				6CDE3BA01789910400AAEEDA /* navbar.png in Resources */,
@@ -976,7 +961,6 @@
 				49742F57179615BF001B62B6 /* ic_m_radar.png in Resources */,
 				49742F58179615BF001B62B6 /* ic_m_radar@2x.png in Resources */,
 				6C61C3A717DE2065000539BC /* glyphicons_054_clock.png in Resources */,
-				491989311839736D00BD8E56 /* Icon-80x80.png in Resources */,
 				49D957F6181336710095AF75 /* green_navbar.png in Resources */,
 				6C61C3A817DE2065000539BC /* glyphicons_309_comments.png in Resources */,
 			);
@@ -1105,7 +1089,6 @@
 				494EFA8819749D50003DD171 /* UIView+PJSBoilerplate.m in Sources */,
 				4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */,
 				4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */,
-				493A338619DB61190009DC03 /* README.md in Sources */,
 				494EFA8719749D50003DD171 /* UIImage+PJSBoilerplate.m in Sources */,
 				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
 				6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */,
@@ -1164,10 +1147,10 @@
 		C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C55A373B178C4EFB00375CB6 /* en */,
 				C55A373D178C4F0F00375CB6 /* de */,
 				C55A373E178C4F1900375CB6 /* fr */,
 				C55A373F178C4F1E00375CB6 /* nl */,
+				49462FF219DF199F001D4801 /* Base */,
 			);
 			name = NoResults_iPhone.xib;
 			sourceTree = "<group>";
@@ -1214,6 +1197,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF319DC1D7800DAE8E3 /* Pods.debug_staging.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1223,12 +1208,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug_Staging;
@@ -1307,6 +1292,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF819DC1D7800DAE8E3 /* Pods.test_staging.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1316,12 +1303,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Test_Staging;
@@ -1400,6 +1387,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF719DC1D7800DAE8E3 /* Pods.test_production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1409,12 +1398,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Test_Production;
@@ -1493,6 +1482,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF219DC1D7800DAE8E3 /* Pods.debug_production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1502,12 +1493,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug_Production;
@@ -1586,6 +1577,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF419DC1D7800DAE8E3 /* Pods.distribution.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1595,12 +1588,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -1679,6 +1672,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF119DC1D7800DAE8E3 /* Pods.adhoc_staging.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1688,12 +1683,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc_Staging;
@@ -1772,6 +1767,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1781,12 +1778,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc_Production;
@@ -1865,6 +1862,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF619DC1D7800DAE8E3 /* Pods.profile_staging.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1874,12 +1873,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Profile_Staging;
@@ -1958,6 +1957,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492C4DF519DC1D7800DAE8E3 /* Pods.profile_production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1967,12 +1968,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Profile_Production;

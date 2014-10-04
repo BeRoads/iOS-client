@@ -268,4 +268,6 @@
  */
 - (void)locationManagerDidStopUpdateLocation:(LSLocationManager*)manager;
 
+- (void)locationManager:(CLLocationManager*)locationManager didUpdateNewLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation;
+
 @end

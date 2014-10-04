@@ -79,7 +79,6 @@ static NSString * const kCamera = @"Camera.json";
 			});
 		});
 		
-		dispatch_release(jsonParsing);
 		// End of success block
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
 		NSLog(@"Error : %@",error);
@@ -126,7 +125,6 @@ static NSString * const kCamera = @"Camera.json";
 			});
 		});
 		
-		dispatch_release(jsonParsing);
 		// End of success block
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
 		NSLog(@"Error : %@",error);
@@ -169,7 +167,6 @@ static NSString * const kCamera = @"Camera.json";
 			});
 		});
 		
-		dispatch_release(jsonParsing);
 		// End of success block
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
 		NSLog(@"Error : %@",error);

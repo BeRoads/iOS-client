@@ -98,11 +98,6 @@
     self.title = NSLocalizedString(@"Map", @"Map");
 }
 
-- (void)viewDidUnload {
-    [self setMapView:nil];
-    [super viewDidUnload];
-}
-
 #pragma mark NETWORK CONNECTION
 
 - (void)reload{

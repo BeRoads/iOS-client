@@ -211,8 +211,8 @@ static LSLocationManager* sharedLocationManager = nil;
 #endif
 	for (id<LSLocationManagerDelegate> delegate in _delegates)
 	{
-		if ([delegate respondsToSelector: @selector(locationManager:didUpdateToLocation:fromLocation:)]){
-			[delegate locationManager: _locationManager didUpdateToLocation: newLocation fromLocation: oldLocation];
+		if ([delegate respondsToSelector: @selector(locationManager:didUpdateNewLocation:fromLocation:)]){
+			[delegate locationManager: _locationManager didUpdateNewLocation:newLocation fromLocation: oldLocation];
         }
 	}
 }
@@ -441,14 +441,15 @@ static LSLocationManager* sharedLocationManager = nil;
  *
  */
 - (void)locationManager:(CLLocationManager*)manager
-	 didUpdateToLocation:(CLLocation*)newLocation
-		    fromLocation:(CLLocation*)oldLocation
-{	
+	 didUpdateLocations:(NSArray *)locations
+{
+    CLLocation* newLocation = [locations lastObject];
+    
 	// If cache is deactivated do only use fresh locations within 'cache time interval'
 	if (NO == _useCache)
-	{        
-		NSDate* eventDate			= newLocation.timestamp;
-		NSTimeInterval howRecent	= [eventDate timeIntervalSinceNow];
+	{
+		NSDate* eventDate = newLocation.timestamp;
+		NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
 		
         NSLog(@"Use cache : %i",_useCache);
         
@@ -488,7 +489,7 @@ static LSLocationManager* sharedLocationManager = nil;
 #endif
     
 #if	DM_LOCATION_MANAGER_LOG_LEVEL >= DM_LOCATION_MANAGER_LOG_LEVEL_ERROR
-	NSLog(@"distance between old and new location : %f AND between _location and new loc %f", [oldLocation distanceFromLocation:newLocation],[_location distanceFromLocation:newLocation]);
+	NSLog(@"distance between old and new location : %f", [_location distanceFromLocation:newLocation]);
 #endif
 }
 
