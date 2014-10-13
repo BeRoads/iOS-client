@@ -7,8 +7,7 @@
 //
 
 #import "LSAppDelegate.h"
-#import "AFHTTPClient.h"
-#import "AFJSONRequestOperation.h"
+#import <AFNetworking.h>
 #import "LSMapViewController.h"
 #if HAS_POD(CrashlyticsFramework)
 #import <Crashlytics/Crashlytics.h>
@@ -64,19 +63,16 @@
     [[LSPreferenceManager defaultManager] populateRegistrationDomain];
     
     //Set the status bar to black color.
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     // Set to navigation bar
-    float requiredVersion7 = 7.0;
     float requiredVersion8 = 8.0;
     float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     
-    if (currentVersion >= requiredVersion7)
-    {
         // Menu Bar Button Item in white
         [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
         // Back in white
-        [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,nil] forState:UIControlStateNormal];
+        [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
         // Arrow in white
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
         // Navigation bar text color in white
@@ -86,11 +82,6 @@
         UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
         UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
         [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
-    } else {
-        UIColor* mapColor = [UIColor colorWithRed:1.000000F green:0.235294F blue:0.282353F alpha:1.0F];
-        [[UINavigationBar appearance] setBackgroundColor:mapColor];
-        [[UINavigationBar appearance] setTintColor:mapColor];
-    }
     
     //UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
     //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
@@ -154,7 +145,6 @@
     
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     
-    NSURL *url = [NSURL URLWithString:@"http://dashboard.beroads.com/apns"];
     
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
     NSInteger area = [userDefaults integerForKey:kAreaPreference];
@@ -177,13 +167,9 @@
         [parameters setObject:language forKey:@"language"];
         [parameters setObject:parametersCoords forKey:@"coords"];
         
-        AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:url];
-        [client registerHTTPOperationClass:[AFHTTPRequestOperation class]];
-        [client setParameterEncoding:AFJSONParameterEncoding];
-        
-        NSMutableURLRequest *request = [client requestWithMethod:@"POST"
-                                                            path:@"http://dashboard.beroads.com/apns"
-                                                      parameters:parameters];
+        NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST"
+                                                            URLString:@"http://dashboard.beroads.com/apns"
+                                                      parameters:parameters error:nil];
         
         NSLog(@"Device Token (with space) : %@",deviceToken);
         NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);

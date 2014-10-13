@@ -107,7 +107,7 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 }
 
 
@@ -216,12 +216,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"detailCamera"]) {
-        LSCameraDetailViewController* detailViewController = [segue destinationViewController];
+        LSCameraDetailViewController* detailViewController = nil;
+        if ([[segue destinationViewController] isKindOfClass:[UINavigationController class]]) {
+            UINavigationController* navigationController = [segue destinationViewController];
+            detailViewController = (LSCameraDetailViewController*) [navigationController topViewController];
+        } else {
+            detailViewController = [segue destinationViewController];
+        }
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         detailViewController.view.backgroundColor = [UIColor blackColor];
         
-        Camera* selectedCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
+        Camera* selectedCamera = [self.zones[indexPath.section] cameras][indexPath.row];
         detailViewController.camera = selectedCamera;
     }
 }

@@ -106,7 +106,7 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

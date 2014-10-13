@@ -11,7 +11,7 @@
 
 #import "ECSlidingViewController.h"
 
-@interface InitialSlidingViewController : ECSlidingViewController
+@interface InitialSlidingViewController : ECSlidingViewController <UISplitViewControllerDelegate>
 
 @end
 

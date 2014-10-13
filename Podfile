@@ -1,15 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '5.1.1'
-pod "ECSlidingViewController", :git => "https://github.com/ValCapri/ECSlidingViewController.git"
+platform :ios, '7.0'
+pod "ECSlidingViewController"
 pod "InAppSettingsKit", '>= 2.0.1'
 pod "MarqueeLabel", '< 2.0.0'
 pod "EGOTableViewPullRefresh", :git => "https://github.com/ValCapri/EGOTableViewPullRefresh.git"
 
 # Crush Utility Belt
-#pod 'Sidecar' // require iOS 7+
+pod 'Sidecar'
 
 # Update checker for Installr (installrapp.com)
-#pod 'Aperitif'
+pod 'Aperitif'
 
 # Logging & Analytics
 pod 'CocoaLumberjack'
@@ -19,7 +19,7 @@ pod 'TestFlightSDK'
 pod 'FlurrySDK'
 
 # Networking
-pod 'AFNetworking', '< 1.9'
+pod 'AFNetworking'
 
 # Various goodies
 pod 'libextobjc'      # Useful macros and some craziness

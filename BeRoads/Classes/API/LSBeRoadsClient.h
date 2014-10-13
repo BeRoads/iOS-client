@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Lionel Schinckus. All rights reserved.
 //
 
-#import "AFHTTPClient.h"
+#import <AFHTTPSessionManager.h>
 
-@interface LSBeRoadsClient : AFHTTPClient
+@interface LSBeRoadsClient : AFHTTPSessionManager
 
 + (LSBeRoadsClient*)sharedClient;
 

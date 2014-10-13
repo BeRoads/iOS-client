@@ -45,6 +45,8 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>BeRoads use your location to show you traffic events near you</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile~ipad</key>

@@ -27,7 +27,7 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 }
 
 
@@ -139,11 +139,13 @@
     if ([annotation isKindOfClass:[Camera class]]){
         LSCameraDetailViewController* cameraDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraDetailViewController"];
         cameraDetailViewController.camera = (Camera*)annotation;
-        [self.navigationController pushViewController:cameraDetailViewController animated:YES];
+        NSLog(@"SVC %@",self.splitViewController);
+        [self.splitViewController showDetailViewController:cameraDetailViewController sender:view];
     } else if ([annotation isKindOfClass:[TrafficEvent class]]){
         LSTrafficDetailViewController* trafficDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"trafficDetailViewController"];
         trafficDetailViewController.trafficEvent = (TrafficEvent*)annotation;
-        [self.navigationController pushViewController:trafficDetailViewController animated:YES];
+        NSLog(@"SVC %@",self.splitViewController);
+        [self.splitViewController showDetailViewController:trafficDetailViewController sender:view];
     }
 }
 

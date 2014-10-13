@@ -100,7 +100,7 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 }
 
 #pragma mark - Table view data source

@@ -78,6 +78,7 @@
 		499BC21A177C3EFC00DC746D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC217177C3EFC00DC746D /* Default@2x.png */; };
 		499BC21C177C409900DC746D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21B177C409900DC746D /* Icon.png */; };
 		499BC21E177C40A700DC746D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BC21D177C40A700DC746D /* Icon@2x.png */; };
+		49C055A719E724E10059D701 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C055A619E724E10059D701 /* Launch Screen.xib */; };
 		49D957F5181336710095AF75 /* blue_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D957F1181336710095AF75 /* blue_navbar.png */; };
 		49D957F6181336710095AF75 /* green_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D957F2181336710095AF75 /* green_navbar.png */; };
 		49D957F7181336710095AF75 /* orange_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D957F3181336710095AF75 /* orange_navbar.png */; };
@@ -274,6 +275,7 @@
 		499BC217177C3EFC00DC746D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		499BC21B177C409900DC746D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		499BC21D177C40A700DC746D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		49C055A619E724E10059D701 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		49D957F1181336710095AF75 /* blue_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_navbar.png; sourceTree = "<group>"; };
 		49D957F2181336710095AF75 /* green_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_navbar.png; sourceTree = "<group>"; };
 		49D957F3181336710095AF75 /* orange_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_navbar.png; sourceTree = "<group>"; };
@@ -807,6 +809,7 @@
 			isa = PBXGroup;
 			children = (
 				C55A373A178C4EFB00375CB6 /* NoResults_iPhone.xib */,
+				49C055A619E724E10059D701 /* Launch Screen.xib */,
 			);
 			name = XIBs;
 			path = ..;
@@ -956,6 +959,7 @@
 				C55A373C178C4EFB00375CB6 /* NoResults_iPhone.xib in Resources */,
 				49742F53179615BF001B62B6 /* ic_m_traffic.png in Resources */,
 				49742F54179615BF001B62B6 /* ic_m_traffic@2x.png in Resources */,
+				49C055A719E724E10059D701 /* Launch Screen.xib in Resources */,
 				49742F55179615BF001B62B6 /* ic_m_webcam.png in Resources */,
 				49742F56179615BF001B62B6 /* ic_m_webcam@2x.png in Resources */,
 				49742F57179615BF001B62B6 /* ic_m_radar.png in Resources */,
@@ -1208,7 +1212,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1303,7 +1307,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1398,7 +1402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1493,7 +1497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1588,7 +1592,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1683,7 +1687,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1778,7 +1782,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1873,7 +1877,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1968,7 +1972,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

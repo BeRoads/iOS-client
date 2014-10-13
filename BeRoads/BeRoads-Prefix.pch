@@ -26,6 +26,9 @@
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
     #import "TestFlight.h"
+    #import <ECSlidingViewController.h>
+    #import <UIViewController+ECSlidingViewController.h>
+    #import "MenuViewController.h"
 
     #if HAS_POD(CocoaLumberjack)
         #import <CocoaLumberjack/CocoaLumberjack.h>

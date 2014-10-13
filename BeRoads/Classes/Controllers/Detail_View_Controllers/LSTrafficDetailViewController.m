@@ -15,6 +15,8 @@
 
 @interface LSTrafficDetailViewController ()
 
+@property (nonatomic, strong) NSDateFormatter* dateFormatter;
+
 @end
 
 @implementation LSTrafficDetailViewController
@@ -22,7 +24,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Date Formatter is very expensive to alloc init, only allow once
+    self.dateFormatter = [[PJSDateFormatters sharedFormatters] dateFormatterWithDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share:)];
+}
 
+- (void)setTrafficEvent:(TrafficEvent *)trafficEvent {
+    _trafficEvent = trafficEvent;
+    [self updateUI];
+}
+
+- (void)updateUI{
     MarqueeLabel *continuousLabel = [[MarqueeLabel alloc] initWithFrame:CGRectMake(10, 300, self.view.frame.size.width-20, 20) rate:100.0f andFadeLength:10.0f];
     continuousLabel.tag = 102;
     continuousLabel.marqueeType = MLContinuous;
@@ -35,25 +50,14 @@
     continuousLabel.backgroundColor = [UIColor clearColor];
     continuousLabel.font = [UIFont fontWithName:@"System" size:18.000];
     continuousLabel.text = self.trafficEvent.location;
-    [self.navigationItem setTitleView:continuousLabel];
-
+    self.navigationItem.titleView = continuousLabel;
     
     self.sourceLabel.text = self.trafficEvent.source;
     self.descriptionTextView.text = self.trafficEvent.message;
-    
-    NSDate *date = self.trafficEvent.time;
-    
-    // Date Formatter is very expensive to alloc init, only allow once
-    NSDateFormatter* dateFormatter = [[PJSDateFormatters sharedFormatters] dateFormatterWithDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
-    
-    self.updateLabel.text = [dateFormatter stringFromDate:date];
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];
-    }
+    self.updateLabel.text = [self.dateFormatter stringFromDate:self.trafficEvent.time];
 }
 
-- (IBAction)Share:(id)sender
+- (IBAction)share:(id)sender
 {
     NSArray *activityItems = @[[NSString stringWithFormat:@"%@ http://beroads.com/event/%li via @BeRoads", self.trafficEvent.location, (long)self.trafficEvent.idTrafficEvent]];
     if ([UIActivityViewController class]) {
@@ -67,21 +71,10 @@
     }
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self addObserver:self forKeyPath:@"trafficEvent" options:NSKeyValueObservingOptionNew context:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self removeObserver:self forKeyPath:@"trafficEvent"];
 }
 
 @end

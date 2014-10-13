@@ -29,18 +29,12 @@
 {
     [super viewDidLoad];
     
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(Share:)];
-    }
     self.title = self.camera.city;
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share:)];
 }
 
-- (IBAction)Share:(id)sender
+- (IBAction)share:(id)sender
 {
     NSArray *activityItems = @[[NSString stringWithFormat:@"[%@ - %@] via @BeRoads", self.camera.zone, self.camera.city],
                                [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.camera.img]]]];
@@ -152,11 +146,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self addObserver:self forKeyPath:@"camera.img" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
-}
-
 - (void)loadImageFromNetwork{
     __weak LSCameraDetailViewController* weakSelf = self;
     NSString* urlString = [self.camera.img stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -174,15 +163,9 @@
     
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self removeObserver:self forKeyPath:@"camera.img"];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"camera.img"]) {
-        [self loadImageFromNetwork];
-    }
+- (void)setCamera:(Camera *)camera{
+    _camera = camera;
+    [self loadImageFromNetwork];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "LSBeRoadsClient.h"
 
-#import "AFJSONRequestOperation.h"
+#import <AFNetworking.h>
 
 #import "Cameras.h"
 #import "TrafficEvents.h"
@@ -37,11 +37,6 @@ static NSString * const kCamera = @"Camera.json";
         return nil;
     }
     
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    
-    // Accept HTTP Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1
-	[self setDefaultHeader:@"Accept" value:@"application/json"];
-    
     return self;
 }
 
@@ -62,7 +57,7 @@ static NSString * const kCamera = @"Camera.json";
         [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
-	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
+	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -80,7 +75,7 @@ static NSString * const kCamera = @"Camera.json";
 		});
 		
 		// End of success block
-	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+	} failure:^(NSURLSessionDataTask *task, NSError *error){
 		NSLog(@"Error : %@",error);
 		
 		// Si block, callback vers le block
@@ -109,7 +104,7 @@ static NSString * const kCamera = @"Camera.json";
         
     }
     
-	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
+	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -126,7 +121,7 @@ static NSString * const kCamera = @"Camera.json";
 		});
 		
 		// End of success block
-	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+	} failure:^(NSURLSessionDataTask *task, NSError *error){
 		NSLog(@"Error : %@",error);
 		
 		// Si block, callback vers le block
@@ -150,7 +145,7 @@ static NSString * const kCamera = @"Camera.json";
         [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
-	[self getPath:path parameters:parameters success:^(AFHTTPRequestOperation* request, id JSON){
+	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -168,7 +163,7 @@ static NSString * const kCamera = @"Camera.json";
 		});
 		
 		// End of success block
-	} failure:^(AFHTTPRequestOperation *operation, NSError *error){
+	} failure:^(NSURLSessionDataTask *task, NSError *error){
 		NSLog(@"Error : %@",error);
 		
 		// Si block, callback vers le block

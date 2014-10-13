@@ -30,7 +30,7 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -132,8 +132,7 @@
     // Configure the cell...
     TrafficEvent* currentTrafficEvent = [self.trafficEvents objectAtIndex:indexPath.row];
     
-        cell.distanceLabel.text = [NSString stringWithFormat:@"%ld km",(long)currentTrafficEvent.distance];
-                
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%ld km",(long)currentTrafficEvent.distance];
     cell.titleLabel.text = [currentTrafficEvent location];
     
     return cell;
@@ -142,7 +141,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
     if ([[segue identifier] isEqualToString:@"detailTrafficEvent"]) {
-        LSTrafficDetailViewController* detailViewController = [segue destinationViewController];
+        LSTrafficDetailViewController* detailViewController = nil;
+        if ([[segue destinationViewController] isKindOfClass:[UINavigationController class]]) {
+            UINavigationController* navigationController = [segue destinationViewController];
+            detailViewController = (LSTrafficDetailViewController*) [navigationController topViewController];
+        } else {
+            detailViewController = (LSTrafficDetailViewController*) [segue destinationViewController];
+        }
         detailViewController.trafficEvent = [_trafficEvents objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }

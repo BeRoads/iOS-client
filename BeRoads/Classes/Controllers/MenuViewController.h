@@ -10,9 +10,8 @@
 #define BeRoads_MenuViewController_h
 
 #import <UIKit/UIKit.h>
-#import "ECSlidingViewController.h"
 
-@interface MenuViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface MenuViewController : UITableViewController
 
 @end
 
