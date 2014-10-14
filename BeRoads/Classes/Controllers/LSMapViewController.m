@@ -48,7 +48,7 @@
 	// Do any additional setup after loading the view.
     _userDefaults = [NSUserDefaults standardUserDefaults];
     
-    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
     self.navigationItem.leftBarButtonItem = menuButton;
 }
 
@@ -62,7 +62,7 @@
     self.navigationController.view.layer.shadowColor = [UIColor blackColor].CGColor;
     
     if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
-        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+        self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.menu];
     }
     
     _mapView.showsUserLocation = YES;
@@ -137,14 +137,12 @@
     id<MKAnnotation> annotation = [view annotation];
 
     if ([annotation isKindOfClass:[Camera class]]){
-        LSCameraDetailViewController* cameraDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraDetailViewController"];
+        LSCameraDetailViewController* cameraDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetail];
         cameraDetailViewController.camera = (Camera*)annotation;
-        NSLog(@"SVC %@",self.splitViewController);
         [self.splitViewController showDetailViewController:cameraDetailViewController sender:view];
     } else if ([annotation isKindOfClass:[TrafficEvent class]]){
-        LSTrafficDetailViewController* trafficDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"trafficDetailViewController"];
+        LSTrafficDetailViewController* trafficDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficDetail];
         trafficDetailViewController.trafficEvent = (TrafficEvent*)annotation;
-        NSLog(@"SVC %@",self.splitViewController);
         [self.splitViewController showDetailViewController:trafficDetailViewController sender:view];
     }
 }

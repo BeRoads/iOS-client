@@ -69,19 +69,19 @@
     float requiredVersion8 = 8.0;
     float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     
-        // Menu Bar Button Item in white
-        [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-        // Back in white
-        [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-        // Arrow in white
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-        // Navigation bar text color in white
-        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-        
-        // Background color
-        UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
-        UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
-        [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
+    // Menu Bar Button Item in white
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    // Back in white
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    // Arrow in white
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    // Navigation bar text color in white
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    // Background color
+    UIImage *singlePixelImage = [UIImage imageNamed:@"red_navbar"];
+    UIImage *resizableImage = [singlePixelImage resizableImageWithCapInsets:UIEdgeInsetsZero];
+    [[UINavigationBar appearance] setBackgroundImage:resizableImage forBarMetrics:UIBarMetricsDefault];
     
     //UIImage *navBar = [UIImage imageNamed:@"navbar.png"];
     //[[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
@@ -102,7 +102,7 @@
 #endif
     } else {
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     }
     
     return YES;
@@ -168,8 +168,8 @@
         [parameters setObject:parametersCoords forKey:@"coords"];
         
         NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST"
-                                                            URLString:@"http://dashboard.beroads.com/apns"
-                                                      parameters:parameters error:nil];
+                                                                                     URLString:@"http://dashboard.beroads.com/apns"
+                                                                                    parameters:parameters error:nil];
         
         NSLog(@"Device Token (with space) : %@",deviceToken);
         NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
@@ -188,12 +188,12 @@
         NSLog(@"La longitude et la latitude sont égales à 0");
     }
     
-	NSLog(@"My token is: %@", deviceTokenString);
+    NSLog(@"My token is: %@", deviceTokenString);
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
-	NSLog(@"Failed to get token, error: %@", error);
+    NSLog(@"Failed to get token, error: %@", error);
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{

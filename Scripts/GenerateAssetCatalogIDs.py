@@ -78,7 +78,7 @@ if __name__ == '__main__':
             lines[0].append(hString)
             lines[1].append(mString)
 
-    outDir = os.path.join(projectDir, 'Other-Sources', 'Generated')
+    outDir = os.path.join(projectDir, 'Classes', 'Utilities')
     assembleAndOutput(lines, outDir, outBasename)
 
     print('Generated {}.h and .m for image assets in the following catalog(s): {}'.format(outBasename, ', '.join([os.path.basename(d) for d in catalogDirs])))

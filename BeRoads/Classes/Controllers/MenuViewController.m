@@ -10,49 +10,57 @@
 
 @interface MenuViewController()
 
-@property (nonatomic, strong) NSArray *menuItems;
-@property (nonatomic, weak) IBOutlet UITableView* tableView;
+@property (nonatomic, strong) NSDictionary *menuDictionary;
+@property (nonatomic, strong) NSArray* menuItems;
 
 @end
 
 @implementation MenuViewController
-@synthesize menuItems;
 
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     
-    self.menuItems = [NSArray arrayWithObjects: @"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About", nil];
+    self.menuItems = @[@"Map", @"Traffic", @"Radars", @"Cameras", @"Settings", @"About"];
+    self.menuDictionary = @{@"Map":LSMainStoryboardIDs.viewControllers.mapNavigation,
+                                 @"Traffic":LSMainStoryboardIDs.viewControllers.trafficNavigation,
+                                 @"Radars":LSMainStoryboardIDs.viewControllers.radarsNavigation,
+                                 @"Cameras":LSMainStoryboardIDs.viewControllers.camerasNavigation,
+                                 @"Settings":LSMainStoryboardIDs.viewControllers.settingsNavigation,
+                                 @"About":LSMainStoryboardIDs.viewControllers.aboutNavigation};
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return [self.menuItems count];
+    return self.menuItems.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"MenuItemCell";
+    NSString *cellIdentifier = LSMainStoryboardIDs.reusables.menuItemCell;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = NSLocalizedString([self.menuItems objectAtIndex:indexPath.row], [self.menuItems objectAtIndex:indexPath.row]);
+    cell.textLabel.text = NSLocalizedString(self.menuItems[indexPath.row], self.menuItems[indexPath.row]);
     cell.textLabel.font = [UIFont fontWithName:@"System" size:18.000];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self.menuItems objectAtIndex:indexPath.row]]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", self.menuItems[indexPath.row]]];
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *identifier = [NSString stringWithFormat:@"%@", [self.menuItems objectAtIndex:indexPath.row]];
+    NSString *identifier = [NSString stringWithFormat:@"%@", self.menuItems[indexPath.row]];
     
-    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    NSString* navigationIdentifier = self.menuDictionary[identifier];
     
+    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:navigationIdentifier];
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
@@ -80,7 +88,6 @@
     }
     
     self.slidingViewController.topViewController = newTopViewController;
-    //[self.slidingViewController.topViewController showViewController:newTopViewController sender:self.view];
     
     [self.slidingViewController resetTopViewAnimated:YES onComplete:^{
     }];

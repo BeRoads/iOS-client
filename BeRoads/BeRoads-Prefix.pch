@@ -23,6 +23,8 @@
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <CoreLocation/CoreLocation.h>
     #import "LSConstants.h"
+    #import "StoryboardIdentifiers.h"
+    #import "AssetCatalogIdentifiers.h"
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
     #import "TestFlight.h"

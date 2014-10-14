@@ -185,7 +185,7 @@ if __name__ == '__main__':
             lines[1].append('#pragma mark ' + idList.name)
             lines[1].append(mString)
 
-    outDir = os.path.join(projectDir, 'Other-Sources', 'Generated')
+    outDir = os.path.join(projectDir, 'Classes', 'Utilities')
     assembleAndOutput(lines, outDir, outBasename)
 
     print('Generated {}.h and .m files from identifiers in the following storyboard(s): {}'.format(outBasename, ', '.join([os.path.basename(fn) for fn in inputFiles])))
