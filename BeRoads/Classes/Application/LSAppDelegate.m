@@ -7,8 +7,15 @@
 //
 
 #import "LSAppDelegate.h"
-#import <AFNetworking.h>
+
 #import "LSMapViewController.h"
+#import "LSTrafficEventDetailViewController.h"
+#import "LSCameraDetailViewController.h"
+
+#import "LSBeRoadsClient.h"
+
+#import <AFNetworking.h>
+
 #if HAS_POD(CrashlyticsFramework)
 #import <Crashlytics/Crashlytics.h>
 #endif
@@ -31,7 +38,7 @@
 #import "Flurry.h"
 #endif
 
-#import "PSPDFHangDetector.h"
+//#import "PSPDFHangDetector.h"
 
 @implementation LSAppDelegate
 
@@ -65,6 +72,9 @@
     //Set the status bar to black color.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
+    UIStoryboard* storyboard = self.window.rootViewController.storyboard;
+    NSLog(@"Storyboard : %@",storyboard);
+    
     // Set to navigation bar
     float requiredVersion8 = 8.0;
     float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
@@ -91,6 +101,11 @@
     if (launchOptions == nil) {
         if([[UIApplication sharedApplication] applicationIconBadgeNumber] > 0){
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+        }
+    } else {
+        NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
+        if (url != nil) {
+            NSLog(@"URL to launch : %@",url);
         }
     }
     
@@ -171,15 +186,15 @@
                                                                                      URLString:@"http://dashboard.beroads.com/apns"
                                                                                     parameters:parameters error:nil];
         
-        NSLog(@"Device Token (with space) : %@",deviceToken);
-        NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
+        //NSLog(@"Device Token (with space) : %@",deviceToken);
+        //NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         
         
         [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
             // Print the response body in text
-            NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+            //NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
         }];
@@ -187,8 +202,6 @@
     } else {
         NSLog(@"La longitude et la latitude sont égales à 0");
     }
-    
-    NSLog(@"My token is: %@", deviceTokenString);
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
@@ -196,15 +209,33 @@
     NSLog(@"Failed to get token, error: %@", error);
 }
 
+/*
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     NSLog(@"Application : %@, open URL : %@, Source Application : %@, Annotation : %@",application,url,sourceApplication,annotation);
-    if ([[url scheme] isEqualToString:@"beroads"]) {
-        if ([[url host] isEqualToString:@"open"]) {
-            NSLog(@"Fragment : %@", [url lastPathComponent]);
+    NSLog(@"Fragment : %@", [url lastPathComponent]);
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSString* scheme = url scheme];
+    NSString* host = [url host];
+    NSString* objectId = [url lastPathComponent];
+    
+    if ([scheme isEqualToString:@"beroads"]) {
+        if ([host isEqualToString:@"open"]) {
+            [LSBeRoadsClient sharedClient] getTrafficEventById:objectId block:^(TrafficEvent *trafficEvent, NSError *error) {
+                if (error == nil) {
+                    LSTrafficEventDetailViewController* trafficDetailViewController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficDetail];
+                    trafficDetailViewController.trafficEvent = trafficEvent;
+                    [self.splitViewController showDetailViewController:trafficDetailViewController sender:view];
+                }
+            }
+        } else if ([host isEqualToString:@"camera"]){
+            LSCameraDetailViewController* cameraDetailViewController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetail];
+            cameraDetailViewController.camera = (Camera*)annotation;
+            [self.splitViewController showDetailViewController:cameraDetailViewController sender:view];
         }
     }
     return YES;
 }
+*/
 
 #pragma mark Amaro foundation goodies
 
@@ -213,7 +244,7 @@
  */
 -(void)initializeLoggingAndServices
 {
-    [PSPDFHangDetector startHangDetector]; // Smart little helper to find main thread hangs.
+    //[PSPDFHangDetector startHangDetector]; // Smart little helper to find main thread hangs.
     
 #if HAS_POD(CrashlyticsFramework)
     NSString *crashlyticsAPIKey = @"3a2322f2e5a421953b38ea0d77076490aba2f9c8";

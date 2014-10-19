@@ -102,11 +102,17 @@
 #define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
 #define COCOAPODS_VERSION_PATCH_ECSlidingViewController 3
 
-// EGOTableViewPullRefresh
-#define COCOAPODS_POD_AVAILABLE_EGOTableViewPullRefresh
-#define COCOAPODS_VERSION_MAJOR_EGOTableViewPullRefresh 0
-#define COCOAPODS_VERSION_MINOR_EGOTableViewPullRefresh 2
-#define COCOAPODS_VERSION_PATCH_EGOTableViewPullRefresh 0
+// EGOCache
+#define COCOAPODS_POD_AVAILABLE_EGOCache
+#define COCOAPODS_VERSION_MAJOR_EGOCache 2
+#define COCOAPODS_VERSION_MINOR_EGOCache 1
+#define COCOAPODS_VERSION_PATCH_EGOCache 0
+
+// FSImageViewer
+#define COCOAPODS_POD_AVAILABLE_FSImageViewer
+#define COCOAPODS_VERSION_MAJOR_FSImageViewer 2
+#define COCOAPODS_VERSION_MINOR_FSImageViewer 6
+#define COCOAPODS_VERSION_PATCH_FSImageViewer 1
 
 // FlurrySDK
 #define COCOAPODS_POD_AVAILABLE_FlurrySDK
@@ -203,12 +209,6 @@
 #define COCOAPODS_VERSION_MAJOR_MZFormSheetController_Core 2
 #define COCOAPODS_VERSION_MINOR_MZFormSheetController_Core 3
 #define COCOAPODS_VERSION_PATCH_MZFormSheetController_Core 6
-
-// MarqueeLabel
-#define COCOAPODS_POD_AVAILABLE_MarqueeLabel
-#define COCOAPODS_VERSION_MAJOR_MarqueeLabel 1
-#define COCOAPODS_VERSION_MINOR_MarqueeLabel 5
-#define COCOAPODS_VERSION_PATCH_MarqueeLabel 0
 
 // Sidecar
 #define COCOAPODS_POD_AVAILABLE_Sidecar

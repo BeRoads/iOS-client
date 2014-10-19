@@ -8,7 +8,6 @@
 extern const struct LSMainStoryboardIDs {
     struct {
         __unsafe_unretained NSString *detailTrafficEvent;
-        __unsafe_unretained NSString *detailCamera;
     } segues;
 
     struct {
@@ -16,11 +15,11 @@ extern const struct LSMainStoryboardIDs {
         __unsafe_unretained NSString *about;
         __unsafe_unretained NSString *camerasNavigation;
         __unsafe_unretained NSString *cameras;
-        __unsafe_unretained NSString *cameraDetail;
         __unsafe_unretained NSString *settings;
         __unsafe_unretained NSString *mapNavigation;
         __unsafe_unretained NSString *menu;
         __unsafe_unretained NSString *initialSliding;
+        __unsafe_unretained NSString *trafficEventDetailNavigation;
         __unsafe_unretained NSString *trafficDetail;
         __unsafe_unretained NSString *radars;
         __unsafe_unretained NSString *radarsNavigation;

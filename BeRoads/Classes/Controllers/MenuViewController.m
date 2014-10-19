@@ -87,6 +87,8 @@
         [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     }
     
+    NSLog(@"Identifier : %@\nNavigationIdentifier : %@\nnewTopVC : %@",identifier,navigationIdentifier,newTopViewController);
+    
     self.slidingViewController.topViewController = newTopViewController;
     
     [self.slidingViewController resetTopViewAnimated:YES onComplete:^{

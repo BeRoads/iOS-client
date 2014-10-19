@@ -2,8 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
 pod "ECSlidingViewController"
 pod "InAppSettingsKit", '>= 2.0.1'
-pod "MarqueeLabel", '< 2.0.0'
-pod "EGOTableViewPullRefresh", :git => "https://github.com/ValCapri/EGOTableViewPullRefresh.git"
+pod 'FSImageViewer', '>= 2.6'
+#pod "MarqueeLabel", '>= 2.0.0'
 
 # Crush Utility Belt
 pod 'Sidecar'

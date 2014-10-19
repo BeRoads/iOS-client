@@ -14,15 +14,17 @@
 	NSString *city;
 	NSString *zone;
 	NSString *img;
+    NSString* img_thumb;
 	double lat;
 	double lng;
     NSInteger distance;
 }
 
 @property (nonatomic, assign) NSInteger idCamera;
-@property (nonatomic, retain) NSString *city;
-@property (nonatomic, retain) NSString *zone;
-@property (nonatomic, retain) NSString *img;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *zone;
+@property (nonatomic, strong) NSString *img;
+@property (nonatomic, strong) NSString* img_thumb;
 @property (nonatomic, assign) double lat;
 @property (nonatomic, assign) double lng;
 @property (nonatomic, assign) NSInteger distance;

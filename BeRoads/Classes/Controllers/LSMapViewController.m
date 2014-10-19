@@ -12,7 +12,7 @@
 #import "Radar.h"
 #import "LSBeRoadsClient.h"
 
-#import "LSTrafficDetailViewController.h"
+#import "LSTrafficEventDetailViewController.h"
 #import "LSCameraDetailViewController.h"
 
 @interface LSMapViewController ()
@@ -137,13 +137,17 @@
     id<MKAnnotation> annotation = [view annotation];
 
     if ([annotation isKindOfClass:[Camera class]]){
-        LSCameraDetailViewController* cameraDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetail];
+        /*
+        UINavigationController* navigationController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetailNavigation];
+        LSCameraDetailViewController* cameraDetailViewController = (LSCameraDetailViewController*) [navigationController topViewController];
         cameraDetailViewController.camera = (Camera*)annotation;
-        [self.splitViewController showDetailViewController:cameraDetailViewController sender:view];
+        [self.splitViewController showDetailViewController:navigationController sender:view];
+         */
     } else if ([annotation isKindOfClass:[TrafficEvent class]]){
-        LSTrafficDetailViewController* trafficDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficDetail];
+        UINavigationController* navigationController = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficEventDetailNavigation];
+        LSTrafficEventDetailViewController* trafficDetailViewController = (LSTrafficEventDetailViewController*)[navigationController topViewController];
         trafficDetailViewController.trafficEvent = (TrafficEvent*)annotation;
-        [self.splitViewController showDetailViewController:trafficDetailViewController sender:view];
+        [self.splitViewController showDetailViewController:navigationController sender:view];
     }
 }
 

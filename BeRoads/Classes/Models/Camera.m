@@ -15,6 +15,7 @@
 @synthesize city;
 @synthesize zone;
 @synthesize img;
+@synthesize img_thumb;
 @synthesize lat;
 @synthesize lng;
 @synthesize idCamera;
@@ -50,6 +51,11 @@
 	{
 		self.img = img_;
 	}
+    
+    id img_thumb_ = [dic objectForKey:@"img_thumb"];
+    if ([img_thumb_ isKindOfClass:[NSString class]]) {
+        self.img_thumb = img_thumb_;
+    }
 	
     id lat_ = [dic objectForKey:@"lat"];
     if([lat_ isKindOfClass:[NSNumber class]]){

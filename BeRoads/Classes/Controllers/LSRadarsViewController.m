@@ -48,7 +48,6 @@
     
     self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
-    ((PullTableView*)self.tableView).pullTableIsLoadingMore = NO;
     [self reloadRadars];
 }
 
@@ -77,11 +76,6 @@
             [_noResultView showInView:self.view];
         } else{
             [_noResultView removeFromView];
-        }
-        
-        PullTableView* pullTableView = (PullTableView*)self.tableView;
-        if (pullTableView.pullTableIsRefreshing) {
-            pullTableView.pullTableIsRefreshing = NO;
         }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
@@ -139,13 +133,9 @@
 }
 
 #pragma mark PullToRefreshDelegate
-- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+- (void)pullTableViewDidTriggerRefresh
 {
     [self reloadRadars];
-}
-
-- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
-    pullTableView.pullTableIsLoadingMore = NO;
 }
 
 #pragma mark - Table view data source

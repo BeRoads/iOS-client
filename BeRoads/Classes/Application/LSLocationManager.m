@@ -501,7 +501,7 @@ static LSLocationManager* sharedLocationManager = nil;
 	    didFailWithError:(NSError*)error
 {
 #if	DM_LOCATION_MANAGER_LOG_LEVEL >= DM_LOCATION_MANAGER_LOG_LEVEL_ERROR
-	NSLog(@"locationManager didFailWithError: %@", [error domain]);
+	NSLog(@"locationManager didFailWithError: %@", error);
 #endif
 	
 	if ([error domain] == kCLErrorDomain)

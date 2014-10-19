@@ -17,6 +17,9 @@
 
 #import "UIImageView+AFNetworking.h"
 #import "LSNoResultView.h"
+#import <FSImageViewer.h>
+#import <FSBasicImage.h>
+#import <FSBasicImageSource.h>
 
 @interface LSCamerasViewController ()
 
@@ -51,8 +54,6 @@
     
     self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
-    ((PullTableView*)self.tableView).pullTableIsLoadingMore = NO;
-    
     [self reloadCameras];
 }
 
@@ -82,12 +83,6 @@
             [_noResultView showInView:self.view];
         } else{
             [_noResultView removeFromView];
-        }
-
-        
-        PullTableView* pullTableView = (PullTableView*)self.tableView;
-        if (pullTableView.pullTableIsRefreshing) {
-            pullTableView.pullTableIsRefreshing = NO;
         }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
@@ -140,8 +135,8 @@
     
     // Configure the cell...
     Camera* currentCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
-    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img]]
-                          placeholderImage:[UIImage imageNamed:@"placeholder-cell"]
+    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img_thumb]]
+                          placeholderImage:[UIImage imageNamed:@"placeholder_cell"]
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         weakCell.imageView.image = image;
         [weakCell setNeedsLayout];
@@ -151,9 +146,16 @@
     
     cell.textLabel.text = currentCamera.city;
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Camera* selectedCamera = [self.zones[indexPath.section] cameras][indexPath.row];
+    FSBasicImage* imageBasic = [[FSBasicImage alloc] initWithImageURL:[NSURL URLWithString:selectedCamera.img]];
+    FSBasicImageSource* imageSource = [[FSBasicImageSource alloc] initWithImages:@[imageBasic]];
+    FSImageViewerViewController *imageViewController = [[FSImageViewerViewController alloc] initWithImageSource:imageSource];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
+    [self.splitViewController showDetailViewController:navigationController sender:self.tableView];
 }
 
 
@@ -213,6 +215,7 @@
     return [[self.zones objectAtIndex:section] title];
 }
 
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"detailCamera"]) {
         LSCameraDetailViewController* detailViewController = nil;
@@ -230,6 +233,7 @@
         detailViewController.camera = selectedCamera;
     }
 }
+*/
 
 - (void) updateFavorites{
     /**
@@ -276,13 +280,9 @@
 }
 
 #pragma mark PullToRefreshDelegate
-- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+- (void)pullTableViewDidTriggerRefresh
 {
     [self reloadCameras];
-}
-
-- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
-    pullTableView.pullTableIsLoadingMore = NO;
 }
 
 #pragma mark - Table view data source
@@ -326,18 +326,5 @@
     return YES;
 }
 */
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

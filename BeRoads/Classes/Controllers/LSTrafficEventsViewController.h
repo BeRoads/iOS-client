@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "PullTableView.h"
 
-@interface LSTrafficEventsViewController : UITableViewController <PullTableViewDelegate>
+@interface LSTrafficEventsViewController : UITableViewController
+
 - (IBAction)revealMenu:(id)sender;
 @property (nonatomic,strong) NSArray* trafficEvents;
 

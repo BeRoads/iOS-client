@@ -16,7 +16,7 @@
 
 #import "LSTrafficEventsBeRoadsCell.h"
 
-#import "LSTrafficDetailViewController.h"
+#import "LSTrafficEventDetailViewController.h"
 
 #import "LSNoResultView.h"
 
@@ -56,7 +56,6 @@
     self.navigationItem.leftBarButtonItem = menuButton;
     self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
     
-    ((PullTableView*)self.tableView).pullTableIsLoadingMore = NO;
     [self reloadTrafficEvents];
 }
 
@@ -73,7 +72,9 @@
         self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.menu];
     }
     
-    [self.view addGestureRecognizer:[self.slidingViewController panGesture]];
+    if (self.slidingViewController) {
+        [self.view addGestureRecognizer:[self.slidingViewController panGesture]];
+    }
 }
 
 - (void)reloadTrafficEvents{
@@ -85,11 +86,6 @@
             [_noResultView showInView:self.view];
         } else{
             [_noResultView removeFromView];
-        }
-        
-        PullTableView* pullTableView = (PullTableView*)self.tableView;
-        if (pullTableView.pullTableIsRefreshing) {
-            pullTableView.pullTableIsRefreshing = NO;
         }
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
@@ -141,25 +137,21 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
     if ([[segue identifier] isEqualToString:@"detailTrafficEvent"]) {
-        LSTrafficDetailViewController* detailViewController = nil;
+        LSTrafficEventDetailViewController* detailViewController = nil;
         if ([[segue destinationViewController] isKindOfClass:[UINavigationController class]]) {
             UINavigationController* navigationController = [segue destinationViewController];
-            detailViewController = (LSTrafficDetailViewController*) [navigationController topViewController];
+            detailViewController = (LSTrafficEventDetailViewController*) [navigationController topViewController];
         } else {
-            detailViewController = (LSTrafficDetailViewController*) [segue destinationViewController];
+            detailViewController = (LSTrafficEventDetailViewController*) [segue destinationViewController];
         }
         detailViewController.trafficEvent = [_trafficEvents objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
 
 #pragma mark PullToRefreshDelegate
-- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView;
+- (void)pullTableViewDidTriggerRefresh
 {
     [self reloadTrafficEvents];
-}
-
-- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView{
-    pullTableView.pullTableIsLoadingMore = NO;
 }
 
 #pragma mark - Table view data source

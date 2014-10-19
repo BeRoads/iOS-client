@@ -10,13 +10,13 @@
 
 #import <AFNetworking.h>
 
-#import "Cameras.h"
-#import "TrafficEvents.h"
-#import "Radars.h"
+#import "Camera.h"
+#import "TrafficEvent.h"
+#import "Radar.h"
 
 @implementation LSBeRoadsClient
 
-static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/IWay/";
+static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/v2/iway/";
 static NSString * const kTrafficEvents = @"TrafficEvent";
 static NSString * const kRadar = @"Radar.json";
 static NSString * const kCamera = @"Camera.json";
@@ -31,16 +31,15 @@ static NSString * const kCamera = @"Camera.json";
     return _sharedClient;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
+- (instancetype)initWithBaseURL:(NSURL *)url
+{
     self = [super initWithBaseURL:url];
-    if (!self) {
-        return nil;
+    if (self) {
     }
-    
     return self;
 }
 
-#pragma mark GET_FROM_REST
+#pragma mark GET ALL
 
 - (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {    
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
@@ -62,10 +61,12 @@ static NSString * const kCamera = @"Camera.json";
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
 		dispatch_async(jsonParsing, ^{
-            NSDictionary* dict = [JSON objectForKey:@"TrafficEvent"];
-            TrafficEvents* trafficEventsObject = [[TrafficEvents alloc] initWithJSONDictionary:dict];
-            NSArray* trafficEvents = [trafficEventsObject item];
-                        
+            NSArray* trafficEventsJSON = JSON;
+            NSMutableArray* trafficEvents = [NSMutableArray array];
+            [trafficEventsJSON enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [trafficEvents addObject:[[TrafficEvent alloc] initWithJSONDictionary:obj]];
+            }];
+            
 			dispatch_async(dispatch_get_main_queue(), ^{
                 
                 if(block){
@@ -109,9 +110,11 @@ static NSString * const kCamera = @"Camera.json";
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
 		dispatch_async(jsonParsing, ^{
-            NSDictionary* dict = [JSON objectForKey:@"Radar"];
-            Radars* radarsObject = [[Radars alloc] initWithJSONDictionary:dict];
-            NSArray* radars = [radarsObject item];
+            NSArray* radarsJSON = JSON;
+            NSMutableArray* radars = [NSMutableArray array];
+            [radarsJSON enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [radars addObject:[[Radar alloc] initWithJSONDictionary:obj]];
+            }];
             
 			dispatch_async(dispatch_get_main_queue(), ^{
                 if(block){
@@ -150,9 +153,11 @@ static NSString * const kCamera = @"Camera.json";
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
 		dispatch_async(jsonParsing, ^{
-            NSDictionary* dict = [JSON objectForKey:@"Camera"];
-            Cameras* camerasObject = [[Cameras alloc] initWithJSONDictionary:dict];
-            NSArray* cameras = [camerasObject item];
+            NSArray* camerasJSON = JSON;
+            NSMutableArray* cameras = [NSMutableArray array];
+            [camerasJSON enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [cameras addObject:[[Camera alloc] initWithJSONDictionary:obj]];
+            }];
             
 			dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -171,7 +176,104 @@ static NSString * const kCamera = @"Camera.json";
 			block(nil,error);
 		}
 	}];
-	
+}
+
+#pragma mark - GET by ID
+
+- (void) getTrafficEventById:(NSUInteger)id block:(void (^)(TrafficEvent*,NSError*))block {
+    NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
+    
+    NSString* path = [NSString stringWithFormat:@"%@/%@/%@",kTrafficEvents,language,@"all.json"];
+    
+    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+        // Block success
+        dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        dispatch_async(jsonParsing, ^{
+            TrafficEvent* trafficEvent = [[TrafficEvent alloc] initWithJSONDictionary:JSON];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if(block){
+                    block(trafficEvent,nil);
+                }
+            });
+        });
+        
+        // End of success block
+    } failure:^(NSURLSessionDataTask *task, NSError *error){
+        NSLog(@"Error : %@",error);
+        
+        // Si block, callback vers le block
+        if(block){
+            block(nil,error);
+        }
+    }];
+    
+}
+
+- (void) getRadarById:(NSUInteger)id block:(void (^)(Radar*,NSError*))block {
+    NSString* path = [NSString stringWithFormat:@"%@",kRadar];
+    
+    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+        // Block success
+        dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        dispatch_async(jsonParsing, ^{
+            Radar* radar = [[Radar alloc] initWithJSONDictionary:JSON];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if(block){
+                    block(radar,nil);
+                }
+            });
+        });
+        
+        // End of success block
+    } failure:^(NSURLSessionDataTask *task, NSError *error){
+        NSLog(@"Error : %@",error);
+        
+        // Si block, callback vers le block
+        if(block){
+            block(nil,error);
+        }
+    }];
+    
+}
+
+- (void) getCameraById:(NSUInteger)id block:(void (^)(Camera*,NSError*))block {
+    NSString* path = [NSString stringWithFormat:@"%@",kCamera];
+    
+    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+        // Block success
+        dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        dispatch_async(jsonParsing, ^{
+            Camera* camera = [[Camera alloc] initWithJSONDictionary:JSON];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if(block){
+                    block(camera,nil);
+                }
+            });
+        });
+        
+        // End of success block
+    } failure:^(NSURLSessionDataTask *task, NSError *error){
+        NSLog(@"Error : %@",error);
+        
+        // Si block, callback vers le block
+        if(block){
+            block(nil,error);
+        }
+    }];
 }
 
 @end

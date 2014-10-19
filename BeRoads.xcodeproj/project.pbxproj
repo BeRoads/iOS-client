@@ -10,12 +10,11 @@
 		426CC2E59A594FF4B2062D8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1C43C4D0084C408A8984E0 /* libPods.a */; };
 		4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
-		490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */; };
+		490A7BB7174C93230013D46F /* LSTrafficEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficEventDetailViewController.m */; };
 		49341F2719ECB7B70048F203 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49341F2619ECB7B70048F203 /* Images.xcassets */; };
 		49384252178EC1D800F05595 /* LSNoResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49384251178EC1D800F05595 /* LSNoResultView.m */; };
 		4942818C19DB8A310077FDCD /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4942818B19DB8A310077FDCD /* Specs.m */; };
 		4942819719DB8A960077FDCD /* LSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4942819519DB8A960077FDCD /* LSDummySpec.m */; };
-		49462FEF19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 49462FED19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m */; };
 		4946321A1760E48F0065AE05 /* FormatterKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494632151760E48F0065AE05 /* FormatterKit.strings */; };
 		4946321C1760E8AC0065AE05 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4946321B1760E8AC0065AE05 /* QuartzCore.framework */; };
 		49463237176150B70065AE05 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49463236176150B70065AE05 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -41,11 +40,8 @@
 		49693D2A173E44D7000D408E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49693D28173E44D7000D408E /* InfoPlist.strings */; };
 		49693D2C173E44D7000D408E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D2B173E44D7000D408E /* main.m */; };
 		49693DA0173E5286000D408E /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D86173E5286000D408E /* Camera.m */; };
-		49693DA1173E5286000D408E /* Cameras.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D88173E5286000D408E /* Cameras.m */; };
 		49693DA2173E5286000D408E /* Radar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D8A173E5286000D408E /* Radar.m */; };
-		49693DA3173E5286000D408E /* Radars.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D8C173E5286000D408E /* Radars.m */; };
 		49693DA4173E5286000D408E /* TrafficEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D8E173E5286000D408E /* TrafficEvent.m */; };
-		49693DA5173E5286000D408E /* TrafficEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693D90173E5286000D408E /* TrafficEvents.m */; };
 		49693DD6173E666E000D408E /* LSTrafficEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DD5173E666E000D408E /* LSTrafficEventsViewController.m */; };
 		49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DD8173E667B000D408E /* LSRadarsViewController.m */; };
 		49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DDB173E6692000D408E /* LSCamerasViewController.m */; };
@@ -59,11 +55,9 @@
 		4979185F1755330D0010974E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4979185E1755330D0010974E /* Settings.bundle */; };
 		4979186117554B6E0010974E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4979186017554B6E0010974E /* MessageUI.framework */; };
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
-		4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */; };
 		49C055A719E724E10059D701 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C055A619E724E10059D701 /* Launch Screen.xib */; };
 		6C61C3A217DBB886000539BC /* LSScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3A117DBB886000539BC /* LSScrollLabel.m */; };
 		6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C61C3A317DBB9E0000539BC /* Security.framework */; };
-		6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */; };
 		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */; };
 		6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */; };
@@ -94,8 +88,8 @@
 		4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventsBeRoadsCell.m; sourceTree = "<group>"; };
 		4906D577174AD77B00693392 /* LSBeRoadsRadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBeRoadsRadarCell.h; sourceTree = "<group>"; };
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
-		490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficDetailViewController.h; sourceTree = "<group>"; };
-		490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficDetailViewController.m; sourceTree = "<group>"; };
+		490A7BB5174C93230013D46F /* LSTrafficEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventDetailViewController.h; sourceTree = "<group>"; };
+		490A7BB6174C93230013D46F /* LSTrafficEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventDetailViewController.m; sourceTree = "<group>"; };
 		492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		492C4DF119DC1D7800DAE8E3 /* Pods.adhoc_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
 		492C4DF219DC1D7800DAE8E3 /* Pods.debug_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_production.xcconfig"; sourceTree = "<group>"; };
@@ -138,8 +132,6 @@
 		4942819319DB8A850077FDCD /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		4942819519DB8A960077FDCD /* LSDummySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDummySpec.m; sourceTree = "<group>"; };
 		4942819919DB8EBC0077FDCD /* Pods-Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-Environment.h"; sourceTree = "<group>"; };
-		49462FED19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPDFUIKitMainThreadGuard.m; sourceTree = "<group>"; };
-		49462FEE19DF0A68001D4801 /* PSPDFHangDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPDFHangDetector.h; sourceTree = "<group>"; };
 		49462FF219DF199F001D4801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NoResults_iPhone.xib; sourceTree = "<group>"; };
 		494632161760E48F0065AE05 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = BeRoads/de.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
 		494632171760E48F0065AE05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = BeRoads/en.lproj/FormatterKit.strings; sourceTree = SOURCE_ROOT; };
@@ -189,16 +181,10 @@
 		49693D2D173E44D7000D408E /* BeRoads-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeRoads-Prefix.pch"; sourceTree = "<group>"; };
 		49693D85173E5286000D408E /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		49693D86173E5286000D408E /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
-		49693D87173E5286000D408E /* Cameras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameras.h; sourceTree = "<group>"; };
-		49693D88173E5286000D408E /* Cameras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cameras.m; sourceTree = "<group>"; };
 		49693D89173E5286000D408E /* Radar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radar.h; sourceTree = "<group>"; };
 		49693D8A173E5286000D408E /* Radar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radar.m; sourceTree = "<group>"; };
-		49693D8B173E5286000D408E /* Radars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radars.h; sourceTree = "<group>"; };
-		49693D8C173E5286000D408E /* Radars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radars.m; sourceTree = "<group>"; };
 		49693D8D173E5286000D408E /* TrafficEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficEvent.h; sourceTree = "<group>"; };
 		49693D8E173E5286000D408E /* TrafficEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficEvent.m; sourceTree = "<group>"; };
-		49693D8F173E5286000D408E /* TrafficEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficEvents.h; sourceTree = "<group>"; };
-		49693D90173E5286000D408E /* TrafficEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficEvents.m; sourceTree = "<group>"; };
 		49693DCB173E55D6000D408E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49693DCC173E55F3000D408E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49693DCD173E5608000D408E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -224,15 +210,11 @@
 		4979186017554B6E0010974E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4979186217556D8E0010974E /* LSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSettingsViewController.h; sourceTree = "<group>"; };
 		4979186317556D8E0010974E /* LSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSettingsViewController.m; sourceTree = "<group>"; };
-		4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+UITabBarController_HideTabBar.h"; sourceTree = "<group>"; };
-		4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+UITabBarController_HideTabBar.m"; sourceTree = "<group>"; };
 		49C055A619E724E10059D701 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		57672ECB432AF1BAF4572131 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
 		6C61C3A017DBB886000539BC /* LSScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSScrollLabel.h; sourceTree = "<group>"; };
 		6C61C3A117DBB886000539BC /* LSScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSScrollLabel.m; sourceTree = "<group>"; };
 		6C61C3A317DBB9E0000539BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraDetailViewController.h; sourceTree = "<group>"; };
-		6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCameraDetailViewController.m; sourceTree = "<group>"; };
 		6CCEE02218279A9200221858 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6CDE3BAA1789A6BB00AAEEDA /* InitialSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
 		6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
@@ -308,11 +290,8 @@
 		490A7BB4174C92DD0013D46F /* Detail View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				490A7BB5174C93230013D46F /* LSTrafficDetailViewController.h */,
-				490A7BB6174C93230013D46F /* LSTrafficDetailViewController.m */,
-				6CB521081750C875004D6B6B /* LSCameraDetailViewController.h */,
-				6CB521091750C889004D6B6B /* LSCameraDetailViewController.m */,
-				4986C843175BF94200DFDE67 /* ScrollViews */,
+				490A7BB5174C93230013D46F /* LSTrafficEventDetailViewController.h */,
+				490A7BB6174C93230013D46F /* LSTrafficEventDetailViewController.m */,
 			);
 			name = "Detail View Controllers";
 			path = Detail_View_Controllers;
@@ -454,8 +433,6 @@
 				49530C5519EC44B700720FF7 /* AssetCatalogIdentifiers.m */,
 				49530C5619EC44B700720FF7 /* StoryboardIdentifiers.h */,
 				49530C5719EC44B700720FF7 /* StoryboardIdentifiers.m */,
-				49462FED19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m */,
-				49462FEE19DF0A68001D4801 /* PSPDFHangDetector.h */,
 				494EFA6319749D50003DD171 /* PJSDateFormatters.h */,
 				494EFA6419749D50003DD171 /* PJSDateFormatters.m */,
 				494EFA6519749D50003DD171 /* PJSUtilityMacros.h */,
@@ -616,16 +593,10 @@
 			children = (
 				49693D85173E5286000D408E /* Camera.h */,
 				49693D86173E5286000D408E /* Camera.m */,
-				49693D87173E5286000D408E /* Cameras.h */,
-				49693D88173E5286000D408E /* Cameras.m */,
 				49693D89173E5286000D408E /* Radar.h */,
 				49693D8A173E5286000D408E /* Radar.m */,
-				49693D8B173E5286000D408E /* Radars.h */,
-				49693D8C173E5286000D408E /* Radars.m */,
 				49693D8D173E5286000D408E /* TrafficEvent.h */,
 				49693D8E173E5286000D408E /* TrafficEvent.m */,
-				49693D8F173E5286000D408E /* TrafficEvents.h */,
-				49693D90173E5286000D408E /* TrafficEvents.m */,
 				4979181F17538C720010974E /* Zone.h */,
 				4979182017538C720010974E /* Zone.m */,
 			);
@@ -643,23 +614,6 @@
 				494632151760E48F0065AE05 /* FormatterKit.strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		4986C843175BF94200DFDE67 /* ScrollViews */ = {
-			isa = PBXGroup;
-			children = (
-				4986C844175BF94200DFDE67 /* Categories */,
-			);
-			path = ScrollViews;
-			sourceTree = "<group>";
-		};
-		4986C844175BF94200DFDE67 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				4986C845175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.h */,
-				4986C846175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		A373DC74C9F7754462BD7AD3 /* Pods */ = {
@@ -951,13 +905,9 @@
 				49693D2C173E44D7000D408E /* main.m in Sources */,
 				494EFA8219749D50003DD171 /* PJSDateFormatters.m in Sources */,
 				49693DA0173E5286000D408E /* Camera.m in Sources */,
-				49693DA1173E5286000D408E /* Cameras.m in Sources */,
 				49693DA2173E5286000D408E /* Radar.m in Sources */,
-				49462FEF19DF0A68001D4801 /* PSPDFUIKitMainThreadGuard.m in Sources */,
-				49693DA3173E5286000D408E /* Radars.m in Sources */,
 				494EFA901974C9EF003DD171 /* LSConstants.m in Sources */,
 				49693DA4173E5286000D408E /* TrafficEvent.m in Sources */,
-				49693DA5173E5286000D408E /* TrafficEvents.m in Sources */,
 				49693DD6173E666E000D408E /* LSTrafficEventsViewController.m in Sources */,
 				49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */,
 				494EFA7D19749D50003DD171 /* LSLocationManager.m in Sources */,
@@ -967,17 +917,15 @@
 				49530C5919EC44B700720FF7 /* StoryboardIdentifiers.m in Sources */,
 				4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */,
 				4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */,
-				490A7BB7174C93230013D46F /* LSTrafficDetailViewController.m in Sources */,
+				490A7BB7174C93230013D46F /* LSTrafficEventDetailViewController.m in Sources */,
 				494EFA8619749D50003DD171 /* CALayer+PJSBoilerplate.m in Sources */,
 				494EFA8419749D50003DD171 /* NSDictionary+PJSBoilerplate.m in Sources */,
 				494EFA7C19749D50003DD171 /* LSAppDelegate.m in Sources */,
-				6CB5210A1750C889004D6B6B /* LSCameraDetailViewController.m in Sources */,
 				494EFA8119749D50003DD171 /* LSBeRoadsClient.m in Sources */,
 				4979182117538C720010974E /* Zone.m in Sources */,
 				494EFA8519749D50003DD171 /* NSObject+PJSBoilerplate.m in Sources */,
 				494EFA8819749D50003DD171 /* UIView+PJSBoilerplate.m in Sources */,
 				4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */,
-				4986C849175BF94200DFDE67 /* UITabBarController+UITabBarController_HideTabBar.m in Sources */,
 				494EFA8719749D50003DD171 /* UIImage+PJSBoilerplate.m in Sources */,
 				C56FA375177333D000596208 /* LSAboutViewController.m in Sources */,
 				6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */,

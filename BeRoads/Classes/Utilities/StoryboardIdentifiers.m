@@ -8,7 +8,6 @@
 const struct LSMainStoryboardIDs LSMainStoryboardIDs = {
     .segues = {
         .detailTrafficEvent = @"detailTrafficEvent",
-        .detailCamera = @"detailCamera",
     },
 
     .viewControllers = {
@@ -16,11 +15,11 @@ const struct LSMainStoryboardIDs LSMainStoryboardIDs = {
         .about = @"AboutViewController",
         .camerasNavigation = @"CamerasNavigationController",
         .cameras = @"CamerasViewController",
-        .cameraDetail = @"CameraDetailViewController",
         .settings = @"SettingsViewController",
         .mapNavigation = @"MapNavigationController",
         .menu = @"MenuViewController",
         .initialSliding = @"InitialSlidingViewController",
+        .trafficEventDetailNavigation = @"TrafficEventDetailNavigationController",
         .trafficDetail = @"TrafficDetailViewController",
         .radars = @"RadarsViewController",
         .radarsNavigation = @"RadarsNavigationController",

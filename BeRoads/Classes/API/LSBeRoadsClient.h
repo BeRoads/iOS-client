@@ -8,14 +8,22 @@
 
 #import <AFHTTPSessionManager.h>
 
+@class Radar;
+@class Camera;
+@class TrafficEvent;
+
 @interface LSBeRoadsClient : AFHTTPSessionManager
 
 + (LSBeRoadsClient*)sharedClient;
 
+// Get All
 - (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
-
 - (void) getRadars:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
-
 - (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
+
+// GetByID
+- (void) getTrafficEventById:(NSUInteger)id block:(void (^)(TrafficEvent*,NSError*))block;
+- (void) getRadarById:(NSUInteger)id block:(void (^)(Radar*,NSError*))block;
+- (void) getCameraById:(NSUInteger)id block:(void (^)(Camera*,NSError*))block;
 
 @end
