@@ -7,7 +7,7 @@
 //
 
 #import "LSCamerasViewController.h"
-#import "LSCameraDetailViewController.h"
+//#import "LSCameraDetailViewController.h"
 
 #import "Camera.h"
 #import "Zone.h"
@@ -195,7 +195,7 @@
         NSData *cameraEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:selectedCamera];
         //if it's not already stored as favorites
         if(!present && ![[selectedZone title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){
-            NSLog(@"Added element at row %@", indexPath);
+            DDLogVerbose(@"Added element at row %@", indexPath);
             [mutableArrayCopy addObject:cameraEncodedObject];
         }
         else if(present && [[selectedZone title] isEqualToString:NSLocalizedString(@"Favorites", @"Favorites")]){

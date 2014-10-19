@@ -77,7 +77,7 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// End of success block
 	} failure:^(NSURLSessionDataTask *task, NSError *error){
-		NSLog(@"Error : %@",error);
+		DDLogError(@"Error : %@",error);
 		
 		// Si block, callback vers le block
 		if(block){
@@ -125,7 +125,7 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// End of success block
 	} failure:^(NSURLSessionDataTask *task, NSError *error){
-		NSLog(@"Error : %@",error);
+		DDLogError(@"Error : %@",error);
 		
 		// Si block, callback vers le block
 		if(block){
@@ -169,7 +169,7 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// End of success block
 	} failure:^(NSURLSessionDataTask *task, NSError *error){
-		NSLog(@"Error : %@",error);
+		DDLogError(@"Error : %@",error);
 		
 		// Si block, callback vers le block
 		if(block){
@@ -180,19 +180,24 @@ static NSString * const kCamera = @"Camera.json";
 
 #pragma mark - GET by ID
 
-- (void) getTrafficEventById:(NSUInteger)id block:(void (^)(TrafficEvent*,NSError*))block {
+- (void) getTrafficEventById:(NSString*)trafficId block:(void (^)(TrafficEvent*,NSError*))block {
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
     
     NSString* path = [NSString stringWithFormat:@"%@/%@/%@",kTrafficEvents,language,@"all.json"];
     
-    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    NSDictionary* parameters = @{@"id":trafficId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
         dispatch_async(jsonParsing, ^{
-            TrafficEvent* trafficEvent = [[TrafficEvent alloc] initWithJSONDictionary:JSON];
+            TrafficEvent* trafficEvent = nil;
+            if ([JSON isKindOfClass:[NSDictionary class]]) {
+                trafficEvent = [[TrafficEvent alloc] initWithJSONDictionary:JSON];
+            } else if ([JSON isKindOfClass:[NSArray class]] && ((NSArray*)JSON).count > 0) {
+                trafficEvent = [[TrafficEvent alloc] initWithJSONDictionary:JSON[0]];
+            }
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -204,7 +209,7 @@ static NSString * const kCamera = @"Camera.json";
         
         // End of success block
     } failure:^(NSURLSessionDataTask *task, NSError *error){
-        NSLog(@"Error : %@",error);
+        DDLogError(@"Error : %@",error);
         
         // Si block, callback vers le block
         if(block){
@@ -214,17 +219,22 @@ static NSString * const kCamera = @"Camera.json";
     
 }
 
-- (void) getRadarById:(NSUInteger)id block:(void (^)(Radar*,NSError*))block {
+- (void) getRadarById:(NSString*)radarId block:(void (^)(Radar*,NSError*))block {
     NSString* path = [NSString stringWithFormat:@"%@",kRadar];
     
-    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    NSDictionary* parameters = @{@"id":radarId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
         dispatch_async(jsonParsing, ^{
-            Radar* radar = [[Radar alloc] initWithJSONDictionary:JSON];
+            Radar* radar = nil;
+            if ([JSON isKindOfClass:[NSDictionary class]]) {
+                radar = [[Radar alloc] initWithJSONDictionary:JSON];
+            } else if ([JSON isKindOfClass:[NSArray class]] && ((NSArray*)JSON).count > 0) {
+                radar = [[Radar alloc] initWithJSONDictionary:JSON[0]];
+            }
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 if(block){
@@ -235,7 +245,7 @@ static NSString * const kCamera = @"Camera.json";
         
         // End of success block
     } failure:^(NSURLSessionDataTask *task, NSError *error){
-        NSLog(@"Error : %@",error);
+        DDLogError(@"Error : %@",error);
         
         // Si block, callback vers le block
         if(block){
@@ -245,17 +255,22 @@ static NSString * const kCamera = @"Camera.json";
     
 }
 
-- (void) getCameraById:(NSUInteger)id block:(void (^)(Camera*,NSError*))block {
+- (void) getCameraById:(NSString*)cameraId block:(void (^)(Camera*,NSError*))block {
     NSString* path = [NSString stringWithFormat:@"%@",kCamera];
     
-    NSDictionary* parameters = @{@"id":[NSString stringWithFormat:@"%li",(unsigned long)id]};
+    NSDictionary* parameters = @{@"id":cameraId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, NSDictionary* JSON){
+    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
         dispatch_async(jsonParsing, ^{
-            Camera* camera = [[Camera alloc] initWithJSONDictionary:JSON];
+            Camera* camera = nil;
+            if ([JSON isKindOfClass:[NSDictionary class]]) {
+                camera = [[Camera alloc] initWithJSONDictionary:JSON];
+            } else if ([JSON isKindOfClass:[NSArray class]] && ((NSArray*)JSON).count > 0) {
+                camera = [[Camera alloc] initWithJSONDictionary:JSON[0]];
+            }
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -267,7 +282,7 @@ static NSString * const kCamera = @"Camera.json";
         
         // End of success block
     } failure:^(NSURLSessionDataTask *task, NSError *error){
-        NSLog(@"Error : %@",error);
+        DDLogError(@"Error : %@",error);
         
         // Si block, callback vers le block
         if(block){

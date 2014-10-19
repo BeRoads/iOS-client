@@ -11,16 +11,6 @@
 
 @implementation LSTrafficEventDetailsView
 
-@synthesize trafficEvent;
-@synthesize locationLabel;
-@synthesize messageLabel;
-@synthesize lastUpdateLabel;
-@synthesize sourceLabel;
-
-- (void)baseInit {
-    NSLog(@"Custom view");
-}
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -37,14 +27,15 @@
     return self;
 }
 
-- (void) setTrafficEvent:(TrafficEvent *) event {
-   
-    self.trafficEvent = event;
-    [locationLabel setText:[self.trafficEvent location]];
-    [messageLabel setText:[self.trafficEvent message]];
-    [sourceLabel setText:[self.trafficEvent source]];
-    
-    
+- (void)updateUI {
+    self.locationLabel.text = [self.trafficEvent location];
+    self.messageLabel.text = [self.trafficEvent message];
+    self.sourceLabel.text = [self.trafficEvent source];
+}
+
+- (void)setTrafficEvent:(TrafficEvent *)trafficEvent {
+    _trafficEvent = trafficEvent;
+    [self updateUI];
 }
 
 @end

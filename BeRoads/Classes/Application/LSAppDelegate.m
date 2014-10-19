@@ -10,7 +10,7 @@
 
 #import "LSMapViewController.h"
 #import "LSTrafficEventDetailViewController.h"
-#import "LSCameraDetailViewController.h"
+//#import "LSCameraDetailViewController.h"
 
 #import "LSBeRoadsClient.h"
 
@@ -42,10 +42,6 @@
 
 @implementation LSAppDelegate
 
-@synthesize window;
-@synthesize navController = _navController;
-@synthesize splitViewController = _splitViewController;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -71,9 +67,6 @@
     
     //Set the status bar to black color.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-    
-    UIStoryboard* storyboard = self.window.rootViewController.storyboard;
-    NSLog(@"Storyboard : %@",storyboard);
     
     // Set to navigation bar
     float requiredVersion8 = 8.0;
@@ -101,11 +94,6 @@
     if (launchOptions == nil) {
         if([[UIApplication sharedApplication] applicationIconBadgeNumber] > 0){
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-        }
-    } else {
-        NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
-        if (url != nil) {
-            NSLog(@"URL to launch : %@",url);
         }
     }
     
@@ -186,56 +174,57 @@
                                                                                      URLString:@"http://dashboard.beroads.com/apns"
                                                                                     parameters:parameters error:nil];
         
-        //NSLog(@"Device Token (with space) : %@",deviceToken);
-        //NSLog(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
+        DDLogVerbose(@"Device Token (with space) : %@",deviceToken);
+        DDLogVerbose(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         
         
         [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
             // Print the response body in text
-            //NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+            DDLogVerbose(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
+            DDLogError(@"Error: %@", error);
         }];
         [operation start];
     } else {
-        NSLog(@"La longitude et la latitude sont égales à 0");
+        DDLogVerbose(@"La longitude et la latitude sont égales à 0");
     }
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
-    NSLog(@"Failed to get token, error: %@", error);
+    DDLogError(@"Failed to get token, error: %@", error);
 }
 
-/*
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    NSLog(@"Application : %@, open URL : %@, Source Application : %@, Annotation : %@",application,url,sourceApplication,annotation);
-    NSLog(@"Fragment : %@", [url lastPathComponent]);
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    NSString* scheme = url scheme];
+    DDLogVerbose(@"Application : %@, open URL : %@, Source Application : %@, Annotation : %@",application,url,sourceApplication,annotation);
+    UIStoryboard* storyboard = self.window.rootViewController.storyboard;
+    UISplitViewController* splitViewController = (UISplitViewController*)self.window.rootViewController;
+    NSString* scheme = [url scheme];
     NSString* host = [url host];
-    NSString* objectId = [url lastPathComponent];
+    NSString* trafficId = [url lastPathComponent];
     
     if ([scheme isEqualToString:@"beroads"]) {
-        if ([host isEqualToString:@"open"]) {
-            [LSBeRoadsClient sharedClient] getTrafficEventById:objectId block:^(TrafficEvent *trafficEvent, NSError *error) {
+        if ([host isEqualToString:@"open"] || [host isEqualToString:@"traffic"]) {
+            [[LSBeRoadsClient sharedClient] getTrafficEventById:trafficId block:^(TrafficEvent *trafficEvent, NSError *error) {
                 if (error == nil) {
-                    LSTrafficEventDetailViewController* trafficDetailViewController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficDetail];
+                    UINavigationController* navigationController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.trafficEventDetailNavigation];
+                    LSTrafficEventDetailViewController* trafficDetailViewController = (LSTrafficEventDetailViewController*) navigationController.topViewController;
                     trafficDetailViewController.trafficEvent = trafficEvent;
-                    [self.splitViewController showDetailViewController:trafficDetailViewController sender:view];
+                    [splitViewController showDetailViewController:navigationController sender:nil];
+                } else {
+                    DDLogError(@"Error : %@",error);
                 }
-            }
+            }];
         } else if ([host isEqualToString:@"camera"]){
-            LSCameraDetailViewController* cameraDetailViewController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetail];
-            cameraDetailViewController.camera = (Camera*)annotation;
-            [self.splitViewController showDetailViewController:cameraDetailViewController sender:view];
+            //LSCameraDetailViewController* cameraDetailViewController = [storyboard instantiateViewControllerWithIdentifier:LSMainStoryboardIDs.viewControllers.cameraDetail];
+            //cameraDetailViewController.camera = (Camera*)annotation;
+            //[splitViewController showDetailViewController:cameraDetailViewController sender:view];
         }
     }
     return YES;
 }
-*/
 
 #pragma mark Amaro foundation goodies
 

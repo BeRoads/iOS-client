@@ -11,7 +11,7 @@
 
 @interface LSTrafficEventDetailsView : UIView
 
-@property (weak, nonatomic) IBOutlet TrafficEvent *trafficEvent;
+@property (strong, nonatomic) TrafficEvent *trafficEvent;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdateLabel;

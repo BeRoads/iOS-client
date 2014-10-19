@@ -13,7 +13,7 @@
 #import "LSBeRoadsClient.h"
 
 #import "LSTrafficEventDetailViewController.h"
-#import "LSCameraDetailViewController.h"
+//#import "LSCameraDetailViewController.h"
 
 @interface LSMapViewController ()
 

@@ -58,7 +58,7 @@
     } else if([lat_ isKindOfClass:[NSString class]]){
         self.lat = [lat_ doubleValue];
     } else {
-        NSLog(@"Lat is not know, %@, the class is %@",lat_,[lat_ class]);
+        DDLogError(@"Lat is not know, %@, the class is %@",lat_,[lat_ class]);
     }
     
     id lng_ = [dic objectForKey:@"lng"];
@@ -67,7 +67,7 @@
     } else if([lng_ isKindOfClass:[NSString class]]){
         self.lng = [lng_ doubleValue];
     } else {
-        NSLog(@"Lng is not know, %@, the class is %@",lng_,[lng_ class]);
+        DDLogError(@"Lng is not know, %@, the class is %@",lng_,[lng_ class]);
     }
 	
 

@@ -22,8 +22,8 @@
 - (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
 
 // GetByID
-- (void) getTrafficEventById:(NSUInteger)id block:(void (^)(TrafficEvent*,NSError*))block;
-- (void) getRadarById:(NSUInteger)id block:(void (^)(Radar*,NSError*))block;
-- (void) getCameraById:(NSUInteger)id block:(void (^)(Camera*,NSError*))block;
+- (void) getTrafficEventById:(NSString*)trafficId block:(void (^)(TrafficEvent*,NSError*))block;
+- (void) getRadarById:(NSString*)radarId block:(void (^)(Radar*,NSError*))block;
+- (void) getCameraById:(NSString*)cameraId block:(void (^)(Camera*,NSError*))block;
 
 @end

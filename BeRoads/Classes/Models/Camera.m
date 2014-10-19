@@ -63,7 +63,7 @@
     } else if([lat_ isKindOfClass:[NSString class]]){
         self.lat = [lat_ doubleValue];
     } else {
-        NSLog(@"Lat is not know, %@",lat_);
+        DDLogError(@"Lat is not know, %@",lat_);
     }
     
     id lng_ = [dic objectForKey:@"lng"];
@@ -72,7 +72,7 @@
     } else if([lng_ isKindOfClass:[NSString class]]){
         self.lng = [lng_ doubleValue];
     } else {
-        NSLog(@"Lng is not know, %@",lng_);
+        DDLogError(@"Lng is not know, %@",lng_);
     }
     
 	id idCamera_ = [dic objectForKey:@"id"];
