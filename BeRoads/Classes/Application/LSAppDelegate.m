@@ -15,6 +15,7 @@
 #import "LSBeRoadsClient.h"
 
 #import <AFNetworking.h>
+#import <AFNetworkActivityIndicatorManager.h>
 
 #if HAS_POD(CrashlyticsFramework)
 #import <Crashlytics/Crashlytics.h>
@@ -48,6 +49,9 @@
     // Location manager
     
     [self initializeLoggingAndServices];
+    
+    // Enable Activity Indicator
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
     LSLocationManager* locationManager = [LSLocationManager sharedLocationManager];
     locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
