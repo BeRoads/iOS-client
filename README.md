@@ -9,21 +9,10 @@ Library used in this project
 ------
 * AFNetworking
 * InAppSettingsKit
-* EGOTableViewPullToRefresh
 * ECSlidingViewController
 * MarqueeLabel
 * TestFlightSDK
+* Crashlytics
+* FlurrySDK
 
-
-RoadMap
--------
-
-###v2.5
-
-* Universal App
-* Twitter cards
-* App Links
-
-###v3.0
-* iOS 7 only
-* AFNetworking 2.0+
+You can see all librairies in the Podfile as we are using CocoaPods to manage our dependencies
