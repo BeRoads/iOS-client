@@ -41,7 +41,7 @@ static NSString * const kCamera = @"Camera.json";
 
 #pragma mark GET ALL
 
-- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {    
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate {
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
     
     NSString* path = [NSString stringWithFormat:@"%@/%@/%@",kTrafficEvents,language,@"all.json"];
@@ -70,7 +70,7 @@ static NSString * const kCamera = @"Camera.json";
 			dispatch_async(dispatch_get_main_queue(), ^{
                 
                 if(block){
-                    block(trafficEvents,nil);
+                    block(trafficEvents,nil,task);
                 }
 			});
 		});
@@ -81,13 +81,13 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// Si block, callback vers le block
 		if(block){
-			block(nil,error);
+			block(nil,error,task);
 		}
 	}];
 	
 }
 
-- (void) getRadars:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {
+- (void) getRadars:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate {
     NSString* path = [NSString stringWithFormat:@"%@",kRadar];
     
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -118,7 +118,7 @@ static NSString * const kCamera = @"Camera.json";
             
 			dispatch_async(dispatch_get_main_queue(), ^{
                 if(block){
-                    block(radars,nil);
+                    block(radars,nil,task);
                 }
 			});
 		});
@@ -129,13 +129,13 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// Si block, callback vers le block
 		if(block){
-			block(nil,error);
+			block(nil,error,task);
 		}
 	}];
 	
 }
 
-- (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate {    
+- (void) getCameras:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate {
     NSString* path = [NSString stringWithFormat:@"%@",kCamera];
     
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -162,7 +162,7 @@ static NSString * const kCamera = @"Camera.json";
 			dispatch_async(dispatch_get_main_queue(), ^{
                 
                 if(block){
-                    block(cameras,nil);
+                    block(cameras,nil,task);
                 }
 			});
 		});
@@ -173,7 +173,7 @@ static NSString * const kCamera = @"Camera.json";
 		
 		// Si block, callback vers le block
 		if(block){
-			block(nil,error);
+			block(nil,error,task);
 		}
 	}];
 }

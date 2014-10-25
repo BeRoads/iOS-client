@@ -16,12 +16,15 @@
 
 + (LSBeRoadsClient*)sharedClient;
 
-// Get All
-- (void) getTrafficEvents:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
-- (void) getRadars:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
-- (void) getCameras:(void (^)(NSArray*,NSError*))block location:(CLLocationCoordinate2D)coordinate;
+#pragma mark -
+#pragma mark Methods
 
-// GetByID
+#pragma mark GetAll
+- (void) getTrafficEvents:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate;
+- (void) getRadars:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate;
+- (void) getCameras:(void (^)(NSArray*,NSError*,NSURLSessionDataTask*))block location:(CLLocationCoordinate2D)coordinate;
+
+#pragma mark GetByID
 - (void) getTrafficEventById:(NSString*)trafficId block:(void (^)(TrafficEvent*,NSError*))block;
 - (void) getRadarById:(NSString*)radarId block:(void (^)(Radar*,NSError*))block;
 - (void) getCameraById:(NSString*)cameraId block:(void (^)(Camera*,NSError*))block;

@@ -7,12 +7,15 @@
 //
 
 #import "LSMapViewController.h"
+
 #import "Camera.h"
 #import "TrafficEvent.h"
 #import "Radar.h"
+
 #import "LSBeRoadsClient.h"
 
 #import "LSTrafficEventDetailViewController.h"
+#import "CSNotificationView+AFNetworking.h"
 //#import "LSCameraDetailViewController.h"
 
 @interface LSMapViewController ()
@@ -24,12 +27,6 @@
 @end
 
 @implementation LSMapViewController
-
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -108,24 +105,30 @@
 
 - (void)reloadCameras{
     if ([_userDefaults boolForKey:kCameraPreference]) {
-        [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
+        [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error, NSURLSessionDataTask* task) {
             [_mapView addAnnotations:cameras];
+            
+            [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];
     }
 }
 
 - (void)reloadTrafficEvents{
     if ([_userDefaults boolForKey:kTrafficreference]) {
-        [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
+        [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error, NSURLSessionDataTask* task) {
             [_mapView addAnnotations:trafficEvents];
+        
+            [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];
     }
 }
 
 - (void)reloadRadars{
     if ([_userDefaults boolForKey:kRadarPreference]) {
-        [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error) {
+        [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error, NSURLSessionDataTask* task) {
             [_mapView addAnnotations:radars];
+        
+            [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];
     }
 }
@@ -274,6 +277,17 @@
         [_mapView setRegion:region animated:YES];
         [_mapView regionThatFits:region];
         _firstTime = YES;
+    }
+}
+
+#pragma mark IBActions
+
+- (IBAction)revealMenu:(id)sender
+{
+    if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else {
+        [self.slidingViewController resetTopViewAnimated:YES];
     }
 }
 

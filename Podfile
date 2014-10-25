@@ -1,9 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
-pod "ECSlidingViewController"
+pod "ECSlidingViewController", :git => "https://github.com/ValCapri/ECSlidingViewController.git", :branch => "develop"
 pod "InAppSettingsKit", '>= 2.0.1'
 pod 'FSImageViewer', '>= 2.6'
 #pod "MarqueeLabel", '>= 2.0.0'
+pod 'CSNotificationView'
 
 # Crush Utility Belt
 pod 'Sidecar'

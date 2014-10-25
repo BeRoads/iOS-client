@@ -15,6 +15,4 @@
 
 - (IBAction)revealMenu:(id)sender;
 
-@property (nonatomic,strong) NSArray* radars;
-
 @end

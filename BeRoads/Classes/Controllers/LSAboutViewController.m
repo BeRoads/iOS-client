@@ -103,11 +103,6 @@
 
 #pragma mark - Navigation
 
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary* contact = self.contacts[indexPath.row];
     [[UIApplication sharedApplication] openURL:contact[@"url"]];
@@ -116,6 +111,17 @@
 - (IBAction)openBeRoadsURL:(id)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.beroads.com"]];
+}
+
+#pragma mark IBActions
+
+- (IBAction)revealMenu:(id)sender
+{
+    if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else {
+        [self.slidingViewController resetTopViewAnimated:YES];
+    }
 }
 
 

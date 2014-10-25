@@ -12,6 +12,5 @@
 @interface LSTrafficEventsViewController : UITableViewController
 
 - (IBAction)revealMenu:(id)sender;
-@property (nonatomic,strong) NSArray* trafficEvents;
 
 @end

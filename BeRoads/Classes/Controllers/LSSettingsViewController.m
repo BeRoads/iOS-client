@@ -60,7 +60,11 @@
 
 - (IBAction)revealMenu:(id)sender
 {
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else {
+        [self.slidingViewController resetTopViewAnimated:YES];
+    }
 }
 
 #pragma mark - Settings Delegate

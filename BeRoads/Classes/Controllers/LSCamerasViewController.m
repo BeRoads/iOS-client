@@ -7,7 +7,6 @@
 //
 
 #import "LSCamerasViewController.h"
-//#import "LSCameraDetailViewController.h"
 
 #import "Camera.h"
 #import "Zone.h"
@@ -15,8 +14,11 @@
 #import "LSLocationManager.h"
 #import "LSBeRoadsClient.h"
 
-#import "UIImageView+AFNetworking.h"
+#import "CSNotificationView+AFNetworking.h"
 #import "LSNoResultView.h"
+
+#import <UIImageView+AFNetworking.h>
+#import <UIRefreshControl+AFNetworking.h>
 #import <FSImageViewer.h>
 #import <FSBasicImage.h>
 #import <FSBasicImageSource.h>
@@ -74,7 +76,7 @@
 }
 
 - (void)reloadCameras{
-    [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error) {
+    [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error, NSURLSessionDataTask* task) {
         self.cameras = cameras;
         [self createZones];
         [self.tableView reloadData];
@@ -84,6 +86,9 @@
         } else{
             [_noResultView removeFromView];
         }
+        
+        [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
+        [self.refreshControl setRefreshingWithStateOfTask:task];
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
@@ -96,14 +101,6 @@
 -(void)awakeFromNib{
     self.title = NSLocalizedString(@"Cameras", @"Cameras");
 }
-
-#pragma mark - IBACTION
-
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
-
 
 #pragma mark - Table view data source
 
@@ -261,8 +258,6 @@
     NSMutableArray* zonesMutable = [NSMutableArray array];
     NSArray* titlesZones = [_cameras valueForKeyPath:@"@distinctUnionOfObjects.zone"];
     
-    
-
     Zone* zone = [[Zone alloc] init];
     zone.title = NSLocalizedString(@"Favorites", @"Favorites");
     [zonesMutable addObject:zone];
@@ -279,52 +274,20 @@
     [self updateFavorites];
 }
 
-#pragma mark PullToRefreshDelegate
-- (void)pullTableViewDidTriggerRefresh
+#pragma mark IBActions
+
+- (IBAction)pullTableViewDidTriggerRefresh:(id)sender
 {
     [self reloadCameras];
 }
 
-#pragma mark - Table view data source
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (IBAction)revealMenu:(id)sender
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else {
+        [self.slidingViewController resetTopViewAnimated:YES];
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 @end

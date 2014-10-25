@@ -55,6 +55,7 @@
 		4979185F1755330D0010974E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4979185E1755330D0010974E /* Settings.bundle */; };
 		4979186117554B6E0010974E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4979186017554B6E0010974E /* MessageUI.framework */; };
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
+		4990BDA119FC58D90029D340 /* CSNotificationView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4990BDA019FC58D90029D340 /* CSNotificationView+AFNetworking.m */; };
 		49C055A719E724E10059D701 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C055A619E724E10059D701 /* Launch Screen.xib */; };
 		6C61C3A217DBB886000539BC /* LSScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3A117DBB886000539BC /* LSScrollLabel.m */; };
 		6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C61C3A317DBB9E0000539BC /* Security.framework */; };
@@ -210,6 +211,8 @@
 		4979186017554B6E0010974E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4979186217556D8E0010974E /* LSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSettingsViewController.h; sourceTree = "<group>"; };
 		4979186317556D8E0010974E /* LSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSettingsViewController.m; sourceTree = "<group>"; };
+		4990BD9F19FC58D90029D340 /* CSNotificationView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSNotificationView+AFNetworking.h"; sourceTree = "<group>"; };
+		4990BDA019FC58D90029D340 /* CSNotificationView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSNotificationView+AFNetworking.m"; sourceTree = "<group>"; };
 		49C055A619E724E10059D701 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		57672ECB432AF1BAF4572131 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
 		6C61C3A017DBB886000539BC /* LSScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSScrollLabel.h; sourceTree = "<group>"; };
@@ -436,6 +439,8 @@
 				494EFA6319749D50003DD171 /* PJSDateFormatters.h */,
 				494EFA6419749D50003DD171 /* PJSDateFormatters.m */,
 				494EFA6519749D50003DD171 /* PJSUtilityMacros.h */,
+				4990BD9F19FC58D90029D340 /* CSNotificationView+AFNetworking.h */,
+				4990BDA019FC58D90029D340 /* CSNotificationView+AFNetworking.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -914,6 +919,7 @@
 				49693DDC173E6692000D408E /* LSCamerasViewController.m in Sources */,
 				49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */,
 				49530C5819EC44B700720FF7 /* AssetCatalogIdentifiers.m in Sources */,
+				4990BDA119FC58D90029D340 /* CSNotificationView+AFNetworking.m in Sources */,
 				49530C5919EC44B700720FF7 /* StoryboardIdentifiers.m in Sources */,
 				4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */,
 				4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */,

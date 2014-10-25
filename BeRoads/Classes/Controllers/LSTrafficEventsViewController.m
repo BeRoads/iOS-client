@@ -9,29 +9,27 @@
 #import "LSTrafficEventsViewController.h"
 
 #import "LSBeRoadsClient.h"
+#import "LSLocationManager.h"
 
 #import "TrafficEvent.h"
 
-#import "LSLocationManager.h"
-
-#import "LSTrafficEventsBeRoadsCell.h"
+#import <UIRefreshControl+AFNetworking.h>
 
 #import "LSTrafficEventDetailViewController.h"
 
+#import "CSNotificationView+AFNetworking.h"
 #import "LSNoResultView.h"
+#import "LSTrafficEventsBeRoadsCell.h"
 
 @interface LSTrafficEventsViewController ()
+
+@property (nonatomic,strong) NSArray* trafficEvents;
 
 @property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
 @implementation LSTrafficEventsViewController
-
-- (IBAction)revealMenu:(id)sender
-{
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -78,7 +76,7 @@
 }
 
 - (void)reloadTrafficEvents{
-    [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error) {
+    [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray* trafficEvents, NSError* error, NSURLSessionDataTask* task) {
         self.trafficEvents = trafficEvents;
         [self.tableView reloadData];
         
@@ -87,6 +85,9 @@
         } else{
             [_noResultView removeFromView];
         }
+        
+        [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
+        [self.refreshControl setRefreshingWithStateOfTask:task];
     } location:[[LSLocationManager sharedLocationManager] location].coordinate];
 }
 
@@ -134,6 +135,8 @@
     return cell;
 }
 
+#pragma mark Prepare For Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
     if ([[segue identifier] isEqualToString:@"detailTrafficEvent"]) {
@@ -148,64 +151,19 @@
     }
 }
 
-#pragma mark PullToRefreshDelegate
-- (void)pullTableViewDidTriggerRefresh
-{
+#pragma mark IBActions
+
+- (IBAction)pullTableViewDidTriggerRefresh:(id)sender {
     [self reloadTrafficEvents];
 }
 
-#pragma mark - Table view data source
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (IBAction)revealMenu:(id)sender
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else {
+        [self.slidingViewController resetTopViewAnimated:YES];
+    }
 }
 
 @end
