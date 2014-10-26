@@ -81,6 +81,8 @@
         [self.tableView reloadData];
         
         if ([self.trafficEvents count] == 0) {
+            CGRect frame = self.view.frame;
+            _noResultView.frame = CGRectMake(frame.origin.x, 0, frame.size.width, frame.size.height);
             [_noResultView showInView:self.view];
         } else{
             [_noResultView removeFromView];
