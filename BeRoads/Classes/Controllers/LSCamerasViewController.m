@@ -15,7 +15,6 @@
 #import "LSBeRoadsClient.h"
 
 #import "CSNotificationView+AFNetworking.h"
-#import "LSNoResultView.h"
 
 #import <UIImageView+AFNetworking.h>
 #import <UIRefreshControl+AFNetworking.h>
@@ -27,7 +26,8 @@
 
 @property (nonatomic, strong) NSArray* zones;
 
-@property (nonatomic,strong) LSNoResultView* noResultView;
+@property (nonatomic, strong) FSImageViewerViewController *imageViewController;
+@property (nonatomic, strong) UINavigationController* imageNavigationController;
 
 @end
 
@@ -54,7 +54,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
+    // Empty DataSet
+    self.tableView.emptyDataSetDelegate = self;
+    self.tableView.emptyDataSetSource = self;
+    
+    // A little trick for removing the cell separators
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
     [self reloadCameras];
 }
@@ -80,14 +85,6 @@
         self.cameras = cameras;
         [self createZones];
         [self.tableView reloadData];
-        
-        if ([self.cameras count] == 0) {
-            CGRect frame = self.view.frame;
-            _noResultView.frame = CGRectMake(frame.origin.x, 0, frame.size.width, frame.size.height);
-            [_noResultView showInView:self.view];
-        } else{
-            [_noResultView removeFromView];
-        }
         
         [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         [self.refreshControl setRefreshingWithStateOfTask:task];
@@ -152,9 +149,9 @@
     Camera* selectedCamera = [self.zones[indexPath.section] cameras][indexPath.row];
     FSBasicImage* imageBasic = [[FSBasicImage alloc] initWithImageURL:[NSURL URLWithString:selectedCamera.img]];
     FSBasicImageSource* imageSource = [[FSBasicImageSource alloc] initWithImages:@[imageBasic]];
-    FSImageViewerViewController *imageViewController = [[FSImageViewerViewController alloc] initWithImageSource:imageSource];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
-    [self.splitViewController showDetailViewController:navigationController sender:self.tableView];
+    self.imageViewController = [[FSImageViewerViewController alloc] initWithImageSource:imageSource];
+    self.imageNavigationController = [[UINavigationController alloc] initWithRootViewController:self.imageViewController];
+    [self.splitViewController showDetailViewController:self.imageNavigationController sender:self.tableView];
 }
 
 
@@ -214,26 +211,6 @@
     return [[self.zones objectAtIndex:section] title];
 }
 
-/*
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"detailCamera"]) {
-        LSCameraDetailViewController* detailViewController = nil;
-        if ([[segue destinationViewController] isKindOfClass:[UINavigationController class]]) {
-            UINavigationController* navigationController = [segue destinationViewController];
-            detailViewController = (LSCameraDetailViewController*) [navigationController topViewController];
-        } else {
-            detailViewController = [segue destinationViewController];
-        }
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
-        detailViewController.view.backgroundColor = [UIColor blackColor];
-        
-        Camera* selectedCamera = [self.zones[indexPath.section] cameras][indexPath.row];
-        detailViewController.camera = selectedCamera;
-    }
-}
-*/
-
 - (void) updateFavorites{
     /**
      Get the favorites zone and set the cameras NSArray to the content stored in NSUserDefaults as "webcams_favorites".
@@ -274,6 +251,16 @@
     
     _zones = [NSArray arrayWithArray:zonesMutable];
     [self updateFavorites];
+}
+
+#pragma mark - Empty DataSource
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"NoResultTitle", @"No Result Title")];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"NoResultDescription", @"No Result Description")];
 }
 
 #pragma mark IBActions

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface LSTrafficEventsViewController : UITableViewController
+@interface LSTrafficEventsViewController : UITableViewController <LSLocationManagerDelegate,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 - (IBAction)revealMenu:(id)sender;
 

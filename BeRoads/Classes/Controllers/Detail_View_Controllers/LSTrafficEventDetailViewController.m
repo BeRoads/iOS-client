@@ -12,6 +12,10 @@
 #import "PJSDateFormatters.h"
 #import <Social/Social.h>
 
+#if __has_include("MarqueeLabel.h")
+    #import <MarqueeLabel/MarqueeLabel.h>
+#endif
+
 @interface LSTrafficEventDetailViewController ()
 
 @property (nonatomic, strong) NSDateFormatter* dateFormatter;
@@ -46,7 +50,6 @@
 }
 
 - (void)updateUI{
-    /*
     MarqueeLabel *continuousLabel = [[MarqueeLabel alloc] initWithFrame:CGRectMake(10, 300, self.view.frame.size.width-20, 20) rate:100.0f andFadeLength:10.0f];
     continuousLabel.tag = 102;
     continuousLabel.marqueeType = MLContinuous;
@@ -60,9 +63,8 @@
     continuousLabel.font = [UIFont fontWithName:@"System" size:18.000];
     continuousLabel.text = self.trafficEvent.location;
     self.navigationItem.titleView = continuousLabel;
-     */
     
-    self.title = self.trafficEvent.location;
+    //self.title = self.trafficEvent.location;
     
     self.sourceLabel.text = self.trafficEvent.source;
     self.descriptionTextView.text = self.trafficEvent.message;

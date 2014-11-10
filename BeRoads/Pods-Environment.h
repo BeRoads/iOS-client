@@ -48,12 +48,6 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 4
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
-// Aperitif
-#define COCOAPODS_POD_AVAILABLE_Aperitif
-#define COCOAPODS_VERSION_MAJOR_Aperitif 0
-#define COCOAPODS_VERSION_MINOR_Aperitif 1
-#define COCOAPODS_VERSION_PATCH_Aperitif 0
-
 // Asterism
 #define COCOAPODS_POD_AVAILABLE_Asterism
 #define COCOAPODS_VERSION_MAJOR_Asterism 1
@@ -68,39 +62,40 @@
 
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
-#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 2
-#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 0
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 0
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
 
 // CocoaLumberjack/Core
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
-#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 2
-#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 0
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 0
-
-// CocoaLumberjack/Default
-#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Default
-#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Default 2
-#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Default 0
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Default 0
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 2
 
 // CocoaLumberjack/Extensions
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
-#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 2
-#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 0
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 0
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 2
 
 // CrashlyticsFramework
 #define COCOAPODS_POD_AVAILABLE_CrashlyticsFramework
-#define COCOAPODS_VERSION_MAJOR_CrashlyticsFramework 2
-#define COCOAPODS_VERSION_MINOR_CrashlyticsFramework 2
-#define COCOAPODS_VERSION_PATCH_CrashlyticsFramework 5
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 2.2.5.1.
 
 // CrashlyticsLumberjack
 #define COCOAPODS_POD_AVAILABLE_CrashlyticsLumberjack
 #define COCOAPODS_VERSION_MAJOR_CrashlyticsLumberjack 1
 #define COCOAPODS_VERSION_MINOR_CrashlyticsLumberjack 0
-#define COCOAPODS_VERSION_PATCH_CrashlyticsLumberjack 1
+#define COCOAPODS_VERSION_PATCH_CrashlyticsLumberjack 2
+
+// DZNEmptyDataSet
+#define COCOAPODS_POD_AVAILABLE_DZNEmptyDataSet
+#define COCOAPODS_VERSION_MAJOR_DZNEmptyDataSet 1
+#define COCOAPODS_VERSION_MINOR_DZNEmptyDataSet 4
+#define COCOAPODS_VERSION_PATCH_DZNEmptyDataSet 1
 
 // ECSlidingViewController
 #define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
@@ -118,7 +113,7 @@
 #define COCOAPODS_POD_AVAILABLE_FSImageViewer
 #define COCOAPODS_VERSION_MAJOR_FSImageViewer 2
 #define COCOAPODS_VERSION_MINOR_FSImageViewer 6
-#define COCOAPODS_VERSION_PATCH_FSImageViewer 1
+#define COCOAPODS_VERSION_PATCH_FSImageViewer 3
 
 // FlurrySDK
 #define COCOAPODS_POD_AVAILABLE_FlurrySDK
@@ -195,8 +190,8 @@
 // InAppSettingsKit
 #define COCOAPODS_POD_AVAILABLE_InAppSettingsKit
 #define COCOAPODS_VERSION_MAJOR_InAppSettingsKit 2
-#define COCOAPODS_VERSION_MINOR_InAppSettingsKit 1
-#define COCOAPODS_VERSION_PATCH_InAppSettingsKit 0
+#define COCOAPODS_VERSION_MINOR_InAppSettingsKit 2
+#define COCOAPODS_VERSION_PATCH_InAppSettingsKit 1
 
 // MZAppearance
 #define COCOAPODS_POD_AVAILABLE_MZAppearance
@@ -216,17 +211,47 @@
 #define COCOAPODS_VERSION_MINOR_MZFormSheetController_Core 3
 #define COCOAPODS_VERSION_PATCH_MZFormSheetController_Core 6
 
+// MarqueeLabel
+#define COCOAPODS_POD_AVAILABLE_MarqueeLabel
+#define COCOAPODS_VERSION_MAJOR_MarqueeLabel 2
+#define COCOAPODS_VERSION_MINOR_MarqueeLabel 0
+#define COCOAPODS_VERSION_PATCH_MarqueeLabel 8
+
+// ReactiveCocoa
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 1
+
+// ReactiveCocoa/Core
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 2
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 1
+
+// ReactiveCocoa/UI
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_UI
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_UI 2
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_UI 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_UI 1
+
+// ReactiveCocoa/no-arc
+#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_no_arc
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_no_arc 2
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 3
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 1
+
 // Sidecar
 #define COCOAPODS_POD_AVAILABLE_Sidecar
 #define COCOAPODS_VERSION_MAJOR_Sidecar 0
-#define COCOAPODS_VERSION_MINOR_Sidecar 1
-#define COCOAPODS_VERSION_PATCH_Sidecar 4
+#define COCOAPODS_VERSION_MINOR_Sidecar 2
+#define COCOAPODS_VERSION_PATCH_Sidecar 0
 
 // Sidecar/Non-ARC
 #define COCOAPODS_POD_AVAILABLE_Sidecar_Non_ARC
 #define COCOAPODS_VERSION_MAJOR_Sidecar_Non_ARC 0
-#define COCOAPODS_VERSION_MINOR_Sidecar_Non_ARC 1
-#define COCOAPODS_VERSION_PATCH_Sidecar_Non_ARC 4
+#define COCOAPODS_VERSION_MINOR_Sidecar_Non_ARC 2
+#define COCOAPODS_VERSION_PATCH_Sidecar_Non_ARC 0
 
 // TestFlightSDK
 #define COCOAPODS_POD_AVAILABLE_TestFlightSDK
@@ -312,3 +337,23 @@
 #define COCOAPODS_VERSION_MINOR_libextobjc_UmbrellaHeader 4
 #define COCOAPODS_VERSION_PATCH_libextobjc_UmbrellaHeader 1
 
+// Debug_Staging build configuration
+#ifdef DEBUG_STAGING
+
+  // Aperitif
+  #define COCOAPODS_POD_AVAILABLE_Aperitif
+  #define COCOAPODS_VERSION_MAJOR_Aperitif 0
+  #define COCOAPODS_VERSION_MINOR_Aperitif 1
+  #define COCOAPODS_VERSION_PATCH_Aperitif 0
+
+#endif
+// AdHoc_Production build configuration
+#ifdef ADHOC_PRODUCTION
+
+  // Aperitif
+  #define COCOAPODS_POD_AVAILABLE_Aperitif
+  #define COCOAPODS_VERSION_MAJOR_Aperitif 0
+  #define COCOAPODS_VERSION_MINOR_Aperitif 1
+  #define COCOAPODS_VERSION_PATCH_Aperitif 0
+
+#endif

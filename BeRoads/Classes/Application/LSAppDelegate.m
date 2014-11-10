@@ -22,6 +22,12 @@
 #endif
 
 #if HAS_POD(CocoaLumberjack)
+#if __has_include("DDASLLogger.h")
+#import <CocoaLumberjack/DDASLLogger.h>
+#endif
+#if __has_include("DDTTYLogger.h")
+#import <CocoaLumberjack/DDTTYLogger.h>
+#endif
 #if HAS_POD(CrashlyticsLumberjack)
 #import <CrashlyticsLumberjack/CrashlyticsLogger.h>
 #endif

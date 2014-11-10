@@ -22,18 +22,25 @@
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <CoreLocation/CoreLocation.h>
+
     #import "LSConstants.h"
     #import "StoryboardIdentifiers.h"
     #import "AssetCatalogIdentifiers.h"
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
-    #import "TestFlight.h"
+    #import <TestFlight.h>
     #import <ECSlidingViewController.h>
     #import <UIViewController+ECSlidingViewController.h>
     #import "MenuViewController.h"
 
+    #import <UIScrollView+EmptyDataSet.h>
+
     #if HAS_POD(CocoaLumberjack)
-        #import <CocoaLumberjack/CocoaLumberjack.h>
+        #if __has_include("CocoaLumberjack.h")
+            #import <CocoaLumberjack/CocoaLumberjack.h>
+        #else
+            #import <CocoaLumberjack/DDLog.h>
+        #endif
 
         #ifdef DEBUG
             static const int ddLogLevel = LOG_LEVEL_VERBOSE;

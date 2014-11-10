@@ -16,14 +16,11 @@
 #import <UIRefreshControl+AFNetworking.h>
 
 #import "CSNotificationView+AFNetworking.h"
-#import "LSNoResultView.h"
 #import "LSBeRoadsRadarCell.h"
 
 @interface LSRadarsViewController ()
 
 @property (nonatomic,strong) NSArray* radars;
-
-@property (nonatomic,strong) LSNoResultView* noResultView;
 
 @end
 
@@ -48,10 +45,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
-    self.navigationItem.leftBarButtonItem = menuButton;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
     
-    self.noResultView = [[UINib nibWithNibName:@"NoResults_iPhone" bundle:nil] instantiateWithOwner:self options:nil][0];
+    // Empty DataSet
+    self.tableView.emptyDataSetDelegate = self;
+    self.tableView.emptyDataSetSource = self;
+    
+    // A little trick for removing the cell separators
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
     [self reloadRadars];
 }
@@ -76,14 +77,6 @@
     [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error, NSURLSessionDataTask* task) {
         self.radars = radars;
         [self.tableView reloadData];
-        
-        if ([self.radars count] == 0) {
-            CGRect frame = self.view.frame;
-            _noResultView.frame = CGRectMake(frame.origin.x, 0, frame.size.width, frame.size.height);
-            [_noResultView showInView:self.view];
-        } else{
-            [_noResultView removeFromView];
-        }
         
         [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         [self.refreshControl setRefreshingWithStateOfTask:task];
@@ -133,6 +126,16 @@
     
     
     return cell;
+}
+
+#pragma mark - Empty DataSource
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"NoResultTitle", @"No Result Title")];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:NSLocalizedString(@"NoResultDescription", @"No Result Description")];
 }
 
 #pragma mark IBActions

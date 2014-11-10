@@ -86,9 +86,7 @@
         [[UINavigationBar appearance] setBackgroundColor:radarsColor];
         [[UINavigationBar appearance] setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     }
-    
-    DDLogVerbose(@"Identifier : %@\nNavigationIdentifier : %@\nnewTopVC : %@",identifier,navigationIdentifier,newTopViewController);
-    
+        
     self.slidingViewController.topViewController = newTopViewController;
     
     [self.slidingViewController resetTopViewAnimated:YES onComplete:^{

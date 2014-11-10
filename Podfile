@@ -3,19 +3,20 @@ platform :ios, '7.0'
 pod "ECSlidingViewController", :git => "https://github.com/ValCapri/ECSlidingViewController.git", :branch => "develop"
 pod "InAppSettingsKit", '>= 2.0.1'
 pod 'FSImageViewer', '>= 2.6'
-#pod "MarqueeLabel", '>= 2.0.0'
-pod 'CSNotificationView'
+pod 'MarqueeLabel', '>= 2.0.0'
+pod 'CSNotificationView', :git => "https://github.com/problame/CSNotificationView.git", :branch => "fix_kvo"
+pod 'DZNEmptyDataSet'
 
 # Crush Utility Belt
 pod 'Sidecar'
 
 # Update checker for Installr (installrapp.com)
-pod 'Aperitif'
+pod 'Aperitif', :configurations => ['Debug_Staging', 'AdHoc_Production']
 
 # Logging & Analytics
 pod 'CocoaLumberjack'
 pod 'CrashlyticsFramework'
-pod 'CrashlyticsLumberjack'
+pod 'CrashlyticsLumberjack', '~>1.0.0'
 pod 'TestFlightSDK'
 pod 'FlurrySDK'
 
@@ -48,30 +49,20 @@ end
 # Inform CocoaPods that we use some custom build configurations
 # Leave this in place unless you've tweaked the project's targets and configurations.
 xcodeproj 'BeRoads',
-'Debug_Staging'   => :debug,   'Debug_Production'   => :debug,
-'Test_Staging'    => :debug,   'Test_Production'    => :debug,
-'AdHoc_Staging'   => :release, 'AdHoc_Production'   => :release,
-'Profile_Staging' => :release, 'Profile_Production' => :release,
-'Distribution'    => :release
+'Debug_Staging'   => :debug, 'Test_Staging'    => :debug,
+'Test_Production' => :release, 'AdHoc_Production' => :release,
+'Profile_Production' => :release, 'Distribution'    => :release
 
 
 # After every installation, copy the license and settings plists over to our project
 post_install do |installer|
     require 'fileutils'
     
-    installer.project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-            config.build_settings['VALID_ARCHS'] = 'arm64 armv7 armv7s'
-            config.build_settings['ARCHS'] = 'arm64 armv7 armv7s'
-        end
-    end
-    
-    if Dir.exists?('BeRoads/Resources/Settings.bundle') && File.exists?('Pods/Pods-Acknowledgements.plist')
-        FileUtils.cp_r('Pods/Pods-Acknowledgements.plist', 'BeRoads/Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+    if Dir.exists?('BeRoads/Resources/Settings.bundle') && File.exists?('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist')
+        FileUtils.cp('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'BeRoads/Resources/Settings.bundle/Acknowledgements.plist')
     end
     
     if File.exists?('Pods/Target Support Files/Pods/Pods-Environment.h')
-        FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Environment.h', 'BeRoads/Pods-Environment.h', :remove_destination => true)
+        FileUtils.cp('Pods/Target Support Files/Pods/Pods-Environment.h', 'BeRoads/Pods-Environment.h')
     end
 end

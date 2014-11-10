@@ -19,33 +19,26 @@
 }
 
 - (void)collapseSecondaryViewController:(UIViewController *)secondaryViewController forSplitViewController:(UISplitViewController *)splitViewController {
-    DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryViewController,splitViewController.viewControllers[0],self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
+    //DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryViewController,splitViewController.viewControllers[0],self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
     if ([self.topViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController* navigationController = (UINavigationController*)self.topViewController;
         [navigationController showViewController:secondaryViewController sender:nil];
-        /*if ([secondaryViewController isKindOfClass:[LSTrafficEventDetailViewController class]]) {
-            LSTrafficEventDetailViewController* trafficDetailViewController = (LSTrafficEventDetailViewController*)secondaryViewController;
-            if (trafficDetailViewController.trafficEvent == nil) {
-                [navigationController popViewControllerAnimated:YES];
-            }
-        }*/
     }
 }
 
 - (UIViewController *)separateSecondaryViewControllerForSplitViewController:(UISplitViewController *)splitViewController {
-    UIViewController* secondaryVC = splitViewController.viewControllers.count > 1 ? splitViewController.viewControllers[1]:nil;
-    DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryVC,splitViewController.viewControllers[0],self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
+    //UIViewController* secondaryVC = splitViewController.viewControllers.count > 1 ? splitViewController.viewControllers[1]:nil;
+    //DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryVC,splitViewController.viewControllers[0],self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
     if ([self.topViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController* navigationController = (UINavigationController*)self.topViewController;
         UIViewController* viewController = [navigationController popViewControllerAnimated:YES];
-        DDLogVerbose(@"ViewController : %@",viewController);
         return viewController;
     }
     return nil;
 }
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryViewController,primaryViewController,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
+    //DDLogVerbose(@"SVC : %@\nsecondVC : %@\nPrimaryVC : %@\nTopVC : %@\nTrait : %@",splitViewController,secondaryViewController,primaryViewController,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
     if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [((UINavigationController*)secondaryViewController).topViewController isKindOfClass:[LSTrafficEventDetailViewController class]]) {
         LSTrafficEventDetailViewController* trafficDetailViewController = (LSTrafficEventDetailViewController*)((UINavigationController*)secondaryViewController).topViewController;
         if (trafficDetailViewController.trafficEvent == nil) {
@@ -56,7 +49,7 @@
 }
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController showDetailViewController:(UIViewController *)vc sender:(id)sender {
-    DDLogVerbose(@"SVC : %@\nVC : %@\nSender : %@\nTopVC : %@\nTrait : %@",splitViewController,vc,sender,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
+    //DDLogVerbose(@"SVC : %@\nVC : %@\nSender : %@\nTopVC : %@\nTrait : %@",splitViewController,vc,sender,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
     if ([self.topViewController isKindOfClass:[UINavigationController class]] && self.splitViewController.collapsed) {
         UINavigationController* navigationController = (UINavigationController*)self.topViewController;
         [navigationController showViewController:vc sender:sender];
@@ -66,7 +59,7 @@
 }
 
 - (void)showViewController:(UIViewController *)vc sender:(id)sender {
-    DDLogVerbose(@"SVC : %@\nVC : %@\nSender : %@\nTopVC : %@\nTrait : %@",self.splitViewController,vc,sender,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
+    //DDLogVerbose(@"SVC : %@\nVC : %@\nSender : %@\nTopVC : %@\nTrait : %@",self.splitViewController,vc,sender,self.topViewController,[InitialSlidingViewController sizeClassesAsString:self.splitViewController.traitCollection.horizontalSizeClass]);
     if ([self.topViewController isKindOfClass:[UINavigationController class]] && self.splitViewController.collapsed) {
         UINavigationController* navigationController = (UINavigationController*)self.topViewController;
         [navigationController showViewController:vc sender:sender];

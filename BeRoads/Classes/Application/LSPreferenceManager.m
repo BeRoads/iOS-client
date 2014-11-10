@@ -56,6 +56,10 @@
     // the Settings Application Schema:
     // <https://developer.apple.com/library/ios/#documentation/PreferenceSettings/Conceptual/SettingsApplicationSchemaReference/Introduction/Introduction.html>.
     
+    if (plistName == nil) {
+        return;
+    }
+    
     // Create an NSDictionary from the plist file.
     NSDictionary *settingsDict = [NSDictionary dictionaryWithContentsOfURL:[settingsBundleURL URLByAppendingPathComponent:plistName]];
     

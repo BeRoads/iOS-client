@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "ECSlidingViewController.h"
-#import "MenuViewController.h"
 
-@interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate>
+@interface LSCamerasViewController : UITableViewController <LSLocationManagerDelegate,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 - (IBAction)revealMenu:(id)sender;
 
