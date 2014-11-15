@@ -60,6 +60,12 @@
 #define COCOAPODS_VERSION_MINOR_CSNotificationView 5
 #define COCOAPODS_VERSION_PATCH_CSNotificationView 1
 
+// CSNotificationView-AFNetworking
+#define COCOAPODS_POD_AVAILABLE_CSNotificationView_AFNetworking
+#define COCOAPODS_VERSION_MAJOR_CSNotificationView_AFNetworking 0
+#define COCOAPODS_VERSION_MINOR_CSNotificationView_AFNetworking 1
+#define COCOAPODS_VERSION_PATCH_CSNotificationView_AFNetworking 0
+
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
 #define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1

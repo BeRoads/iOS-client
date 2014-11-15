@@ -1,10 +1,23 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
+
+# SlidingView
 pod "ECSlidingViewController", :git => "https://github.com/ValCapri/ECSlidingViewController.git", :branch => "develop"
+
+# Settings in app
 pod "InAppSettingsKit", '>= 2.0.1'
+
+# ScrollView to zoom on image
 pod 'FSImageViewer', '>= 2.6'
+
+# Label animation
 pod 'MarqueeLabel', '>= 2.0.0'
+
+# Notification
 pod 'CSNotificationView', :git => "https://github.com/problame/CSNotificationView.git", :branch => "fix_kvo"
+pod 'CSNotificationView-AFNetworking', :git => 'https://github.com/ValCapri/CSNotificationView-AFNetworking.git'
+
+# EmptyDataSet
 pod 'DZNEmptyDataSet'
 
 # Crush Utility Belt

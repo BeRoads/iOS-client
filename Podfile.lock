@@ -33,6 +33,9 @@ PODS:
     - CocoaLumberjack/Core (~> 1.9)
   - CSNotificationView (0.5.1):
     - ReactiveCocoa (~> 2.3.1)
+  - CSNotificationView-AFNetworking (0.1.0):
+    - AFNetworking (~> 2.4.1)
+    - CSNotificationView (~> 0.5.1)
   - DZNEmptyDataSet (1.4.1)
   - ECSlidingViewController (2.0.3)
   - EGOCache (2.1)
@@ -128,6 +131,7 @@ DEPENDENCIES:
   - CrashlyticsFramework
   - CrashlyticsLumberjack (~> 1.0.0)
   - CSNotificationView (from `https://github.com/problame/CSNotificationView.git`, branch `fix_kvo`)
+  - CSNotificationView-AFNetworking (from `https://github.com/ValCapri/CSNotificationView-AFNetworking.git`)
   - DZNEmptyDataSet
   - ECSlidingViewController (from `https://github.com/ValCapri/ECSlidingViewController.git`, branch `develop`)
   - Expecta
@@ -145,6 +149,8 @@ EXTERNAL SOURCES:
   CSNotificationView:
     :branch: fix_kvo
     :git: https://github.com/problame/CSNotificationView.git
+  CSNotificationView-AFNetworking:
+    :git: https://github.com/ValCapri/CSNotificationView-AFNetworking.git
   ECSlidingViewController:
     :branch: develop
     :git: https://github.com/ValCapri/ECSlidingViewController.git
@@ -157,6 +163,7 @@ SPEC CHECKSUMS:
   CrashlyticsFramework: 195dfef587ade7a3954ce8effd483a3879d35877
   CrashlyticsLumberjack: 192a08e07648e4e09d44052356b53ab839cc8a1b
   CSNotificationView: e97c77c1703da0cf8e5cc4b85eea1b3a7842db86
+  CSNotificationView-AFNetworking: 956ce2507ef2789d53d472f6bed665964cc74b69
   DZNEmptyDataSet: 381e880cb3bb2d33885cb0325218443df265bc98
   ECSlidingViewController: 4a82819683e6e4ae4400358f3a5ee44dc24271b4
   EGOCache: bf414333c425fe47f5182351d1dd47ebf72d8352
