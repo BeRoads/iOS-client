@@ -269,7 +269,6 @@
     [[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
 #endif
     [Flurry startSession:@"5G6J9C6GQMRV4GZ9HRYP"];
-    [TestFlight takeOff:@"03c76c2b-de43-48f9-a7f6-7b9530e06416"];
     
     [DDLog addLogger:[CrashlyticsLogger sharedInstance] withLogLevel:LOG_LEVEL_INFO];
 #endif

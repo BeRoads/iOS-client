@@ -28,7 +28,6 @@
     #import "AssetCatalogIdentifiers.h"
     #import "LSLocationManager.h"
     #import "LSPreferenceManager.h"
-    #import <TestFlight.h>
     #import <ECSlidingViewController.h>
     #import <UIViewController+ECSlidingViewController.h>
     #import "MenuViewController.h"
@@ -67,5 +66,3 @@
         #import <Asterism/Asterism.h>
     #endif
 #endif
-
-#define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

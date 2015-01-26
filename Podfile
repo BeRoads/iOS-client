@@ -8,13 +8,13 @@ pod "ECSlidingViewController", :git => "https://github.com/ValCapri/ECSlidingVie
 pod "InAppSettingsKit", '>= 2.0.1'
 
 # ScrollView to zoom on image
-pod 'FSImageViewer', '>= 2.6'
+pod 'FSImageViewer', :path => "/Users/lionelschinckus/Repositories/github/iOS/UI/FSImageViewer"
 
 # Label animation
 pod 'MarqueeLabel', '>= 2.0.0'
 
 # Notification
-pod 'CSNotificationView', :git => "https://github.com/problame/CSNotificationView.git", :branch => "fix_kvo"
+pod 'CSNotificationView'
 pod 'CSNotificationView-AFNetworking', :git => 'https://github.com/ValCapri/CSNotificationView-AFNetworking.git'
 
 # EmptyDataSet
@@ -23,24 +23,20 @@ pod 'DZNEmptyDataSet'
 # Crush Utility Belt
 pod 'Sidecar'
 
-# Update checker for Installr (installrapp.com)
-pod 'Aperitif', :configurations => ['Debug_Staging', 'AdHoc_Production']
-
 # Logging & Analytics
 pod 'CocoaLumberjack'
 pod 'CrashlyticsFramework'
 pod 'CrashlyticsLumberjack', '~>1.0.0'
-pod 'TestFlightSDK'
 pod 'FlurrySDK'
 
 # Networking
 pod 'AFNetworking'
 
 # Various goodies
-pod 'libextobjc'      # Useful macros and some craziness
+#pod 'libextobjc'      # Useful macros and some craziness
 #pod 'PixateFreestyle' # Style your app with CSS
-pod 'FormatterKit'    # For all your string formatting needs
-pod 'Asterism'        # Nice & fast collection operations
+#pod 'FormatterKit'    # For all your string formatting needs
+#pod 'Asterism'        # Nice & fast collection operations
 
 # You may want...
 #pod 'PromiseKit'     # Promises/A+-alike
@@ -48,6 +44,8 @@ pod 'Asterism'        # Nice & fast collection operations
 #pod 'SSKeychain'     # Go-to keychain wrapper
 #pod 'DateTools'      # Datetime heavy lifting
 
+# Update checker for Installr (installrapp.com)
+#pod 'Aperitif', :configurations => ['Debug_Staging', 'AdHoc_Production']
 
 # Testing necessities
 target 'Specs', :exclusive => true do
