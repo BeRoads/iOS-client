@@ -1,68 +1,65 @@
 PODS:
-  - AFNetworking (2.5.0):
-    - AFNetworking/NSURLConnection (= 2.5.0)
-    - AFNetworking/NSURLSession (= 2.5.0)
-    - AFNetworking/Reachability (= 2.5.0)
-    - AFNetworking/Security (= 2.5.0)
-    - AFNetworking/Serialization (= 2.5.0)
-    - AFNetworking/UIKit (= 2.5.0)
-  - AFNetworking/NSURLConnection (2.5.0):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.0):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.0)
-  - AFNetworking/Security (2.5.0)
-  - AFNetworking/Serialization (2.5.0)
-  - AFNetworking/UIKit (2.5.0):
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CocoaLumberjack (1.9.2):
-    - CocoaLumberjack/Extensions (= 1.9.2)
-  - CocoaLumberjack/Core (1.9.2)
-  - CocoaLumberjack/Extensions (1.9.2):
+  - CocoaLumberjack/Core (2.4.0)
+  - CocoaLumberjack/Default (2.4.0):
     - CocoaLumberjack/Core
-  - CrashlyticsFramework (2.2.5.2)
-  - CrashlyticsLumberjack (1.0.2):
-    - CocoaLumberjack/Core (~> 1.9)
-  - CSNotificationView (0.5.3)
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - CrashlyticsLumberjack (2.0.5):
+    - CocoaLumberjack/Default (~> 2.2)
+    - Crashlytics
+  - CSNotificationView (0.5.4)
   - CSNotificationView-AFNetworking (0.1.0):
     - AFNetworking (~> 2.5)
     - CSNotificationView (~> 0.5)
-  - DZNEmptyDataSet (1.4.1)
+  - DZNEmptyDataSet (1.8.1)
   - ECSlidingViewController (2.0.3)
-  - EGOCache (2.1)
-  - Expecta (0.3.1)
-  - FlurrySDK (5.4.0):
-    - FlurrySDK/FlurrySDK (= 5.4.0)
-  - FlurrySDK/FlurrySDK (5.4.0)
-  - FSImageViewer (2.6.4):
-    - AFNetworking (~> 2.2)
-    - EGOCache (~> 2.0)
-  - InAppSettingsKit (2.3)
-  - MarqueeLabel (2.0.8)
-  - Sidecar (0.2.0):
-    - CocoaLumberjack/Core (~> 1.9.0)
-    - Sidecar/Non-ARC (= 0.2.0)
-  - Sidecar/Non-ARC (0.2.0):
-    - CocoaLumberjack/Core (~> 1.9.0)
-  - Specta (0.2.1)
+  - EGOCache (2.1.3)
+  - Expecta (1.0.6)
+  - Fabric (1.6.12)
+  - FSImageViewer (3.4):
+    - AFNetworking (~> 2.5)
+    - EGOCache (~> 2.1)
+    - UAProgressView (~> 0.1)
+  - InAppSettingsKit (2.8.1)
+  - MarqueeLabel (3.1.2):
+    - MarqueeLabel/ObjC (= 3.1.2)
+  - MarqueeLabel/ObjC (3.1.2)
+  - Sidecar (2.0.0)
+  - Specta (1.0.6)
+  - UAProgressView (0.1.3)
 
 DEPENDENCIES:
   - AFNetworking
-  - CocoaLumberjack
-  - CrashlyticsFramework
-  - CrashlyticsLumberjack (~> 1.0.0)
+  - CocoaLumberjack/Default
+  - Crashlytics
+  - CrashlyticsLumberjack (~> 2.0.0)
   - CSNotificationView
   - CSNotificationView-AFNetworking (from `https://github.com/ValCapri/CSNotificationView-AFNetworking.git`)
   - DZNEmptyDataSet
   - ECSlidingViewController (from `https://github.com/ValCapri/ECSlidingViewController.git`, branch `develop`)
   - Expecta
-  - FlurrySDK
-  - FSImageViewer (from `/Users/lionelschinckus/Repositories/github/iOS/UI/FSImageViewer`)
+  - FSImageViewer (~> 3.4)
   - InAppSettingsKit (>= 2.0.1)
   - MarqueeLabel (>= 2.0.0)
   - Sidecar
@@ -74,33 +71,34 @@ EXTERNAL SOURCES:
   ECSlidingViewController:
     :branch: develop
     :git: https://github.com/ValCapri/ECSlidingViewController.git
-  FSImageViewer:
-    :path: /Users/lionelschinckus/Repositories/github/iOS/UI/FSImageViewer
 
 CHECKOUT OPTIONS:
   CSNotificationView-AFNetworking:
     :commit: 15b433f4cef713b3cc1f42feba14084775bd6802
     :git: https://github.com/ValCapri/CSNotificationView-AFNetworking.git
   ECSlidingViewController:
-    :commit: 66feed8e4c250debfce22069e683dbd9bdc5ba51
+    :commit: b306b8a1f578505810092f6badd4c6b2e6522a4b
     :git: https://github.com/ValCapri/ECSlidingViewController.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
-  CrashlyticsFramework: 4e91082f3019bea7e718e1b67b0a3b56729dbc5d
-  CrashlyticsLumberjack: 192a08e07648e4e09d44052356b53ab839cc8a1b
-  CSNotificationView: e4d26da44dfb569ab284949c822a8239f23cc13d
-  CSNotificationView-AFNetworking: bc09b20ddffe9f7dda4e5c8248c9fd9733e39751
-  DZNEmptyDataSet: 381e880cb3bb2d33885cb0325218443df265bc98
-  ECSlidingViewController: 4a82819683e6e4ae4400358f3a5ee44dc24271b4
-  EGOCache: bf414333c425fe47f5182351d1dd47ebf72d8352
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
-  FSImageViewer: 227f4b6d085d7a4e1d352b797eb7a9a3d748eb5f
-  InAppSettingsKit: 96e3500969b31546b252b039ad6b2b8d82693a1a
-  MarqueeLabel: 80ff5069b2b8ccd8678b56af0d8ff08ce417d34c
-  Sidecar: 99904c52d566cf8c92ed6729cb44de7f25d31dd0
-  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  CrashlyticsLumberjack: bdcc53dfcf6f05282fb9652cfa242328b4bccf13
+  CSNotificationView: 0792f5220163c2befaf1a9716aa3d5a7d6bd4fb1
+  CSNotificationView-AFNetworking: 1c35c0a07b56c5e367fd1b27a5f1e3289c33faf1
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  EGOCache: f0295dbe041156acabd39021354ad1045ee49e72
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  FSImageViewer: 0dea92069cce74a800b75cb8777c923f2be59124
+  InAppSettingsKit: 94d2fba3ccd700fc4e32c6d09fabcc0af2426744
+  MarqueeLabel: fcd7057a779422d86589be759036f1510b08c6a0
+  Sidecar: 8eb888a6f052a7a6244abb043e5f7d3c898d2cb1
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+  UAProgressView: ce49aee47c14df6dc372f6fd57852f570ca97e6b
 
-COCOAPODS: 0.36.0.beta.1
+PODFILE CHECKSUM: 13f8a9112c163d9eab876102a34b3b272db5b833
+
+COCOAPODS: 1.3.1

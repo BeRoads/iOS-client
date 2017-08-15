@@ -41,10 +41,6 @@
 #import <Aperitif/CRLAperitif.h>
 #endif
 
-#if HAS_POD(FlurrySDK)
-#import "Flurry.h"
-#endif
-
 //#import "PSPDFHangDetector.h"
 
 @implementation LSAppDelegate
@@ -79,8 +75,6 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     // Set to navigation bar
-    float requiredVersion8 = 8.0;
-    float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     
     // Menu Bar Button Item in white
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
@@ -108,7 +102,9 @@
     }
     
     // Let the device know we want to receive push notifications
-    if (currentVersion >= requiredVersion8) {
+    
+    // FIXEME : Handle notification
+    /*if (currentVersion >= requiredVersion8) {
 #ifdef __IPHONE_8_0
         [[UIApplication sharedApplication] registerForRemoteNotifications];
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil]];
@@ -116,7 +112,7 @@
     } else {
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
          (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-    }
+    }*/
     
     return YES;
 }
@@ -268,9 +264,7 @@
 #if HAS_POD(Sidecar)
     [[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
 #endif
-    [Flurry startSession:@"5G6J9C6GQMRV4GZ9HRYP"];
-    
-    [DDLog addLogger:[CrashlyticsLogger sharedInstance] withLogLevel:LOG_LEVEL_INFO];
+    [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
 #endif
 #endif
 }

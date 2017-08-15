@@ -21,9 +21,9 @@
                   second:(NSInteger)second
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components: NSYearCalendarUnit|
-                                    NSMonthCalendarUnit|
-                                    NSDayCalendarUnit
+    NSDateComponents *components = [calendar components: NSCalendarUnitYear|
+                                    NSCalendarUnitMonth|
+                                    NSCalendarUnitDay
                                                fromDate:[NSDate date]];
     [components setHour:hour];
     [components setMinute:minute];

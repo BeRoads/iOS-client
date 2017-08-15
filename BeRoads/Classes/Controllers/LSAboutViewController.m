@@ -57,7 +57,7 @@
                       @{@"name":@"Quentin Kaiser", @"description":@"Project Manager", @"image":[UIImage imageNamed:@"qkaiser.png" ],@"url":[NSURL URLWithString:@"https://twitter.com/QKaiser"]}
                       ];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,6 +67,7 @@
 }
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     self.title = NSLocalizedString(@"About", @"About");
 }
 

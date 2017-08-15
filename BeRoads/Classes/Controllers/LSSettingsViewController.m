@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -53,6 +53,7 @@
 }
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     self.title = NSLocalizedString(@"Settings", @"Settings");
 }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/python
 
 # This script increments the build number (CFBundleVersion in the Info.plist)
 # on Ad-Hoc or Distribution builds that target real devices.

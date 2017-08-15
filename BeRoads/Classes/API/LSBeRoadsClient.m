@@ -16,7 +16,7 @@
 
 @implementation LSBeRoadsClient
 
-static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.com/v2/iway/";
+static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.ovh/v2/iway/";
 static NSString * const kTrafficEvents = @"TrafficEvent";
 static NSString * const kRadar = @"Radar.json";
 static NSString * const kCamera = @"Camera.json";

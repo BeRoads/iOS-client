@@ -47,7 +47,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
 
     // Empty DataSet
     self.tableView.emptyDataSetDelegate = self;
@@ -94,6 +94,7 @@
 }
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     self.title = NSLocalizedString(@"Traffic", @"Traffic");
 }
 

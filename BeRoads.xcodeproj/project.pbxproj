@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		426CC2E59A594FF4B2062D8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1C43C4D0084C408A8984E0 /* libPods.a */; };
 		4906D570174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */; };
 		4906D579174AD77B00693392 /* LSBeRoadsRadarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */; };
 		490A7BB7174C93230013D46F /* LSTrafficEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490A7BB6174C93230013D46F /* LSTrafficEventDetailViewController.m */; };
@@ -55,14 +54,15 @@
 		4979186117554B6E0010974E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4979186017554B6E0010974E /* MessageUI.framework */; };
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
 		49C055A719E724E10059D701 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C055A619E724E10059D701 /* Launch Screen.xib */; };
+		4CABE0A3EB5EFC0CEAC584DE /* libPods-beroads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3915638BBCC8E147D19864 /* libPods-beroads.a */; };
 		6C61C3A217DBB886000539BC /* LSScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3A117DBB886000539BC /* LSScrollLabel.m */; };
 		6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C61C3A317DBB9E0000539BC /* Security.framework */; };
 		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */; };
 		6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */; };
 		6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */; };
+		A5634AAF32E7050BBFCA911F /* libPods-beroads-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
-		E0A0A8F4FCF1C6FBDAE0B384 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745181855EE7D6E96444CF54 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,27 +76,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002A1781262D86EE624E97E3 /* Pods-Specs.profile_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.profile_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.profile_staging.xcconfig"; sourceTree = "<group>"; };
-		0A7970C04D0E684CA6F4613B /* Pods-Specs.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.distribution.xcconfig"; sourceTree = "<group>"; };
-		182AE9235BB8D4D2ADDF05BE /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
-		286E201AF6887BD31800510C /* Pods-Specs.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.adhoc_production.xcconfig"; sourceTree = "<group>"; };
-		2F72BABD92AEC5F1542E8702 /* Pods-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
-		3F883E3E576843CE368485C4 /* Pods-Specs.debug_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug_production.xcconfig"; sourceTree = "<group>"; };
+		0D79473A0CDCCAD58CA5DFCD /* Pods-beroads.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.profile_production.xcconfig"; sourceTree = "<group>"; };
+		1CF1CA43E0F6F31648345F64 /* Pods-beroads-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
+		2E330958F71BF55B2375B9D7 /* Pods-beroads-Specs.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.debug_staging.xcconfig"; sourceTree = "<group>"; };
+		446645E0970048A5CA54E615 /* Pods-beroads.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.test_staging.xcconfig"; sourceTree = "<group>"; };
+		45E7D15F0BBB5BDEF8FBE394 /* Pods-beroads.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.test_production.xcconfig"; sourceTree = "<group>"; };
 		4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventsBeRoadsCell.h; sourceTree = "<group>"; };
 		4906D56F174A7F3000693392 /* LSTrafficEventsBeRoadsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventsBeRoadsCell.m; sourceTree = "<group>"; };
 		4906D577174AD77B00693392 /* LSBeRoadsRadarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBeRoadsRadarCell.h; sourceTree = "<group>"; };
 		4906D578174AD77B00693392 /* LSBeRoadsRadarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBeRoadsRadarCell.m; sourceTree = "<group>"; };
 		490A7BB5174C93230013D46F /* LSTrafficEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventDetailViewController.h; sourceTree = "<group>"; };
 		490A7BB6174C93230013D46F /* LSTrafficEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventDetailViewController.m; sourceTree = "<group>"; };
-		492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
-		492C4DF119DC1D7800DAE8E3 /* Pods.adhoc_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.adhoc_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
-		492C4DF219DC1D7800DAE8E3 /* Pods.debug_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_production.xcconfig"; sourceTree = "<group>"; };
-		492C4DF319DC1D7800DAE8E3 /* Pods.debug_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_staging.xcconfig"; sourceTree = "<group>"; };
-		492C4DF419DC1D7800DAE8E3 /* Pods.distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.distribution.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribution.xcconfig"; sourceTree = "<group>"; };
-		492C4DF519DC1D7800DAE8E3 /* Pods.profile_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.profile_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_production.xcconfig"; sourceTree = "<group>"; };
-		492C4DF619DC1D7800DAE8E3 /* Pods.profile_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.profile_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_staging.xcconfig"; sourceTree = "<group>"; };
-		492C4DF719DC1D7800DAE8E3 /* Pods.test_production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.test_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.test_production.xcconfig"; sourceTree = "<group>"; };
-		492C4DF819DC1D7800DAE8E3 /* Pods.test_staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.test_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.test_staging.xcconfig"; sourceTree = "<group>"; };
 		49341F2619ECB7B70048F203 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BeRoads/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		493A335B19DB510E0009DC03 /* BeRoads-Environment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeRoads-Environment.h"; sourceTree = "<group>"; };
 		493A335F19DB61190009DC03 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -206,7 +196,9 @@
 		4979186217556D8E0010974E /* LSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSettingsViewController.h; sourceTree = "<group>"; };
 		4979186317556D8E0010974E /* LSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSettingsViewController.m; sourceTree = "<group>"; };
 		49C055A619E724E10059D701 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
-		57672ECB432AF1BAF4572131 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
+		4ABF79F0D4A85EBECEAA7B10 /* Pods-beroads.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.debug_staging.xcconfig"; sourceTree = "<group>"; };
+		4D24FE593B727DA6047858AB /* Pods-beroads-Specs.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.distribution.xcconfig"; sourceTree = "<group>"; };
+		6992A976203D6B94D395CE0D /* Pods-beroads-Specs.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		6C61C3A017DBB886000539BC /* LSScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSScrollLabel.h; sourceTree = "<group>"; };
 		6C61C3A117DBB886000539BC /* LSScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSScrollLabel.m; sourceTree = "<group>"; };
 		6C61C3A317DBB9E0000539BC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -217,16 +209,14 @@
 		6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		6CDE3BD0178A2FDE00AAEEDA /* LSTrafficEventDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventDetailsView.h; sourceTree = "<group>"; };
 		6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventDetailsView.m; sourceTree = "<group>"; };
-		6E12B2B26F29B4335106A62D /* Pods-Specs.adhoc_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.adhoc_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
-		745181855EE7D6E96444CF54 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F567F60A7DD9B2F7E3F67B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9294D31CF027164AEBF29B87 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BBEFCF83627591E64A3471EA /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
+		944A845610274C52A5B98F48 /* Pods-beroads-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
+		AA7AE2E54702E59750D403FE /* Pods-beroads-Specs.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.profile_production.xcconfig"; sourceTree = "<group>"; };
+		B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beroads-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E2B5C5DB6CB98FD64CA3E3 /* Pods-beroads.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
-		CC1C43C4D0084C408A8984E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE529C7D9AE465292D2C8DCC /* Pods-Specs.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug_staging.xcconfig"; sourceTree = "<group>"; };
-		F752EDE0A9D71611C873A717 /* Pods-Specs.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.profile_production.xcconfig"; sourceTree = "<group>"; };
+		CB3915638BBCC8E147D19864 /* libPods-beroads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beroads.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E39206514012170CE48297FA /* Pods-beroads.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.distribution.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A0A8F4FCF1C6FBDAE0B384 /* libPods-Specs.a in Frameworks */,
+				A5634AAF32E7050BBFCA911F /* libPods-beroads-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +245,7 @@
 				49693D20173E44D7000D408E /* UIKit.framework in Frameworks */,
 				49693D22173E44D7000D408E /* Foundation.framework in Frameworks */,
 				49693D24173E44D7000D408E /* CoreGraphics.framework in Frameworks */,
-				426CC2E59A594FF4B2062D8D /* libPods.a in Frameworks */,
+				4CABE0A3EB5EFC0CEAC584DE /* libPods-beroads.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +471,7 @@
 				4942818819DB8A310077FDCD /* Specs */,
 				49693D1E173E44D7000D408E /* Frameworks */,
 				49693D1D173E44D7000D408E /* Products */,
-				A373DC74C9F7754462BD7AD3 /* Pods */,
+				4FDEE33E9DDE79E2E056E2A6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -510,8 +500,8 @@
 				49693D1F173E44D7000D408E /* UIKit.framework */,
 				49693D21173E44D7000D408E /* Foundation.framework */,
 				49693D23173E44D7000D408E /* CoreGraphics.framework */,
-				CC1C43C4D0084C408A8984E0 /* libPods.a */,
-				745181855EE7D6E96444CF54 /* libPods-Specs.a */,
+				CB3915638BBCC8E147D19864 /* libPods-beroads.a */,
+				B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -606,31 +596,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A373DC74C9F7754462BD7AD3 /* Pods */ = {
+		4FDEE33E9DDE79E2E056E2A6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */,
-				492C4DF119DC1D7800DAE8E3 /* Pods.adhoc_staging.xcconfig */,
-				492C4DF219DC1D7800DAE8E3 /* Pods.debug_production.xcconfig */,
-				492C4DF319DC1D7800DAE8E3 /* Pods.debug_staging.xcconfig */,
-				492C4DF419DC1D7800DAE8E3 /* Pods.distribution.xcconfig */,
-				492C4DF519DC1D7800DAE8E3 /* Pods.profile_production.xcconfig */,
-				492C4DF619DC1D7800DAE8E3 /* Pods.profile_staging.xcconfig */,
-				492C4DF719DC1D7800DAE8E3 /* Pods.test_production.xcconfig */,
-				492C4DF819DC1D7800DAE8E3 /* Pods.test_staging.xcconfig */,
-				8F567F60A7DD9B2F7E3F67B8 /* Pods.debug.xcconfig */,
-				9294D31CF027164AEBF29B87 /* Pods.release.xcconfig */,
-				BBEFCF83627591E64A3471EA /* Pods-Specs.debug.xcconfig */,
-				182AE9235BB8D4D2ADDF05BE /* Pods-Specs.release.xcconfig */,
-				CE529C7D9AE465292D2C8DCC /* Pods-Specs.debug_staging.xcconfig */,
-				3F883E3E576843CE368485C4 /* Pods-Specs.debug_production.xcconfig */,
-				2F72BABD92AEC5F1542E8702 /* Pods-Specs.test_staging.xcconfig */,
-				57672ECB432AF1BAF4572131 /* Pods-Specs.test_production.xcconfig */,
-				0A7970C04D0E684CA6F4613B /* Pods-Specs.distribution.xcconfig */,
-				6E12B2B26F29B4335106A62D /* Pods-Specs.adhoc_staging.xcconfig */,
-				286E201AF6887BD31800510C /* Pods-Specs.adhoc_production.xcconfig */,
-				002A1781262D86EE624E97E3 /* Pods-Specs.profile_staging.xcconfig */,
-				F752EDE0A9D71611C873A717 /* Pods-Specs.profile_production.xcconfig */,
+				4ABF79F0D4A85EBECEAA7B10 /* Pods-beroads.debug_staging.xcconfig */,
+				446645E0970048A5CA54E615 /* Pods-beroads.test_staging.xcconfig */,
+				45E7D15F0BBB5BDEF8FBE394 /* Pods-beroads.test_production.xcconfig */,
+				E39206514012170CE48297FA /* Pods-beroads.distribution.xcconfig */,
+				B6E2B5C5DB6CB98FD64CA3E3 /* Pods-beroads.adhoc_production.xcconfig */,
+				0D79473A0CDCCAD58CA5DFCD /* Pods-beroads.profile_production.xcconfig */,
+				2E330958F71BF55B2375B9D7 /* Pods-beroads-Specs.debug_staging.xcconfig */,
+				944A845610274C52A5B98F48 /* Pods-beroads-Specs.test_staging.xcconfig */,
+				1CF1CA43E0F6F31648345F64 /* Pods-beroads-Specs.test_production.xcconfig */,
+				4D24FE593B727DA6047858AB /* Pods-beroads-Specs.distribution.xcconfig */,
+				6992A976203D6B94D395CE0D /* Pods-beroads-Specs.adhoc_production.xcconfig */,
+				AA7AE2E54702E59750D403FE /* Pods-beroads-Specs.profile_production.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -651,11 +631,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4942819119DB8A310077FDCD /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
-				2398D66835F66A83F8D0CFD5 /* Check Pods Manifest.lock */,
+				C10B0408308D21CD639BB6C6 /* [CP] Check Pods Manifest.lock */,
 				4942818319DB8A310077FDCD /* Sources */,
 				4942818419DB8A310077FDCD /* Frameworks */,
 				4942818519DB8A310077FDCD /* Resources */,
-				A7189ADEDA8D7FFFDAD51546 /* Copy Pods Resources */,
+				F15C4AAAF3A04CA6C28CA53E /* [CP] Embed Pods Frameworks */,
+				532B484BBA9BC74283FB25AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,15 +652,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49693D4A173E44D7000D408E /* Build configuration list for PBXNativeTarget "beroads" */;
 			buildPhases = (
-				6BE52A1229D847E88D372E11 /* Check Pods Manifest.lock */,
+				D47826A9ED2A203C7D0A1DA8 /* [CP] Check Pods Manifest.lock */,
 				4937DDF619EC3FD900AB9605 /* Generate Storyboard Constants */,
 				4937DDF719EC400500AB9605 /* Generate Asset Catalog Constants */,
 				49693D18173E44D7000D408E /* Sources */,
 				49693D19173E44D7000D408E /* Frameworks */,
 				49530C5319EC426400720FF7 /* Increment Build Number */,
 				49693D1A173E44D7000D408E /* Resources */,
-				E744527E9FDE46A3BF1FECBB /* Copy Pods Resources */,
 				49B3144319DB1E3C00446E8F /* Crashlytics Script */,
+				B0FBC66E3FAA629B2F2E127B /* [CP] Embed Pods Frameworks */,
+				10D993DD4F5C1E0C6538D246 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -697,7 +679,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LS;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Lionel Schinckus";
 				TargetAttributes = {
 					4942818619DB8A310077FDCD = {
@@ -756,19 +738,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2398D66835F66A83F8D0CFD5 /* Check Pods Manifest.lock */ = {
+		10D993DD4F5C1E0C6538D246 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/CSNotificationView/CSNotificationView.bundle",
+				"${PODS_ROOT}/FSImageViewer/FSImageViewer.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/InAppSettingsKit/InAppSettingsKit.bundle",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4937DDF619EC3FD900AB9605 /* Generate Storyboard Constants */ = {
@@ -827,49 +814,90 @@
 			shellPath = /bin/sh;
 			shellScript = "# If you have installed the Crashlytics pod, this script runs the required\n# setup script. If you didn't set up Crashlytics in the bootstrap script,\n# you will need to insert your API key below, as well as in the AppDelegate.\n# You can retrieve that key by running this command in Terminal:\n# ruby -e \"$(curl -fsSL https://raw.github.com/crushlovely/Amaro/master/tiramisu)\" -- --crashlytics\n\n# If you didn't install the CrashlyticsFramework pod, this script will do nothing.\n# Feel free to remove it in that case, if you wish.\n\nCRASHLYTICS_SCRIPT=\"./Pods/CrashlyticsFramework/Crashlytics.framework/run\"\n[ -x \"$CRASHLYTICS_SCRIPT\" ] || exit 0\n\n# Enter your key below:\nCRASHLYTICS_API_KEY=\"3a2322f2e5a421953b38ea0d77076490aba2f9c8\"\n\nif [ \"${CRASHLYTICS_API_KEY:0:1}\" = \"<\" ]; then\necho \"warning: Set your Crashlytics API key in the Build Phases tab to enable Crashlytics integration\" 1>&2\nexit 0\nfi\n\n\"$CRASHLYTICS_SCRIPT\" \"$CRASHLYTICS_API_KEY\"";
 		};
-		6BE52A1229D847E88D372E11 /* Check Pods Manifest.lock */ = {
+		532B484BBA9BC74283FB25AA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/CSNotificationView/CSNotificationView.bundle",
+				"${PODS_ROOT}/FSImageViewer/FSImageViewer.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/InAppSettingsKit/InAppSettingsKit.bundle",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7189ADEDA8D7FFFDAD51546 /* Copy Pods Resources */ = {
+		B0FBC66E3FAA629B2F2E127B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E744527E9FDE46A3BF1FECBB /* Copy Pods Resources */ = {
+		C10B0408308D21CD639BB6C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beroads-Specs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D47826A9ED2A203C7D0A1DA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beroads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F15C4AAAF3A04CA6C28CA53E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -976,19 +1004,24 @@
 			baseConfigurationReference = 493A338819DB616E0009DC03 /* BeRoads-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -998,8 +1031,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -1008,7 +1041,7 @@
 		};
 		49489BA219DC6474000D60A1 /* Debug_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF319DC1D7800DAE8E3 /* Pods.debug_staging.xcconfig */;
+			baseConfigurationReference = 4ABF79F0D4A85EBECEAA7B10 /* Pods-beroads.debug_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1021,9 +1054,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1034,7 +1068,7 @@
 		};
 		49489BA319DC6474000D60A1 /* Debug_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE529C7D9AE465292D2C8DCC /* Pods-Specs.debug_staging.xcconfig */;
+			baseConfigurationReference = 2E330958F71BF55B2375B9D7 /* Pods-beroads-Specs.debug_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1063,6 +1097,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};
@@ -1073,19 +1108,23 @@
 			baseConfigurationReference = 493A338B19DB616E0009DC03 /* BeRoads-Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1095,7 +1134,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1105,7 +1144,7 @@
 		};
 		49489BA819DC6620000D60A1 /* Test_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF819DC1D7800DAE8E3 /* Pods.test_staging.xcconfig */;
+			baseConfigurationReference = 446645E0970048A5CA54E615 /* Pods-beroads.test_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1118,8 +1157,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1130,7 +1170,7 @@
 		};
 		49489BA919DC6620000D60A1 /* Test_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F72BABD92AEC5F1542E8702 /* Pods-Specs.test_staging.xcconfig */;
+			baseConfigurationReference = 944A845610274C52A5B98F48 /* Pods-beroads-Specs.test_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1158,6 +1198,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};
@@ -1168,19 +1209,23 @@
 			baseConfigurationReference = 493A338B19DB616E0009DC03 /* BeRoads-Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1190,7 +1235,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1200,7 +1245,7 @@
 		};
 		49489BAB19DC6633000D60A1 /* Test_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF719DC1D7800DAE8E3 /* Pods.test_production.xcconfig */;
+			baseConfigurationReference = 45E7D15F0BBB5BDEF8FBE394 /* Pods-beroads.test_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1213,8 +1258,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1225,7 +1271,7 @@
 		};
 		49489BAC19DC6633000D60A1 /* Test_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57672ECB432AF1BAF4572131 /* Pods-Specs.test_production.xcconfig */;
+			baseConfigurationReference = 1CF1CA43E0F6F31648345F64 /* Pods-beroads-Specs.test_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1253,6 +1299,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};
@@ -1263,19 +1310,23 @@
 			baseConfigurationReference = 493A336319DB61190009DC03 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1285,7 +1336,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1295,7 +1346,7 @@
 		};
 		49489BB419DC6673000D60A1 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF419DC1D7800DAE8E3 /* Pods.distribution.xcconfig */;
+			baseConfigurationReference = E39206514012170CE48297FA /* Pods-beroads.distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1308,8 +1359,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1320,7 +1372,7 @@
 		};
 		49489BB519DC6673000D60A1 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A7970C04D0E684CA6F4613B /* Pods-Specs.distribution.xcconfig */;
+			baseConfigurationReference = 4D24FE593B727DA6047858AB /* Pods-beroads-Specs.distribution.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1348,6 +1400,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};
@@ -1358,19 +1411,23 @@
 			baseConfigurationReference = 493A336319DB61190009DC03 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1380,7 +1437,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1390,7 +1447,7 @@
 		};
 		49489BBA19DC669B000D60A1 /* AdHoc_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF019DC1D7800DAE8E3 /* Pods.adhoc_production.xcconfig */;
+			baseConfigurationReference = B6E2B5C5DB6CB98FD64CA3E3 /* Pods-beroads.adhoc_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1403,8 +1460,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1415,7 +1473,7 @@
 		};
 		49489BBB19DC669B000D60A1 /* AdHoc_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 286E201AF6887BD31800510C /* Pods-Specs.adhoc_production.xcconfig */;
+			baseConfigurationReference = 6992A976203D6B94D395CE0D /* Pods-beroads-Specs.adhoc_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1443,6 +1501,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};
@@ -1453,19 +1512,23 @@
 			baseConfigurationReference = 493A338919DB616E0009DC03 /* BeRoads-Profile.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1475,7 +1538,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1485,7 +1548,7 @@
 		};
 		49489BC019DC66B7000D60A1 /* Profile_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 492C4DF519DC1D7800DAE8E3 /* Pods.profile_production.xcconfig */;
+			baseConfigurationReference = 0D79473A0CDCCAD58CA5DFCD /* Pods-beroads.profile_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1498,9 +1561,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "BeRoads/BeRoads-Prefix.pch";
 				INFOPLIST_FILE = "BeRoads/BeRoads-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "be.beroads.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1511,7 +1575,7 @@
 		};
 		49489BC119DC66B7000D60A1 /* Profile_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F752EDE0A9D71611C873A717 /* Pods-Specs.profile_production.xcconfig */;
+			baseConfigurationReference = AA7AE2E54702E59750D403FE /* Pods-beroads-Specs.profile_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1540,6 +1604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.special-beer.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beroads.app/beroads";
 			};

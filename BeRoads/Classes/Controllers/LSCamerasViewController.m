@@ -46,7 +46,7 @@
 {
     [super viewDidLoad];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -98,6 +98,7 @@
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     self.title = NSLocalizedString(@"Cameras", @"Cameras");
 }
 
@@ -131,7 +132,7 @@
     
     // Configure the cell...
     Camera* currentCamera = [[[self.zones objectAtIndex:indexPath.section] cameras] objectAtIndex:indexPath.row];
-    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img_thumb]]
+    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:currentCamera.img_thumb] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:5]
                           placeholderImage:[UIImage imageNamed:@"placeholder_cell"]
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         weakCell.imageView.image = image;

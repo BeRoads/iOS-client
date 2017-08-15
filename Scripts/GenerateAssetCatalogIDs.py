@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/python
 
 # This script walks the asset catalogs in your project and spits out one .h/.m pair with
 # classes and methods for UIImages found therein.

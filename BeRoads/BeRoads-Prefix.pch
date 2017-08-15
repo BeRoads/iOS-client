@@ -35,21 +35,14 @@
     #import <UIScrollView+EmptyDataSet.h>
 
     #if HAS_POD(CocoaLumberjack)
-        #if __has_include("CocoaLumberjack.h")
-            #import <CocoaLumberjack/CocoaLumberjack.h>
-        #else
-            #import <CocoaLumberjack/DDLog.h>
-        #endif
+        #import <CocoaLumberjack/CocoaLumberjack.h>
+
 
         #ifdef DEBUG
-            static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+            static const int ddLogLevel = DDLogLevelDebug;
         #else
-            static const int ddLogLevel = LOG_LEVEL_WARN;
+            static const int ddLogLevel = DDLogLevelWarn;
         #endif
-    #endif
-
-    #if HAS_POD(Sidecar)
-        #import <Sidecar/CRLCategoriesAndUtils.h>
     #endif
 
     #if HAS_POD(libextobjc)

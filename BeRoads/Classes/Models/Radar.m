@@ -7,6 +7,7 @@
 
 // Import
 #import "Radar.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 
 @implementation Radar

@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/python
 
 # This script walks the storyboards in your project and spits out one .h/.m pair with
 # constants for all the identifiers in the storyboards.

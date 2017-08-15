@@ -45,7 +45,7 @@
 	// Do any additional setup after loading the view.
     _userDefaults = [NSUserDefaults standardUserDefaults];
     
-    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealMenu:)];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
     self.navigationItem.leftBarButtonItem = menuButton;
 }
 
@@ -92,6 +92,7 @@
 }
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     self.title = NSLocalizedString(@"Map", @"Map");
 }
 
@@ -185,7 +186,8 @@
             // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
             //
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            // FIXME: Add action
+            //[rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
             customAnnotationView.rightCalloutAccessoryView = rightButton;
             return customAnnotationView;
         }
@@ -216,7 +218,8 @@
             // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
             //
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            // FIXME: Add action
+            //[rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
             customAnnotationView.rightCalloutAccessoryView = rightButton;
             
             return customAnnotationView;
@@ -257,7 +260,8 @@
         _location = userLocation.location;
         
         // Let the device know we want to receive push notifications or update his location
-        float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+        // FIXME: Restore notifications
+        /*float currentVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
         float requiredVersion8 = 8.0;
         if (currentVersion >= requiredVersion8) {
 #ifdef __IPHONE_8_0
@@ -267,7 +271,7 @@
         } else {
             [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
              (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-        }
+        }*/
         
         [self reload];
         
