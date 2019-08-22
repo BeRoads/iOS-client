@@ -5,32 +5,32 @@
 
 @implementation LSImagesCatalog
 
-+(UIImage *)About { return [UIImage imageNamed:@"About"]; }
-+(UIImage *)bg_list { return [UIImage imageNamed:@"bg_list"]; }
++(UIImage *)placeholder_cell { return [UIImage imageNamed:@"placeholder_cell"]; }
++(UIImage *)orange_navbar { return [UIImage imageNamed:@"orange_navbar"]; }
++(UIImage *)ic_m_traffic { return [UIImage imageNamed:@"ic_m_traffic"]; }
++(UIImage *)Image { return [UIImage imageNamed:@"Image"]; }
++(UIImage *)ic_m_webcam { return [UIImage imageNamed:@"ic_m_webcam"]; }
++(UIImage *)glyphicons_054_clock { return [UIImage imageNamed:@"glyphicons_054_clock"]; }
++(UIImage *)green_navbar { return [UIImage imageNamed:@"green_navbar"]; }
++(UIImage *)waza_be { return [UIImage imageNamed:@"waza_be"]; }
 +(UIImage *)bg_speedlimit { return [UIImage imageNamed:@"bg_speedlimit"]; }
 +(UIImage *)blue_navbar { return [UIImage imageNamed:@"blue_navbar"]; }
-+(UIImage *)Cameras { return [UIImage imageNamed:@"Cameras"]; }
-+(UIImage *)Default { return [UIImage imageNamed:@"Default"]; }
-+(UIImage *)glyphicons_054_clock { return [UIImage imageNamed:@"glyphicons_054_clock"]; }
-+(UIImage *)glyphicons_309_comments { return [UIImage imageNamed:@"glyphicons_309_comments"]; }
-+(UIImage *)green_navbar { return [UIImage imageNamed:@"green_navbar"]; }
-+(UIImage *)harkor { return [UIImage imageNamed:@"harkor"]; }
-+(UIImage *)ic_m_radar { return [UIImage imageNamed:@"ic_m_radar"]; }
-+(UIImage *)ic_m_traffic { return [UIImage imageNamed:@"ic_m_traffic"]; }
-+(UIImage *)ic_m_webcam { return [UIImage imageNamed:@"ic_m_webcam"]; }
++(UIImage *)red_navbar { return [UIImage imageNamed:@"red_navbar"]; }
 +(UIImage *)Icon { return [UIImage imageNamed:@"Icon"]; }
-+(UIImage *)Image { return [UIImage imageNamed:@"Image"]; }
-+(UIImage *)Map { return [UIImage imageNamed:@"Map"]; }
++(UIImage *)Default { return [UIImage imageNamed:@"Default"]; }
++(UIImage *)qkaiser { return [UIImage imageNamed:@"qkaiser"]; }
++(UIImage *)ic_m_radar { return [UIImage imageNamed:@"ic_m_radar"]; }
++(UIImage *)Traffic { return [UIImage imageNamed:@"Traffic"]; }
 +(UIImage *)menu { return [UIImage imageNamed:@"menu"]; }
 +(UIImage *)navbar { return [UIImage imageNamed:@"navbar"]; }
-+(UIImage *)orange_navbar { return [UIImage imageNamed:@"orange_navbar"]; }
-+(UIImage *)placeholder_cell { return [UIImage imageNamed:@"placeholder_cell"]; }
-+(UIImage *)qkaiser { return [UIImage imageNamed:@"qkaiser"]; }
++(UIImage *)harkor { return [UIImage imageNamed:@"harkor"]; }
++(UIImage *)Cameras { return [UIImage imageNamed:@"Cameras"]; }
++(UIImage *)bg_list { return [UIImage imageNamed:@"bg_list"]; }
++(UIImage *)Map { return [UIImage imageNamed:@"Map"]; }
 +(UIImage *)Radars { return [UIImage imageNamed:@"Radars"]; }
-+(UIImage *)red_navbar { return [UIImage imageNamed:@"red_navbar"]; }
++(UIImage *)About { return [UIImage imageNamed:@"About"]; }
 +(UIImage *)Settings { return [UIImage imageNamed:@"Settings"]; }
-+(UIImage *)Traffic { return [UIImage imageNamed:@"Traffic"]; }
 +(UIImage *)valcapri { return [UIImage imageNamed:@"valcapri"]; }
-+(UIImage *)waza_be { return [UIImage imageNamed:@"waza_be"]; }
++(UIImage *)glyphicons_309_comments { return [UIImage imageNamed:@"glyphicons_309_comments"]; }
 
 @end

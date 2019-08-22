@@ -28,13 +28,9 @@
 #if __has_include("DDTTYLogger.h")
 #import <CocoaLumberjack/DDTTYLogger.h>
 #endif
-#if HAS_POD(CrashlyticsLumberjack)
-#import <CrashlyticsLumberjack/CrashlyticsLogger.h>
-#endif
 
-#if HAS_POD(Sidecar)
-#import <Sidecar/CRLMethodLogFormatter.h>
-#endif
+#import "CrashlyticsLogger.h"
+
 #endif
 
 #if HAS_POD(Aperitif) && IS_ADHOC_BUILD
@@ -176,23 +172,17 @@
         [parameters setObject:language forKey:@"language"];
         [parameters setObject:parametersCoords forKey:@"coords"];
         
-        NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST"
-                                                                                     URLString:@"http://dashboard.beroads.com/apns"
-                                                                                    parameters:parameters error:nil];
-        
         DDLogVerbose(@"Device Token (with space) : %@",deviceToken);
-        DDLogVerbose(@"URL Request : %@, \n parameters : %@", [request URL], parameters);
+        DDLogVerbose(@"URL Request : %@, \n parameters : %@", @"http://dashboard.beroads.com/apns", parameters);
         
-        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
         
-        
-        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            // Print the response body in text
+        [manager POST:@"http://dashboard.beroads.com/apns" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DDLogVerbose(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DDLogError(@"Error: %@", error);
         }];
-        [operation start];
+
     } else {
         DDLogVerbose(@"La longitude et la latitude sont égales à 0");
     }
@@ -249,23 +239,15 @@
 #endif
     
 #if HAS_POD(CocoaLumberjack)
-#if HAS_POD(Sidecar)
-    CRLMethodLogFormatter *logFormatter = [[CRLMethodLogFormatter alloc] init];
-    [[DDASLLogger sharedInstance] setLogFormatter:logFormatter];
-    [[DDTTYLogger sharedInstance] setLogFormatter:logFormatter];
-#endif
     
     // Emulate NSLog behavior for DDLog*
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
     // Send warning & error messages to Crashlytics
-#if HAS_POD(CrashlyticsLumberjack)
-#if HAS_POD(Sidecar)
-    [[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
-#endif
+    //[[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
+
     [DDLog addLogger:[CrashlyticsLogger sharedInstance]];
-#endif
 #endif
 }
 

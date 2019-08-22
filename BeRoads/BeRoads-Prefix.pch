@@ -9,13 +9,6 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
-// Pull in tgmath for seamless 32-/64-bit math functions.
-// Due to a nasty clang situation right now (early 2014), we can't just use <tgmath.h>
-// directly. See the note in the header.
-#if HAS_POD(Sidecar)
-#import <Sidecar/tgmath-stopgap.h>
-#endif
-
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>

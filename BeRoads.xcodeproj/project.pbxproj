@@ -48,21 +48,22 @@
 		49693DF1173F9DC5000D408E /* LSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49693DF0173F9DC5000D408E /* LSMapViewController.m */; };
 		49693DF4173F9E81000D408E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF2173F9E80000D408E /* CoreLocation.framework */; };
 		49693DF5173F9E81000D408E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49693DF3173F9E80000D408E /* MapKit.framework */; };
+		496C36B1230ED759001312B2 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 496C36AF230ED759001312B2 /* CrashlyticsLogger.m */; };
 		4979182117538C720010974E /* Zone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979182017538C720010974E /* Zone.m */; };
 		4979182D17541A580010974E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4979182817541A580010974E /* Localizable.strings */; };
 		4979185F1755330D0010974E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4979185E1755330D0010974E /* Settings.bundle */; };
 		4979186117554B6E0010974E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4979186017554B6E0010974E /* MessageUI.framework */; };
 		4979186417556D8E0010974E /* LSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4979186317556D8E0010974E /* LSSettingsViewController.m */; };
 		49C055A719E724E10059D701 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C055A619E724E10059D701 /* Launch Screen.xib */; };
-		4CABE0A3EB5EFC0CEAC584DE /* libPods-beroads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3915638BBCC8E147D19864 /* libPods-beroads.a */; };
+		54513B079280BEEFCE7E7C19 /* Pods_beroads_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B7980E90E16D64E4AB71BF /* Pods_beroads_Specs.framework */; };
 		6C61C3A217DBB886000539BC /* LSScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C61C3A117DBB886000539BC /* LSScrollLabel.m */; };
 		6C61C3A417DBB9E0000539BC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C61C3A317DBB9E0000539BC /* Security.framework */; };
 		6CCEE02318279A9200221858 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCEE02218279A9200221858 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6CDE3BAC1789A6F200AAEEDA /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAB1789A6F100AAEEDA /* InitialSlidingViewController.m */; };
 		6CDE3BAF1789A76100AAEEDA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BAE1789A76000AAEEDA /* MenuViewController.m */; };
 		6CDE3BD2178A2FF200AAEEDA /* LSTrafficEventDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */; };
-		A5634AAF32E7050BBFCA911F /* libPods-beroads-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */; };
 		C56FA375177333D000596208 /* LSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56FA374177333D000596208 /* LSAboutViewController.m */; };
+		EF4AD565DF2B8E6C172685C6 /* Pods_beroads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB63C3FEF83A1F2F2A1077A /* Pods_beroads.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		0D79473A0CDCCAD58CA5DFCD /* Pods-beroads.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.profile_production.xcconfig"; sourceTree = "<group>"; };
 		1CF1CA43E0F6F31648345F64 /* Pods-beroads-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
 		2E330958F71BF55B2375B9D7 /* Pods-beroads-Specs.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.debug_staging.xcconfig"; sourceTree = "<group>"; };
+		33B7980E90E16D64E4AB71BF /* Pods_beroads_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beroads_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		446645E0970048A5CA54E615 /* Pods-beroads.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.test_staging.xcconfig"; sourceTree = "<group>"; };
 		45E7D15F0BBB5BDEF8FBE394 /* Pods-beroads.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.test_production.xcconfig"; sourceTree = "<group>"; };
 		4906D56E174A7F3000693392 /* LSTrafficEventsBeRoadsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrafficEventsBeRoadsCell.h; sourceTree = "<group>"; };
@@ -185,6 +187,8 @@
 		49693DF0173F9DC5000D408E /* LSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMapViewController.m; sourceTree = "<group>"; };
 		49693DF2173F9E80000D408E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49693DF3173F9E80000D408E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		496C36AF230ED759001312B2 /* CrashlyticsLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashlyticsLogger.m; sourceTree = "<group>"; };
+		496C36B0230ED759001312B2 /* CrashlyticsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashlyticsLogger.h; sourceTree = "<group>"; };
 		4979181F17538C720010974E /* Zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zone.h; sourceTree = "<group>"; };
 		4979182017538C720010974E /* Zone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zone.m; sourceTree = "<group>"; };
 		4979182917541A580010974E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		49C055A619E724E10059D701 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		4ABF79F0D4A85EBECEAA7B10 /* Pods-beroads.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.debug_staging.xcconfig"; sourceTree = "<group>"; };
 		4D24FE593B727DA6047858AB /* Pods-beroads-Specs.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.distribution.xcconfig"; sourceTree = "<group>"; };
+		5EB63C3FEF83A1F2F2A1077A /* Pods_beroads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beroads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6992A976203D6B94D395CE0D /* Pods-beroads-Specs.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		6C61C3A017DBB886000539BC /* LSScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSScrollLabel.h; sourceTree = "<group>"; };
 		6C61C3A117DBB886000539BC /* LSScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSScrollLabel.m; sourceTree = "<group>"; };
@@ -211,11 +216,9 @@
 		6CDE3BD1178A2FF200AAEEDA /* LSTrafficEventDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrafficEventDetailsView.m; sourceTree = "<group>"; };
 		944A845610274C52A5B98F48 /* Pods-beroads-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
 		AA7AE2E54702E59750D403FE /* Pods-beroads-Specs.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads-Specs.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs.profile_production.xcconfig"; sourceTree = "<group>"; };
-		B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beroads-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E2B5C5DB6CB98FD64CA3E3 /* Pods-beroads.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		C56FA373177333D000596208 /* LSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAboutViewController.h; sourceTree = "<group>"; };
 		C56FA374177333D000596208 /* LSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAboutViewController.m; sourceTree = "<group>"; };
-		CB3915638BBCC8E147D19864 /* libPods-beroads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beroads.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39206514012170CE48297FA /* Pods-beroads.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beroads.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-beroads/Pods-beroads.distribution.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5634AAF32E7050BBFCA911F /* libPods-beroads-Specs.a in Frameworks */,
+				54513B079280BEEFCE7E7C19 /* Pods_beroads_Specs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +248,7 @@
 				49693D20173E44D7000D408E /* UIKit.framework in Frameworks */,
 				49693D22173E44D7000D408E /* Foundation.framework in Frameworks */,
 				49693D24173E44D7000D408E /* CoreGraphics.framework in Frameworks */,
-				4CABE0A3EB5EFC0CEAC584DE /* libPods-beroads.a in Frameworks */,
+				EF4AD565DF2B8E6C172685C6 /* Pods_beroads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +412,8 @@
 		494EFA6219749D50003DD171 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				496C36B0230ED759001312B2 /* CrashlyticsLogger.h */,
+				496C36AF230ED759001312B2 /* CrashlyticsLogger.m */,
 				49530C5419EC44B700720FF7 /* AssetCatalogIdentifiers.h */,
 				49530C5519EC44B700720FF7 /* AssetCatalogIdentifiers.m */,
 				49530C5619EC44B700720FF7 /* StoryboardIdentifiers.h */,
@@ -500,8 +505,8 @@
 				49693D1F173E44D7000D408E /* UIKit.framework */,
 				49693D21173E44D7000D408E /* Foundation.framework */,
 				49693D23173E44D7000D408E /* CoreGraphics.framework */,
-				CB3915638BBCC8E147D19864 /* libPods-beroads.a */,
-				B429415D076574D30ECD9D21 /* libPods-beroads-Specs.a */,
+				5EB63C3FEF83A1F2F2A1077A /* Pods_beroads.framework */,
+				33B7980E90E16D64E4AB71BF /* Pods_beroads_Specs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -635,8 +640,7 @@
 				4942818319DB8A310077FDCD /* Sources */,
 				4942818419DB8A310077FDCD /* Frameworks */,
 				4942818519DB8A310077FDCD /* Resources */,
-				F15C4AAAF3A04CA6C28CA53E /* [CP] Embed Pods Frameworks */,
-				532B484BBA9BC74283FB25AA /* [CP] Copy Pods Resources */,
+				087F4C13A62828239F625B4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,8 +664,7 @@
 				49530C5319EC426400720FF7 /* Increment Build Number */,
 				49693D1A173E44D7000D408E /* Resources */,
 				49B3144319DB1E3C00446E8F /* Crashlytics Script */,
-				B0FBC66E3FAA629B2F2E127B /* [CP] Embed Pods Frameworks */,
-				10D993DD4F5C1E0C6538D246 /* [CP] Copy Pods Resources */,
+				EF685085B4E769C84DD5C4E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -679,7 +682,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LS;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Lionel Schinckus";
 				TargetAttributes = {
 					4942818619DB8A310077FDCD = {
@@ -696,6 +699,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				fr,
 				nl,
@@ -738,24 +742,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10D993DD4F5C1E0C6538D246 /* [CP] Copy Pods Resources */ = {
+		087F4C13A62828239F625B4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/CSNotificationView/CSNotificationView.bundle",
-				"${PODS_ROOT}/FSImageViewer/FSImageViewer.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/InAppSettingsKit/InAppSettingsKit.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CSNotificationView/CSNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/CSNotificationView-AFNetworking/CSNotificationView_AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/EGOCache/EGOCache.framework",
+				"${BUILT_PRODUCTS_DIR}/FSImageViewer/FSImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel-ObjC/MarqueeLabel_ObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/UAProgressView/UAProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSNotificationView_AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EGOCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel_ObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UAProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4937DDF619EC3FD900AB9605 /* Generate Storyboard Constants */ = {
@@ -814,41 +840,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# If you have installed the Crashlytics pod, this script runs the required\n# setup script. If you didn't set up Crashlytics in the bootstrap script,\n# you will need to insert your API key below, as well as in the AppDelegate.\n# You can retrieve that key by running this command in Terminal:\n# ruby -e \"$(curl -fsSL https://raw.github.com/crushlovely/Amaro/master/tiramisu)\" -- --crashlytics\n\n# If you didn't install the CrashlyticsFramework pod, this script will do nothing.\n# Feel free to remove it in that case, if you wish.\n\nCRASHLYTICS_SCRIPT=\"./Pods/CrashlyticsFramework/Crashlytics.framework/run\"\n[ -x \"$CRASHLYTICS_SCRIPT\" ] || exit 0\n\n# Enter your key below:\nCRASHLYTICS_API_KEY=\"3a2322f2e5a421953b38ea0d77076490aba2f9c8\"\n\nif [ \"${CRASHLYTICS_API_KEY:0:1}\" = \"<\" ]; then\necho \"warning: Set your Crashlytics API key in the Build Phases tab to enable Crashlytics integration\" 1>&2\nexit 0\nfi\n\n\"$CRASHLYTICS_SCRIPT\" \"$CRASHLYTICS_API_KEY\"";
 		};
-		532B484BBA9BC74283FB25AA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/CSNotificationView/CSNotificationView.bundle",
-				"${PODS_ROOT}/FSImageViewer/FSImageViewer.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/InAppSettingsKit/InAppSettingsKit.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0FBC66E3FAA629B2F2E127B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads/Pods-beroads-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C10B0408308D21CD639BB6C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -885,19 +876,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F15C4AAAF3A04CA6C28CA53E /* [CP] Embed Pods Frameworks */ = {
+		EF685085B4E769C84DD5C4E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beroads/Pods-beroads-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CSNotificationView/CSNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/CSNotificationView-AFNetworking/CSNotificationView_AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/EGOCache/EGOCache.framework",
+				"${BUILT_PRODUCTS_DIR}/FSImageViewer/FSImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel-ObjC/MarqueeLabel_ObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/UAProgressView/UAProgressView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSNotificationView_AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EGOCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel_ObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UAProgressView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beroads-Specs/Pods-beroads-Specs-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beroads/Pods-beroads-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -923,6 +937,7 @@
 				49693DA0173E5286000D408E /* Camera.m in Sources */,
 				49693DA2173E5286000D408E /* Radar.m in Sources */,
 				494EFA901974C9EF003DD171 /* LSConstants.m in Sources */,
+				496C36B1230ED759001312B2 /* CrashlyticsLogger.m in Sources */,
 				49693DA4173E5286000D408E /* TrafficEvent.m in Sources */,
 				49693DD6173E666E000D408E /* LSTrafficEventsViewController.m in Sources */,
 				49693DD9173E667B000D408E /* LSRadarsViewController.m in Sources */,
@@ -1008,11 +1023,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1043,8 +1063,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4ABF79F0D4A85EBECEAA7B10 /* Pods-beroads.debug_staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1070,6 +1093,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E330958F71BF55B2375B9D7 /* Pods-beroads-Specs.debug_staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1112,11 +1136,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1146,8 +1175,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 446645E0970048A5CA54E615 /* Pods-beroads.test_staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1172,6 +1204,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 944A845610274C52A5B98F48 /* Pods-beroads-Specs.test_staging.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1213,11 +1246,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1247,8 +1285,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45E7D15F0BBB5BDEF8FBE394 /* Pods-beroads.test_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1273,6 +1314,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CF1CA43E0F6F31648345F64 /* Pods-beroads-Specs.test_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1314,11 +1356,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1348,8 +1395,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E39206514012170CE48297FA /* Pods-beroads.distribution.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1374,6 +1424,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D24FE593B727DA6047858AB /* Pods-beroads-Specs.distribution.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1415,11 +1466,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1449,8 +1505,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6E2B5C5DB6CB98FD64CA3E3 /* Pods-beroads.adhoc_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1475,6 +1534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6992A976203D6B94D395CE0D /* Pods-beroads-Specs.adhoc_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1516,11 +1576,16 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1550,8 +1615,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D79473A0CDCCAD58CA5DFCD /* Pods-beroads.profile_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_FLOAT_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1577,6 +1645,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA7AE2E54702E59750D403FE /* Pods-beroads-Specs.profile_production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

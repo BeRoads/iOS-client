@@ -5,32 +5,32 @@
 
 @interface LSImagesCatalog: NSObject
 
-+(UIImage *)About;
-+(UIImage *)bg_list;
++(UIImage *)placeholder_cell;
++(UIImage *)orange_navbar;
++(UIImage *)ic_m_traffic;
++(UIImage *)Image;
++(UIImage *)ic_m_webcam;
++(UIImage *)glyphicons_054_clock;
++(UIImage *)green_navbar;
++(UIImage *)waza_be;
 +(UIImage *)bg_speedlimit;
 +(UIImage *)blue_navbar;
-+(UIImage *)Cameras;
-+(UIImage *)Default;
-+(UIImage *)glyphicons_054_clock;
-+(UIImage *)glyphicons_309_comments;
-+(UIImage *)green_navbar;
-+(UIImage *)harkor;
-+(UIImage *)ic_m_radar;
-+(UIImage *)ic_m_traffic;
-+(UIImage *)ic_m_webcam;
++(UIImage *)red_navbar;
 +(UIImage *)Icon;
-+(UIImage *)Image;
-+(UIImage *)Map;
++(UIImage *)Default;
++(UIImage *)qkaiser;
++(UIImage *)ic_m_radar;
++(UIImage *)Traffic;
 +(UIImage *)menu;
 +(UIImage *)navbar;
-+(UIImage *)orange_navbar;
-+(UIImage *)placeholder_cell;
-+(UIImage *)qkaiser;
++(UIImage *)harkor;
++(UIImage *)Cameras;
++(UIImage *)bg_list;
++(UIImage *)Map;
 +(UIImage *)Radars;
-+(UIImage *)red_navbar;
++(UIImage *)About;
 +(UIImage *)Settings;
-+(UIImage *)Traffic;
 +(UIImage *)valcapri;
-+(UIImage *)waza_be;
++(UIImage *)glyphicons_309_comments;
 
 @end

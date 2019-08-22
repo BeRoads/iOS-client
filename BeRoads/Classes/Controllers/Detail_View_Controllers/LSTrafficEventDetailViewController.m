@@ -13,7 +13,7 @@
 #import <Social/Social.h>
 
 #if __has_include("MarqueeLabel.h")
-    #import <MarqueeLabel/MarqueeLabel.h>
+    #import <MarqueeLabel_ObjC/MarqueeLabel.h>
 #endif
 
 @interface LSTrafficEventDetailViewController ()

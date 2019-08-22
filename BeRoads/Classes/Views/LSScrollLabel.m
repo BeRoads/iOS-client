@@ -121,7 +121,7 @@
 
 - (void) readjustLabels
 {
-	float offset = 0.0f;
+	double offset = 0.0f;
 	
 	for (int i = 0; i < NUM_LABELS; ++i){
 		[label[i] sizeToFit];
@@ -134,7 +134,7 @@
 		
 		CGRect frame;
 		frame = label[i].frame;
-		frame.origin.x = offset;
+		frame.origin.x = (CGFloat)offset;
 		label[i].frame = frame;
 		
 		offset += label[i].frame.size.width + LABEL_BUFFER_SPACE;

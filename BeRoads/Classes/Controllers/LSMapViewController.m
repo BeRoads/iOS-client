@@ -107,7 +107,7 @@
 - (void)reloadCameras{
     if ([_userDefaults boolForKey:kCameraPreference]) {
         [[LSBeRoadsClient sharedClient] getCameras:^(NSArray * cameras, NSError * error, NSURLSessionDataTask* task) {
-            [_mapView addAnnotations:cameras];
+            [self->_mapView addAnnotations:cameras];
             
             [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];
@@ -117,7 +117,7 @@
 - (void)reloadTrafficEvents{
     if ([_userDefaults boolForKey:kTrafficreference]) {
         [[LSBeRoadsClient sharedClient] getTrafficEvents:^(NSArray * trafficEvents, NSError * error, NSURLSessionDataTask* task) {
-            [_mapView addAnnotations:trafficEvents];
+            [self->_mapView addAnnotations:trafficEvents];
         
             [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];
@@ -127,7 +127,7 @@
 - (void)reloadRadars{
     if ([_userDefaults boolForKey:kRadarPreference]) {
         [[LSBeRoadsClient sharedClient] getRadars:^(NSArray * radars, NSError * error, NSURLSessionDataTask* task) {
-            [_mapView addAnnotations:radars];
+            [self->_mapView addAnnotations:radars];
         
             [CSNotificationView showNotificationViewForTaskWithErrorOnCompletion:task controller:self];
         } location:_location.coordinate];

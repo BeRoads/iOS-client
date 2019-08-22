@@ -16,7 +16,7 @@
 
 @implementation LSBeRoadsClient
 
-static NSString * const kBeRoadsBaseURLString = @"http://data.beroads.ovh/v2/iway/";
+static NSString * const kBeRoadsBaseURLString = @"https://data.beroads.com/v2/iway/";
 static NSString * const kTrafficEvents = @"TrafficEvent";
 static NSString * const kRadar = @"Radar.json";
 static NSString * const kCamera = @"Camera.json";
@@ -56,7 +56,7 @@ static NSString * const kCamera = @"Camera.json";
         [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
-	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+	[self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -105,7 +105,7 @@ static NSString * const kCamera = @"Camera.json";
         
     }
     
-	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+	[self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -148,7 +148,7 @@ static NSString * const kCamera = @"Camera.json";
         [parameters setObject:[NSString stringWithFormat:@"%li",(long)area] forKey:@"area"];
     }
     
-	[self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+	[self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
 		// Block success
 		dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -187,7 +187,7 @@ static NSString * const kCamera = @"Camera.json";
     
     NSDictionary* parameters = @{@"id":trafficId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+    [self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -224,7 +224,7 @@ static NSString * const kCamera = @"Camera.json";
     
     NSDictionary* parameters = @{@"id":radarId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+    [self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -260,7 +260,7 @@ static NSString * const kCamera = @"Camera.json";
     
     NSDictionary* parameters = @{@"id":cameraId};
     
-    [self GET:path parameters:parameters success:^(NSURLSessionDataTask* task, id JSON){
+    [self GET:path parameters:parameters progress:nil success:^(NSURLSessionDataTask* task, id JSON){
         // Block success
         dispatch_queue_t jsonParsing = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         

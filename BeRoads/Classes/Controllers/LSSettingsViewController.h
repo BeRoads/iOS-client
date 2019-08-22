@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
-#import "IASKAppSettingsViewController.h"
+#import "InAppSettingsKit/IASKAppSettingsViewController.h"
 
 @interface LSSettingsViewController : IASKAppSettingsViewController <IASKSettingsDelegate>
 
